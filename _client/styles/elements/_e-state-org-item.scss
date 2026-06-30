@@ -1,0 +1,98 @@
+$e-state-org-map-link-icon-size: 20px;
+
+.e-state-org-item {
+    display: none;
+    border-bottom: 1px solid t-brand-colour(divider);
+
+    .js & {
+        display: block;
+    }
+
+    &__section {
+        border-bottom: 1px solid t-brand-colour(divider);
+        padding-top: t-rem($s-layout-gutter-mobile-large);
+        padding-bottom: t-rem($s-layout-gutter-mobile-large);
+
+        .grid__item:first-child > & {
+            border-bottom: none;
+        }
+
+        .grid__item:nth-last-child(2) > & {
+            border-bottom: none;
+        }
+
+        .grid__item:last-child > & {
+            border-bottom: none;
+        }
+    }
+
+    &__name {
+
+        @include t-type-h3;
+        margin-bottom: t-rem($s-layout-gutter-mobile-tiny);
+
+        @include t-respond-to-min(large) {
+            margin-bottom: t-rem($s-layout-gutter-desktop-small);
+        }
+    }
+
+    &__info {
+
+        &-title {
+
+            @include t-type-h4;
+            margin-bottom: 0;
+        }
+
+        &-list {
+            list-style-type: none;
+            margin-bottom: 0;
+
+            &-item {
+
+                @include t-type-p1;
+            }
+        }
+
+        &-item {
+
+            @include t-type-p1;
+            color: t-brand-colour(darkgreytext);
+
+            &--link {
+                text-decoration: none;
+                transition: t-transition-value(color, fast, ease);
+
+                @include t-interaction() {
+                    color: t-brand-colour(richtextanchorshover);
+                }
+            }
+        }
+    }
+
+    &__map-link {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: t-brand-colour(richtextanchors);
+        transition: t-transition-value(color, fast, ease);
+        padding-left: t-rem($e-state-org-map-link-icon-size + 2px);
+
+        @include t-interaction() {
+            color: t-brand-colour(richtextanchorshover);
+        }
+
+        @include t-icon(icon-external-link) {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: t-brand-colour(richtextanchorshover);
+            font-size: t-rem($e-state-org-map-link-icon-size);
+        }
+
+        @include t-respond-to-min(large) {
+            display: none;
+        }
+    }
+}

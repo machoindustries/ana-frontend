@@ -1,0 +1,72 @@
+---
+title: Account My Details
+---
+
+
+
+	<div class="grid-constraint">
+		
+		<div class="grid">
+			<div class="grid__item one-whole">
+				{{> c-breadcrumb breadcrumb}}
+			</div>
+		</div>
+
+		<div class="block block--vs-none grid grid--full">
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--four-twelfths">
+				<h2 class="c-account__address-heading">My Account</h2>
+			</div>
+		</div>
+
+		<div class="block grid">
+			
+			<aside class="grid__item one-whole medium--three-twelfths">
+				
+				{{> e-subnav subnav}}
+
+			</aside>
+
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--one-twelfth">
+				<div class="c-account__section">
+					<h4 class="c-account__title">Personal Details</h4>
+					<div class="grid grid--full">
+						<div class="grid__item three-eighths">
+							<p class="c-account__text c-account__text--no-margin">{{account-my-details.personal_details.name}}</p>
+						</div>
+						<div class="grid__item four-eighths">
+							<p class="c-account__text c-account__text--no-margin">{{account-my-details.personal_details.email}}</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="c-account__section">
+
+					<h4 class="c-account__title">My Memberships</h4>
+					<p class="c-account__text">{{account-my-details.membership.text}}</p>
+
+					{{> e-responsive-table account-my-details.data.[0]}}
+
+					<a href="#" class="c-account__cta--add-new" title="Add a new membership">+ add a new membership</a>
+
+				</div>
+
+				<div class="c-account__section">
+					{{> c-join-promo-block join-promo-block.[1]}}
+				</div>
+
+				<div class="c-account__section c-account__section--mobile-accordion">
+					<h4 class="c-account__title">Licenses</h4>
+					<div class="c-account__content">
+						<p>{{account-my-details.licenses.text}}</p>
+						{{> e-responsive-table account-my-details.data.[1]}}
+						<a href="#" class="c-account__cta--add-new" title="Add a new license">+ add a new license</a>
+					</div>
+				</div>
+
+				<div class="c-account__section">
+					<p class="c-account__text c-account__text--no-margin">{{account-my-details.caveat.title}}</p>
+				</div>
+			</div>
+
+		</div>
+	</div>

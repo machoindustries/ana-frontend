@@ -1,0 +1,18 @@
+$e-map-map-min-height: 700px;
+
+.e-map {
+	
+	&__map {
+		
+		display: none;
+		width: 100%;
+		min-height: t-rem($e-map-map-min-height);
+
+		@include t-vertical-spacing(small, margin-bottom);
+
+		@include t-respond-to-min(large){
+			
+			display: block;	
+		}
+	}
+}

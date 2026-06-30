@@ -1,0 +1,49 @@
+$c-header-global-nav-container-height: 40px;
+$c-header-primary-nav-container-height: 70px;
+
+.c-header {
+
+    position: relative;
+    z-index: t-z-index(header);
+    background-color: t-brand-colour(headerbackground);
+
+    @include t-brand-box-shadow;
+    @include t-clearfix;
+
+    &__wrap {
+        
+        &--dark {
+            background-color: map-get($s-colours, blue);
+        }
+    }
+
+    &__grid-item {
+
+        @include t-respond-to-min(xlarge) {
+            width: 100%;
+        }
+        
+        z-index: t-z-index(header);
+        position: relative;
+    }
+
+    &__nav-container {
+
+        &--global {
+
+            min-height: t-rem($c-header-global-nav-container-height);
+        }
+
+        &--primary {
+
+            height: t-rem($c-header-primary-nav-container-height);
+
+            @include t-content-constraint(true, false);
+
+            @include t-respond-to-min(xlarge) {
+
+                height: t-rem(85px);
+            }
+        }
+    }
+}

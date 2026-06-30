@@ -1,0 +1,261 @@
+---
+title: Category listing
+---
+
+{{> c-breadcrumb breadcrumb}}
+
+<div class="content-area">
+
+	<div class="block">
+		<div class="grid-constraint">
+			<div class="grid">
+				<div class="grid__item one-whole">
+					<h1 class="containerblock__heading">
+						<span>Books</span>
+					</h1>
+				</div>
+				<div class="grid__item one-whole medium--eight-twelfths push--medium--two-twelfths">
+					<div class="e-richtext">
+						<p>Bookstore introduction. Explaining that books are listed by type with our favourites/best sellers first. Possible text links to <a href="#">workshops</a> and <a href="#">webinars</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="block containerblock containerblock--featured" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="false" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<span>This week's featured books</span>
+						</h2>
+					</div>
+					<div class="containerblock__intro grid__item one-whole medium--eight-twelfths">
+						<div class="e-richtext">
+							<p>Aliquam ut ligula sit amet urna tristique scelerisque sit amet nec neque. Nulla gravida lacinia elit. Suspend isse augue lorem, vehicula sit amet finibus at, Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam.</p>
+						</div>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.featuredBooks}}
+								<div class="grid__item one-whole large--one-quarter" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{{!-- Foundation books --}}
+	<div class="block containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<a href="#">Foundation Books</a>
+						</h2>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.foundationBooks}}
+								<div class="grid__item one-whole" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{{!-- Ethics books --}}
+	<div class="block containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<a href="#">Ethics Books</a>
+						</h2>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.ethicsBooks}}
+								<div class="grid__item one-whole" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{{!-- Standards books --}}
+	<div class="block containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<a href="#">Standards Books</a>
+						</h2>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.standardsBooks}}
+								<div class="grid__item one-whole" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{{!-- Quality books --}}
+	<div class="block containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<a href="#">Quality Books</a>
+						</h2>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.qualityBooks}}
+								<div class="grid__item one-whole" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{{!-- Leadership books --}}
+	<div class="block containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<a href="#">Leadership Books</a>
+						</h2>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.leadershipBooks}}
+								<div class="grid__item one-whole" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{{!-- Magnet books --}}
+	<div class="block containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<a href="#">Magnet Books</a>
+						</h2>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.magnetBooks}}
+								<div class="grid__item one-whole" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{{!-- ANA You --}}
+	<div class="block containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-product-carousel>
+		<section>
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h2 class="containerblock__heading">
+							<a href="#">ANA You</a>
+						</h2>
+					</div>
+				</div>
+				<div class="containerblock__content grid grid--full">
+					<div class="grid__item one-whole">
+						<div class="grid" data-containerblock-content>
+							{{#each category-listing.anaYouBooks}}
+								<div class="grid__item one-whole" data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+									{{> c-product-detail this }}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="block">
+		<div class="grid-constraint">
+			<div class="grid">
+				<div class="grid__item one-whole medium--three-quarters push--medium--one-eighth large--two-thirds push--large--one-sixth">
+					{{> c-join-promo-block join-promo-block.[3]}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="grid-constraint">
+			<div class="grid">
+				<div class="grid__item one-whole medium--one-half">
+					{{> c-cta-block cta-block.[8]}}
+				</div>
+				<div class="grid__item one-whole medium--one-half">
+					{{> c-cta-block cta-block.[8]}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

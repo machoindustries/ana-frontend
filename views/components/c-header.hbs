@@ -1,0 +1,24 @@
+<header class="c-header{{#if reduced}} c-header--reduced{{/if}}">
+    <a href="#content" class="c-header__skip-to-content sr-only">Skip to content</a>
+    <div class="c-header__wrap">
+        <div class="c-header__grid">
+            {{#unless reduced}}
+                <div class="c-header__grid-item c-header__nav-container c-header__nav-container--global">
+                    {{> e-global-nav }}
+                </div>
+            {{/unless}}
+            <div class="c-header__grid-item c-header__nav-container c-header__nav-container--primary">
+                {{> e-site-logo data.siteLogo }}
+                {{#unless reduced}}
+                    <a href="LINK-TO-SITEMAP-PAGE" class="e-nav-primary__button" data-nav-button>
+                        <span class="e-nav-primary__menu-icon">
+                            <span class="sr-only">Open navigation</span>
+                        </span>
+                    </a>
+                    {{> e-nav-primary }}
+                    {{> e-header-tools variant="mobile" }}
+                {{/unless}}
+            </div>
+        </div>
+	</div>
+</header>

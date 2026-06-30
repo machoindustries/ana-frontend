@@ -1,0 +1,61 @@
+.e-modal {
+	
+	display: block;
+	position: relative;
+	overflow: hidden;
+	padding-top: t-rem($s-layout-gutter-mobile-large);
+	padding-bottom: t-rem($s-layout-gutter-mobile-large);
+
+	@include t-respond-to-min(large) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	&__content {
+		
+		@include t-vertical-spacing(large, padding);
+
+		cursor: initial;
+		margin-left: auto;
+		margin-right: auto;
+		padding: t-rem($s-layout-gutter-mobile-small $s-layout-gutter-mobile-large);
+
+		@include t-respond-to-min(large) {
+			max-width: t-rem( calc(100% - #{$s-layout-gutter-mobile-large*3} - #{$s-layout-gutter-mobile-medium*2}));
+		}
+	}
+
+	[data-validation-response-form] {
+
+		text-align: center;
+		margin-bottom: 0;
+
+		.e-form__label.e-form__label--radio,
+		.e-form__label.e-form__label--checkbox {
+
+			display: block;
+			height: t-rem(30px);
+			margin-top: t-rem(5px);
+
+			.e-form__label-text {
+
+				float: right;
+				margin-right: 0;
+				margin-left: t-rem(10px);
+				width: 100%;
+				text-align: left;
+			}
+
+			.e-form__fake-radio,
+			.e-form__fake-checkbox {
+
+				float: left;
+			}
+		}
+
+		.e-button {
+
+			margin: t-rem(20px auto 0);
+		}
+	}
+}

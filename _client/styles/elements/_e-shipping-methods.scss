@@ -1,0 +1,42 @@
+.e-shipping-methods {
+	
+	&__text {
+		
+		@include t-type-caption;
+		
+		display: block;
+		margin-bottom: t-rem($s-layout-gutter-mobile-small);
+	}
+
+	&__options {
+
+		list-style-type: none;
+	}
+
+	&__item {
+		
+		margin-bottom: t-rem($s-layout-gutter-mobile-small);
+
+		& > .e-button {
+
+			width: 100%;
+		}
+
+		& > .e-form__label {
+
+			margin-top: 0;
+		}
+
+		&:last-child {
+
+			margin-bottom: 0;
+		}
+
+		&--message {
+
+			@include t-type-p1;
+
+			color: t-brand-colour(formvalidationerrortext);
+		}
+	}
+}

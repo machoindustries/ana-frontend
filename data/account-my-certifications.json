@@ -1,0 +1,64 @@
+{
+	"caveat": {
+		"title": "ANA will never use your personal information onec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Nunc diam tellus, malesuada consectetur vulputate at, rutrum nec neque. Nulla et est lectus."
+	},
+	"certifications": {
+		"text": "Keep a record of your certifications in one central place."
+	},
+	"nurse_verification": {
+		"title": "Lorem ipsum dolor sit amet sed diam."
+	},
+	"volunteer_status": {
+		"left_column": [
+			"Board Member",
+			"Commissioner",
+			"Magnet Program Director",
+			"Other"
+		],
+		"right_column": [
+			"Pathway Contact",
+			"SME",
+			"Committee Member"
+		]
+	},
+	"data": [
+		{
+			"titles": [
+				"Certification Name",
+				"Date Started",
+				"Status",
+				"Nurse Verification",
+				"Options"
+			],
+			"rows": [
+				{
+					"cols": [
+						"Child/Adolescent Psychiatric-Mental Health CNS",
+						"01/01/2010",
+						"In progress <a href='#' class='icon icon--icon-info'></a>",
+						"<a href='#'>Verify</a>",
+						"<a href='#'>Edit</a>"
+					]
+				},
+				{
+					"cols": [
+						"Child/Adolescent Psychiatric-Mental Health CNS",
+						"02/01/2010",
+						"Pass (05/01/2010)",
+						"<a href='#'>Verify</a>",
+						"<a href='#'>Edit</a>"
+					]
+				},
+				{
+					"cols": [
+						"Child/Adolescent Psychiatric-Mental Health CNS",
+						"03/01/2010",
+						"<a href='#'>Incomplete</a>",
+						"<a href='#'>Verify</a>",
+						"<a href='#'>Edit</a>"
+					]
+				}
+			]
+		}
+	]
+}

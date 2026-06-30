@@ -1,0 +1,77 @@
+{
+  "name": "ana",
+  "version": "2.0.0",
+  "description": "ANA build.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "optimise:images": "node scripts/optimise-images.mjs"
+  },
+  "author": "Amaze",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs-readdir-recursive": "^1.0.0",
+    "glob-all": "^3.3.0",
+    "loadjs": "^4.2.0",
+    "lodash": "^4.18.1",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "autoprefixer": "^10.5.2",
+    "browserslist": "^4.21.0",
+    "chosen-js": "^1.6.2",
+    "compression": "^1.7.4",
+    "cssnano": "^8.0.2",
+    "dotenv": "^2.0.0",
+    "enquire.js": "^2.1.1",
+    "eslint": "^10.5.0",
+    "eventemitter3": "^1.2.0",
+    "events": "^1.1.0",
+    "glob": "^13.0.6",
+    "jquery-validation": "^1.19.4",
+    "jquery-validation-unobtrusive": "^3.2.6",
+    "jsonfile": "^2.4.0",
+    "magnific-popup": "^1.1.0",
+    "moment": "^2.20.1",
+    "normalize-scss": "^7.0.1",
+    "owl.carousel": "2.2.0",
+    "postcss": "^8.5.15",
+    "postcss-sort-media-queries": "^6.6.2",
+    "sass": "^1.101.0",
+    "sharp": "^0.35.2",
+    "slash": "^1.0.0",
+    "strip-extension": "^1.1.0",
+    "terser": "^5.48.0",
+    "util": "^0.10.3",
+    "velocity-animate": "~1.2.3",
+    "vite": "^8.1.0",
+    "vite-plugin-static-copy": "^4.1.1",
+    "waypoints": "^4.0.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery",
+    "chosen-js": {
+      "depends": "jquery"
+    },
+    "waypoints": {
+      "depends": "jquery"
+    },
+    "hoverIntent": {
+      "depends": "jquery"
+    }
+  },
+  "browserslist": [
+    "last 2 versions",
+    ">0.2%"
+  ]
+}

@@ -1,0 +1,63 @@
+.e-tag {
+
+    @include t-type-base(bold);
+    font-size: t-rem($s-font-size-endor);
+    display: inline-block;
+    vertical-align: middle;
+    height: t-rem(20px);
+    padding: 0 t-rem(10px);
+    border-radius: t-rem(8px);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: t-rem(21px);
+    letter-spacing: t-rem(2px);
+
+    &--ana {
+
+        background-color: #cf4620;
+        color: #fff;
+    }
+
+    &--ancc {
+
+        background-color: #009685;
+        color: #fff;
+    }
+
+    &--fnd {
+
+        background-color: #009685
+;
+        color: #fff;
+    }
+
+    &--blue {
+
+        background-color: rgba(#009685, 0.1);
+        color: #009685;
+
+        &:hover {
+            background-color: rgba(#009685
+, 0.1);
+            color: #009685
+;
+        }
+    }
+
+    &--white {
+        
+        background-color: #fff;
+        color: #009685;
+    }
+
+    a {
+        
+        display: block;
+        margin: 0 t-rem(-10px);
+        padding: 0 t-rem(10px);
+        border-radius: t-rem(8px);
+        text-decoration: none;
+        color: inherit;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+}

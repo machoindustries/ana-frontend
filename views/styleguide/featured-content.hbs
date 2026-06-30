@@ -1,0 +1,44 @@
+
+{{#extend "c-static-section" heading="Quarters"}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="Featured content x4" variant=""
+            carousel-at-mobile="true" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+
+            {{#content "container-block-content"}}
+
+                {{> c-featured-content featured-content.[0] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+                
+                {{> c-featured-content featured-content.[1] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                {{> c-featured-content featured-content.[2] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                {{> c-featured-content featured-content.[3] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}
+
+{{#extend "c-static-section" heading="Half"}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="Featured content x2" variant=""
+            carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides=""}}
+
+            {{#content "container-block-content"}}
+
+                {{> c-featured-content featured-content.[0] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+                
+                {{> c-featured-content featured-content.[1] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}

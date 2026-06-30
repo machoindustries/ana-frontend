@@ -1,0 +1,77 @@
+/* Settings - Icons
+------------------------- */
+
+/// $s-icons
+/// Establishes a map containing a series of icon sets with a map of icons with associated unicode (UTF8) values and an associated font family stack.
+///
+/// @example
+/// $s-icons: (
+///     icons: (
+///         'icon-name': '\f101'
+///     ),
+///     stack: 'icons'
+/// );
+$s-icons: (
+    icons: (
+        'icon-arrow-down': '\f101',
+        'icon-arrow-left': '\f102',
+        'icon-arrow-right': '\f103',
+        'icon-arrow-up': '\f104',
+        'icon-arrowfull-down': '\f105',
+        'icon-arrowfull-left': '\f106',
+        'icon-arrowfull-right': '\f107',
+        'icon-arrowfull-up': '\f108',
+        'icon-call': '\f109',
+        'icon-cart-add': '\f10a',
+        'icon-cart-empty': '\f10b',
+        'icon-cart-full': '\f10c',
+        'icon-cert': '\f10d',
+        'icon-close': '\f10e',
+        'icon-collapse': '\f10f',
+        'icon-contacthours': '\f110',
+        'icon-contacthourswedge': '\f111',
+        'icon-delete': '\f112',
+        'icon-drop-down': '\f113',
+        'icon-drop-up': '\f114',
+        'icon-edit': '\f115',
+        'icon-elearn': '\f116',
+        'icon-email': '\f117',
+        'icon-expand': '\f118',
+        'icon-external-link': '\f119',
+        'icon-facebook': '\f11a',
+        'icon-file-doc': '\f11b',
+        'icon-file-pdf': '\f11c',
+        'icon-file-xls': '\f11d',
+        'icon-file': '\f11e',
+        'icon-help': '\f11f',
+        'icon-image': '\f120',
+        'icon-info': '\f121',
+        'icon-launchcareer': '\f122',
+        'icon-linkedin': '\f123',
+        'icon-liveandonline': '\f124',
+        'icon-music': '\f125',
+        'icon-nav': '\f126',
+        'icon-online': '\f127',
+        'icon-play': '\f128',
+        'icon-profile': '\f129',
+        'icon-publication': '\f12a',
+        'icon-scroll': '\f12b',
+        'icon-search': '\f12c',
+        'icon-seminar': '\f12d',
+        'icon-settings': '\f12e',
+        'icon-share': '\f12f',
+        'icon-star-empty': '\f130',
+        'icon-tick-mark': '\f131',
+        'icon-tick': '\f132',
+        'icon-twitter-x': '\f133',
+        'icon-twitter': '\f134',
+        'icon-user': '\f135',
+        'icon-video': '\f136',
+        'icon-webinar': '\f137',
+        'icon-workshop-alt': '\f138',
+        'icon-workshop': '\f139',
+        'icon-x-cross': '\f13a',
+        'icon-youtube': '\f13b'
+    ),
+    stack: 'icons'
+);

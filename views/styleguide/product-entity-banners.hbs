@@ -1,0 +1,90 @@
+
+{{#extend "c-static-section" heading="Books"}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="x4 Books" variant=""
+            carousel-at-mobile="false" carousel-at-desktop="false" 
+            carousel-slide-items-small="2" carousel-slide-items-medium="" carousel-slide-items-large="" }}
+
+            {{#content "container-block-content"}}
+
+                {{#each product-listing.books }}
+                    {{> c-product-detail this }}
+                {{/each}}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}
+
+{{#extend "c-static-section" heading="Books featured"}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="x4 Books" variant="featured"
+            carousel-at-mobile="true" carousel-at-desktop="true"
+            carousel-slide-items-small="2" carousel-slide-items-medium="3" carousel-slide-items-large="4" }}
+
+            {{#content "container-block-content"}}
+
+                {{#each product-listing.books-featured }}
+                    {{> c-product-detail this }}
+                {{/each}}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}
+
+{{#extend "c-static-section" heading="Courses"}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="x4 Courses" variant=""
+            carousel-at-mobile="false" carousel-at-desktop="false"
+            carousel-slide-items-small="2" carousel-slide-items-medium="" carousel-slide-items-large="" }}
+
+            {{#content "container-block-content"}}
+
+                {{#each product-listing.courses }}
+                    {{> c-product-detail this }}
+                {{/each}}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}
+
+
+{{!-- <h1>Product entity banners</h1>
+
+<div class="block containerblock">
+    <div class="grid-constraint">
+        <div class="grid">
+            {{#each product-listing.}}
+                <div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+                    {{> c-product-detail this }}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<div class="block containerblock">
+    <div class="grid-constraint">
+        <div class="grid">
+            {{#each product-listing.coursesWithEntityBanner}}
+                <div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+                    {{> c-product-detail this }}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div> --}}

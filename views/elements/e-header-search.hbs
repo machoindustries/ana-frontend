@@ -1,0 +1,16 @@
+<form class="e-header-search e-form" data-require="./src/views/header-search-view">
+	<button class="e-header-search__btn-trigger" data-search-trigger>
+		<span class="e-header-search__btn-trigger-text">Open search</span>
+	</button>
+	<div class="e-header-search__controls grid" data-search-panel>
+		<div class="e-header-search__controls-wrap" data-search-controls-wrapper>
+			<div class="grid__item e-header-search__label-box">
+				<label class="e-header-search__label" for="header-search-input">Search</label>
+			</div>
+			<div class="e-header-search__search-box grid__item one-whole">
+				{{> e-search-box variant="header" }}
+			</div>
+			<div class="e-header-search__results grid__item one-whole" data-search-results></div>
+		</div>
+	</div>
+</form>

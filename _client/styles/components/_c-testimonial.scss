@@ -1,0 +1,98 @@
+$testimonial-slide-xlarge: 640px;
+$testimonial-slide-large: 500px;
+$testimonial-slide-medium: 322px;
+
+.c-testimonial {
+    width: t-rem($testimonial-slide-xlarge);
+    margin: 0 auto;
+    padding: t-rem(45px) t-rem(80px) t-rem(45px) t-rem(45px);
+    background-color: #fff;
+    box-shadow: 0 t-rem(2px) t-rem(8px) 0 rgba(12,30,41,0.35);
+
+    @include t-respond-to-min-max(large, xlarge) {
+        width: t-rem($testimonial-slide-large);
+    }
+
+    @include t-respond-to-max(large) {
+        width: t-rem($testimonial-slide-medium);
+        padding: t-rem(20px);
+        text-align: center;
+    }
+
+    @include t-respond-to-min(large) {
+        display: flex;
+    }
+
+    .thumb {
+        width: t-rem(80px);
+        height: t-rem(80px);
+
+        @include t-respond-to-max(large) {
+            margin: 0 auto;
+        }
+
+        @include t-respond-to-min(large) {
+            margin-right: t-rem(35px);
+        }
+
+        img {
+            width: inherit;
+            height: inherit;
+            border-radius: 50%;
+            border: t-rem(4px) solid #F3F3F3;
+        }
+    }
+
+    .details {
+
+        @include t-respond-to-min(large) {
+            width: calc(100% - 115px);
+        }
+    }
+
+    blockquote {
+        margin: 0;
+    }
+
+    cite {
+        display: block;
+        margin: 20px 0;
+        font-style: normal;
+
+        @include t-respond-to-max(large) {
+            margin: 10px 0 20px;
+        }
+    }
+
+    .name {
+        display: block;
+        @include t-type-base(regular);
+        color: #003367;
+        font-size: t-rem(20px);
+        line-height: t-rem(28px);
+    }
+
+    .role {
+        display: block;
+        color: rgba(#0C1E29, 0.6);
+        font-size: t-rem(15px);
+        line-height: t-rem(22px);
+        letter-spacing: t-rem(2px);
+        text-transform: uppercase;
+    }
+
+    .quote {
+        margin-bottom: 0;
+        color: rgba(#0C1E29, 0.8);
+        font-size: t-rem(15px);
+        line-height: t-rem(22px);
+
+        &:before {
+            content: "\201C";
+        }
+
+        &:after {
+            content: "\201D";
+        }
+    }
+}

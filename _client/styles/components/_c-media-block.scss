@@ -1,0 +1,180 @@
+$c-video-options: (
+    lightGradientRotation: 50deg,
+    lightGradentLeftRGB: rgba(255, 255, 255, 0.9),
+    lightGradentRightRGB: rgba(255, 255, 255, 0),
+    darkGradientRotation: 35deg,
+    darkGradentLeftRGB: rgba(0, 0, 0, 0.7),
+    darkGradentRightRGB: rgba(0, 0, 0, 0),
+    playIconSizeMobileStandard: t-rem(70px),
+    playIconSizeMobileLarge: t-rem(80px),
+    playIconSizeDesktopStandard: t-rem(90px),
+    playIconSizeDesktopLarge: t-rem(100px),
+    playIconSizeMobileOffsetLeft: t-rem(-35px),
+    playIconSizeMobileOffsetTop: t-rem(-35px),
+    playIconSizeDesktopOffsetTop: t-rem(-45px),
+    playIconFontSize: t-rem(48px),
+    playIconWidth: t-rem(42px)
+);
+
+.c-media-block {
+    $root: &;
+
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    //@include t-escape-content-padding;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &--inline {
+
+        #{$root}__caption-content {
+
+            @include t-respond-to-min(large) {
+
+                padding-top: t-rem($s-layout-gutter-desktop-medium);
+                border-top: 1px solid t-brand-colour(divider);
+            }
+        }
+    }
+
+    &--8col {
+
+        #{$root}__caption {
+
+            #{$root}__heading,
+            #{$root}__description {
+
+                display: inline-block;
+            }
+        }
+    }
+
+    &__caption {
+        &-content {
+            padding-top: t-rem($s-layout-gutter-mobile-medium);
+        }
+    }
+        
+    &__description {
+        @include t-type-caption;
+        margin: 0;
+    }
+
+    &__figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__heading {
+        @include t-type-caption('bold');
+        color: inherit;
+        margin: t-rem(0 0 $s-layout-gutter-mobile-tiny 0);
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(
+            map-get($c-video-options, darkGradientRotation), 
+            map-get($c-video-options, darkGradentLeftRGB), 
+            map-get($c-video-options, darkGradentRightRGB)
+        );
+        color: t-brand-colour(videolink);
+        padding-top: 89.5%;
+        padding-bottom: 0;
+        position: relative;
+        text-decoration: none;
+    
+        @include t-respond-to-min(small) {
+            padding-top: 56.25%;
+        }
+
+        .no-cssgradients & {
+            background-image: url(/assets/img/overlay-black-50.png);
+            background-repeat: repeat;
+        }
+
+        @include t-interaction {
+            #{$root}__heading {
+                text-decoration: underline;
+            }
+        }
+
+        &:hover {
+            #{$root}__play-icon {
+                background-color: t-brand-colour(videolinkhover);
+            }
+        }
+
+        &:after {
+            background-color: t-brand-colour(videolinkoverlay);
+            content: "";
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: t-z-index(videoplayoverlay);
+        }
+    }
+
+    &__play-icon {
+        border-radius: 100%;
+        background-color: t-brand-colour(videoplaybutton);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: map-get($c-video-options, playIconSizeMobileStandard);
+        height: map-get($c-video-options, playIconSizeMobileStandard);
+        font-size: map-get($c-video-options, playIconSizeMobileStandard);
+        color: t-brand-colour(videoplaybuttoncolour);
+        z-index: t-z-index(videoplaybutton);
+        transition: t-transition-value(background, medium, ease-in-out);
+
+        @include t-respond-to-min(small) {
+            width: map-get($c-video-options, playIconSizeDesktopStandard);
+            height: map-get($c-video-options, playIconSizeDesktopStandard);
+            font-size: map-get($c-video-options, playIconSizeDesktopStandard);
+        }
+
+        @include t-icon(icon-play, before) {
+            opacity: 1;
+            display: block;
+            font-size: t-rem(map-get($c-video-options, playIconFontSize));
+            height: 0;
+            left: 50%;
+            line-height: 0;
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: t-rem(map-get($c-video-options, playIconWidth));
+        }
+    }
+}
+
+.grid__item .c-media-block {
+    width: 100%;
+}

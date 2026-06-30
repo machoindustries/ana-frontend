@@ -1,0 +1,88 @@
+{
+	"categories": [
+		{
+			"title": "Features",
+			"collapse": "false",
+			"items": [
+				{
+					"name": "Type",
+					"description": "Male torso child"
+				},
+				{
+					"name": "Airway",
+					"description": "Non-breathing, disposable"
+				},
+				{
+					"name": "Squeeze bulb",
+					"description": null
+				},
+				{
+					"name": "Carotid pulse",
+					"description": false
+				},
+				{
+					"name": "Compression generated",
+					"description": null
+				},
+				{
+					"name": "Ribs xiphoid",
+					"description": true
+				},
+				{
+					"name": "Gastric distension simulation",
+					"description": false
+				},
+				{
+					"name": "Navel",
+					"description": false
+				},
+				{
+					"name": "Tongue / teeth",
+					"description": null
+				},
+				{
+					"name": "Adam's apple",
+					"description": true
+				},
+				{
+					"name": "Chart recorder",
+					"description": false
+				},
+				{
+					"name": "Metronome",
+					"description": false
+				}
+			]
+		},
+		{
+			"title": "Dimensions",
+			"collapse": "true",
+			"items" : [
+				{
+					"name": "Name",
+					"description": "Description"
+				}
+			]
+		},
+		{
+			"title": "Category three",
+			"collapse": "true",
+			"items" : [
+				{
+					"name": "Name",
+					"description": "Description"
+				}
+			]
+		},
+		{
+			"title": "Category four",
+			"collapse": "true",
+			"items" : [
+				{
+					"name": "Name",
+					"description": "Description"
+				}
+			]
+		}
+	]
+}

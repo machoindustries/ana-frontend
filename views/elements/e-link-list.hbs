@@ -1,0 +1,10 @@
+<div class="e-link-list">
+	<h2 class="e-link-list__heading">{{data.description}}</h2>
+	<ul>
+		{{#each data.items}}
+		<li class="e-download-cta__item">
+			{{> e-download-cta }}
+		</li>
+		{{/each}}
+	</ul>
+</div>

@@ -1,0 +1,8 @@
+<label class="e-form__label e-form__label--select" for="{{data.id}}" data-formfield>
+	<span class="e-form__label-text{{#if labelTextVariant}} e-form__label-text--{{labelTextVariant}}{{/if}}">{{data.label}}</span>
+	<select class="e-form__input e-form__input--select" name="{{data.name}}" id="{{data.id}}" placeholder="placeholder..."{{#if dataAttributes}} {{dataAttributes}}{{/if}}>
+		{{#eachIndex data.items}}
+			<option class="e-form__input e-form__input--option" value="{{this.value}}" {{#ifEqual this.index 0}}selected=""{{/ifEqual}}>{{this.label}}</option>
+		{{/eachIndex}}
+	</select>
+</label>

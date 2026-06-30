@@ -1,0 +1,222 @@
+// NOTE: these styles are intended for use in the rich text editor and should not follow the BEM css methodology.
+$e-richtext-list-padding: 20px;
+$e-richtext-bullet-size: 7px;
+
+@mixin e-richtext-content($epiProps: false) {
+
+    @if ($epiProps == false){
+        @include t-type-p1; // base
+        text-align: left;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p, ul, ol {
+        @include t-vertical-spacing(xsmall, margin-bottom);
+    }
+    
+    @if ($epiProps == false) {
+        
+        > *:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    h1 {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuTitle: Headings;
+            EditMenuName: Heading 1;
+        }
+
+        @include t-type-h1;
+    }
+
+    h2 {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuName: Heading 2;
+        }
+
+        @include t-type-h2;
+    }
+
+    h2.h3 {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuName: Medium H2;
+        }
+
+        @include t-type-h3;
+    }
+
+    h2.h4 {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuName: Small H2;
+        }
+
+        @include t-type-h4;
+    }
+
+    h3 {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuName: Heading 3;
+        }
+
+        @include t-type-h3;
+    }
+
+    h3.h4 {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuName: Small H3;
+        }
+
+        @include t-type-h4;
+    }
+
+    h4 {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuName: Heading 4;
+        }
+
+        @include t-type-h4;
+    }
+
+
+    p {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuTitle: Paragraphs;
+            EditMenuName: Paragraph;
+        }
+
+        @include t-type-p1;
+    }
+
+    p.footnote {
+        @if ($epiProps == true) {
+            ChangeElementType: true;
+            EditMenuName: Footnote;
+        }
+        font-style: italic;
+        @include t-type-caption;
+    }
+
+    strong {
+        @include t-type-p1('bold');
+    }
+
+    ol,
+    ul {
+
+        @if ($epiProps == true) {
+
+            ChangeElementType: true;
+            EditMenuTitle: Lists;
+        }
+
+        margin-left: t-rem($e-richtext-list-padding);
+        padding-left: 0;
+        list-style-type: none;
+        counter-reset: item;
+
+        & > li {
+            position: relative;
+
+            &:before {
+                display: block;
+                position: absolute;
+                left: t-rem(-($e-richtext-list-padding));
+            }
+        }
+    }
+
+    ol {
+        @if ($epiProps == true) {
+
+            ChangeElementType: true;
+            EditMenuName: Ordered;
+        }
+
+        & > li {
+            display: inline-block;
+            width: 100%;
+
+            &:before {
+                @include t-type-p1('bold');
+                content: counter(item) '.';
+                counter-increment: item;
+                color: t-brand-colour(richtextbulletpoints);
+                top: 0;
+            }
+        }
+    }
+
+    ul {
+        @if ($epiProps == true) {
+
+            ChangeElementType: true;
+            EditMenuName: Unordered;
+        }
+
+        margin-left: t-rem($e-richtext-list-padding);
+        padding-left: 0;
+
+        &[style*="text-align: center"] {
+            margin-left: 0;
+            list-style-position: inside;
+        }
+
+        & > li {
+            &:before {
+                content: "";
+                width: t-rem($e-richtext-bullet-size);
+                height: t-rem($e-richtext-bullet-size);
+                background-color: t-brand-colour(richtextbulletpoints);
+                border-radius: 50%;
+                top: t-rem($e-richtext-bullet-size);
+            }
+        }
+
+        & > ul {
+            & > li {
+                &:before {
+                    height: t-rem(2px);
+                    width: t-rem(8px);
+                    background-color: t-brand-colour(richtextbulletpoints);
+                    border-radius: 0;
+                    left: t-rem(-($e-richtext-list-padding - 2));
+                }
+            }
+        }
+    }
+
+    li {
+
+        & > ul,
+        & > ol {
+
+            margin-bottom: 0;
+        }
+    }
+
+    @if ($epiProps == false) {
+        a:not([class*="e-button"]) {
+
+            color: t-brand-colour(richtextanchors);
+
+            @include t-interaction {
+            
+                color: t-brand-colour(richtextanchorshover);
+            };
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

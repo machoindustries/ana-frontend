@@ -1,0 +1,65 @@
+.e-entities-nav {
+	
+	$root: &;
+
+	@include t-type-nav1;
+
+	color: t-brand-colour(globalnavtext);
+
+	&__list {
+
+		@include t-clearfix;
+
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+
+		display: inline-block;
+		float: left;
+
+		&:last-child {
+
+			#{$root}__link {
+
+				padding-right: 0;
+			}
+		}
+	}
+
+	&__link {
+		
+		display: block;
+		position: relative;
+		color: t-brand-colour(globalnavtext);
+		text-decoration: none;
+		text-align: center;
+        text-transform: uppercase;
+        margin-right: t-rem($s-layout-gutter-mobile-small);
+		padding-top: t-rem(14px);
+		padding-bottom: t-rem(11px);
+		//padding-left: t-rem($s-layout-gutter-mobile-tiny);
+		//padding-right: t-rem($s-layout-gutter-mobile-tiny);
+
+		@include t-respond-to-min(small){
+		
+            margin-right: t-rem($s-layout-gutter-mobile-small);
+		}
+
+		@include t-respond-to-min(large){
+
+            margin-right: t-rem($s-layout-gutter-desktop-medium);
+		}
+
+		@include t-hover-jump-fix {
+
+			@include t-type-nav1('bold');
+		}
+
+		@include t-interaction {
+			
+			@include t-type-nav1('bold');
+		}
+	}
+}

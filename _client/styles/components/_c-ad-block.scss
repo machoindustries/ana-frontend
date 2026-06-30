@@ -1,0 +1,38 @@
+.c-ad-block {
+    position: relative;
+    text-align: center;
+
+    @include t-respond-to-min(medium){
+        &--large {
+            display: inline-block;
+        }
+        &--large-block {
+            display: block;
+        }
+    }
+
+    @include t-respond-to-max(medium){
+        &--small {
+            display: block;
+        }
+    }
+
+    &--grey {
+        background: t-brand-colour(advertbackground);
+        @include t-vertical-spacing(small, (padding-top, padding-left, padding-right));
+        @include t-vertical-spacing(medium, padding-bottom);
+    }
+
+    &_heading {
+        color: t-brand-colour(adverttitle);
+    }
+
+    &__content {
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+}

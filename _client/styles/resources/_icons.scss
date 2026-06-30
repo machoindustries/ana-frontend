@@ -1,0 +1,15 @@
+/* Resources - Icons
+------------------------- */
+
+.icon {
+
+    @include t-icon-base;
+}
+
+@each $key in map-keys( map-get( $s-icons, icons )) {
+
+    .icon--#{$key}:before {
+        font-family: "icons";
+        content: map-get( map-get( $s-icons, icons ), $key );
+    }
+}

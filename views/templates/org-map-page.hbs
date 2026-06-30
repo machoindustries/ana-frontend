@@ -1,0 +1,40 @@
+---
+title: organisations map page
+---
+
+<h4>NOTE: map functionality does not work in the frontend demo area, due to a change from clientside to serverside filtering.</h4>
+
+<div class="containerblock">
+	<section data-require="./src/views/map-page-view" data-map-page-type="org">
+	    <div class="grid-constraint">
+	        <div class="grid grid--center grid--full">
+	            <div class="grid__item one-whole">
+	                <h1 class="containerblock__heading">
+	                    <span>Find your organization</span>
+	                </h1>
+	            </div>
+	            <div class="grid__item e-richtext large--two-thirds xpush--large--one-sixth">
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                consequat.</p>
+	                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+	                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	            </div>
+	            {{> e-organisation-filters }}
+	        </div>
+	    </div>
+		
+		{{> e-map }}
+		
+		<div class="grid-constraint">
+			<div class="grid grid--center grid--full">
+				<div class="grid__item one-whole large--three-quarters">
+					{{> e-responsive-table organisations-map-table dataAttributes="data-location-results" }}
+				</div>	
+			</div>
+		</div>
+
+	</section>
+</div>

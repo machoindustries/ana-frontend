@@ -1,0 +1,33 @@
+[
+    {
+        "name": "black"
+    },{
+        "name": "white"
+    },{
+        "name": "offwhite"
+    },{
+        "name": "darkergrey"
+    },{
+        "name": "darkgrey"
+    },{
+        "name": "grey"
+    },{
+        "name": "lightgrey"
+    },{
+        "name": "blue"
+    },{
+        "name": "lightblue"
+    },{
+        "name": "orange"
+    },{
+        "name": "teal"
+    },{
+        "name": "purple"
+    },{
+        "name": "red"
+    },{
+        "name": "transblack"
+    },{
+        "name": "transwhite"
+    }
+]

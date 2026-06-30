@@ -1,0 +1,88 @@
+<div class="c-cart-summary grid" data-require="./src/views/cart-summary-view">
+    <div class="grid__item one-whole large--one-half pad--large--one-half">
+        <div class="c-cart-summary__row c-cart-summary__row--border-bottom">
+            <div class="grid">
+                <div class="grid__item one-half">
+                    <a href="#" class="c-cart-summary__action c-cart-summary__action--continue">Continue shopping</a>
+                </div>
+                <div class="grid__item one-half">
+                    <a href="#" class="c-cart-summary__action c-cart-summary__action--add c-cart-summary__action--right" data-add-discount-code="<form class='c-cart-summary__modal-form' action='POST'><h3 class='c-cart-summary__modal-heading'>Please enter your discount code:</h3><input type='text' class='c-cart-summary__modal-input e-form__input e-form__input--text'/><input class='e-button c-cart-summary__modal-submit' type='submit' value='Apply' /></form>">add a discount code</a>
+                </div>
+                <div class="grid__item one-whole">
+                    <ul class="c-cart-summary__discount-list">
+                        <li class="c-cart-summary__discount">
+                            <p class="c-cart-summary__discount-line"><em>Discount:</em> <span>-$10.00</span></p>
+                            <p class="c-cart-summary__discount-caveat">
+                                Lorem ipsum dolor sit amet sed diam <a href="#" class="c-cart-summary__discount-remove">Remove</a></p>
+                        </li>
+                        <li class="c-cart-summary__discount">
+                            <p class="c-cart-summary__discount-line"><em>Discount:</em> <span>-$10.00</span></p>
+                            <p class="c-cart-summary__discount-caveat">
+                                Lorem ipsum dolor sit amet sed diam <a href="#" class="c-cart-summary__discount-remove">Remove</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid__item one-whole large--one-half pad--large--one-half">
+        <div class="c-cart-summary__row c-cart-summary__row--border-bottom">
+            <div class="c-cart-summary__subtotal">
+                Subtotal: <span class="c-cart-summary__subtotal-text">$300.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="grid__item one-whole c-cart-summary__row">
+        <div class="grid">
+            <div class="grid__item one-whole large--one-half">
+                <div class="c-cart-summary__promo">
+                    {{> c-join-promo-block join-promo-block.[5]}}
+                </div>
+            </div>
+            <div class="grid__item one-whole large--one-half">
+                <div class="c-cart-summary__donation grid">
+                    <div class="c-cart-summary__donation-desc grid__item one-whole">
+                        Add an optional donation to lorem ipsum dolor sit amet Mauris viverra euismod mauris. Suspendisse auctor vel est sit amet pharetra integer ultrices vitae lectus id volutpat. Aliquam pharetra aliquam tortor ut maximus.
+                    </div>
+                    <div class="grid__item one-third">
+                        {{> e-button type="anchor" colourVariant="white" text="$XX.XX" additionalClasses="e-button c-cart-summary__button c-cart-summary__button--donate" dataAttributes="" }}
+                    </div>
+                    <div class="grid__item one-third">
+                        {{> e-button type="anchor" colourVariant="white" text="$XX.XX" additionalClasses="e-button c-cart-summary__button c-cart-summary__button--donate" dataAttributes="" }}
+                    </div>
+                    <div class="grid__item one-third">
+                        {{> e-button type="anchor" colourVariant="white" text="$XX.XX" additionalClasses="e-button c-cart-summary__button c-cart-summary__button--donate" dataAttributes="" }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid__item one-whole large--one-half pad--large--one-half">
+        <div class="c-cart-summary__row c-cart-summary__row--border-bottom c-cart-summary__row--border-top">
+            <fieldset class="c-cart-summary__terms e-form__fieldset">
+                <label class="e-form__label e-form__label--checkbox" for="sg-checkbox1" name="sg-checkbox-group" data-formfield>
+                    <span class="e-form__label-text">Relevant disclaimer text to go here. User must check the box to proceed.</span>
+                    <input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox1" name="sg-checkbox-group">
+                    <span class="e-form__fake-checkbox"></span>
+                </label>
+            </fieldset>
+        </div>
+    </div>
+    <div class="grid__item one-whole large--one-half pad--large--one-half">
+        <div class="c-cart-summary__row">
+            <div class="grid grid--middle c-cart-summary__checkout">
+                <div class="grid__item one-half">
+                    <a href="#" class="c-cart-summary__action c-cart-summary__action--continue">Continue shopping</a>
+                </div>
+                <div class="grid__item one-half">
+                    {{> e-button type="submit" colourVariant="blue" text="Checkout" additionalClasses="e-button c-cart-summary__button c-cart-summary__button--checkout" dataAttributes="" }}
+                </div>
+                <div class="grid__item one-whole">
+                    <p class="c-cart-summary__checkout-caveat">
+                        For bulk or invoice purchases, please contact <a href="mailto:sales@ana.org" class="c-cart-summary__checkout-caveat-link">sales@ana.org</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+/* Tools - Locales
+------------------------- */
+
+// Mixins
+// -------------------------
+
+/// @mixin t-rtl
+/// Applies styles to a page with a right-to-left direction attribute.
+///
+/// @access public
+///
+/// @example
+///	@include t-rtl {
+/// 	// @content...
+/// }
+@mixin t-rtl {
+
+	[dir="rtl"] & {
+		@content;
+	}
+}
+
+/// @mixin t-ltr
+/// Overrides any incorrect assumptions made by Unicode Bidirectional Algorithm.
+///
+/// @access public
+///
+/// @example
+///	@include t-ltr
+@mixin t-ltr {
+
+	@include t-rtl {
+		direction: ltr;
+		unicode-bidi: embed;
+	}
+}

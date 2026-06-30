@@ -1,0 +1,17 @@
+<article class="e-accordion">
+	{{#if data.heading}}
+		<h3 class="e-accordion__heading{{#if headingModifier}} e-accordion__heading--{{headingModifier}}{{/if}}">{{data.heading}}</h3>
+	{{/if}}
+	{{#each data.items}}
+		<section class="e-accordion__item{{#if fullWidth}} e-accordion__item--full{{/if}}" data-require="./src/views/accordion-item-view" data-collapse-panel="{{collapsePanel}}" data-gtm-event-action="{{../data.heading}}" data-gtm-event-label="{{title}}">
+			<div class="e-accordion__toggle" data-accordion-toggle>
+				<h4 class="e-accordion__toggle-title">{{title}}</h4>
+			</div>
+			<div class="e-accordion__item-content-wrapper" data-accordion-content>
+				<div class="e-accordion__item-content e-richtext">
+					{{{htmlContent}}}
+				</div>
+			</div>
+		</section>
+	{{/each}}
+</article>

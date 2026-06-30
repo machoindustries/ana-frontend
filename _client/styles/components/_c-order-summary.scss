@@ -1,0 +1,133 @@
+$c-order-summary-edit-cart-offset: 7px;
+
+.c-order-summary {
+    opacity: 0.5;
+
+    &.is--enabled {
+        opacity: 1.0;
+    }
+
+    @include t-vertical-spacing(small, padding-top);
+    border-top: 1px solid t-brand-colour(divider);
+
+    @include t-respond-to-min(large) {
+        padding-top: 0;
+        border-top: none;
+    }
+
+    &__heading {
+        margin-bottom: t-rem($s-layout-gutter-mobile-large);
+        // Use flex to align heading text and the edit link on the same line
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: t-rem(8px);
+    }
+
+    &__edit-cart {
+        @include t-type-p1;
+
+        font-size: 1.125rem; /* ~18px depending on base rem */
+        line-height: 1.25;   /* helps vertical alignment */
+
+        /* Use inline-flex and center alignment instead of float so it lines up with the heading */
+        display: inline-flex;
+        align-items: center;
+        float: none;
+        color: t-brand-colour(richtextheadings);
+        margin-top: 0;
+        margin-left: t-rem($c-order-summary-edit-cart-offset);
+        white-space: nowrap;
+    }
+
+
+    &__content {
+        position: relative;
+        border-top: 1px solid t-brand-colour(ordersectionborder);
+        overflow: hidden;
+
+        @include t-vertical-spacing(small, margin-bottom);
+    }
+
+    &__section {
+        border-bottom: 1px solid t-brand-colour(ordersectionborder);
+        overflow: hidden;
+        padding: t-rem($s-vertical-spacing-mobile-small 0);
+    }
+
+    &__row {
+        overflow: hidden;
+        margin-bottom: t-rem($s-layout-gutter-mobile-small);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-dl {
+            margin-bottom: 0;
+
+            @include t-clearfix;
+        }
+    }
+
+    &__item {
+
+        &--discount {
+
+            @include t-type-caption;
+            color: t-brand-colour(orderdiscount);
+            white-space: nowrap;
+        }
+
+        &--discount,
+        &--label,
+        &--value {
+            margin: 0;
+        }
+
+        &--value {
+            text-align: right;
+        }
+    }
+
+    &__total {
+
+        @include t-type-p2;
+        @include t-vertical-spacing(small, padding-bottom);
+        color: t-brand-colour(ordertotal);
+        display: block;
+        text-align: right;
+    }
+
+    &__add-discount {
+
+        @include t-type-p1;
+        display: block;
+        text-align: right;
+        color: t-brand-colour(richtextheadings);
+
+        &-field,
+        &-apply {
+            margin-top: t-rem($s-layout-gutter-mobile-small);
+        }
+
+        &-field {
+            width: calc(100% - #{t-rem(20px)});
+        }
+
+        &-apply {
+            width: 100%;
+        }
+    }
+
+    &__remove-discount {
+
+        @include t-type-caption;
+        float: right;
+        color: t-brand-colour(richtextheadings);
+    }
+
+    &__applied-discount {
+        display: block;
+    }
+}

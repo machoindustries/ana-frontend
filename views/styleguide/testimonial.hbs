@@ -1,0 +1,19 @@
+<h2><br/>With Image: Full Width</h2>
+{{> c-testimonial testimonial=testimonials.[0]}}
+
+<div class="grid-constraint">
+	<h2><br/>With Image: 12 Column</h2>
+	<div class="grid grid--center">
+		<div class="grid__item one-whole">
+			{{> c-testimonial testimonial=testimonials.[0]}}
+		</div>
+	</div>
+
+	<h2><br/>No Image: 8 Column</h2>
+	<div class="grid grid--center">
+		<div class="grid__item medium--eight-twelfths">
+			{{> c-testimonial testimonial=testimonials.[1]}}
+		</div>
+	</div>
+	<br /><br />
+</div>

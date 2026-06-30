@@ -1,0 +1,19 @@
+
+<div class="c-tab-control">
+    {{#each this}}
+        <div class="c-tab-control__section" data-require="./src/views/tab-control-view" data-collapse-panel="{{collapsePanel}}">
+            <h2 class="e-tab-toggle" data-tab-control-toggle>
+                <span class="e-tab-toggle__text">{{title}}</span>
+            </h2>
+            <div class="c-tab-control__content" data-tab-control-content>
+                {{#if productDetail}}
+                    {{> e-product-detail productDetail }}
+                {{else}}
+                    <div class="e-richtext">
+                        {{{htmlContent}}}
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    {{/each}}
+</div>

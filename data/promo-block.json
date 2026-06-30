@@ -1,0 +1,28 @@
+[
+	{
+		"author": {
+			"image": "/assets/img/no-profile--white.svg",
+			"name": "Lorem Ipsum"
+		},
+		"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id mi vitae libero congue aliquam. Maecenas sed ullamcorper urna. Donec sollicitudin sem magna, et mollis libero iaculis id. Vestibulum interdum enim id ornare commodo. Duis consectetur vulputate tortor, eu dictum urna gravida nec.",
+		"cta": {
+			"link": "#",
+			"title": "FIND OUT MORE"
+		},
+		"image": "http://via.placeholder.com/1000/1000",
+		"title": "Lorem ipsum dolor sit amet sed diam non"
+	},
+	{
+		"author": {
+			"image": "/assets/img/no-profile--white.svg",
+			"name": "Lorem Ipsum"
+		},
+		"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id mi vitae libero congue aliquam. Maecenas sed ullamcorper urna. Donec sollicitudin sem magna, et mollis libero iaculis id. Vestibulum interdum enim id ornare commodo. Duis consectetur vulputate tortor, eu dictum urna gravida nec.",
+		"cta": {
+			"link": "#",
+			"title": "FIND OUT MORE"
+		},
+		"image": "http://via.placeholder.com/1000/1000",
+		"title": "Lorem ipsum dolor sit amet sed diam non"
+	}
+]

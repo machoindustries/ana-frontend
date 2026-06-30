@@ -1,0 +1,57 @@
+{
+	"items": [
+		{
+			"year": "1965",
+			"imagePathMobile": "/assets/img/placeholder-images/timeline-ph-mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-images/timeline-ph-tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-images/timeline-ph-desktop.jpg",
+			"title": "Longer title goes here for the historic event",
+			"richTextContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+			"ctaText": "Button Label",
+			"ctaUrl": "#",
+			"alignRight": false
+		},{
+			"year": "1966",
+			"yearIcon": "email",
+			"imagePathMobile": "/assets/img/placeholder-images/timeline-ph-mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-images/timeline-ph-tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-images/timeline-ph-desktop.jpg",
+			"title": "Longer title goes here for the historic event",
+			"richTextContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+			"ctaText": "Button Label",
+			"ctaUrl": "#",
+			"alignRight": true
+		},{
+			"year": "1967",
+			"yearIcon": "tick",
+			"imagePathMobile": "/assets/img/placeholder-images/timeline-ph-mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-images/timeline-ph-tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-images/timeline-ph-desktop.jpg",
+			"title": "Longer title goes here for the historic event",
+			"richTextContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+			"ctaText": "Button Label",
+			"ctaUrl": "#",
+			"alignRight": false
+		},{
+			"year": "1968",
+			"imagePathMobile": "/assets/img/placeholder-images/timeline-ph-mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-images/timeline-ph-tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-images/timeline-ph-desktop.jpg",
+			"title": "This is an event in ANA's history",
+			"richTextContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
+			"ctaText": "Find out more",
+			"ctaUrl": "#",
+			"alignRight": true
+		},{
+			"year": "1969",
+			"imagePathMobile": "/assets/img/placeholder-images/timeline-ph-mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-images/timeline-ph-tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-images/timeline-ph-desktop.jpg",
+			"title": "Summer of love",
+			"richTextContent": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+			"ctaText": "Dance in mud",
+			"ctaUrl": "#",
+			"alignRight": false
+		}
+	]
+}

@@ -1,0 +1,22 @@
+<h3>Edit payment method</h3>
+<form class="e-form" data-require="./src/views/form-view">
+	<label class="e-form__label e-form__label--select" for="pm-cardtype" data-formfield>
+		<span class="e-form__label-text">Card type</span>
+		<select class="e-form__input e-form__input--select" name="pm-cardtype" id="pm-cardtype" placeholder="placeholder...">
+			<option value="e-form__input e-form__input--option" selected="">MasterCard</option>
+			<option value="e-form__input e-form__input--option">VISA</option>
+			<option value="e-form__input e-form__input--option">American Express</option>
+		</select>
+	</label>
+	<label for="pm-cardnum" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Card number</span>
+		<input type="text" name="pm-cardnum" class="e-form__input e-form__input--text" title="Card number" data-formfield-text data-validate data-validate-required data-validate-minlength="16" data-validate-maxlength="16">
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="pm-cardnum"></div>
+	<label for="pm-cardname" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Name on card</span>
+		<input type="text" name="pm-cardname" class="e-form__input e-form__input--text" title="Name on card" data-formfield-text data-validate data-validate-required data-validate-minlength="3">
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="pm-cardname"></div>
+	<input class="e-button e-button--submit e-button--blue e-form__submit" type="submit" value="Submit"  />
+</form>

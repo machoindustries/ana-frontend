@@ -1,0 +1,40 @@
+$e-price-tablet-top-margin: 2px;
+$e-price-desktop-top-margin: 15px;
+
+.e-price {
+
+    @include t-type-p1;
+    @include t-clearfix;
+    
+    &__item {
+        
+        display: block;
+        margin: 0;
+        padding-bottom: t-rem($s-layout-gutter-mobile-tiny);
+
+        &:last-child {
+            
+            padding-bottom: 0;
+        }
+
+        @include t-clearfix;
+
+        &-label,
+        &-value {
+
+            float: left;
+            width: 50%;
+            margin: 0;
+        }
+
+        &-value {
+
+            text-align: right;
+        }
+    }
+
+    &__divider {
+        
+        display: none;
+    }
+}

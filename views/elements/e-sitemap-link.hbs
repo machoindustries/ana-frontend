@@ -1,0 +1,19 @@
+ <li class="c-sitemap-link-list__item">
+
+    <a href="{{this.url}}" class="c-sitemap-link-list__item-link">{{this.title}}</a>
+
+    {{#if this.subLinks}}
+
+        <ul class="c-sitemap-link-list__item-sublinks">
+            
+            {{#each this.subLinks}}
+
+                {{> e-sitemap-link data=this }}
+
+            {{/each}}
+
+        </ul>
+
+    {{/if}}
+
+</li>

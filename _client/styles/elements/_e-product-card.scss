@@ -1,0 +1,68 @@
+.e-product-card {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: t-rem(15px);
+    min-height: t-rem(236px);
+    background-color: t-brand-colour(cardbackground);
+    border-top: 4px solid #000;
+    color: t-brand-colour(richtextanchors);
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+
+    &--light-blue {
+
+        border-color: #009685
+
+    }
+
+    &--blue {
+        
+        border-color: #009685;
+    }
+
+    &--orange {
+        
+        border-color: #193E4B;
+    }
+
+    &--green {
+        
+        border-color: #0b8d98;
+    }
+
+    &--purple {
+        
+        border-color: #009685;
+    }
+
+    &--red {
+        
+        border-color: #193E4B;
+    }
+
+    .card-label {
+
+        @include t-type-base(bold);
+        text-transform: uppercase;
+        font-size: t-rem($s-font-size-endor);
+        letter-spacing: 2px;
+    }
+
+    .card-title {
+
+        @include t-type-base(regular);
+        font-size: t-rem(14px);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        
+        @include t-respond-to-min(medium) {
+
+            box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+        }
+    }
+}

@@ -1,0 +1,147 @@
+/* Base - Typography
+------------------------- */
+
+html {
+    font-size: $s-base-font-size;
+    letter-spacing: t-rem($s-base-letter-spacing);
+}
+
+body {
+
+    @include t-responsive-type-size(p1);
+    
+    font-family: $s-base-font-family;
+}
+
+a {
+    
+}
+
+ul, ol {
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr {
+    margin: 0;
+    margin-bottom: t-rem(t-get-vertical-spacing(medium));
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+img {
+    // margin-bottom: t-rem(t-get-vertical-spacing(medium));
+}
+
+label,
+button,
+select,
+option {
+    cursor: pointer;
+}
+
+.page-section-heading {
+
+    @include t-vertical-spacing(large, margin-bottom, $type-size: h2);
+    margin-top: t-rem(-(t-get-vertical-spacing-type-adjust(h2, small)));
+
+    @include t-type-h2;
+    text-align: center;
+}
+
+/// Type Placeholders / Classes
+/// Iterates through the $s-type-sizing map to render a class and placeholder for each font-size.
+@each $type in map-keys($s-type-sizing) {
+	%b-type--#{$type}, .b-type--#{$type} {
+		@include t-responsive-type-size($type);
+	}
+}
+
+// Create a class matching each typography mixin (used for stylesheet typography demo page)
+// There's probably a better way to do this
+h1,
+.t-type-h1 {
+    @include t-type-h1;
+
+    &--bold {
+        @include t-type-h1('bold');
+    }
+}
+
+h2,
+.t-type-h2 {
+    @include t-type-h2;
+
+    &--bold {
+        @include t-type-h2('bold');
+    }
+}
+
+h3,
+.t-type-h3 {
+    @include t-type-h3;
+
+    &--bold {
+        @include t-type-h3('bold');
+    }
+}
+
+h4,
+.t-type-h4 {
+    @include t-type-h4;
+
+    &--bold {
+        @include t-type-h4('bold');
+    }
+}
+
+p,
+.t-type-p1 {
+    @include t-type-p1;
+
+    &--bold {
+        @include t-type-p1('bold');
+    }
+}
+
+.t-type-caption {
+    @include t-type-caption;
+
+    &--bold {
+        @include t-type-caption('bold');
+    }
+}
+
+.t-type-nav1 {
+    @include t-type-nav1;
+
+    &--bold {
+        @include t-type-nav1('bold');
+    }
+}
+.t-type-nav3 {
+    @include t-type-nav3;
+
+    &--bold {
+        @include t-type-nav3('bold');
+    }
+}
+.t-type-productpage {
+    @include t-type-productpage;
+
+    &--bold {
+        @include t-type-productpage('bold');
+    }
+}
+
+.text-align-center {
+
+    text-align: center;
+}

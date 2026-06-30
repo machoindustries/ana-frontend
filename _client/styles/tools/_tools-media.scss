@@ -1,0 +1,119 @@
+/* Tools - Media
+------------------------- */
+
+// Functions
+// -------------------------
+
+/// @function t-get-breakpoint-width
+/// Returns a breakpoint width matching a breakpoint label.
+///
+/// @access public
+/// @param {String | Number} $width	- A String which represents a breakpoint label in the $s-breakpoints map or a Number (with or without a unit) to be passed through.
+/// @return {Number} - A Number representing the map value or the original value.
+///
+/// @example
+/// t-get-breakpoint-width('small');
+@function t-get-breakpoint-width($width) {
+	@if type-of($width) != "number" {
+		@return t-map-value($s-breakpoints,(#{$width}, size));
+	}
+
+	@return $width;
+}
+
+
+// Mixins
+// -------------------------
+
+/// @mixin t-respond-to-min
+/// Media query injection responding to a minimum width with @content.
+///
+/// @access public
+/// @param {String | Number} $width - A String which represents a breakpoint label in the $s-breakpoints map or a Number (with or without a unit) to be passed through.
+///
+/// @example
+///	@include t-respond-to-min('small') {
+/// 	// @content...
+/// }
+@mixin t-respond-to-min($width) {
+	$width: t-get-breakpoint-width($width);
+
+	@media only screen and (min-width: $width)  { @content; }
+}
+
+/// @mixin t-respond-to-max
+/// Media query injection responding to a maximum width with @content.
+///
+/// @access public
+/// @param {String | Number} $width - A String which represents a breakpoint label in the $s-breakpoints map or a Number (with or without a unit) to be passed through.
+///
+/// @example
+///	@include t-respond-to-max('small') {
+/// 	// @content...
+/// }
+@mixin t-respond-to-max($width) {
+	$width: t-get-breakpoint-width($width);
+
+	@media only screen and (max-width: $width - 1px)  { @content; }
+}
+
+/// @mixin t-respond-to-min-max
+/// Media query injection responding to a width range specified by a minimum and maximum width with @content.
+///
+/// @access public
+/// @param {String | Number} $min-width - A String which represents a breakpoint label in the $s-breakpoints map or a Number (with or without a unit) to be passed through.
+/// @param {String | Number} $max-width - A String which represents a breakpoint label in the $s-breakpoints map or a Number (with or without a unit) to be passed through.
+///
+/// @example
+///	@include t-respond-to-max('small', 'large') {
+/// 	// @content...
+/// }
+///
+@mixin t-respond-to-min-max($min-width, $max-width) {
+	$min-width: t-get-breakpoint-width($min-width);
+	$max-width: t-get-breakpoint-width($max-width);
+
+	@media only screen and (min-width: $min-width) and (max-width: $max-width)   { @content; }
+}
+
+/// @mixin t-respond-to-res
+/// Media query injection responding to a specified display resolution with @content.
+///
+/// @access public
+/// @param {Number} $dp - A Number which represents the target device pixel ratio multiplier.
+/// @param {Number} $res - A Number which represents the target resolution density.
+///
+/// @example
+///	@include t-respond-to-res(2, 192dppx) {
+/// 	// @content...
+/// }
+@mixin t-respond-to-res($dp: 2, $res:192dppx) {
+  @media (-webkit-min-device-pixel-ratio: $dp), (min-resolution: $res) { @content; }
+}
+
+/// @mixin t-respond-to-orientation
+/// Media query injection responding to a specified device orientation with @content.
+///
+/// @access public
+/// @param {String} $orientation - A String which represents the target device orientation.
+///
+/// @example
+///	@include t-respond-to-orientation(portrait) {
+/// 	// @content...
+/// }
+@mixin t-respond-to-orientation($orientation) {
+  @media (orientation: $orientation) { @content; }
+}
+
+/// @mixin t-print
+/// Media query injection for print specific styles.
+///
+/// @access public
+///
+/// @example
+///	@include t-print() {
+/// 	// @content...
+/// }
+@mixin t-print() {
+  @media print { @content; }
+}

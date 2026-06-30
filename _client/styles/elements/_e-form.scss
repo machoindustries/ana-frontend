@@ -1,0 +1,352 @@
+$e-form-input-radio-size: 		   24px;
+$e-form-radio-check-size: 		   12px;
+$e-form-checkbox-check-size: 	   $s-layout-gutter-mobile-large;
+$e-form-box-border-radius: 		   4px;
+$e-form-text-input-padding: 	   $s-layout-gutter-mobile-medium;
+$e-form-dropdown-arrow-offset: 	   18px;
+$e-form-dropdown-arrow-font-size:  46px;
+$e-form-dropdown-arrow-size: 	   24px;
+
+@include t-input-placeholders {
+    
+    opacity: 0;
+}
+
+.e-form {
+
+    $root: &;
+    
+    &__fieldset {
+
+        border: none;
+        margin: 0;
+        margin-top: t-rem($s-layout-gutter-mobile-large);
+    }
+
+    &__legend {
+
+        margin-bottom: t-rem($s-layout-gutter-mobile-small);
+    }
+
+    &__legend,
+    &__label-text {
+
+        @include t-type-caption;
+
+        color: t-brand-colour(forminputtext);
+    }
+
+    &__label-text {
+        
+        display: block;
+
+        #{$root}__label--radio &,
+        #{$root}__label--checkbox & {
+            
+            float: left;
+            margin-top: t-rem($e-form-input-radio-size / 4);
+            margin-right: t-rem($s-layout-gutter-mobile-small);
+            max-width: calc(100% - #{$e-form-input-radio-size + $s-layout-gutter-mobile-small});
+        }
+
+        #{$root}__label--select & {
+
+            margin-bottom: t-rem($s-layout-gutter-mobile-tiny);
+        }
+    }
+
+    &__label {
+
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-top: t-rem($s-layout-gutter-mobile-large);
+
+        &.is--disabled {
+
+            opacity: 0.5;
+        }
+
+        &--select {
+
+            margin-top: t-rem($s-layout-gutter-desktop-large);
+
+            @include t-icon(icon-arrow-down, after) {
+
+                position: absolute;
+                right: t-rem($e-form-dropdown-arrow-offset);
+                font-size: t-rem($e-form-dropdown-arrow-font-size);
+                top: 50%;
+                color: t-brand-colour(formicons);
+                transform: translateY(-50%);
+                pointer-events: none;
+                line-height: 0.575;
+                width: t-rem($e-form-dropdown-arrow-size);
+                height: t-rem($e-form-dropdown-arrow-size);
+                text-indent: t-rem(-$s-layout-gutter-mobile-small);
+            }
+
+            #{$root}__label-text {
+
+                display: block;
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+            }
+        }
+
+        &--radio,
+        &--checkbox {
+            
+            display: inline-block;
+            width: auto;
+            margin-right: t-rem($s-layout-gutter-mobile-large);
+            
+            &:last-child {
+
+                margin-right: 0;
+            }
+
+            &--block {
+
+                display: block;
+
+                @include t-clearfix;
+
+                #{$root}__label-text {
+
+                    width: calc(100% - #{$e-form-input-radio-size + $s-layout-gutter-mobile-large});
+                }
+            }
+
+            &--left {
+
+                #{$root}__fake-checkbox {
+                    
+                    float: left;
+                }
+
+                #{$root}__label-text {
+                    
+                    float: right;
+                    margin-left: t-rem($s-layout-gutter-mobile-small);
+                }
+            }
+        }
+
+        &--text {
+
+            #{$root}__label-text {
+                
+                @include t-type-caption;
+
+                margin-bottom: t-rem($s-layout-gutter-mobile-tiny);
+            }
+        }
+    }
+
+    &__fake {
+
+        &-radio,
+        &-checkbox {
+            
+            display: block;
+            float: right;
+            position: relative;
+            width: t-rem($e-form-input-radio-size);
+            height: t-rem($e-form-input-radio-size);
+            background-color: t-brand-colour(forminputbackground);
+            border: 1px solid t-brand-colour(divider);
+
+            &:after {
+
+                content: "";
+                display: block;
+                position: absolute;
+                opacity: 0;
+            }
+        }
+
+        &-radio {
+        
+            border-radius: 50%;
+
+            &:after {
+                top: t-rem((($e-form-input-radio-size - $e-form-radio-check-size) / 2) - 1px);
+                left: t-rem((($e-form-input-radio-size - $e-form-radio-check-size) / 2) - 1px);
+                width: t-rem($e-form-radio-check-size);
+                height: t-rem($e-form-radio-check-size);
+                background-color: t-brand-colour(formicons);
+                border-radius: 50%;
+            }
+        }
+
+        &-checkbox {
+
+            @include t-icon(icon-tick, after){
+
+                color: t-brand-colour(formicons);
+                font-size: t-rem($e-form-checkbox-check-size);
+                line-height: 1.2;
+                top: 0;
+                left: t-rem(1px);
+            }
+        }
+    }
+    
+    &__input {
+
+        display: block;
+        width: 100%;
+
+        @include t-type-p1;
+
+        color: t-brand-colour(forminputtext);
+        
+        &--select {
+            
+            display: block;
+            appearance: none;
+            border-radius: 0;
+            background-color: t-brand-colour(forminputbackground);
+            border-radius: t-rem($e-form-box-border-radius);
+            padding: t-rem($e-form-text-input-padding ($e-form-text-input-padding * 3) $e-form-text-input-padding $e-form-text-input-padding);
+            user-select: none;
+            border: 1px solid t-brand-colour(divider);
+
+            @include t-brand-box-shadow();
+
+            &::-ms-expand {
+                display: none;
+            }
+        }
+
+        &--radio,
+        &--checkbox {
+
+            @include t-hidden;
+
+            &:checked ~ #{$root}__fake-radio:after,
+            &:checked ~ #{$root}__fake-checkbox:after {
+
+                opacity: 1;
+            }
+        }
+
+        &--radio {
+
+            &:checked ~ #{$root}__fake-checkbox {
+
+                background-color: t-brand-colour(formicons);
+            }
+
+            & ~ #{$root}__label {
+
+                &.e-button {
+
+                    background-color: t-brand-colour(buttonwhiteltbg);
+                    border-color: t-brand-colour(buttonwhiteltborder);
+
+                    #{$root}__fake-radio {
+
+                        display: none;
+                    }
+
+                    #{$root}__label-text {
+
+                        pointer-events: none;
+                        font-family: inherit;
+                        font-size: inherit;
+                        font-style: inherit;
+                        text-align: inherit;
+                        width: 100%;
+                        max-width: 100%;
+                        margin: 0;
+                        text-align: center;
+                        color: t-brand-colour(buttonwhitelttext);
+                    }
+                }
+            }
+
+            &:checked ~ #{$root}__label {
+
+                &.e-button {
+
+                    background-color: t-brand-colour(buttonwhitelthoverbg);
+                    border-color: t-brand-colour(buttonwhitelthoverborder);
+
+                    #{$root}__label-text {
+
+                        color: t-brand-colour(buttonwhitelthovertext);
+                    }
+                }
+            }
+        }
+
+        &--text {
+    
+            border: 1px solid t-brand-colour(divider);
+        }
+
+        &--textarea {
+
+            max-width: 100%;
+        }
+
+        &--text,
+        &--textarea {
+
+            padding: t-rem($e-form-text-input-padding);
+
+            &:focus,
+            &.has--content {
+
+                .js & ~ #{$root}__label-text {
+
+                    display: none;
+                }
+            }
+
+            &.has--error {
+
+                border-color: t-brand-colour(formvalidationerrorborder);
+            }
+        }
+    }
+
+    &__submit {
+
+        margin-top: t-rem($s-layout-gutter-mobile-medium);
+    }
+
+    &__validation-errors {
+        
+        .error-msg {
+            
+            @include t-type-p1();
+            
+            display: block;
+            margin-top: t-rem($s-layout-gutter-mobile-tiny);
+            color: t-brand-colour(formvalidationerrortext);
+        }
+    }
+
+    &__captcha {
+
+        &-title {
+            
+            &,
+            .EPiServerForms .Form__Element &.Form__Element__Caption {
+
+                display: block;
+
+                margin-bottom: t-rem($s-layout-gutter-mobile-tiny);
+            }
+        }
+
+        &-refresh {
+
+            margin-bottom: t-rem($s-layout-gutter-mobile-tiny);
+        }
+    }
+}

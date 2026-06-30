@@ -1,0 +1,31 @@
+{
+	"summary": "Lorem ipsum dolor sit amet, simul vituperata eum ex, ne probo liber civibus usu, quodsi equidem sapientem nam et. Eros ipsum sed ad. Vix ea choro commune adipisci, ne est conceptam efficiendi. Eos vero deleniti accusamus ei, cum summo dolore feugait ea.",
+	"addresses": {
+		"billing": {
+			"guid": "a0",
+			"firstName": "Firstname",
+			"lastName": "Lastname",
+			"line1": "Address Line 1",
+			"line2": "Address Line 2",
+			"line3": "Address Line 3",
+			"city": "City",
+			"state": "State",
+			"zipCode": "12345",
+			"telephone": "000-000-0000",
+			"telephone2": "111-111-1111"
+		},
+		"shipping": {
+			"guid": "a1",
+			"firstName": "Firstname",
+			"lastName": "Lastname",
+			"line1": "Address Line 1",
+			"line2": "Address Line 2",
+			"line3": "Address Line 3",
+			"city": "City",
+			"state": "State",
+			"zipCode": "12345",
+			"telephone": "000-000-0000",
+			"telephone2": "111-111-1111"
+		}
+	}
+}

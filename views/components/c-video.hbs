@@ -1,0 +1,11 @@
+<article class="c-video grid{{#if variant}} c-video--{{variant}}{{/if}}" data-require="./src/views/video-view" data-language="{{data.language}}">
+	<a href="{{data.link}}" style="{{#if data.image}}background-image: url({{data.image}});{{/if}}" class="c-video__link grid__item one-whole{{#ifEqual variant "inline"}} large--eight-twelfths{{/ifEqual}}{{#ifEqual variant "8col"}} large--eight-twelfths{{/ifEqual}}" title="Play video {{data.heading}}" data-video-link>
+		<span class="c-video__play-icon" data-video-play-icon></span>
+	</a>
+	<div class="c-video__caption grid__item one-whole {{#ifEqual variant "inline"}} large--two-twelfths{{/ifEqual}}">
+		<div class="c-video__caption-content">
+			<h2 class="c-video__heading">{{data.heading}}</h2>
+			<p class="c-video__description">{{data.description}}</p>
+		</div>
+	</div>
+</article>

@@ -1,0 +1,171 @@
+[
+    {
+        "_name": "Large block, navigation, 8 cols #0",
+        "block-class": "personblock",
+        "grid-class": "grid__item one-whole large--eight-twelfths push--large--four-twelfths",
+        "image-grid-class": "grid__item one-quarter medium--two-eighths",
+        "detail-grid-class": "grid__item three-quarters medium--six-eighths",
+        "summary-grid-class": "grid__item one-whole medium--six-eighths",
+        "description-grid-class": "grid__item one-whole medium--six-eighths ",
+        "modifier": "large",
+        "copy": {
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id condimentum sapien, id pellent sed esque lacus.",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id condimentum sapien, id pellentesque lacus. Suspendisse facilisis sollicitudin tortor ac efficitur. Donec mattis, metus nec posuere porta, turpis dui viverra dolor, maximus egestas ligula eros a ante. Nunc imperdiet commodo ex in vulputate. Etiam vitae ultricies lorem. Quisque auctor ex dapibus sodales aliquet. Curabitur ac leo lorem.",
+                "Maecenas ullamcorper porta lorem, vel iaculis turpis iaculis et. Aliquam viverra non metus ut consectetur. Aliquam rutrum imperdiet lectus et vestibulum. Morbi pharetra nulla id suscipit ultrices. Maecenas eget urna at tellus convallis egestas. Sed in euismod risus, sed sodales ante. Nam lobortis velit ipsum, vel vehicula nisl cursus sed. Etiam eget congue risus. Nam nec metus quis sapien faucibus efficitur. Ut posuere elementum tincidunt. Morbi fermentum pharetra erat, in facilisis nibh tempus euismod. Donec vel magna elit.",
+                "Nulla consequat magna id tempus porta. Donec ac metus a enim congue volutpat sed sit amet mi. Suspendisse eu justo justo. Nulla accumsan turpis vel felis ornare, eget tempor ligula dignissim. Ut ornare suscipit sapien, id efficitur neque blandit id. Donec gravida orci quis justo hendrerit, id malesuada nunc posuere. Cras eget aliquet metus. Donec sit amet elit imperdiet enim commodo pharetra."
+            ]
+        },
+        "image": "http://via.placeholder.com/200x200",
+        "name": "Name of Person",
+        "details": [
+            "Job Title",
+            "MBA, RN, NEA-BC",
+            "<a href='mailto:david.allen@ana.org'>david.allen@ana.org</a>",
+            "<a href='tel:301-628-5391'>301-628-5391</a>"
+        ]
+    },
+    {
+        "_name": "Large block, no summary, navigation, 8 cols #1",
+        "block-class": "personblock",
+        "grid-class": "grid__item one-whole large--eight-twelfths push--large--four-twelfths",
+        "image-grid-class": "grid__item one-quarter medium--two-eighths",
+        "detail-grid-class": "grid__item three-quarters medium--six-eighths",
+        "summary-grid-class": "grid__item one-whole medium--six-eighths",
+        "description-grid-class": "grid__item one-whole medium--six-eighths",
+        "modifier": "large",
+        "copy": {
+            "summary": "",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id condimentum sapien, id pellentesque lacus. Suspendisse facilisis sollicitudin tortor ac efficitur. Donec mattis, metus nec posuere porta, turpis dui viverra dolor, maximus egestas ligula eros a ante. Nunc imperdiet commodo ex in vulputate. Etiam vitae ultricies lorem. Quisque auctor ex dapibus sodales aliquet. Curabitur ac leo lorem.",
+                "Nulla consequat magna id tempus porta. Donec ac metus a enim congue volutpat sed sit amet mi. Suspendisse eu justo justo. Nulla accumsan turpis vel felis ornare, eget tempor ligula dignissim. Ut ornare suscipit sapien, id efficitur neque blandit id. Donec gravida orci quis justo hendrerit, id malesuada nunc posuere. Cras eget aliquet metus. Donec sit amet elit imperdiet enim commodo pharetra."
+            ]
+        },
+        "image": "http://via.placeholder.com/200x200",
+        "name": "Name of Person",
+        "details": [
+            "Job Title"
+        ]
+    },
+    {
+        "_name": "Small block, navigation #2",
+        "block-class": "personblock personblocksmall",
+        "grid-class": "grid__item one-whole large--three-twelfths",
+        "image-grid-class": "grid__item one-quarter medium--two-eighths large--one-third",
+        "detail-grid-class": "grid__item three-quarters medium--six-eighths large--two-thirds",
+        "summary-grid-class": "grid__item one-whole medium--six-eighths large--one-whole",
+        "description-grid-class": "grid__item one-whole medium--six-eighths large--two-thirds",
+        "modal-grid-class": "grid__item one-whole large--eight-twelfths push--large--two-twelfths",
+        "modal-image-grid-class": "grid__item one-quarter large--two-eighths",
+        "modal-detail-grid-class": "grid__item three-quarters large--six-eighths",
+        "modal-description-grid-class": "grid__item one-whole large--six-eighths",
+        "modifier": "small",
+        "copy": {
+            "summary": "Lorem ipsum dolor sit amet.",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id condimentum sapien, id pellentesque lacus. Suspendisse facilisis sollicitudin tortor ac efficitur. Donec mattis, metus nec posuere porta, turpis dui viverra dolor, maximus egestas ligula eros a ante. Nunc imperdiet commodo ex in vulputate. Etiam vitae ultricies lorem. Quisque auctor ex dapibus sodales aliquet. Curabitur ac leo lorem.",
+                "Maecenas ullamcorper porta lorem, vel iaculis turpis iaculis et. Aliquam viverra non metus ut consectetur. Aliquam rutrum imperdiet lectus et vestibulum. Morbi pharetra nulla id suscipit ultrices. Maecenas eget urna at tellus convallis egestas. Sed in euismod risus, sed sodales ante. Nam lobortis velit ipsum, vel vehicula nisl cursus sed. Etiam eget congue risus. Nam nec metus quis sapien faucibus efficitur. Ut posuere elementum tincidunt. Morbi fermentum pharetra erat, in facilisis nibh tempus euismod. Donec vel magna elit.",
+                "Nulla consequat magna id tempus porta. Donec ac metus a enim congue volutpat sed sit amet mi. Suspendisse eu justo justo. Nulla accumsan turpis vel felis ornare, eget tempor ligula dignissim. Ut ornare suscipit sapien, id efficitur neque blandit id. Donec gravida orci quis justo hendrerit, id malesuada nunc posuere. Cras eget aliquet metus. Donec sit amet elit imperdiet enim commodo pharetra."
+            ]
+        },
+        "name": "Name of Person",
+        "details": [
+            "Job Title",
+            "MBA, RN, NEA-BC",
+            "<a href='mailto:david.allen@ana.org'>david.allen@ana.org</a>",
+            "<a href='tel:301-628-5391'>301-628-5391</a>"
+        ]
+    },
+    {
+        "_name": "Small block, no summary, navigation #3",
+        "block-class": "personblock",
+        "grid-class": "grid__item one-whole large--three-twelfths",
+        "image-grid-class": "grid__item one-quarter medium--two-eighths large--one-third",
+        "detail-grid-class": "grid__item three-quarters medium--six-eighths large--two-thirds",
+        "summary-grid-class": "grid__item one-whole medium--six-eighths large--one-whole",
+        "description-grid-class": "grid__item one-whole medium--six-eighths large--two-thirds",
+        "modal-grid-class": "grid__item one-whole large--eight-twelfths push--large--two-twelfths",
+        "modal-image-grid-class": "grid__item one-quarter large--two-eighths",
+        "modal-detail-grid-class": "grid__item three-quarters large--six-eighths",
+        "modal-description-grid-class": "grid__item one-whole large--six-eighths",
+        "modifier": "small",
+        "copy": {
+            "summary": "",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id condimentum sapien, id pellentesque lacus. Suspendisse facilisis sollicitudin tortor ac efficitur. Donec mattis, metus nec posuere porta, turpis dui viverra dolor, maximus egestas ligula eros a ante. Nunc imperdiet commodo ex in vulputate. Etiam vitae ultricies lorem. Quisque auctor ex dapibus sodales aliquet. Curabitur ac leo lorem.",
+                "Maecenas ullamcorper porta lorem, vel iaculis turpis iaculis et. Aliquam viverra non metus ut consectetur. Aliquam rutrum imperdiet lectus et vestibulum. Morbi pharetra nulla id suscipit ultrices. Maecenas eget urna at tellus convallis egestas. Sed in euismod risus, sed sodales ante. Nam lobortis velit ipsum, vel vehicula nisl cursus sed. Etiam eget congue risus. Nam nec metus quis sapien faucibus efficitur. Ut posuere elementum tincidunt. Morbi fermentum pharetra erat, in facilisis nibh tempus euismod. Donec vel magna elit.",
+                "Nulla consequat magna id tempus porta. Donec ac metus a enim congue volutpat sed sit amet mi. Suspendisse eu justo justo. Nulla accumsan turpis vel felis ornare, eget tempor ligula dignissim. Ut ornare suscipit sapien, id efficitur neque blandit id. Donec gravida orci quis justo hendrerit, id malesuada nunc posuere. Cras eget aliquet metus. Donec sit amet elit imperdiet enim commodo pharetra."
+            ]
+        },
+        "name": "Name of Person",
+        "details": [
+            "Job Title",
+            "MBA, RN, NEA-BC"
+        ]
+    },
+    {
+        "_name": "Large block, no description, centred, 8 col #4",
+        "block-class": "personblock",
+        "grid-class": "grid__item one-whole large--eight-twelfths push--large--two-twelfths",
+        "image-grid-class": "grid__item one-quarter medium--two-eighths",
+        "detail-grid-class": "grid__item three-quarters medium--six-eighths",
+        "summary-grid-class": "grid__item one-whole medium--six-eighths",
+        "description-grid-class": "grid__item one-whole medium--six-eighths",
+        "modifier": "large",
+        "copy": {
+            "summary": "Other optional additional copy or tagline",
+            "description": ""
+        },
+        "name": "David Allen",
+        "details": [
+            "Job Title",
+            "MBA, RN, NEA-BC"
+        ]
+    },
+    {
+        "_name": "Large block, no summary, centred, 8 col #5",
+        "block-class": "personblock",
+        "grid-class": "grid__item one-whole large--eight-twelfths push--large--two-twelfths",
+        "image-grid-class": "grid__item one-quarter medium--two-eighths",
+        "detail-grid-class": "grid__item three-quarters medium--six-eighths",
+        "summary-grid-class": "grid__item one-whole medium--six-eighths",
+        "description-grid-class": "grid__item one-whole medium--six-eighths",
+        "modifier": "large",
+        "copy": {
+            "summary": "",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id condimentum sapien, id pellentesque lacus. Suspendisse facilisis sollicitudin tortor ac efficitur. Donec mattis, metus nec posuere porta, turpis dui viverra dolor, maximus egestas ligula eros a ante. Nunc imperdiet commodo ex in vulputate. Etiam vitae ultricies lorem. Quisque auctor ex dapibus sodales aliquet. Curabitur ac leo lorem."
+            ]
+        },
+        "image": "http://via.placeholder.com/200x200",
+        "name": "Name of Person",
+        "details": [
+            "Job Title",
+            "MBA, RN, NEA-BC"
+        ]
+    },
+    {
+        "_name": "Large block, long content, centred, 8 col #6",
+        "block-class": "personblock",
+        "grid-class": "grid__item one-whole large--eight-twelfths push--large--two-twelfths",
+        "image-grid-class": "grid__item one-quarter medium--two-eighths",
+        "detail-grid-class": "grid__item three-quarters medium--six-eighths",
+        "summary-grid-class": "grid__item one-whole medium--six-eighths",
+        "description-grid-class": "grid__item one-whole medium--six-eighths",
+        "modifier": "large",
+        "copy": {
+            "summary": "Other optional additional copy or tagline",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id condimentum sapien, id pellentesque lacus. Suspendisse facilisis sollicitudin tortor ac efficitur. Donec mattis, metus nec posuere porta, turpis dui viverra dolor, maximus egestas ligula eros a ante. Nunc imperdiet commodo ex in vulputate. Etiam vitae ultricies lorem. Quisque auctor ex dapibus sodales aliquet. Curabitur ac leo lorem.",
+                "Maecenas ullamcorper porta lorem, vel iaculis turpis iaculis et. Aliquam viverra non metus ut consectetur. Aliquam rutrum imperdiet lectus et vestibulum. Morbi pharetra nulla id suscipit ultrices. Maecenas eget urna at tellus convallis egestas. Sed in euismod risus, sed sodales ante. Nam lobortis velit ipsum, vel vehicula nisl cursus sed. Etiam eget congue risus. Nam nec metus quis sapien faucibus efficitur. Ut posuere elementum tincidunt. Morbi fermentum pharetra erat, in facilisis nibh tempus euismod. Donec vel magna elit.",
+                "Nulla consequat magna id tempus porta. Donec ac metus a enim congue volutpat sed sit amet mi. Suspendisse eu justo justo. Nulla accumsan turpis vel felis ornare, eget tempor ligula dignissim. Ut ornare suscipit sapien, id efficitur neque blandit id. Donec gravida orci quis justo hendrerit, id malesuada nunc posuere. Cras eget aliquet metus. Donec sit amet elit imperdiet enim commodo pharetra."
+            ]
+        },
+        "name": "Really really long name for someone which goes multiple lines ",
+        "bordered": true,
+        "details": [
+            "Job Title",
+            "MBA, RN, NEA-BC"
+        ]
+    }
+]

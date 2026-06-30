@@ -1,0 +1,42 @@
+{{#ifGreaterThan this.length 1}}
+	<section class="c-promo-block owl-carousel" data-require="./src/views/promo-block-view" data-promo-block data-nav-dots="true" data-nav-arrows="false">
+		{{#each this}}
+			<div class="c-promo-block__item" data-promo-block-slide data-dot="<span class='{{this.title}}'></span>">
+				
+				<figure class="c-promo-block__image" style="background-image: url({{this.image}});"></figure>
+				
+				<div class="c-promo-block__content">
+					<figure class="c-promo-block__portrait">
+						<span class="icon--icon-profile c-promo-block__portrait-icon"></span>
+					</figure>
+					<h2 class="c-promo-block__title">{{this.title}}</h2>
+					<div class="c-promo-block__copy">{{this.copy}}</div>
+					<div class="c-promo-block__cta">
+						{{> e-button type="anchor" url=this.cta.link colourVariant="" additionalClasses="e-button--white" text=this.cta.title}}
+					</div>
+				</div>
+			</div>
+		{{/each}}
+	</section>
+
+{{else}}
+
+	<section class="c-promo-block">
+		<div class="c-promo-block__item">
+			
+			<figure class="c-promo-block__image" style="background-image: url({{this.image}});"></figure>
+			
+			<div class="c-promo-block__content">
+				<figure class="c-promo-block__portrait">
+					<span class="icon--icon-profile c-promo-block__portrait-icon"></span>
+				</figure>
+				<h2 class="c-promo-block__title">{{this.title}}</h2>
+				<div class="c-promo-block__copy">{{this.copy}}</div>
+				<div class="c-promo-block__cta">
+					{{> e-button type="anchor" url=this.cta.link colourVariant="" additionalClasses="e-button--white" text=this.cta.title}}
+				</div>
+			</div>
+		</div>
+	</section>	
+
+{{/ifGreaterThan}}

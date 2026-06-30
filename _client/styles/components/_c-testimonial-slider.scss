@@ -1,0 +1,106 @@
+$testimonial-slide-xlarge: 640px;
+$testimonial-slide-large: 500px;
+$testimonial-slide-medium: 322px;
+
+.c-testimonial-slider {
+    max-width: t-rem(1440px);
+    margin: 0 auto;
+    background-color: #F3F3F3;
+    padding: t-rem(80px) 0 t-rem(75px) 0;
+
+    @include t-respond-to-max(medium) {
+        padding: t-rem(35px) 0 t-rem(60px) 0;
+    }
+
+    .section-title {
+        margin-bottom: t-rem(60px);
+        padding: 0 t-rem(20px);
+        color: rgba(#0C1E29, 0.8);
+        font-size: t-rem(34px);
+        line-height: t-rem(38px);
+        text-align: center;
+
+        @include t-respond-to-max(medium) {
+            margin-bottom: t-rem(25px);
+            font-size: t-rem(26px);
+            line-height: t-rem(34px);
+        }
+    }
+
+    .owl-carousel {
+        touch-action: manipulation;
+    }
+
+    .owl-stage-outer {
+        padding-bottom: t-rem(8px); // need this to show box-shadow on the bottom of testimonial slide
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: t-rem(32px);
+            height: t-rem(32px);
+        }
+
+        &:hover {
+            background-color: rgba(#009685
+, 0.05);
+        }
+
+        @include t-respond-to-max(large) {
+            display: none;
+        }
+    }
+
+    .owl-carousel .owl-nav .owl-prev {
+        right: calc(50% + #{$testimonial-slide-xlarge}/2 + 60px);
+
+        @include t-respond-to-max(xlarge) {
+            right: calc(50% + #{$testimonial-slide-large}/2 + 30px);
+        }
+
+        &:after {
+            background: url($s-image-path  + '/icon-arrow-left-teal.svg') no-repeat 0 0/contain;
+        }
+    }
+
+    .owl-carousel .owl-nav .owl-next {
+        left: calc(50% + #{$testimonial-slide-xlarge}/2 + 60px);
+
+        @include t-respond-to-max(xlarge) {
+            left: calc(50% + #{$testimonial-slide-large}/2 + 30px);
+        }
+
+        &:after {
+            background: url($s-image-path  + '/icon-arrow-right-teal.svg') no-repeat 0 0/contain;
+        }
+    }
+
+    // overriding regular testimonial block styles
+    .grid-constraint {
+        padding: 0;
+
+        > .grid {
+            margin-left: 0;
+
+            > .grid__item {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+            }
+        }
+    }
+}

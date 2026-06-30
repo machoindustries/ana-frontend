@@ -1,0 +1,66 @@
+{
+	"addresses": {
+		"billing": {
+			"addressType": "billing",
+			"showAddressesSameCheckbox": false,
+			"selectId": "select-billing-address",
+			"lines": {
+				"firstName": "First name",
+				"lastName": "Last name",
+				"telephone": "00000111222",
+				"telephone2": "11111222333",
+				"line1": "Address Line 1",
+				"line2": "Address Line 2",
+				"line3": "Address Line 3",
+				"city": "City",
+				"state": "State",
+				"zipCode": "01234"
+			},
+			"phone": [
+				"Telephone number (valid format)",
+				"Telephone number 2 (optional)"
+			]
+		},
+		"shipping": {
+			"addressType": "shipping",
+			"showAddressesSameCheckbox": true,
+			"selectId": "select-shipping-address",
+			"lines": {
+				"firstName": "First name",
+				"lastName": "Last name",
+				"telephone": "00000111222",
+				"telephone2": "11111222333",
+				"line1": "Address Line 1",
+				"line2": "Address Line 2",
+				"line3": "Address Line 3",
+				"city": "City",
+				"state": "State",
+				"zipCode": "01234"
+			},
+			"phone": [
+				"Telephone number (valid format)",
+				"Telephone number 2 (optional)"
+			]
+		}
+	},
+	"shippingMethods": [
+		{
+			"idx": 0,
+			"text": "Standard - $4.99"
+		},
+		{
+			"idx": 1,
+			"text": "Expedited - $9.99"
+		}
+	],
+	"orderSummary": {
+		"showEditCart": true,
+		"items": 0,
+		"tax": 0,
+		"discount": {},
+		"shipping": 0,
+		"donation": 0,
+		"pac_contribution": 0,
+		"total": 0
+	}
+}

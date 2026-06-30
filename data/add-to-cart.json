@@ -1,0 +1,36 @@
+[
+    {
+        "description": "For bulk or invoice purchases, please contact <a href='mailto:sales@ana.org'>sales@ana.org</a>",
+        "items": [
+            {
+                "id": 1,
+                "pricing": {
+                    "standard": "54.85",
+                    "member": "49.95"
+                },
+                "type": "Paperback"
+            },
+            {
+                "id": 2,
+                "pricing": {
+                    "standard": "64.85",
+                    "member": "59.95"
+                },
+                "type": "Hardback"
+            }
+        ]
+    },
+    {
+        "description": "For bulk or invoice purchases, please contact <a href='mailto:sales@ana.org'>sales@ana.org</a>",
+        "items": [
+            {
+                "id": 1,
+                "pricing": {
+                    "standard": "54.85",
+                    "member": "49.95"
+                },
+                "type": "Paperback"
+            }
+        ]
+    }
+]

@@ -1,0 +1,78 @@
+{
+	"addresses": [
+		{
+			"guid": "a0",
+			"firstName": "Phillip",
+			"lastName": "Bautista",
+			"line1": "1121 L Street",
+			"line2": "Suite 406",
+			"line3": "",
+			"city": "Sacramento",
+			"state": "California",
+			"zipCode": "95814",
+			"telephone": "916-346-4590",
+			"telephone2": ""
+		},{
+			"guid": "a1",
+			"firstName": "Jann",
+			"lastName": "Ricklefs",
+			"line1": "2400 86th Street",
+			"line2": "#32",
+			"line3": "",
+			"city": "Urbandale",
+			"state": "Iowa",
+			"zipCode": "50322",
+			"telephone": "(515) 225-0495",
+			"telephone2": "555-HUGS"
+		}
+	],
+	"paymentMethods": [
+		{
+			"guid": "pm0",
+			"cardType": "MasterCard",
+			"cardName": "Phillip Bautista",
+			"cardNumber": "0000111122223333",
+			"cardSecurityNumber": "123",
+			"cardExpiry": {
+				"month": "09",
+				"year": "2017"
+			}
+		},{
+			"guid": "pm1",
+			"cardType": "VISA",
+			"cardName": "Jann Ricklefs",
+			"cardNumber": "9999888877776666",
+			"cardSecurityNumber": "321",
+			"cardExpiry": {
+				"month": "12",
+				"year": "2018"
+			}
+		}
+	],
+	"orderSummary": {
+		"items": 79.99,
+		"tax": 12.00,
+		"shipping": 15.00,
+		"donation": 60.00,
+		"pac": 60.00,
+		"total": 220.53,
+		"discount": 10.00,
+		"appliedDiscounts": [
+			{
+				"name": "Summer sale",
+				"code": "12345"
+			}
+		]
+	},
+	"discountCodes": [
+		{
+			"name": "Summer sale",
+			"code": "12345",
+			"amt": 10.00
+		},{
+			"name": "Winter sale",
+			"code": "54321",
+			"amt": 25
+		}
+	]
+}

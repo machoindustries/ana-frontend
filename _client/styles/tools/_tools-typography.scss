@@ -1,0 +1,214 @@
+/* Tools - Typography
+------------------------- */
+
+@mixin t-type-base($weight: 'light') {
+	@if $weight == 'bold' {
+		font-family: t-font('SourceSansProBold');
+	} @else if $weight == 'regular' {
+		font-family: t-font('SourceSansProRegular');
+	} @else {
+		font-family: t-font('SourceSansProRegular');
+	}
+}
+
+@mixin t-type-h1($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(h1);
+	color: t-brand-colour(richtextheadings);
+}
+
+@mixin t-type-h2($weight: 'bold') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(h2);
+	color: t-brand-colour(richtextheadings);
+}
+
+@mixin t-type-h3($weight: 'bold') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(h3);
+	color: t-brand-colour(richtextheadings);
+}
+
+@mixin t-type-h4($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(h4);
+	color: t-brand-colour(richtextheadings);
+}
+
+@mixin t-type-ctaheadings($weight: 'light') {
+    @include t-type-base($weight);
+	@include t-responsive-type-size(ctaheadings);
+}
+
+@mixin t-type-p1($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(p1);
+}
+
+@mixin t-type-p2($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(p2);
+}
+
+@mixin t-type-caption($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(caption);
+}
+
+@mixin t-type-nav1($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(nav1);
+}
+
+@mixin t-type-nav3($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(nav3);
+}
+
+@mixin t-type-quote($weight: 'light') {
+	@include t-type-base($weight);
+	@include t-responsive-type-size(quote);
+    font-style: italic;
+}
+
+@mixin t-type-quotemark($weight: 'bold') {
+	@include t-responsive-type-size(super);
+	font-family: arial;
+    font-style: normal;
+}
+
+@mixin t-type-productpage($weight: 'light') {
+    @include t-type-base($weight);
+	@include t-responsive-type-size(productpage);
+}
+
+@mixin t-type-annotation($weight: 'light') {
+    @include t-type-base($weight);
+	@include t-responsive-type-size(annotation);
+}
+
+/// @mixin t-link--inherit
+/// Inherits link styling from the cascade.
+///
+/// @access access
+///
+/// @example
+/// @include t-link--inherit;
+@mixin t-link--inherit {
+	color: inherit;
+	font-weight: inherit;
+	text-decoration: inherit;
+}
+
+@mixin t-default-link-interaction($colour: 'richtextanchors', $interaction-colour: 'richtextanchorshover') {
+
+    color: t-brand-colour($colour);
+
+    @include t-interaction {
+
+        color: t-brand-colour($interaction-colour);
+    };
+}
+
+// Functions
+// -------------------------
+
+/// @function t-font
+/// Returns a matching font-family stack from the $s-fonts map.
+///
+/// @access public
+/// @param {String} $font-name - A String which represents a font-family label in the $s-fonts map specifying the required font stack.
+///
+/// @example
+///	font-family: t-font('FontName');
+@function t-font($font-name) {
+
+	@return unquote(t-map-value($s-fonts, ($font-name, stack)));
+}
+
+
+// Mixins
+// -------------------------
+
+/// @mixin t-type-size
+/// Get the font-size and line-height for an element from a given map key and specific breakpoint label.
+///
+/// @access public
+/// @param {String} $type-size - A String which represents a type-size label in the $s-type-sizing map specifying the required type size.
+/// @param {String} $breakpoint-name - A String which represents a breakpoint label in the $s-breakpoints map specifying the required breakpoint size.
+///
+/// @example
+///	@include t-type-size(type-size, small);
+@mixin t-type-size($type-size, $breakpoint-name) {
+
+	font-size: t-rem(t-map-value($s-type-sizing, ($type-size, $breakpoint-name, font-size)));
+	line-height: t-rem(t-map-value($s-type-sizing, ($type-size, $breakpoint-name, line-height)));
+}
+
+/// @mixin t-responsive-type-size
+/// Get the font-size and line-height for an element for all breakpoints.
+///
+/// @access public
+/// @param {String} $type-size - A String which represents a type-size label in the $s-type-sizing map specifying the required type size.
+/// @param {String} $default-breakpoint-name - A String which represents a breakpoint label in the $s-breakpoints map in which to apply default styling. (Optional)
+/// @example
+///	@include t-responsive-type-size('type-size');
+@mixin t-responsive-type-size($type-size, $default-breakpoint-name: 'small') {
+
+	@include t-type-size($type-size, $default-breakpoint-name);
+
+	@each $breakpoint-name in map-keys(map-get($s-type-sizing, $type-size)) {
+		@if $breakpoint-name != $default-breakpoint-name and breakpoint($breakpoint-name) != null {
+			@include t-respond-to-min(t-map-value($s-breakpoints, ($breakpoint-name, size))) {
+				@include t-type-size($type-size, $breakpoint-name);
+			}
+		}
+	}
+}
+
+/// @mixin t-type-heading-lines
+/// Applies lines either side of a heading
+///
+/// @access public
+/// @example
+///	@include t-type-heading-lines;
+@mixin t-type-heading-lines($desktopOnly: false) {
+
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    span {
+
+        display: inline-block;
+        padding: t-rem(0 $s-layout-gutter-mobile-medium);
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            display: block;
+            position:absolute;
+            border-top: solid 1px t-brand-colour(divider);
+            width: 50vw;
+            right: 100%;
+            top: 50%;
+        }
+
+        &:after {
+            left: 100%;
+            right: auto;
+        }
+
+        @if $desktopOnly == true {
+
+        	@include t-respond-to-max(large) {
+
+        		&:before,
+        		&:after {
+
+        			display: none;
+        		}
+        	}
+        }
+    }
+}

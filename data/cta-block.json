@@ -1,0 +1,107 @@
+[
+	{
+		"sgTitle": "Icon, no image, linked heading",
+        "icon": "icon-profile",
+		"heading": {
+			"url": "#",
+            "text": "Heading text",
+            "variant": "icon"
+		},
+		"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	},{
+		"sgTitle": "No icon, image, linked heading",
+		"image": {
+			"src": "http://via.placeholder.com/240x360",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"url": "#",
+			"text": "Heading text"
+		},
+		"date": "01/01/2018",
+		"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	},{
+		"sgTitle": "No icon, image, unlinked heading",
+		"image": {
+			"src": "http://via.placeholder.com/350x150",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"text": "Heading text"
+		},
+		"date": "01/01/2018",
+		"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	},{
+		"sgTitle": "Half width variant",
+		"variant": "half",
+		"icon": "icon-profile",
+		"image": {
+			"src": "http://via.placeholder.com/350x150",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"text": "Heading text"
+		},
+		"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	},{
+		"sgTitle": "Half width variant",
+		"variant": "half",
+		"icon": "icon-profile",
+		"image": {
+			"src": "http://via.placeholder.com/350x150",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"text": "Heading text"
+		},
+		"contentHtml": "<p>Lorem ipsum dolor sit amet. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	},{
+		"sgTitle": "Third width variant",
+		"variant": "third",
+		"icon": "icon-profile",
+		"image": {
+			"src": "http://via.placeholder.com/350x150",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"text": "Heading text"
+		},
+		"contentHtml": "<p>Lorem ipsum dolor sit amet, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p>"
+	},{
+		"sgTitle": "Third width variant",
+		"variant": "third",
+		"icon": "icon-profile",
+		"image": {
+			"src": "http://via.placeholder.com/350x150",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"text": "Heading text"
+		},
+		"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	},{
+		"sgTitle": "Third width variant",
+		"variant": "third",
+		"icon": "icon-profile",
+		"image": {
+			"src": "http://via.placeholder.com/350x150",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"text": "Heading text"
+		},
+		"contentHtml": "<p>Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	},{
+		"sgTitle": "Image, linked heading",
+		"image": {
+			"src": "http://via.placeholder.com/350x150",
+			"alt": "Alt text"
+		},
+		"heading": {
+			"url": "#",
+			"text": "Heading text"
+		},
+		"date": "01/01/2018",
+		"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+	}
+]

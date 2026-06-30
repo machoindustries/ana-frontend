@@ -1,0 +1,113 @@
+$e-quantity-selector-input-size: 55px;
+$e-quantity-selector-input-height-mobile: 45px;
+$e-quantity-selector-nav-font-size: 20px;
+$e-quantity-selector-input-vert-padding-mobile: 10.5px;
+$e-quantity-selector-content-padding: $e-quantity-selector-nav-font-size + $s-layout-gutter-mobile-medium;
+
+.e-quantity-selector {
+	display: block;
+	position: relative;
+
+	@include t-clearfix;
+
+	@include t-respond-to-min(medium) {
+		margin: 0 auto;
+	}
+
+	&__disabled {
+		opacity: 0.5 !important;
+		cursor: not-allowed !important;
+	}
+
+	&__content {
+		display: inline-block;
+		position: relative;
+		padding: t-rem(0 $e-quantity-selector-content-padding);
+		max-width: t-rem($e-quantity-selector-input-size + (2 * $e-quantity-selector-content-padding));
+
+		@include t-respond-to-min(medium) {
+			margin: 0 auto;
+		}
+	}
+
+	&__field {
+		width: t-rem($e-quantity-selector-input-size);
+		height: t-rem($e-quantity-selector-input-height-mobile);
+		margin-top: 0;
+
+		@include t-respond-to-min(medium) {
+			height: t-rem($e-quantity-selector-input-size);
+		}
+	}
+
+	&__nav {
+		display: block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		text-decoration: none;
+
+		&:before {
+			font-size: t-rem($e-quantity-selector-nav-font-size);
+			color: t-brand-colour(quantitynavarrows);
+		}
+
+		&--dec {
+			left: 0;
+
+			@include t-icon(icon-collapse, before) {
+			}
+		}
+
+		&--inc {
+			right: 0;
+
+			@include t-icon(icon-expand, before) {
+			}
+		}
+
+		&-text {
+
+			@include t-hidden;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		text-align: center;
+
+		@include t-respond-to-max(medium) {
+			padding-top: t-rem($e-quantity-selector-input-vert-padding-mobile);
+			padding-bottom: t-rem($e-quantity-selector-input-vert-padding-mobile);
+		}
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+
+	&__remove {
+
+		@include t-type-caption;
+		display: inline-block;
+		float: right;
+		text-decoration: underline;
+		cursor: pointer;
+		color: t-brand-colour(richtextanchors);
+		text-align: center;
+		height: t-rem($e-quantity-selector-input-height-mobile);
+		padding-top: t-rem(14px);
+		max-width: t-rem(60px);
+		margin: 0 auto;
+
+		@include t-respond-to-min(medium) {
+			display: block;
+			float: none;
+			height: auto;
+			padding-top: t-rem($s-layout-gutter-mobile-tiny);
+		}
+	}
+}

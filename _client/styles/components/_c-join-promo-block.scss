@@ -1,0 +1,206 @@
+$c-join-promo-background-size-default: 500px;
+$c-join-promo-background-offset-x: -160px;
+$c-join-promo-background-offset-x--slim: -30px;
+$c-join-promo-background-offset-y--slim: 10px;
+$c-join-promo-background-size-default--slim: 150px;
+$c-join-promo-background-overlay-opacity: 0.9;
+$c-join-promo-constraint: 600px;
+$c-join-promo-mobile-vertical-spacing: 50px;
+$c-join-promo-desktop-content-padding-left: 80px;
+
+.c-join-promo-block {
+
+    $root: &;
+
+    background-color: t-brand-colour(joinpromoblockbg);
+    color: t-brand-colour(joinpromoblocktext);
+    overflow: hidden;
+    position: relative;
+    letter-spacing: normal;
+
+    &__button {
+        text-align: center;
+        width: 100%;
+
+        @include t-respond-to-min(small) {
+            width: auto;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        min-height: t-rem(44px);
+
+        @include t-respond-to-min(large) {
+            margin-left: t-rem($c-join-promo-desktop-content-padding-left);
+        }
+
+        #{$root}--slim &,
+        #{$root}--full & {
+
+            @include t-respond-to-min(large) {
+                margin-left: inherit;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: t-rem($s-vertical-spacing-desktop-small);
+
+        ul > li {
+            margin-bottom: t-rem($s-layout-gutter-mobile-small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        @include t-type-h3('light');
+        color: t-brand-colour(joinpromoblocktext);
+        margin-bottom: t-rem($s-vertical-spacing-desktop-small);
+    }
+
+    &--slim {
+        background-color: #032347;
+        background-position: t-rem($c-join-promo-background-offset-x--slim $c-join-promo-background-offset-y--slim);
+        background-size: t-rem($c-join-promo-background-size-default--slim);
+        overflow: hidden;
+        padding: t-rem(30px) t-rem(60px);
+        position: relative;
+
+        @include t-respond-to-max(medium) {
+            padding-left: t-rem(20px);
+            padding-right: t-rem(20px);
+            padding-bottom: t-rem(20px);
+        }
+
+        @include t-respond-to-max(large) {
+            text-align: center;
+        }
+
+        #{$root}__button {
+
+            @include t-respond-to-max(small) {
+                width: 100%;
+            }
+
+            @include t-respond-to-min(small) {
+                padding-left: t-rem(80px);
+                padding-right: t-rem(80px);
+            }
+        }
+
+        #{$root}__content {
+
+            @include t-respond-to-min(large) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        #{$root}__title {
+
+            @include t-type-base(bold);
+            margin-bottom: 0;
+            color: #fff;
+            font-size: t-rem(28px);
+            line-height: t-rem(32px);
+
+            @include t-respond-to-max(large) {
+                margin-bottom: t-rem(20px);
+                color: rgba(#fff, 0.8);
+                font-size: t-rem(24px);
+                line-height: t-rem(26px);
+            }
+
+            @include t-respond-to-min(large) {
+                padding-right: t-rem(40px);
+            }
+        }
+    }
+
+    &:not(#{$root}--slim) {
+        padding: t-rem($c-join-promo-mobile-vertical-spacing $s-layout-gutter-mobile-large);
+        @include t-respond-to-min(small) {
+            padding: t-rem($s-vertical-spacing-desktop-medium $s-layout-gutter-mobile-xlarge);
+        }
+
+        #{$root}__content {
+            margin-left: auto;
+            max-width: t-rem($c-join-promo-constraint);
+        }
+    }
+
+    &--no-cta {
+        #{$root}__text {
+            margin-bottom: 0;
+        }
+    }
+
+    &--has-background {
+        background-position: center;
+        background-size: cover;
+
+        &:after {
+            background-color: t-brand-colour(joinpromoblockbg);
+            bottom: 0;
+            content: "";
+            display: block;
+            left: 0;
+            opacity: $c-join-promo-background-overlay-opacity;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &:not(#{$root}--has-background) {
+
+        &#{$root}--slim {
+            &:before {
+                bottom: -75%;
+                left: -50%;
+                right: 60%;
+                padding-top: 70%;
+
+                @include t-respond-to-min(small) {
+                    left: -20%;
+                    padding-top: 30%;
+                    right: 0;
+                    width: 44%;
+                }
+            }
+        }
+
+        #{$root}__content {
+
+            &:before {
+                background-image: url(/assets/img/logos/ana-flame-white.svg);
+                background-size: contain;
+                background-position: left;
+                background-repeat: no-repeat;
+                content: "";
+                display: block;
+                position: absolute;
+                opacity: 0.05;
+                top: -10%;
+                bottom: -100%;
+                left: 0;
+                padding-left: 100%;
+                transform: translateX(-50%);
+                min-height: 580px;
+            }
+        }
+
+        &#{$root}--slim #{$root}__content {
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

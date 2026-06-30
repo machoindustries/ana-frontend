@@ -1,0 +1,114 @@
+.c-search-filters {
+
+    header {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header {
+
+        margin: 0 t-rem(-20px) t-rem(20px);
+        padding: t-rem(45px) t-rem(10px) t-rem(20px) t-rem(20px);
+        border-bottom: 1px solid t-brand-colour(divider);
+        
+        h2 {
+            
+            @include t-type-h3;
+            margin: 0;
+        }
+
+        .close.mfp-close {
+
+            @include t-icon(icon-close, before);
+            position: static;
+            width: t-rem(44px);
+            height: t-rem(44px);
+            border: 0;
+            background-color: transparent;
+            font-size: t-rem(20px);
+        }
+    }
+
+    footer {        
+
+        @include t-respond-to-max(medium) {
+
+            margin: t-rem(20px) t-rem(-20px) 0;
+            padding: t-rem(20px);
+            border-top: 1px solid t-brand-colour(divider);
+            text-align: center;
+        }
+
+        @include t-respond-to-min(medium) {
+
+            display: block;
+            margin: t-rem(10px) 0 0;
+        }
+
+        @include t-respond-to-min(xlarge) {
+
+            display: inline-block;
+            border-left: 1px solid t-brand-colour(divider);
+            padding: 0 0 0 t-rem(20px);
+            margin: 0 0 0 t-rem(20px);
+        }
+
+        .clear {
+            
+            @include t-icon(icon-close, before);
+            @include t-type-base(regular);
+            padding: t-rem(7px) t-rem(10px);
+            border-radius: 8px;
+            background-color: transparent;
+            color: t-brand-colour(richtextanchors);
+            font-size: t-rem(16px);
+            border: 0;
+            transition: background-color 0.3s ease, 
+                    color 0.3s ease;
+
+            &:before {
+                
+                padding: t-rem(2px) t-rem(5px);
+                margin-right: t-rem(5px);
+                vertical-align: baseline;
+                background-color: t-brand-colour(filtersclearbg);
+                color: t-brand-colour(richtextanchors);
+                border-radius: 8px;    
+            }
+
+            &:hover {
+
+                background-color: rgba(t-brand-colour(searchpagelightblue), 0.1);
+                color: t-brand-colour(searchpagelightblue);
+                transition: background-color 0.3s ease, 
+                    color 0.3s ease;
+
+                &:before {
+
+                    background-color: rgba(t-brand-colour(searchpagelightblue), 0.1);
+                    color: t-brand-colour(searchpagelightblue);
+                }
+            }
+        }
+    }
+    
+    @include t-respond-to-min(medium) {
+
+        &.mfp-hide {
+
+            display: block !important;
+        }
+
+        header {
+            
+            display: none;
+        }
+    }
+
+    @include t-respond-to-max(medium) {
+
+        padding: 0 t-rem(20px);
+    }
+}

@@ -1,0 +1,81 @@
+{
+	"addresses": {
+		"billing": {
+			"guid": "a0",
+			"name": "Firstname Lastname",
+			"address1": "Address Line 1",
+			"address2": "Address Line 2",
+			"address3": "Address Line 3",
+			"city": "City",
+			"state": "State",
+			"country": "Country",
+			"zipcode": "12345",
+			"phone1": "000-000-0000",
+			"phone2": "111-111-1111"
+		},
+		"shipping": {
+			"guid": "a1",
+			"name": "Firstname Lastname",
+			"address1": "Address Line 1",
+			"address2": "Address Line 2",
+			"address3": "Address Line 3",
+			"city": "City",
+			"state": "State",
+			"country": "Country",
+			"zipcode": "12345",
+			"phone1": "000-000-0000",
+			"phone2": "111-111-1111"
+		},
+		"nonDefault": [
+			{
+				"guid": "a2",
+				"name": "Firstname Lastname",
+				"address1": "Address Line 1",
+				"address2": "Address Line 2",
+				"address3": "Address Line 3",
+				"city": "City",
+				"state": "State",
+				"country": "Country",
+				"zipcode": "12345",
+				"phone1": "000-000-0000",
+				"phone2": "111-111-1111"
+			},{
+				"guid": "a3",
+				"name": "Firstname Lastname",
+				"address1": "Address Line 1",
+				"address2": "Address Line 2",
+				"address3": "Address Line 3",
+				"city": "City",
+				"state": "State",
+				"country": "Country",
+				"zipcode": "12345",
+				"phone1": "000-000-0000",
+				"phone2": "111-111-1111"
+			},{
+				"guid": "a4",
+				"name": "Firstname Lastname",
+				"address1": "Address Line 1",
+				"address2": "Address Line 2",
+				"address3": "Address Line 3",
+				"city": "City",
+				"state": "State",
+				"country": "Country",
+				"zipcode": "12345",
+				"phone1": "000-000-0000",
+				"phone2": "111-111-1111"
+			},{
+				"guid": "a5",
+				"name": "Firstname Lastname",
+				"address1": "Address Line 1",
+				"address2": "Address Line 2",
+				"address3": "Address Line 3",
+				"city": "City",
+				"state": "State",
+				"country": "Country",
+				"zipcode": "12345",
+				"phone1": "000-000-0000",
+				"phone2": "111-111-1111"
+			}
+		]
+	}
+}

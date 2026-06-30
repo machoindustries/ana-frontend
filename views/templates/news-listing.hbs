@@ -1,0 +1,64 @@
+---
+title: News Listing
+---
+
+{{> c-hero content=hero.single modifier='cutout c-hero--cutout c-hero--cutout-left' }}
+
+<div class="content-area b-vsb--large">
+    {{#extend "c-container-block" heading="" variant=""
+        carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+
+        {{#content "container-block-content"}}
+
+            {{> c-featured-content featured-content.[0] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+            
+            {{> c-featured-content featured-content.[1] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+            {{> c-featured-content featured-content.[2] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+            {{> c-featured-content featured-content.[3] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+        {{/content}}
+
+    {{/extend}}
+</div>
+
+
+<div class="grid-constraint">
+    <div class="grid">
+        <div class="grid__item one-whole">
+            {{> c-product-detail-form page="news-listing"}}
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    <div class="block containerblock">
+        <div class="c-container-block">
+
+            <div class="grid-constraint">
+                <div class="c-container-block__content grid grid--flex grid--overflow-hidden">
+
+                    <div class="block ctablock ctablock--third ctablock--news grid__item medium--one-half large--one-third">
+                        {{> c-cta-block cta-block.[5]}}
+                    </div>
+
+                    <div class="block ctablock ctablock--third ctablock--news grid__item medium--one-half large--one-third">
+                        {{> c-cta-block cta-block.[6]}}
+                    </div>
+
+                    <div class="block ctablock ctablock--third ctablock--news grid__item medium--one-half large--one-third">
+                        {{> c-cta-block cta-block.[3]}}
+                    </div>
+
+                    <div class="block ctablock ctablock--third ctablock--news grid__item medium--one-half large--one-third">
+                        {{> c-cta-block cta-block.[2]}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> e-pagination additional-class="e-pagination--plp" }}

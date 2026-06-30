@@ -1,0 +1,54 @@
+$image-caption-maxwidth: 220px;
+
+.c-image {
+
+	$root: &;
+
+	//@include t-escape-content-padding;
+
+	&__caption {
+		padding: t-rem($s-layout-gutter-mobile-medium 0 0);
+
+		@include t-respond-to-min(small) {
+			max-width: t-rem($image-caption-maxwidth);
+		}
+	}
+	
+	&__figure {
+		margin: 0;
+		padding: 0;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+	}
+
+	&__text {
+		@include t-type-caption;
+	}
+
+	&__title {
+		@include t-type-caption("bold");
+		margin: 0;
+		padding-bottom: t-rem($s-layout-gutter-mobile-medium);
+	}
+
+	&--inline {
+		#{$root}__caption {
+			@include t-respond-to-min(large) {
+				@include t-vertical-spacing(medium, padding-top);
+				border-top: 1px solid t-brand-colour(imagecaptionborder);
+			}
+		}
+	}
+
+    @include t-respond-to-min(large) {
+        &__wrapper--nav {
+            .c-image__caption {
+                position: absolute;
+            }
+        }
+    }
+
+}

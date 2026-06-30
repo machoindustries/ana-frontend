@@ -1,0 +1,27 @@
+.e-org-filters {
+
+	@include t-vertical-spacing(small, margin-bottom);
+
+	@include t-respond-to-min(large){
+		
+		border-bottom: 1px solid t-brand-colour(divider);
+		
+		@include t-vertical-spacing(medium, padding-bottom);	
+	}
+
+	&__item {
+
+		padding-bottom: t-rem($s-layout-gutter-mobile-xlarge);
+
+		@include t-respond-to-min(large){
+			
+			padding-bottom: 0;	
+		}
+	}
+
+	&__full-list-link {
+
+		display: block;
+		text-align: right;
+	}
+}

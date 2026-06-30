@@ -1,0 +1,57 @@
+.e-link-list {
+
+	$root: &;
+
+	&--flush-top {
+
+		#{$root}__list {
+
+			margin-top: 0;
+		}
+	}
+
+	&__heading-link,
+	&__link {
+
+		text-decoration: none;
+	}
+
+	&__heading {
+		@include t-type-h4;
+		color: t-brand-colour(richtextheadings);
+		margin: 0;
+		line-height: 1.4;
+		padding-top: 6px;
+		padding-bottom: t-rem($s-layout-gutter-mobile-medium);
+	}
+
+	&__list {
+
+		@include t-clearfix;
+
+		list-style-type: none;
+		margin-top: t-rem($s-layout-gutter-mobile-small);
+		margin-bottom: 0;
+	}
+	
+	&__item {
+
+		&--large {
+
+			#{$root}__link {
+
+				@include t-type-p1;
+			}
+		}
+
+		&--inline {
+
+			float: left;
+		}
+	}
+
+	&__link {
+
+		@include t-type-p1;
+	}
+}

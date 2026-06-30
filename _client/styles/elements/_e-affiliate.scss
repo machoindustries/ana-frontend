@@ -1,0 +1,47 @@
+$affiliate-width: 300px;
+$affiliate-image-size: 50px;
+
+.e-affiliate {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    &--stacked {
+        display: block;
+    }
+    
+    @include t-respond-to-min(large) {
+
+        margin: 0;
+    }
+    
+    &__link {
+
+        display: block;
+        text-decoration: none;
+
+        &-text {
+
+            text-decoration: underline;
+
+            @include t-default-link-interaction;
+        }
+    }
+
+    &__thumbnail {
+
+        margin-right: t-rem($s-layout-gutter-mobile-small);
+        align-self: center;
+    }
+
+    &__text {
+
+        margin: 0;
+    }
+
+    &__title {
+
+        @include t-type-caption;
+    }
+}

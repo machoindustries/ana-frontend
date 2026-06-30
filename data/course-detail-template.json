@@ -1,0 +1,208 @@
+{
+	"breadcrumb": [
+	    {
+	        "href": "#",
+	        "label": "Education & Events",
+	        "order": 1
+	    },{
+	        "href": "#",
+	        "label": "Continuing education",
+	        "order": 2
+	    },{
+	        "label": "Title of course",
+	        "order": 3
+	    }
+	],
+	"productDetail": {
+		"affiliate": {
+			"title": "Sponsored by:",
+			"name": "The International Society of Nurses in Genetics",
+			"image": "http://via.placeholder.com/50x50",
+			"url": "http://www.isong.org/"
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Duis viverra tortor a placerat egestas. Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam.",
+		"image": "http://via.placeholder.com/150x230/999999/ffffff",
+		"total_hours": "20.15",
+		"pricing": [
+			{
+				"type": "List Price",
+				"member": {
+					"price": "49.95"
+				},
+				"regular": {
+					"price": "54.95"
+				}
+			}
+		],
+		"event": {
+			"date": "May 22-24, 2017",
+			"time": "10.30am - 4.30pm",
+			"location": "Oak Brook, IL"
+		},
+		"subtitle": "Presenter Name",
+		"title": "Nursing's Leading Edges: Advancing the Profession through Specialization, Credentialing, and Certification"
+	},
+	"addToCart": {
+		"description": "For bulk or invoice purchases, please contact <a href='mailto:sales@ana.org'>sales@ana.org</a>",
+		"items": [
+			{
+				"id": 1,
+				"pricing": {
+					"standard": "54.85",
+					"member": "49.95"
+				}
+			}
+		]
+	},
+	"tabControl": [
+		{
+			"title": "Course details",
+			"productDetail": {
+				"sidebarAffiliate": {
+					"title": "Co-published with:",
+					"name": "The International Society of Nurses in Genetics",
+					"image": "http://via.placeholder.com/50x50",
+					"url": "http://www.isong.org/"
+				},
+				"introContent": "<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Nunc diam tellus, malesuada consectetur vulputate at, rutrum nec neque. Nulla et est lectus. Duis viverra tortor a placerat egestas. Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam. Aliquam ut ligula sit amet urna tristique scelerisque sit amet nec neque. Nulla gravida lacinia elit. Phasellus accumsan mi dui, vitae ornare tortor rutrum ac. Aenean scelerisque faucibus orci nec sollicitudin. Donec vel efficitur velit. Pellentesque egestas quam sit amet metus hendrerit pharetra. Proin eget cursus diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut justo purus, ornare sit amet quam id, dictum aliquet dolor. Etiam gravida interdum justo sed diam nonummy imdipscing.</p><p>In euismod est eget leo ultricies sagittis. Suspendisse vel tempor est, vitae laoreet quam. Donec volutpat consequat tristique. Fusce placerat eros a volutpat sagittis. In ut ligula consectetur, viverra orci porttitor, vestibulum arcu. Vivamus at ipsum ullamcorper, pellentesque nisi ut, sodales ante. Sed lobortis lacinia neque, vel luctus nisi aliquam non.</p><ul><li>Benefit is lorem ipsum dolor sit onsectetur adipiscing elit. Aenean sollicit udin hendrerit porttitor. Cras sit amet nibh libero</li><li>Benefit is dolor sit lorem ipsum consectetur, in gravida nulla.</li><li>Benefit is lorem ipsum dolor sit Nulla vel metus scelerisque ante sollicitudin.</li></ul><h4>Presented by</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Nunc diam tellus, malesuada consectetur vulputate at, rutrum nec neque. Nulla et est lectus.</p>",
+				"video": {
+					"type": "video",
+			        "heading": "Video caption title",
+			        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+			        "video_url": "//vimeo.com/223080635",
+			        "image": "http://via.placeholder.com/1280x768"
+			    },
+			    "addToCart": {
+					"description": "For bulk or invoice purchases, please contact <a href='mailto:sales@ana.org'>sales@ana.org</a>",
+					"items": [
+						{
+							"id": 1,
+							"pricing": {
+								"standard": "54.85",
+								"member": "49.95"
+							}
+						}
+					]
+				},
+				"outroContent": "<h4>Disclaimer</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Nunc diam tellus, malesuada consectetur vulputate at, rutrum nec neque. Nulla et est lectus.</p><h4>Accrediation</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Nunc diam tellus, malesuada consectetur vulputate at, rutrum nec neque. Nulla et est lectus.</p>",
+				"accordion": {
+					"heading": "FAQs",
+					"items": [
+						{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": false
+						},{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": true
+						},{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": true
+						},{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": true
+						}
+					]
+				},
+				"joinPromo": {
+					"title": "Join ANA From just $XXX in Washington DC",
+					"cta": {
+						"title": "FIND OUT MORE",
+						"url": "https://www.google.com"
+					},
+					"style": "slim"
+				}
+			},
+			"collapsePanel": false
+		},
+		{
+			"title": "Location details",
+			"htmlContent": "<p>Mauris sit amet feugiat ex, vel ultricies mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa massa, aliquet vitae finibus et, ultricies sed libero. Maecenas aliquet sapien sed finibus tristique. Vestibulum rutrum diam tellus, ac congue turpis tempus a. Praesent sit amet congue diam. Morbi consequat porttitor arcu, nec elementum sapien lobortis sed. Sed convallis tortor ut lectus elementum pulvinar. Nam quis libero ut sapien eleifend tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec felis dui, pharetra quis erat vulputate, molestie porttitor ante. Nam felis mi, posuere eget rhoncus eu, bibendum at ligula. Sed sagittis a ligula ut finibus. Donec a felis cursus, convallis turpis at, auctor orci. Nam sit amet tincidunt metus. Sed at felis viverra, pellentesque urna ac, vulputate lorem.</p>",
+			"collapsePanel": true
+		}
+	],
+	"suggestedProducts": {
+		"heading": "You may also like",
+		"products": [
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "Nursing: Scope and Standards of Practice...",
+				"url": "#"
+			},
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "Code of Ethics for Nurses with Interpretive...",
+				"url": "#"
+			},
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "Anatomy of a Super Nurse: The Ultimate...",
+				"url": "#"
+			},
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "What Would Florence Do? A Guide for New...",
+				"url": "#"
+			}
+		]
+	}
+}

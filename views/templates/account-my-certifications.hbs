@@ -1,0 +1,63 @@
+---
+title: Account My Certifications
+---
+
+<div class="grid-constraint">
+    
+    <div class="grid">
+        <div class="grid__item one-whole">
+            {{> c-breadcrumb breadcrumb}}
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__item one-whole medium--eight-twelfths push--medium--four-twelfths">
+            <h2 class="c-account__address-heading">My Account</h2>
+        </div>
+    </div>
+
+    <div class="grid">
+        
+        <aside class="grid__item one-whole medium--three-twelfths">
+            
+            {{> e-subnav subnav}}
+
+        </aside>
+
+        <div class="grid__item one-whole medium--eight-twelfths push--medium--one-twelfth">
+            
+            <div class="c-account__section">
+
+                <h4 class="c-account__title">My Certifications</h4>
+                <p class="c-account__text">{{account-my-certifications.certifications.text}}</p>
+
+                {{> e-responsive-table account-my-certifications.data.[0]}}
+
+                {{!-- <a href="#" class="c-account__cta--add-new" title="Add a new membership">+ add a new membership</a> --}}
+
+            </div>
+
+            {{!-- <div class="c-account__section">
+                {{> c-join-promo-block join-promo-block.[1]}}
+            </div>
+
+            <div class="c-account__section">
+                <div class="grid grid--full">
+                    <div class="grid__item six-eighths">
+                        <h4 class="c-account__title">Nurse Verification</h4>
+                        <p class="c-account__text c-account__text--no-margin">{{account-my-certifications.nurse_verification.title}}</p>
+                    </div>
+                    <div class="grid__item one-whole small--two-eighths">
+                        {{> e-button type="button" colourVariant="blue" text="BUY NOW" additionalClasses="e-button c-account__cta"}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-account__section">
+                <p class="c-account__text c-account__text--no-margin">{{account-my-certifications.caveat.title}}</p>
+            </div> --}}
+        </div>
+        
+    </div>
+
+</div>

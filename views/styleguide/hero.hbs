@@ -1,0 +1,79 @@
+
+{{#extend "c-static-section" heading="Hero"}}
+    {{#content "static-section-content"}}
+
+       {{> c-hero content=hero.items.[0] }}
+
+    {{/content}}
+{{/extend}}
+
+{{#extend "c-static-section" heading="Hero - Enterprise Desktop"}}
+    {{#content "static-section-content"}}
+
+       {{> c-hero content=hero.items.[1] modifier='cutout' }}
+
+        <div class="content-area">
+
+            {{> c-editorial-block editorial-blocks.[3] }}
+
+            {{> c-media-block media-block.[1] }}
+
+        </div>
+
+    {{/content}}
+{{/extend}}
+
+{{#extend "c-static-section" heading="Hero - Enterprise Desktop - Left"}}
+    {{#content "static-section-content"}}
+
+       {{> c-hero content=hero.single modifier='cutout c-hero--cutout c-hero--cutout-left' }}
+
+        <div class="content-area">
+
+            {{#extend "c-container-block" heading="" variant=""
+                carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+
+                {{#content "container-block-content"}}
+
+                    {{> c-featured-content featured-content.[0] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+                    
+                    {{> c-featured-content featured-content.[1] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                    {{> c-featured-content featured-content.[2] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                    {{> c-featured-content featured-content.[3] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                {{/content}}
+
+            {{/extend}}
+
+        </div>
+
+    {{/content}}
+{{/extend}}
+
+{{#extend "c-static-section" heading="Hero - Enterprise Desktop (tall)"}}
+    {{#content "static-section-content"}}
+
+       {{> c-hero content=hero.items.[1] modifier='cutout c-hero--cutout-tall' }}
+
+        <div class="content-area">
+
+            {{> c-editorial-block editorial-blocks.[3] }}
+
+            {{> c-media-block media-block.[1] }}
+
+        </div>
+
+    {{/content}}
+{{/extend}}
+
+
+<h1 style="margin: 20px 0 50px 15px">Hero - Carousel - Pips</h1>
+
+{{> c-hero-carousel items=hero.items }}
+
+
+<h1 style="margin: 20px 0 50px 15px">Hero - Carousel - Tabs</h1>
+
+{{> c-hero-carousel items=hero.items modifier='tabs' }}

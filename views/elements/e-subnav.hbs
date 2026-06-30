@@ -1,0 +1,25 @@
+<nav class="c-subnav" data-require="./src/views/sub-nav-view">
+    <a href="#" class="c-subnav__open" data-show-subnav>{{section_title_mobile}}</a>
+    <div class="c-subnav__wrap" data-subnav-wrap>
+        <h2 class="c-subnav__heading">
+            <a class="c-subnav__heading-link" href="#">{{section_title}}</a>
+        </h2>
+        <ul class="c-subnav__list c-subnav__list--lv1">
+            {{#each items}}
+                <li class="c-subnav__item c-subnav__item--lv1">
+                    <a href="#" class="c-subnav__link{{#if this.hasChildrenActive}} c-subnav__link--ancestor{{/if}}">{{this.title}}</a>
+                    
+                    {{#if this.items}}
+                        <ul class="c-subnav__list c-subnav__list--lv2">
+                            {{#each this.items}}
+                                <li class="c-subnav__item c-subnav__item--lv2">
+                                    <a href="#" class="c-subnav__link{{#if this.active}} c-subnav__link--current{{/if}}">Sub child</a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,36 @@
+.e-book-stat-summary {
+
+	margin-bottom: t-rem($s-layout-gutter-mobile-large);
+
+	&:last-child {
+
+		margin-bottom: 0;
+	}
+
+	&__heading {
+
+		@include t-type-h4;
+
+		color: t-brand-colour(richtextheadings);
+		margin-bottom: t-rem($s-layout-gutter-mobile-small);
+	}
+
+	&__label,
+	&__value {
+
+		margin-bottom: 0;
+	}
+
+	&__label {
+
+		@include t-type-caption;
+
+		color: t-brand-colour(bookstatsummarylabel);
+		padding-top: t-rem(2px);
+	}
+
+	&__value {
+
+		@include t-type-p1;
+	}
+}

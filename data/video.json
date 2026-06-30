@@ -1,0 +1,31 @@
+{
+	"default-dark": {
+        "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "duration": "00:00:00",
+        "link": "http://v.youku.com/v_show/id_XNTkxODUyMTg0.html",
+        "image": "/frontend/_client/images/placeholder-content/ANA-Header-Tablet.jpg",
+        "language": "cn"
+    },
+    "default-light": {
+        "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "duration": "00:00:00",
+        "link": "http://v.youku.com/v_show/id_XNTkxODUyMTg0.html",
+        "image": "/frontend/_client/images/placeholder-content/ANA-Header-Tablet.jpg",
+        "language": "cn"
+    },
+    "youtube-dark": {
+        "heading": "Video caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "duration": "00:08:04",
+        "link": "//vimeo.com/223080635",
+        "image": "http://via.placeholder.com/1280x768",
+        "language": "sv"
+    },
+    "youtube-dark-featured-content": {
+        "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "duration": "00:08:04",
+        "link": "//www.youtube.com/watch?v=X8MCVxCy7kc",
+        "image": "/frontend/_client/images/placeholder-content/ANA-Header-Tablet.jpg",
+        "language": "sv"
+    }
+}

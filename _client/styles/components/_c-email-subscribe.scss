@@ -1,0 +1,150 @@
+.c-email-subscribe {
+    max-width: t-rem(1440px);
+    margin: 0 auto;  
+    background-color: #032347;
+
+    .wrapper {
+        padding: t-rem(30px) t-rem(50px);
+
+        @include t-respond-to-max(xlarge) {
+            padding: t-rem(30px) t-rem(20px) t-rem(20px);
+            text-align: center;
+        }
+
+        @include t-respond-to-min(xlarge) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    h2 {
+        @include t-type-base(bold);
+        margin-bottom: 0;
+        font-size: t-rem(28px);
+        line-height: t-rem(32px);
+        color: #fff;
+        
+        @include t-respond-to-min(xlarge) {
+            margin-right: t-rem(20px);
+        }
+
+        @include t-respond-to-max(xlarge) {
+            margin-bottom: t-rem(20px);
+        }
+
+        @include t-respond-to-max(large) {
+            font-size: t-rem(24px);
+            line-height: t-rem(26px);
+        }
+    }
+
+    .form {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 0;
+
+        @include t-respond-to-max(xlarge) {
+            justify-content: center;
+        }
+
+        @include t-respond-to-min(xlarge) {
+            width: 50%;
+        }
+
+        .email {
+            width: t-rem(496px);
+            height: t-rem(54px);
+            padding-left: t-rem(20px);
+            background-color: rgba(#fff, 0.15);
+            color: #fff;
+            border: 0;
+
+            &:focus {
+                outline: none;
+                border: 1px solid #2AB2EC;
+                border-right :0;
+                box-shadow: inset 0 0 6px 0 rgba(0, 156, 222, 0.25);
+            }
+
+            @include t-respond-to-max(large) {
+                max-width: t-rem(335px);
+            }
+        }
+
+        .submit {
+            
+            @include t-respond-to-max(large) {
+                background-image: url($s-image-path + '/icon-paper-airplane.svg');
+                background-repeat: no-repeat;
+                background-size: t-rem(24px);
+                background-position: center;
+
+                .text {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0,0,0,0);
+                    border: 0;
+                }
+            }
+        }
+
+        @include t-input-placeholders {
+            opacity: 1;
+            color: rgba(#fff, 0.5);
+        }
+    }
+
+    .hero-area & {
+        position: relative;
+        z-index: 50;
+        background: #f3f3f3;
+
+        .wrapper {
+
+            @include t-respond-to-min(xlarge) {
+                margin: 0 t-rem(60px);
+                transform: translateY(-50%);
+                background: #fff;
+                box-shadow: 0 2px 16px 0 rgba(12,30,41,0.35);
+            }
+        }
+
+        h2 {
+            color: rgba(#0C1E29, 0.8);
+        }
+
+        .form { 
+
+            .email {
+                border: 1px solid #979797;
+                background-color: #fff;
+                color: #0C1E29;
+            }
+
+            .submit {
+                background-color: t-brand-colour(buttonbluebg);
+                color: t-brand-colour(buttonbluetext);
+                border-color: t-brand-colour(buttonblueborder);
+
+                &:hover,
+                &.is--active {
+
+                    background-color: t-brand-colour(buttonbluehoverbg);
+                    color: t-brand-colour(buttonbluehovertext);
+                    border-color: t-brand-colour(buttonbluehoverborder);
+                    box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+                } 
+            }
+
+            @include t-input-placeholders {
+                color: rgba(#0C1E29, 0.4);
+            }
+        }
+    }
+}

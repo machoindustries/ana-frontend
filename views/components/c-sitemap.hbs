@@ -1,0 +1,34 @@
+<div class="c-sitemap grid">
+	
+	<div class="grid__item one-whole">
+		<h1 class="containerblock__heading containerblock__heading--large">
+			<span>Sitemap</span>
+		</h1>
+	</div>
+	
+	<div class="grid__item one-whole">
+		{{#each data.sections}}
+
+			<div class="block block--full grid">
+				
+				<div class="grid__item one-whole">
+					
+					<h2 class="c-sitemap__section-title">{{this.title}}</h2>
+
+				</div>
+
+				{{#each this.subSections}}
+
+					<div class="grid__item one-whole medium--one-half large--one-third">
+
+						{{> c-sitemap-link-list data=this variant="sitemap" isAccordion=true titleIsLink=true }}
+
+					</div>
+
+				{{/each}}
+
+			</div>
+
+		{{/each}}
+	</div>
+</div>

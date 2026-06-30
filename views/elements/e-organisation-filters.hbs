@@ -1,0 +1,24 @@
+<div class="e-org-filters grid__item">
+	<div class="grid">
+		{{#if variant}}
+			{{#ifEqual variant "state"}}
+				<div class="e-org-filters__item grid__item one-whole large--one-third">
+					{{> e-dropdown data=org-filters.state labelTextVariant="below" dataAttributes="data-location-filter-state" }}
+				</div>
+				<div class="e-org-filters__item grid__item one-whole">
+					<a href="#" class="e-org-filters__full-list-link" data-organisations-list-link>View full organization list</a>
+				</div>
+			{{/ifEqual}}
+		{{else}}
+			<div class="e-org-filters__item grid__item one-whole large--one-third">
+				{{> e-dropdown data=org-filters.inUSA labelTextVariant="below" dataAttributes="data-location-filter-in-usa" }}
+			</div>
+			<div class="e-org-filters__item grid__item one-whole large--one-third">
+				{{> e-dropdown data=org-filters.stateAll labelTextVariant="below" dataAttributes="data-location-filter-state" }}
+			</div>
+			<div class="e-org-filters__item grid__item one-whole">
+				<a href="#" class="e-org-filters__full-list-link" data-organisations-list-link>View full organization list</a>
+			</div>
+		{{/if}}
+	</div>
+</div>

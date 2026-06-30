@@ -1,0 +1,72 @@
+
+{{#extend "c-static-section" heading=cta-block.[0].sgTitle}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="CTA Blocks x3" variant=""
+            carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides=""}}
+
+            {{#content "container-block-content"}}
+
+                {{> c-cta-block cta-block.[0] block-class="ctablock--third grid__item one-whole medium--one-third" }}
+
+                {{> c-cta-block cta-block.[0] block-class="ctablock--third grid__item one-whole medium--one-third" }}
+
+                {{> c-cta-block cta-block.[0] block-class="ctablock--third grid__item one-whole medium--one-third" }}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}
+
+
+{{#extend "c-static-section" heading="Featured content x4, carousel at mobile"}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="Featured content x4" variant=""
+            carousel-at-mobile="true" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+
+            {{#content "container-block-content"}}
+
+                {{> c-featured-content featured-content.[0] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+                
+                {{> c-featured-content featured-content.[1] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                {{> c-featured-content featured-content.[2] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                {{> c-featured-content featured-content.[3] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}
+
+
+{{#extend "c-static-section" heading="Featured content x4"}}
+    {{#content "static-section-content"}}
+
+        {{#extend "c-container-block" heading="Featured content x4" variant="featured"
+            carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+
+            {{#content "container-block-content"}}
+
+                {{> c-featured-content featured-content.[0] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+                
+                {{> c-featured-content featured-content.[1] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                {{> c-featured-content featured-content.[2] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+                {{> c-featured-content featured-content.[3] block-class="grid__item one-whole medium--one-half large--one-quarter" }}
+
+            {{/content}}
+
+        {{/extend}}
+
+    {{/content}}
+
+{{/extend}}

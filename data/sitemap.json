@@ -1,0 +1,142 @@
+{
+  "sections": [
+    {
+      "title": "Practice & Policy",
+      "subSections": [
+        {
+          "title": "Nursing Excellence",
+          "url": "#",
+          "links": [
+            {
+              "title": "Ethics",
+              "url": "#"
+            },
+            {
+              "title": "Standards",
+              "url": "#"
+            },
+            {
+              "title": "Speciality Recognition",
+              "url": "#"
+            },
+            {
+              "title": "RN/APRN Scope of Practice",
+              "url": "#"
+            },
+            {
+              "title": "ANA Official Position Statements",
+              "url": "#"
+            },
+            {
+              "title": "Honor a Nurse",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Innovation & Evidence",
+          "url": "#",
+          "links": [
+            {
+              "title": "Clinical Practice Material",
+              "url": "#"
+            },
+            {
+              "title": "Quality",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Work Environment",
+          "url": "#",
+          "links": [
+            {
+              "title": "Nurse Staging",
+              "url": "#"
+            },
+            {
+              "title": "Health & Safety",
+              "url": "#"
+            },
+            {
+              "title": "Violence, Incivility & Bullying",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Workforce",
+          "url": "#",
+          "links": [
+            {
+              "title": "Career Center",
+              "url": "#"
+            },
+            {
+              "title": "Data",
+              "url": "#"
+            },
+            {
+              "title": "Minority Fellowship Program",
+              "url": "#"
+            },
+            {
+              "title": "What is Nursing",
+              "url": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Another section",
+      "subSections": [
+        {
+          "title": "Subsection title",
+          "url": "#",
+          "links": [
+            {
+              "title": "lorem ipsum dolor",
+              "url": "#"
+            },
+            {
+              "title": "sit amet consectetur",
+              "url": "#"
+            },
+            {
+              "title": "adipisicing elit",
+              "url": "#"
+            },
+            {
+              "title": "sed do eiusmod",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Duis aute irure",
+          "url": "#",
+          "links": [
+            {
+              "title": "dolor in reprehenderit",
+              "url": "#"
+            },
+            {
+              "title": "in voluptate",
+              "url": "#"
+            },
+            {
+              "title": "velit esse cillum dolore",
+              "url": "#"
+            },
+            {
+              "title": "eu fugiat nulla pariatur",
+              "url": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

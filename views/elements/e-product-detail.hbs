@@ -1,0 +1,56 @@
+{{!-- NOTE - for use only as content for the tab control panels on product detail page --}}
+<div class="e-product-detail grid">
+    <div class="e-product-detail__sidebar grid__item one-whole large--three-twelfths">
+        {{#each statSummary}}
+            {{> e-book-stat-summary this }}
+        {{/each}}
+        {{#if sidebarAffiliate}}
+            {{> e-affiliate sidebarAffiliate}}
+        {{/if}}
+    </div>
+    
+    {{#if introContent}}
+        <div class="grid__item one-whole large--two-thirds pad--large--one-third e-product-detail__row">
+            <div class="e-richtext">
+                {{{introContent}}}
+            </div>
+        </div>
+    {{/if}}
+
+    <div class="grid__item one-whole large--two-thirds pad--large--one-third e-product-detail__row e-product-detail__preview">
+        <a class="e-product-detail__preview-link" href="#">Sample chapter</a>
+        <a class="e-product-detail__preview-link" href="#">Table of contents</a>
+    </div>
+
+    <div class="grid__item one-whole large--two-thirds pad--large--one-third e-product-detail__row e-product-detail__row--border">
+        {{> c-media-block data=video noCaption=true}}
+    </div>
+
+    <div class="grid__item one-whole large--two-thirds pad--large--one-third e-product-detail__row e-product-detail__row--border">
+        {{> c-add-to-cart addToCart}}
+    </div>
+
+    {{#if author}}
+        <div class="grid__item large--two-thirds pad--large--one-third">
+            <h4 class="e-product-detail__heading">About the author</h4>
+            {{> c-person author modifier="small"}}
+        </div>
+    {{/if}}
+
+    {{#if outroContent}}
+        <div class="grid__item one-whole large--two-thirds pad--large--one-third e-product-detail__row">
+            <div class="e-richtext">
+                {{{outroContent}}}
+            </div>
+        </div>
+    {{/if}}
+
+    <div class="grid__item one-whole e-product-detail__row">
+        {{> e-accordion data=accordion headingModifier='small' }}
+    </div>
+
+    <div class="grid__item one-whole e-product-detail__row">
+        {{> c-join-promo-block joinPromo}}
+    </div>
+        
+</div>

@@ -1,0 +1,23 @@
+<div class="c-order-detail">
+    <ul class="c-order-detail__items">
+        <li class="grid c-order-detail__items-header">
+            <div class="grid__item one-whole medium--five-twelfths">
+                <div class="c-order-detail__column-label c-order-detail__column-label--item">Item</div>
+            </div>
+            <div class="grid__item one-whole medium--two-twelfths">
+                <div class="c-order-detail__column-label">Item Price</div>
+            </div>
+            <div class="grid__item one-whole medium--three-twelfths">
+                <div class="c-order-detail__column-label c-order-detail__column-label--quantity">Quantity</div>
+            </div>
+            <div class="grid__item one-whole medium--two-twelfths">
+                <div class="c-order-detail__column-label c-order-detail__column-label--item-total">Item Total</div>
+            </div>
+        </li>
+        {{#each this.items}}
+            <li class="c-order-detail__items-row">
+                {{> c-order-item this}}
+            </li>
+        {{/each}}
+    </ul>
+</div>

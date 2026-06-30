@@ -1,0 +1,23 @@
+.c-address {
+	
+	&__heading {
+
+		margin-bottom: t-rem($s-layout-gutter-mobile-medium);
+	}
+
+	&__address {
+		
+		@include t-type-p1(normal);
+
+		font-style: normal;
+		list-style-type: none;
+
+		&-item {
+			display: block;
+
+			&--push {
+				margin-top: t-rem($s-vertical-spacing-mobile-small);
+			}
+		}
+	}
+}

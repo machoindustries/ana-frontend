@@ -1,0 +1,188 @@
+.e-blue-ui-icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--certificate {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/certificate.svg');
+        }
+    }
+
+    &--classroom {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/classroom.svg');
+        }
+    }
+
+    &--conference {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/conference.svg');
+        }
+    }
+
+    &--coronavirus {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/coronavirus.svg');
+        }
+    }
+
+    &--course {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/course.svg');
+        }
+    }
+
+    &--curriculum {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/curriculum.svg');
+        }
+    }
+
+    &--diploma {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/diploma.svg');
+        }
+    }
+
+    &--donate {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/donate.svg');
+        }
+    }
+
+    &--e-learning {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/e-learning.svg');
+        }
+    }
+
+    &--event {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/event.svg');
+        }
+    }
+
+    &--graduation-cap {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/graduation-cap.svg');
+        }
+    }
+
+    &--health-book {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/health-book.svg');
+        }
+    }
+
+    &--hospital {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/hospital.svg');
+        }
+    }
+
+    &--lecture {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/lecture.svg');
+        }
+    }
+
+    &--literature {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/literature.svg');
+        }
+    }
+
+    &--membership-card {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/membership-card.svg');
+        }
+    }
+
+    &--microscope {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/microscope.svg');
+        }
+    }
+
+    &--parliament {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/parliament.svg');
+        }
+    }
+
+    &--read {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/read.svg');
+        }
+    }
+
+    &--shop {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/shop.svg');
+        }
+    }
+
+    &--study {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/study.svg');
+        }
+    }
+
+    &--syringe {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/syringe.svg');
+        }
+    }
+
+    &--treatment {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/treatment.svg');
+        }
+    }
+
+    &--video-conference {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/video-conference.svg');
+        }
+    }
+
+    &--webinar {
+
+        &:after {
+            background-image: url($s-image-path  + '/blue-ui-icons/webinar.svg');
+        }
+    }
+}

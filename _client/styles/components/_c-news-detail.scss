@@ -1,0 +1,17 @@
+.c-news-detail {
+	border-bottom: 1px solid t-brand-colour(newsdetailborder);
+	margin-bottom: t-rem($s-vertical-spacing-mobile-large);
+	padding-bottom: t-rem($s-vertical-spacing-mobile-large);
+
+	&__title {
+		@include t-type-h2;
+		margin-bottom: t-rem($s-vertical-spacing-mobile-medium);
+		margin-top: t-rem($s-vertical-spacing-mobile-medium);
+	}
+
+	&__subtitle {
+		@include t-type-h3;
+		margin-bottom: t-rem($s-vertical-spacing-mobile-medium);
+		margin-top: t-rem($s-vertical-spacing-mobile-medium);
+	}
+}

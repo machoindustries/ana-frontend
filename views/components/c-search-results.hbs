@@ -1,0 +1,28 @@
+<div class="c-search-results grid grid--full">
+	<form class="c-search-results__controls e-form grid__item one-whole">
+		<div class="c-search-results__controls-wrap grid">
+			<div class="c-search-results__subheading grid__item one-whole">
+				<span data-num-search-results>55</span> results for '<span data-search-term>ethics</span>'
+			</div>
+			<div class="grid__item one-whole large--one-half">
+				{{> e-search-box }}
+			</div>
+			<div class="grid__item one-whole large--one-half">
+				<label class="c-search-results__filter e-form__label e-form__label--select" for="sg-select">
+					<select class="c-search-results__filter-select e-form__input e-form__input--select" name="sg-dropdown" id="sg-select" placeholder="placeholder...">
+						<option value="e-form__input e-form__input--option" selected="">View all</option>
+						<option value="e-form__input e-form__input--option">Most recent</option>
+						<option value="e-form__input e-form__input--option">Most read</option>
+					</select>
+				</label>
+			</div>
+		</div>
+	</form>
+	<ul class="c-search-results__list grid__item one-whole large--two-thirds push--large--one-sixth">
+		{{#each search-results}}
+			<li class="c-search-results__item">
+				{{> e-search-result data=this}}
+			</li>
+		{{/each}}
+	</ul>
+</div>

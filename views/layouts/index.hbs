@@ -1,0 +1,15 @@
+---
+layout: "styleguide.hbs"
+---
+
+<div>
+    <h1>{{title}}</h1>
+
+    <ul>
+      {{#each paths}}
+        <li> <a href ="/frontend/build/{{url}}">{{label}}</a></li>
+      {{/each}}
+    </ul>
+
+    {{> body }}
+</div>

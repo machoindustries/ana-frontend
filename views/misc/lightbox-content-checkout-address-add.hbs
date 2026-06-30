@@ -1,0 +1,81 @@
+<div data-lightbox-src="{{#if editVersion}}edit{{else}}add{{/if}}{{addressType}}address">
+	<h3>{{#if editVersion}}Edit{{else}}Add{{/if}} {{addressType}} address</h3>
+	<form class="e-form" data-require="./src/views/form-view" data-ajax-form>
+
+		<label for="caa-firstname" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>First Name</span>
+			<input type="text" name="caa-firstname" class="e-form__input e-form__input--text" title="First name" data-formfield-text data-validate data-validate-required data-address-input-firstname>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-firstname"></div>
+
+		<label for="caa-lastname" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Last Name</span>
+			<input type="text" name="caa-lastname" class="e-form__input e-form__input--text" title="Last name" data-formfield-text data-validate data-validate-required data-address-input-lastname>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-lastname"></div>
+
+		<label for="caa-addressline1" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Address line 1</span>
+			<input type="text" name="caa-addressline1" class="e-form__input e-form__input--text" title="Address line 1" data-formfield-text data-validate data-validate-required data-address-input-line1>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-addressline1"></div>
+
+		<label for="caa-addressline2" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Address line 2</span>
+			<input type="text" name="caa-addressline2" class="e-form__input e-form__input--text" title="Address line 2" data-formfield-text data-address-input-line2>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-addressline2"></div>
+		
+		<label for="caa-addressline3" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Address line 3</span>
+			<input type="text" name="caa-addressline3" class="e-form__input e-form__input--text" title="Address line 3" data-formfield-text data-address-input-line3>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-addressline3"></div>
+
+		<label for="caa-city" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>City</span>
+			<input type="text" name="caa-city" class="e-form__input e-form__input--text" title="City" data-formfield-text data-validate data-validate-required data-address-input-city>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-city"></div>
+
+		<label for="caa-state" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>State</span>
+			<input type="text" name="caa-state" class="e-form__input e-form__input--text" title="State" data-formfield-text data-validate data-validate-required data-address-input-state>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-state"></div>
+
+		<label for="caa-country" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Country</span>
+			<input type="text" name="caa-country" class="e-form__input e-form__input--text" title="Country" data-formfield-text data-validate data-validate-required data-address-input-country>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-country"></div>
+
+		<label for="caa-zipcode" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Zip code</span>
+			<input type="text" name="caa-zipcode" class="e-form__input e-form__input--text" title="Zip code" data-formfield-text data-validate data-validate-required data-validate data-validate-regex="^\d{5}(?:[-\s]\d{4})?$" data-validate-message="Please enter a valid zip code" data-address-input-zipcode>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-zipcode"></div>
+
+		<label for="caa-default" class="e-form__label e-form__label--checkbox" data-formfield>
+			<span class="e-form__label-text">Make this my default {{addressType}} address</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="caa-default" name="caa-default" title="Make this my default {{addressType}} address" data-validate>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-default"></div>
+
+		<label for="caa-telephone" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Telephone number</span>
+			<input type="text" name="caa-telephone" class="e-form__input e-form__input--text" title="Telephone number" data-formfield-text data-validate data-validate-required data-address-input-telephone>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-telephone"></div>
+
+		<label for="caa-telephone2" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Telephone2 number</span>
+			<input type="text" name="caa-telephone2" class="e-form__input e-form__input--text" title="Telephone number (alternative)" data-formfield-text data-validate data-address-input-telephone2>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="caa-telephone2"></div>
+
+		<input class="e-button e-button--submit e-button--blue e-form__submit" type="submit" value="{{#if editVersion}}Apply{{else}}Submit{{/if}}" data-add-{{addressType}}-address />
+
+	</form>
+</div>

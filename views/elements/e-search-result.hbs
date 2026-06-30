@@ -1,0 +1,18 @@
+<article class="e-search-result">
+	<h2 class="e-search-result__heading">{{data.heading}}</h2>
+	<header class="e-search-result__info">
+		<time class="e-search-result__info-item e-search-result__info-item--date">{{data.info.date}}</time>
+		{{#if data.info.category}}
+			<div class="e-search-result__info-item e-search-result__info-item--category">{{data.info.category}}</div>
+		{{/if}}
+		{{#if data.info.author}}
+			<address>
+				<a href="{{data.info.author.url}}" class="e-search-result__author">{{data.info.author.name}}</a>
+			</address>
+		{{/if}}
+	</header>
+	<p class="e-search-result__copy">
+		{{data.copy}}
+	</p>
+	<a href="{{data.link}}" class="e-search-result__link">{{data.link}}</a>
+</article>

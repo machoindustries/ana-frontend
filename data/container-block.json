@@ -1,0 +1,182 @@
+[
+    {
+		"heading": "Container block",
+		"introContent": "<p>This is some intro content for the block Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dignissimos, doloremque consequatur excepturi dolorum ducimus minima fugiat deserunt. Deserunt qui veritatis consectetur, blanditiis aspernatur pariatur quas voluptatibus quam cum quia?</p>",
+		"contents": "",
+		"variant": "",
+		"carouselContentAtMobile": false
+    },
+    {
+		"heading": "Container block with heading and border between items",
+		"introContent": "",
+		"borderBetweenItems": true,
+		"carouselContentAtMobile": false,
+		"carouselContentAtDesktop": false,
+		"contentItems": [
+			{
+				"partialName": "c-cta-block",
+				"icon": "icon-profile",
+				"heading": {
+					"url": "#",
+                    "text": "Heading text",
+                    "variant": "icon"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+            },
+            {
+				"partialName": "c-cta-block",
+				"icon": "icon-profile",
+				"heading": {
+					"url": "#",
+                    "text": "Heading text",
+                    "variant": "icon"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+            }
+        ]
+    },
+	{
+		"heading": "Container block with border between items and mixed content (no carousel)",
+		"introContent": "<p>This is some intro content for the block Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dignissimos, doloremque consequatur excepturi dolorum ducimus minima fugiat deserunt. Deserunt qui veritatis consectetur, blanditiis aspernatur pariatur quas voluptatibus quam cum quia?</p>",
+		"borderBetweenItems": true,
+		"carouselContentAtMobile": false,
+		"carouselContentAtDesktop": false,
+		"contentItems": [
+			{
+				"partialName": "c-cta-block",
+				"icon": "icon-profile",
+				"heading": {
+					"url": "#",
+                    "text": "Heading text",
+                    "variant": "icon"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+			},
+			{
+				"partialName": "c-featured-content",
+				"img": "http://via.placeholder.com/278x314",
+				"title": "One",
+				"copy": "Cras sit amet nibh libero, inn gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+				"ctaText": "Find out more"
+			},
+			{
+				"partialName": "c-cta-block",
+				"image": {
+					"src": "http://via.placeholder.com/240x360",
+					"alt": "Alt text"
+				},
+				"heading": {
+					"url": "#",
+					"text": "Heading text"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+			},
+			{
+				"partialName": "c-featured-content",
+                "img": "http://via.placeholder.com/278x314",
+                "title": "Two",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur dolor assumenda totam laborum delectus eaque deleniti itaque quisquam.",
+                "ctaText": "Buy"
+			}
+		]
+	},
+	{
+		"heading": "Container block with border between items and mixed content (mobile carousel)",
+		"introContent": "<p>This is some intro content for the block Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dignissimos, doloremque consequatur excepturi dolorum ducimus minima fugiat deserunt. Deserunt qui veritatis consectetur, blanditiis aspernatur pariatur quas voluptatibus quam cum quia?</p>",
+		"borderBetweenItems": true,
+		"carouselContentAtMobile": true,
+		"carouselContentAtDesktop": false,
+		"contentItems": [
+			{
+				"partialName": "c-cta-block",
+				"icon": "icon-profile",
+				"heading": {
+					"url": "#",
+                    "text": "Heading text",
+                    "variant": "icon"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+			},
+			{
+				"partialName": "c-featured-content",
+				"img": "http://via.placeholder.com/278x314",
+				"title": "One",
+				"copy": "Cras sit amet nibh libero, inn gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+				"ctaText": "Find out more"
+			},
+			{
+				"partialName": "c-cta-block",
+				"image": {
+					"src": "http://via.placeholder.com/240x360",
+					"alt": "Alt text"
+				},
+				"heading": {
+					"url": "#",
+					"text": "Heading text"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+			},
+			{
+				"partialName": "c-featured-content",
+                "img": "http://via.placeholder.com/278x314",
+                "title": "Two",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur dolor assumenda totam laborum delectus eaque deleniti itaque quisquam.",
+                "ctaText": "Buy"
+			}
+		]
+    },
+    {
+		"heading": "Container block, featured and mixed content (mobile carousel)",
+		"introContent": "<p>This is some intro content for the block Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dignissimos, doloremque consequatur excepturi dolorum ducimus minima fugiat deserunt. Deserunt qui veritatis consectetur, blanditiis aspernatur pariatur quas voluptatibus quam cum quia?</p>",
+		"borderBetweenItems": true,
+		"carouselContentAtMobile": true,
+        "carouselContentAtDesktop": false,
+        "variant": "featured",
+		"contentItems": [
+			{
+				"partialName": "c-cta-block",
+				"icon": "icon-profile",
+				"heading": {
+					"url": "#",
+                    "text": "Heading text",
+                    "variant": "icon"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+			},
+			{
+				"partialName": "c-featured-content",
+				"img": "http://via.placeholder.com/278x314",
+				"title": "One",
+				"copy": "Cras sit amet nibh libero, inn gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+				"ctaText": "Find out more"
+			},
+			{
+				"partialName": "c-cta-block",
+				"image": {
+					"src": "http://via.placeholder.com/240x360",
+					"alt": "Alt text"
+				},
+				"heading": {
+					"url": "#",
+					"text": "Heading text"
+				},
+				"date": "01/01/2018",
+				"contentHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eum. Quasi voluptatum adipisci, a facilis nulla porro accusantium assumenda, architecto nisi officia. Ad dignissimos veniam suscipit dolores repellat excepturi ratione.</p><a href=\"#\">Dolor sit amet</a>"
+			},
+			{
+				"partialName": "c-featured-content",
+                "img": "http://via.placeholder.com/278x314",
+                "title": "Two",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur dolor assumenda totam laborum delectus eaque deleniti itaque quisquam.",
+                "ctaText": "Buy"
+			}
+		]
+	}
+]

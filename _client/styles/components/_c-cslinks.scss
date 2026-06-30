@@ -1,0 +1,93 @@
+$c-cslinks-line-height: 24px;
+
+.c-cslinks {
+
+    $root: &;
+
+    margin-top: t-get-vertical-spacing(xsmall, large);
+
+    &__list {
+        
+        @include t-clearfix;
+
+        margin: 0;
+        list-style: none;
+        float: right;
+    }
+
+    &__item {
+
+        @include t-type-caption(regular);
+    
+        float: left;
+        color: t-brand-colour(cstext);
+        line-height: t-rem($c-cslinks-line-height);
+        padding-right: t-rem($s-layout-gutter-mobile-small);
+        border-right: 1px solid t-brand-colour(divider);
+        margin-right: t-rem($s-layout-gutter-mobile-small);
+
+        &:last-child {
+
+            padding-right: 0;
+            margin-right: 0;
+            border-right: none;
+        }
+
+        @include t-respond-to-min(large){
+            
+            line-height: t-rem($c-cslinks-line-height);  
+        }
+    }
+
+    &__link {
+
+        @include t-type-caption(regular);
+
+        color: t-brand-colour(cslink);
+        text-decoration: none;
+        transition: t-transition-value(color, fast, ease);
+
+        &:hover {
+            
+            color: t-brand-colour(cslinkhover);
+            text-decoration: none;
+        }
+
+        &--help,
+        &--phone,
+        &--email {
+
+            padding-left: t-rem($s-layout-gutter-desktop-medium);
+            position: relative;
+
+            &:before {
+
+                @include t-responsive-type-size(p2);
+
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &--help {
+
+            @include t-icon(icon-help, before);
+        }
+
+        &--phone {
+
+            @include t-icon(icon-call, before);   
+        }
+
+        &--email {
+
+            @include t-icon(icon-email, before);
+        }
+    }
+
+    & + .hero-area {
+        margin-top: t-get-vertical-spacing(xsmall, large);
+    }
+}

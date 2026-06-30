@@ -1,0 +1,35 @@
+
+{{#if block-class}}
+<div class="block ctablock {{block-class}}">
+{{/if}}
+
+<article class="c-cta-block{{#if variant}} c-cta-block--{{variant}}{{/if}}">
+    <div class="c-cta-block__inner">
+        {{#if image}}
+            <img src="{{image.src}}" alt="{{image.alt}}" class="c-cta-block__image" />
+        {{else}}
+            <div class="c-cta-block__icon-wrap">
+                <span class="icon--{{icon}}"></span>
+            </div>
+        {{/if}}
+        <h3 class="c-cta-block__heading{{#if heading.variant}} c-cta-block__heading--{{heading.variant}}{{/if}}">
+            {{#if heading.url}}
+                <a class="c-cta-block__heading-link" href="{{heading.url}}">{{heading.text}}</a>
+            {{else}}
+                {{heading.text}}
+            {{/if}}
+        </h3>
+        {{#if date}}
+            <div class="c-cta-block__date">
+                <time>{{date}}</time>
+            </div>
+        {{/if}}
+        <div class="c-cta-block__content e-richtext">
+            {{{contentHtml}}}
+        </div>
+    </div>
+</article>
+
+{{#if block-class}}
+</div>
+{{/if}}

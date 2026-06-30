@@ -1,0 +1,45 @@
+.e-search-result {
+
+    &.best-bet {
+
+        padding: 40px;
+    }
+
+    &__heading {
+
+        @include t-type-h4(regular);
+        color: t-brand-colour(richtextheadings);
+        margin-bottom: t-rem(3px);
+
+        @include t-respond-to-max(medium) {
+
+            @include t-type-base(regular);
+            font-size: t-rem(16px);
+            margin-bottom: t-rem(7px);
+        }
+    }
+
+    &__copy {
+
+        @include t-type-p1;
+        color: rgba(#0C1E29, 0.8);
+        margin-bottom: 0;
+    }
+
+    &__link {
+
+        text-decoration: none;
+        color: t-brand-colour(richtextanchors);
+        transition: t-transition-value(color, medium, ease);
+
+        @include t-interaction() {
+            
+            color: t-brand-colour(richtextanchorshover);
+        }
+    }
+
+    em {
+        font-style: normal;
+        @include t-type-base(bold);
+    }
+}

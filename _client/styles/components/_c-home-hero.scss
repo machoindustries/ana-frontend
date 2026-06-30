@@ -1,0 +1,242 @@
+$home-hero-width: t-rem(1680px);
+$home-hero-text-width: t-rem(924px);
+$home-hero-image-container-width: percentage(912 / 1680);
+$home-hero-image-width: t-rem(912px);
+$home-hero-height: t-rem(513px);
+$home-hero-overlap: t-rem(100px);
+
+.c-home-hero {
+    max-width: $home-hero-width;
+    margin: 0 auto;
+
+    .hero {
+        border-bottom: t-rem(10px) solid t-brand-colour(homeheroborder);
+
+        @include t-respond-to-min-max(medium, xlarge) {
+            padding: t-rem(30px) t-rem(60px);
+        }
+
+        @include t-respond-to-max(xlarge) {
+            background: url($s-image-path  + '/hero-background-mobile.svg') no-repeat 0 0/cover;
+        }
+
+        @include t-respond-to-min(xlarge) {
+            position: relative;
+            height: $home-hero-height;
+            overflow: hidden;
+        }
+
+        @include t-respond-to-max(medium) {
+            padding: t-rem(30px) t-rem(20px);
+        }
+    }
+
+    .text {
+        color: #fff;
+
+        @include t-respond-to-max(xlarge) {
+            max-width: $home-hero-image-width;
+            margin: 0 auto;
+        }
+
+        @include t-respond-to-min(xlarge) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: $home-hero-text-width;
+            height: 100%;
+            background: url($s-image-path  + '/hero-background.svg') no-repeat 0 0/cover;
+            padding: t-rem(60px) t-rem(150px) t-rem(60px) t-rem(60px);
+        }
+
+        h1 {
+            margin: 0 0 t-rem(15px);
+            @include t-type-base(bold);
+            font-size: t-rem(32px);
+            line-height: t-rem(36px);
+            color: #8CDDFF;
+
+            @include t-respond-to-max(xlarge) {
+                margin: 0 0 t-rem(10px);
+            }
+
+            @include t-respond-to-min(xlarge) {
+                font-size: t-rem(54px);
+                line-height: t-rem(58px);
+            }
+        }
+
+        p {
+            font-size: t-rem(16px);
+            line-height: t-rem(20px);
+
+            @include t-respond-to-max(xlarge) {
+                margin: 0 0 t-rem(20px);
+            }
+
+            @include t-respond-to-min(xlarge) {
+                font-size: t-rem(24px);
+                line-height: t-rem(28px);
+            }
+        }
+    }
+
+    .no-text {
+        color: #fff;
+
+        @include t-respond-to-max(xlarge) {
+            max-width: $home-hero-image-width;
+            margin: 0 auto;
+        }
+
+        @include t-respond-to-min(xlarge) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: $home-hero-text-width;
+            height: 100%;
+            padding: t-rem(60px) t-rem(150px) t-rem(60px) t-rem(60px);
+        }
+
+        h1 {
+            margin: 0 0 t-rem(15px);
+            @include t-type-base(bold);
+            font-size: t-rem(32px);
+            line-height: t-rem(36px);
+            color: #8CDDFF;
+
+            @include t-respond-to-max(xlarge) {
+                margin: 0 0 t-rem(10px);
+            }
+
+            @include t-respond-to-min(xlarge) {
+                font-size: t-rem(54px);
+                line-height: t-rem(58px);
+            }
+        }
+
+        p {
+            font-size: t-rem(16px);
+            line-height: t-rem(20px);
+
+            @include t-respond-to-max(xlarge) {
+                margin: 0 0 t-rem(20px);
+            }
+
+            @include t-respond-to-min(xlarge) {
+                font-size: t-rem(24px);
+                line-height: t-rem(28px);
+            }
+        }
+    }
+
+    .button {
+
+        @include t-respond-to-max(xlarge) {
+            margin: 0 auto;
+            max-width: $home-hero-image-width;
+            text-align: center;
+
+            &.desktop-only {
+                display: none;
+            }
+        }
+
+        @include t-respond-to-min(xlarge) {
+
+            &.mobile-only {
+                display: none;
+            }
+        }
+    }
+
+    .image {
+        position: relative;
+        width: 100%;
+
+        @include t-respond-to-max(xlarge) {
+            margin: 0 0 t-rem(20px);
+        }
+
+        @include t-respond-to-min(xlarge) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 5;
+            width: $home-hero-image-container-width;
+            height: 100%;
+        }
+
+
+
+        img {
+            display: block;
+            transition: transform 0.3s ease;
+
+            @include t-respond-to-max(xlarge) {
+                width: 100%;
+                max-width: $home-hero-image-width;
+                margin: 0 auto;
+            }
+
+            @include t-respond-to-min(xlarge) {
+                min-width: calc(100% + #{$home-hero-overlap});
+                min-height: 100%;
+                margin-left: -$home-hero-overlap;
+            }
+        }
+
+        .play-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: t-rem(120px);
+            height: t-rem(120px);
+            border-radius: 50%;
+            background-color: rgba(#e7e7e7, 0.5);
+            transition: background-color 0.3s ease;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 53%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+                border-top: t-rem(22px) solid transparent;
+                border-bottom: t-rem(22px) solid transparent;
+                border-left: t-rem(38px) solid t-brand-colour(homeheroplaybutton); // border-top + border-bottom * 0.866
+                transition: border-left-color 0.3s ease;
+            }
+        }
+
+        a {
+
+            &:hover {
+
+                img {
+
+                    @include t-respond-to-min(xlarge) {
+                        transform: scale(1.03);
+                    }
+                }
+
+                .play-icon {
+                    background-color: rgba(t-brand-colour(homeheroplaybuttonhover), 0.25);
+
+                    &:after {
+                        border-left-color: t-brand-colour(homeheroplaybuttonhover);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-area .grid-constraint {
+    padding: 0;
+}

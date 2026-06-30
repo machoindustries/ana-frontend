@@ -1,0 +1,47 @@
+/* Styles used by the TinyMCE editor */
+
+@import "settings/settings";
+@import "tools/tools";
+@import "resources/resources-typography";
+@import "resources/resources-richtext";
+@import "elements/e-button";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $s-base-font-size;
+}
+
+body {
+
+    @include t-type-p1;
+}
+
+@include e-richtext-content(true);
+
+a.e-button--blue {
+
+    EditMenuTitle: Buttons;
+    EditMenuName: Blue;
+    ChangeElementType: true;
+}
+
+a.e-button--white {
+
+    EditMenuName: White;
+}
+
+a.e-button--orange {
+
+    EditMenuName: Orange;
+}
+
+table.e-responsive-table {
+
+    EditMenuTitle: Tables;
+    EditMenuName: Responsive Table;
+}

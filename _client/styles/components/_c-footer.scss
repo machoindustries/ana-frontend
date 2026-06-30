@@ -1,0 +1,319 @@
+$c-footer-large-item-height: 50px;
+$c-footer-social-icon-size: 20px;
+
+.c-footer {
+
+    $root: &;
+
+    background-color: map-get($s-colours, blue);
+    color: map-get($s-colours, white);
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+
+        content: "";
+        display: block;
+        position: absolute;
+        left: -50%;
+        bottom: -15%;
+        right: -15%;
+        padding-top: 150%;
+        opacity: 0.05;
+        background-image: url(/assets/img/logos/ana-flame-white.svg);
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+
+        @include t-respond-to-min(medium) {
+
+            left: -30%;
+            right: 45%;
+        }
+
+        @include t-respond-to-min(large) {
+            
+            padding-top: 33%;
+            width: 50%;
+            left: -20%;
+            bottom: -20%;
+            top: 0;   
+        }
+    }
+
+    &__section {
+
+        &--dark {
+
+            background-color: map-get($s-colours, transblack);
+        }
+    }
+
+    &__content {
+        
+        @include t-content-constraint;
+
+        position: relative;
+        padding-top: t-rem($s-layout-gutter-mobile-large);
+        padding-bottom: t-rem($s-layout-gutter-mobile-large);
+
+        &-item {
+
+            margin-bottom: t-rem($s-layout-gutter-mobile-xlarge);
+        }
+    }
+
+    &__back-to-top {
+
+        display: block;
+        position: absolute;
+        top: t-rem($s-layout-gutter-mobile-small);
+        right: t-rem($s-layout-gutter-mobile-large);
+
+        @include t-respond-to-min(large){
+            
+            top: t-rem($s-layout-gutter-mobile-large);
+            right: t-rem($s-layout-gutter-mobile-large);
+        }
+    }
+
+    &__nav-item {
+
+        margin-top: t-rem(0px);
+        margin-bottom: t-rem($s-layout-gutter-mobile-large);
+
+        &--flush {
+
+            margin-bottom: 0;
+        }
+
+        &:first-child {
+
+            margin-top: 0;
+        }
+
+        &--secondary {
+
+            margin-top: 0;
+        }
+    }
+
+    &__link-list {
+
+        @include t-clearfix;
+
+        list-style-type: none;
+        margin: 0;
+
+        &-item {
+
+            &:first-child {
+
+                #{$root}__link-list-link:not(#{$root}__link-list-link--large) {
+
+                    padding-top: t-rem($s-layout-gutter-mobile-small);
+                    padding-left: 0;
+                }
+            }
+
+            &--icon {
+
+                display: inline-block;
+
+                #{$root}__link-list-link {
+
+                    margin-right: t-rem($s-layout-gutter-mobile-large);
+                    padding-left: t-rem($s-layout-gutter-mobile-medium / 2);
+                    padding-right: t-rem($s-layout-gutter-mobile-medium / 2);
+                    display: block;
+
+                    &:last-child {
+
+                        margin-right: 0;
+                    }
+
+                    &:before {
+
+                        font-size: t-rem($c-footer-social-icon-size);
+                    }
+                }
+            }
+        }
+
+        &-link {
+
+            @include t-type-p1;
+            
+            display: block;
+            color: t-brand-colour(footerlink);
+            text-decoration: none;
+            transition: t-transition-value(color, fast, ease);
+            padding-top: t-rem($s-layout-gutter-mobile-tiny);
+
+            @include t-interaction(){
+
+                color: t-brand-colour(footerlinkhover);
+            }
+        }
+
+        &-heading,
+        &-link--large {
+            
+            @include t-type-p1('bold');
+
+            display: block;
+            color: t-brand-colour(footerheading);
+            text-transform: uppercase;
+            text-decoration: none;
+            padding-top: t-rem($s-layout-gutter-mobile-large);
+            padding-bottom: t-rem($s-layout-gutter-mobile-large);
+            border-bottom: 1px solid t-brand-colour(footerheadingunderline);
+            transition: t-transition-value(color, fast, ease);
+
+            @include t-interaction(){
+
+                color: t-brand-colour(footerlinkhover);
+            }
+        }
+    }
+
+    &__entities-nav {
+
+        &-list {
+
+            list-style-type: none;
+        }
+
+        &-item {
+            
+            border-right: 1px solid t-brand-colour(transdivider);
+            opacity: 0.7;
+            transition: t-transition-value(opacity, fast, ease);
+
+            &.grid__item {
+
+                padding: t-rem(0 $s-layout-gutter-mobile-small);
+            }
+
+            &:nth-child(2) {
+
+                padding-left: 0;
+            }
+
+            &:first-child,
+            &:last-child {
+
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+
+        &-link {
+
+            display: block;
+            text-align: center;
+        }
+
+        &-logo {
+
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+
+    &__copyright {
+        
+        @include t-type-caption;
+
+        opacity: 0.7;
+        margin-bottom: t-rem($s-layout-gutter-mobile-small);
+    }
+
+    &__utility-nav {
+
+        &-list {
+
+            margin-bottom: 0;
+            list-style-type: none;
+        }
+
+        &-item {
+
+            display: inline-block;
+            float: left;
+
+            &:last-child {
+
+                #{$root}__utility-nav-link {
+
+                    margin-right: 0;
+                    border-right: 0;
+                }
+            }
+        }
+
+        &-link {
+
+            @include t-type-caption;
+
+            opacity: 0.7;
+            text-decoration: none;
+            color: map-get($s-colours, white);
+            transition: t-transition-value(opacity, fast, ease);
+            border-right: 1px solid map-get($s-colours, transwhite);
+            padding-right: t-rem($s-layout-gutter-mobile-small);
+            margin-right: t-rem($s-layout-gutter-mobile-small);
+
+            &:hover {
+
+                opacity: 1;
+            }
+        }
+
+        @include t-respond-to-min(large) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include t-respond-to-min(small) {
+            
+        &__social-item {
+            
+            margin: t-rem(0 20px);
+
+            &:first-child {
+
+                margin-left: 0;
+            }
+
+            &:last-child {
+                
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include t-respond-to-min(large) {
+
+        padding-bottom: 0;
+
+        &__nav-item {
+
+            margin-top: 0;
+        }
+        
+        &__locality {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &__utility-nav,
+        &__copyright {
+
+            clear: right;
+            float: right;
+        }
+    }
+}

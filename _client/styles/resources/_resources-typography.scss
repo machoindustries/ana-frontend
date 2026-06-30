@@ -1,0 +1,21 @@
+/* Resources - Typography
+------------------------- */
+
+/// @font-face Injection
+/// Iterates through the $s-fonts map to render each font import.
+@each $font in map-keys($s-fonts) {
+	$map: map-get($s-fonts, $font);
+	$file: map-get($map, file);
+	$weight: map-get($map, weight);
+    $random-string: unique-id();
+
+	@font-face {
+		font-family: $font;
+		src: url($s-fonts-path + $file + '.eot?' + $random-string);
+		src: url($s-fonts-path + $file + '.eot?#iefix') format('embedded-opentype'),
+			url($s-fonts-path + $file + '.woff?' + $random-string) format('woff'),
+			url($s-fonts-path + $file + '.ttf?' + $random-string) format('truetype');
+		font-weight: $weight;
+		font-style: normal;
+	}
+}

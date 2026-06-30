@@ -1,0 +1,99 @@
+$e-responsive-table-cell-min-height: 32px;
+
+.e-responsive-table {
+	$root: &;
+
+	overflow: hidden;
+	overflow-x: auto;
+	text-align: left;
+	width: 100%;
+	
+	&--fixed {
+		table {
+			table-layout: fixed;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		margin: 0;
+		vertical-align: top;
+		width: 100%;
+		
+		thead {
+			@include t-type-p1("bold");
+			background: t-brand-colour(tabletheadbackground);
+			color: t-brand-colour(tabletheadtextcolour);
+			display: none;
+
+			@include t-respond-to-min(medium) {
+				display: table-header-group;
+			}
+		}
+
+		tbody {
+			@include t-type-p1;
+			
+			tr {
+				border-bottom: 1px solid t-brand-colour(tablerowbordercolour);
+				display: block;
+				padding: t-rem($s-layout-gutter-mobile-small 0);
+
+				@include t-respond-to-min(medium) {
+					display: table-row;
+					padding: 0;
+				}
+
+				&:nth-child(odd) {
+					background: t-brand-colour(tablerowbackground);
+				}
+
+				&:nth-child(1) {
+					border-top: 1px solid t-brand-colour(tablerowbordercolour);
+					
+					@include t-respond-to-min(medium) {
+						border-top: 0;
+					}
+				}
+			}	
+		}
+
+		td {
+			display: block;
+			margin: 0;
+			position: relative;
+			padding: t-rem($s-layout-gutter-mobile-tiny $s-layout-gutter-mobile-small $s-layout-gutter-mobile-tiny 50%);
+			vertical-align: top;
+			min-height: t-rem($e-responsive-table-cell-min-height);
+			
+			@include t-respond-to-min(medium) {
+				display: table-cell;
+				padding: t-rem($s-layout-gutter-mobile-medium $s-layout-gutter-mobile-small $s-layout-gutter-mobile-medium 0);
+			}
+
+			&:before {
+				@include t-type-p1(bold);
+				content: attr(data-cell-header);
+				left: t-rem($s-layout-gutter-mobile-small);
+				position: absolute;
+				top: t-rem($s-layout-gutter-mobile-tiny);
+				width: 50%; 
+	
+				@include t-respond-to-min(medium) {
+					display: none;
+				}
+			}
+		}
+
+		td, th {
+			@include t-respond-to-min(medium) {
+				padding: t-rem($s-layout-gutter-mobile-medium $s-layout-gutter-mobile-small);
+			}
+		}
+
+		th {
+			text-align: left;
+		}
+	}
+
+}

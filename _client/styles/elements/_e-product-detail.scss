@@ -1,0 +1,100 @@
+.e-product-detail {
+
+    &__sidebar {
+
+        @extend .zero-height;
+
+        @include t-respond-to-max(large) {
+            margin-bottom: t-get-vertical-spacing(medium, small);
+        }
+    }
+
+    &__row {
+
+        margin-bottom: t-get-vertical-spacing(medium, small);
+
+        .c-tab-control & {
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &--border {
+
+            &::after {
+
+                content: '';
+                display: block;
+                height: 1px;
+                background-color: t-brand-colour(divider);
+                margin-top: t-get-vertical-spacing(medium, small);
+            }
+        }
+        
+        &:last-child,
+        &--flush {
+
+            @include t-vertical-spacing(none, (padding-top, padding-bottom));
+        }
+    }
+
+    &__preview {
+
+        &-link {
+
+            @include t-default-link-interaction;
+            
+            text-decoration: underline;
+            color: t-brand-colour(richtextheadings);
+            margin-right: t-rem($s-layout-gutter-mobile-large);
+            padding-right: t-rem($s-layout-gutter-mobile-large);
+            border-right: 1px solid t-brand-colour(divider);
+
+            &:last-child {
+
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+
+    &__video {
+
+        @include t-vertical-spacing(small, padding-bottom);
+    }
+}
+
+//hover for book products member price message
+//DT2-255
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 210px;
+    background-color: #009685
+;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    left: 80px;
+    top: -30px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+img.show_info {
+    top: 5px;
+    position: relative;
+}

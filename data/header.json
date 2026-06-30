@@ -1,0 +1,17 @@
+{
+	"ana": {
+		"siteLogo": {
+			"img": "/assets/img/logos/ana.svg"
+		}
+	},
+	"ancc": {
+		"siteLogo": {
+			"img": "/assets/img/logos/ancc.svg"
+		}
+	},
+	"anf": {
+		"siteLogo": {
+			"img": "/assets/img/logos/anf.svg"
+		}
+	}
+}

@@ -1,0 +1,47 @@
+$e-spinner-size: 96px;
+
+.e-spinner {
+
+	$root: &;
+
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: t-brand-colour(spinnerOverlay);
+	z-index: t-z-index(spinnerOverlay);
+
+	&.is--active {
+
+		display: block;
+	}
+	
+	&__spinner {
+
+		display: block;
+		position: absolute;
+		width: t-rem($e-spinner-size);
+		height: t-rem($e-spinner-size);
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
+		margin: 0 auto;
+		animation: spin 1s infinite linear;
+	}
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}

@@ -1,0 +1,18 @@
+/* Base - Static
+------------------------- */
+
+.static {
+
+    &__heading {
+
+        @include t-vertical-spacing(xsmall, margin-bottom);
+
+        margin-top: 0;
+        padding: t-rem(10px $s-layout-gutter--half);
+    }
+
+    &__section {
+
+        @include t-vertical-spacing(medium, margin-bottom);
+    }
+}

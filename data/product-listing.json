@@ -1,0 +1,515 @@
+{
+    "books": [
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Nursing: Scope and Standards of Practice...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/100x100/999999/ffffff",
+            "title": "Code of Ethics for Nurses with Interpretive...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/450x630/999999/ffffff",
+            "title": "Anatomy of a Super Nurse: The Ultimate...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "What Would Florence Do? A Guide for New...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "This is a nursing book title",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Another title for a nursing-related book",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Placeholder title for a book here",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Nursing: this is an example book title...",
+            "url": "#"
+        }
+    ],
+    "books-featured": [
+        {
+            "block-class": "c-container-block__slide grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "modifier": "c-product-detail--feature c-product-detail--carousel",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Nursing: Scope and Standards of Practice...",
+            "url": "#"
+        },
+        {
+            "block-class": "c-container-block__slide grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "modifier": "c-product-detail--feature c-product-detail--carousel",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/100x100/999999/ffffff",
+            "title": "Code of Ethics for Nurses with Interpretive...",
+            "url": "#"
+        },
+        {
+            "block-class": "c-container-block__slide grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "modifier": "c-product-detail--feature c-product-detail--carousel",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/450x630/999999/ffffff",
+            "title": "Anatomy of a Super Nurse: The Ultimate...",
+            "url": "#"
+        },
+        {
+            "block-class": "c-container-block__slide grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "modifier": "c-product-detail--feature c-product-detail--carousel",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "What Would Florence Do? A Guide for New...",
+            "url": "#"
+        }
+    ],
+    "courses": [
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter courseproduct",
+            "detail_1": "Webinar",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: Not applicable",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "10 Steps to Becoming a Successful Nurse...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter courseproduct",
+            "detail_1": "Live and Online",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: 20.15",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "Achieving Excellence Through A Culture...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter courseproduct",
+            "detail_1": "eLearning",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: 20.15",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "A Nurse's Guide to Preventing Compass...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter courseproduct",
+            "detail_1": "Workshop",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: 20.15",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "foundation",
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "Acute Kidney Injury - Causes, Phases, and...",
+            "url": "#"
+        }
+    ],
+    "booksWithEntityBanner": [
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "entityBannerText": "ana",
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Nursing: Scope and Standards of Practice...",
+            "url": "#"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Code of Ethics for Nurses with Interpretive...",
+            "url": "#",
+            "entityBannerText": "ancc"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "Anatomy of a Super Nurse: The Ultimate...",
+            "entityBannerText": "foundation"
+        },
+        {
+            "block-class": "grid__item one-whole small--one-half medium--one-third large--one-quarter bookproduct",
+            "detail_1": "Author Name",
+            "detail_2": "Paperback",
+            "note": "Also available in e-book",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "product_type": "book",
+            "image": "http://via.placeholder.com/150x230/999999/ffffff",
+            "title": "What Would Florence Do? A Guide for New...",
+            "url": "#",
+            "entityBannerText": "foundation"
+        }
+    ],
+    "coursesWithEntityBanner": [
+        {
+            "detail_1": "Webinar",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: Not applicable",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "10 Steps to Becoming a Successful Nurse...",
+            "url": "#",
+            "entityBannerText": "ana"
+        },
+        {
+            "detail_1": "Live and Online",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: 20.15",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "Achieving Excellence Through A Culture...",
+            "url": "#",
+            "entityBannerText": "ancc"
+        },
+        {
+            "detail_1": "eLearning",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: 20.15",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "A Nurse's Guide to Preventing Compass...",
+            "url": "#",
+            "entityBannerText": "foundation"
+        },
+        {
+            "detail_1": "Workshop",
+            "detail_2": "10th May 2017",
+            "note": "Contact hours: 20.15",
+            "price": {
+                "standard": {
+                    "original": "54.95",
+                    "offer": "49.95"
+                },
+                "member": {
+                    "original": "52.95",
+                    "offer": "47.95"
+                }
+            },
+            "product_type": "course",
+            "image": "icon--icon-profile",
+            "title": "Acute Kidney Injury - Causes, Phases, and...",
+            "url": "#",
+            "entityBannerText": "foundation"
+        }
+    ]
+}

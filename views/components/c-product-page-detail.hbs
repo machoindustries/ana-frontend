@@ -1,0 +1,105 @@
+<div class="c-product-page-detail grid">
+
+    <div class="grid__item one-whole medium--eight-twelfths push--medium--four-twelfths">
+
+        <div class="grid">
+        
+            {{#if this.subtitle}}
+                <h1 class="grid__item one-whole c-product-page-detail__title c-product-page-detail__title--has-subtitle">{{this.title}}</h1>
+                <p class="grid__item one-whole c-product-page-detail__subtitle">{{this.subtitle}}</p>
+            {{else}}
+                <h1 class="grid__item one-whole c-product-page-detail__title">{{this.title}}</h1>
+            {{/if}}
+
+            <div class="grid__item one-whole c-product-page-detail__section">
+
+                <div class="grid">
+
+                    <div class="grid__item one-whole{{#if this.event}} large--three-eighths{{else}} large--one-half{{/if}}">
+                        
+                        <div class="c-product-page-detail__pricing">
+                            <div class="c-product-page-detail__pricing-item">
+                                <span class="c-product-page-detail__pricing-label">
+                                    {{#if this.event}}List Price:{{else}}Regular Price:{{/if}}
+                                </span>
+                                {{#if this.pricing.[0].regular.sale}}
+                                    <span class="c-product-page-detail__pricing-price--old">${{this.pricing.[0].regular.price}}</span>
+                                    <span class="c-product-page-detail__pricing-price--new">${{this.pricing.[0].regular.sale}}</span>
+                                {{else}}
+                                    <span class="c-product-page-detail__pricing-price">${{this.pricing.[0].regular.price}}</span>
+                                {{/if}}
+                            </div>
+                            
+                            <div class="c-product-page-detail__pricing-item">
+                                <span class="c-product-page-detail__pricing-label">ANA Member Price:</span>
+                                {{#if this.pricing.[0].member.sale}}
+                                    <span class="c-product-page-detail__pricing-price--old">${{this.pricing.[0].member.price}}</span>
+                                    <span class="c-product-page-detail__pricing-price--new">${{this.pricing.[0].member.sale}}</span>
+                                {{else}}
+                                    <span class="c-product-page-detail__pricing-price">${{this.pricing.[0].member.price}}</span>
+                                {{/if}}
+                            </div>
+
+                            <div class="c-product-page-detail__pricing-item c-product-page-detail__pricing-item--small">
+                                <a href="/" class="c-product-page-detail__pricing-label">Join ANA</a>
+                                {{#if this.sale_note}}
+                                    <span class="c-product-page-detail__pricing-salenote">{{this.sale_note}}</span>
+                                {{/if}}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {{#if this.event}}
+                        <div class="grid__item one-whole large--two-eighths">
+                            <div class="c-product-page-detail__event">
+                                <span class="c-product-page-detail__event-detail">{{this.event.date}}</span>
+                                <span class="c-product-page-detail__event-detail">{{this.event.time}}</span>
+                                <span class="c-product-page-detail__event-detail">{{this.event.location}}</span>
+                            </div>
+                        </div>
+                    {{/if}}
+            
+                    <div class="grid__item one-whole{{#if this.event}} large--three-eighths{{else}} large--one-half{{/if}}">
+                        {{> e-affiliate this.affiliate}}
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="grid__item one-whole medium--one-half pull--medium--one-half c-product-page-detail__media">
+
+                {{#if this.total_hours}}
+                    <p class="c-product-page-detail__totalhours">
+                        <span class="c-product-page-detail__totalhours-workshop icon--icon-workshop"></span>
+                        <span class="c-product-page-detail__totalhours-description">
+                            <span class="c-product-page-detail__totalhours-clock icon--icon-contacthours"></span> <strong>{{this.total_hours}}</strong> Contact Hours
+                        </span>
+                    </p>
+                {{else}}
+                    <figure class="c-product-page-detail__image-wrapper">
+                        <img src="{{this.image}}" class="c-product-page-detail__image" alt="{{this.title}}" />
+                        {{#if this.entityBannerText}}
+                            <div class="c-product-detail__entity-banner c-product-detail__entity-banner--{{this.entityBannerText}}">
+                                <span class="c-product-detail__entity-banner-pretext">Presented by</span>
+                                <span class="c-product-detail__entity-banner-text">{{this.entityBannerText}}</span>
+                            </div>
+                        {{/if}}
+                    </figure>
+                {{/if}}
+
+            </div>
+
+            <div class="grid__item one-whole c-product-page-detail__section">
+                <div class="c-product-page-detail__description">
+                    <div class="e-richtext">
+                        <p>{{this.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

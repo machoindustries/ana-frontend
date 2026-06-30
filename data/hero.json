@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+        "cta": {
+            "text": "FIND OUT MORE",
+            "url": "http://www.google.com"
+        },
+        "heading": "This is a title here over three lines",
+        "imageAlt": "Image Alternative Text",
+        "imagePathDesktop": "http://via.placeholder.com/1440x540",
+        "imagePathDesktop2x": "http://via.placeholder.com/2880x1080",
+        "imagePathMobile": "http://via.placeholder.com/375x300",
+        "imagePathMobile2x": "http://via.placeholder.com/750x600",
+        "imagePathTablet": "http://via.placeholder.com/1024x540",
+        "imagePathTablet2x": "http://via.placeholder.com/2048x1080",
+        "introduction": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+        "tabName": "Lorem ipsum"
+    },
+    {
+        "heading": "This is a title here over two lines",
+        "imageAlt": "Image Alternative Text",
+        "imagePathDesktop": "http://via.placeholder.com/1440x540",
+        "imagePathDesktop2x": "http://via.placeholder.com/2880x1080",
+        "imagePathMobile": "http://via.placeholder.com/375x300",
+        "imagePathMobile2x": "http://via.placeholder.com/750x600",
+        "imagePathTablet": "http://via.placeholder.com/1024x540",
+        "imagePathTablet2x": "http://via.placeholder.com/2048x1080",
+        "introduction": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+        "tabName": "Dolor sit amed sed diam nonummy"
+    },
+    {
+        "cta": {
+            "text": "FIND OUT MORE",
+            "url": "http://www.google.com"
+        },
+        "heading": "This is a title here over three lines",
+        "imageAlt": "Image Alternative Text",
+        "imagePathDesktop": "http://via.placeholder.com/1440x540",
+        "imagePathDesktop2x": "http://via.placeholder.com/2880x1080",
+        "imagePathMobile": "http://via.placeholder.com/375x300",
+        "imagePathMobile2x": "http://via.placeholder.com/750x600",
+        "imagePathTablet": "http://via.placeholder.com/1024x540",
+        "imagePathTablet2x": "http://via.placeholder.com/2048x1080",
+        "introduction": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+        "tabName": "Imdipscing odio"
+    },
+    {
+        "cta": {
+            "text": "FIND OUT MORE",
+            "url": "http://www.google.com"
+        },
+        "heading": "This is a title here over two lines",
+        "imageAlt": "Image Alternative Text",
+        "imagePathDesktop": "http://via.placeholder.com/1440x540",
+        "imagePathDesktop2x": "http://via.placeholder.com/2880x1080",
+        "imagePathMobile": "http://via.placeholder.com/375x300",
+        "imagePathMobile2x": "http://via.placeholder.com/750x600",
+        "imagePathTablet": "http://via.placeholder.com/1024x540",
+        "imagePathTablet2x": "http://via.placeholder.com/2048x1080",
+        "introduction": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+        "tabName": "Nulla veil metus libero"
+    }
+  ],
+  "single": {
+    "heading": "News",
+    "imageAlt": "Image Alternative Text",
+    "imagePathDesktop": "http://via.placeholder.com/1440x540",
+    "imagePathDesktop2x": "http://via.placeholder.com/2880x1080",
+    "imagePathMobile": "http://via.placeholder.com/375x300",
+    "imagePathMobile2x": "http://via.placeholder.com/750x600",
+    "imagePathTablet": "http://via.placeholder.com/1024x540",
+    "imagePathTablet2x": "http://via.placeholder.com/2048x1080",
+    "introduction": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo."
+  }
+}

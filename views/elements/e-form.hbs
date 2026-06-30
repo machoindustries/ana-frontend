@@ -1,0 +1,230 @@
+<form class="e-form" data-require="./src/views/form-view">
+
+	<h2>Dropdown</h2>
+	<label class="e-form__label e-form__label--select" for="sg-select" data-formfield>
+		<span class="e-form__label-text">Dropdown label</span>
+		<select class="e-form__input e-form__input--select" name="sg-dropdown" id="sg-select" placeholder="placeholder...">
+			<option class="e-form__input e-form__input--option" value="first" selected="">First</option>
+			<option class="e-form__input e-form__input--option" value="second">Second</option>
+			<option class="e-form__input e-form__input--option" value="third">Third</option>
+		</select>
+	</label>
+
+	<h2>Radio</h2>
+	<fieldset class="e-form__fieldset">
+		<legend class="e-form__legend">Radio buttons legend</legend>
+		<label class="e-form__label e-form__label--radio" for="sg-radio1" data-formfield>
+			<span class="e-form__label-text">Radio 1 label</span>
+			<input type="radio" class="e-form__input e-form__input--radio" id="sg-radio1" name="sgr" title="Radio buttons legend" data-validate data-validate-required>
+			<span class="e-form__fake-radio"></span>
+		</label>
+		<label class="e-form__label e-form__label--radio" for="sg-radio2" data-formfield>
+			<span class="e-form__label-text">Radio 2 label</span>
+			<input type="radio" class="e-form__input e-form__input--radio" id="sg-radio2" name="sgr" title="Radio buttons legend" data-validate data-validate-required>
+			<span class="e-form__fake-radio"></span>
+		</label>
+		<label class="e-form__label e-form__label--radio" for="sg-radio3" data-formfield>
+			<span class="e-form__label-text">Radio 3 label</span>
+			<input type="radio" class="e-form__input e-form__input--radio" id="sg-radio3" name="sgr" title="Radio buttons legend" data-validate data-validate-required>
+			<span class="e-form__fake-radio"></span>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="sgr"></div>
+	</fieldset>
+
+	<h2>Checkbox</h2>
+	<fieldset class="e-form__fieldset">
+		<legend class="e-form__legend">Checkboxes legend</legend>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox1" data-formfield>
+			<span class="e-form__label-text">Checkbox 1 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox1" name="sgc" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox2" data-formfield>
+			<span class="e-form__label-text">Checkbox 2 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox2" name="sgc" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox3" data-formfield>
+			<span class="e-form__label-text">Checkbox 3 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox3" name="sgc" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="sgc"></div>
+	</fieldset>
+
+	<h2>Checkbox (left)</h2>
+	<fieldset class="e-form__fieldset">
+		<legend class="e-form__legend">Checkboxes legend</legend>
+		<label class="e-form__label e-form__label--checkbox e-form__label--checkbox--left" for="sg-checkbox1a" data-formfield>
+			<span class="e-form__label-text">Checkbox 1 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox1a" name="sgc2" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox e-form__label--checkbox--left" for="sg-checkbox2a" data-formfield>
+			<span class="e-form__label-text">Checkbox 2 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox2a" name="sgc2" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox e-form__label--checkbox--left" for="sg-checkbox3a" data-formfield>
+			<span class="e-form__label-text">Checkbox 3 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox3a" name="sgc2" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="sgc2"></div>
+	</fieldset>
+
+	<h2>Checkbox (block)</h2>
+	<fieldset class="e-form__fieldset">
+		<legend class="e-form__legend">Checkboxes legend</legend>
+		<label class="e-form__label e-form__label--checkbox e-form__label--checkbox--block" for="sg-checkbox1b" data-formfield>
+			<span class="e-form__label-text">Checkbox 1 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox1b" name="sgc2" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox e-form__label--checkbox--block" for="sg-checkbox2b" data-formfield>
+			<span class="e-form__label-text">Checkbox 2 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox2b" name="sgc2" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox e-form__label--checkbox--block" for="sg-checkbox3b" data-formfield>
+			<span class="e-form__label-text">Checkbox 3 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox3b" name="sgc2" title="Checkboxes legend" data-validate data-validate-required>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="sgc2"></div>
+	</fieldset>
+
+	<h2>Checkbox (with MVC CheckboxFor hidden input field)</h2>
+	<fieldset class="e-form__fieldset">
+		<legend class="e-form__legend">Checkboxes legend</legend>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox1c" data-formfield>
+			<span class="e-form__label-text">Checkbox 1 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox1c" name="sgc" title="Checkboxes legend" data-validate data-validate-required>
+			<input name="sgc" type="hidden" value="false" />
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox2c" data-formfield>
+			<span class="e-form__label-text">Checkbox 2 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox2c" name="sgc" title="Checkboxes legend" data-validate data-validate-required>
+			<input name="sgc" type="hidden" value="false" />
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox3c" data-formfield>
+			<span class="e-form__label-text">Checkbox 3 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox3c" name="sgc" title="Checkboxes legend" data-validate data-validate-required>
+			<input name="sgc" type="hidden" value="false" />
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="sgc"></div>
+	</fieldset>
+
+	<h2>Text inputs</h2>
+
+	<label for="textarea" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Text area</span>
+		<textarea class="e-form__input e-form__input--textarea" name="textarea" title="Text area" rows="3" data-formfield-text></textarea>
+		<div class="e-form__validation-errors" data-validation-error></div>
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="username"></div>
+	<label for="username" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Username</span>
+		<input type="text" name="username" class="e-form__input e-form__input--text" title="Username" data-formfield-text data-validate data-validate-required data-validate-minlength="3">
+		<div class="e-form__validation-errors" data-validation-error></div>
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="username"></div>
+	<label for="password" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Password</span>
+		<input type="password" name="password" class="e-form__input e-form__input--text" title="Password" data-formfield-text data-validate data-validate-required data-validate-minlength="8" data-validate-maxlength="16">
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="password"></div>
+	<label for="email" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Email</span>
+		<input type="email" name="email" class="e-form__input e-form__input--text" title="Email" data-formfield-text data-validate data-validate-required data-validate-email>
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="email"></div>
+	<label for="telephone" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Tel</span>
+		<input type="tel" name="telephone" class="e-form__input e-form__input--text" title="Tel" data-formfield-text data-validate data-validate-required data-validate-digits>
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="telephone"></div>
+	<label for="zipcode" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Zip code</span>
+		<input type="text" name="zipcode" class="e-form__input e-form__input--text" title="Zip code" data-formfield-text data-validate data-validate-regex="^\d{5}(?:[-\s]\d{4})?$" data-validate-message="Please enter a valid zip code">
+	</label>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="zipcode"></div>
+
+	{{> e-button type="submit" colourVariant="blue" text="Submit" additionalClasses="e-form__submit" dataAttributes="" }}
+
+
+	<h2>Spacing demo</h2>
+
+	<label for="textarea2" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Text area</span>
+		<textarea class="e-form__input e-form__input--textarea" name="textarea2" title="Text area" rows="3" data-formfield-text></textarea>
+	</label>
+	<label for="username2" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Username</span>
+		<input type="text" name="username2" class="e-form__input e-form__input--text" title="Username" data-formfield-text>
+	</label>
+	<label class="e-form__label e-form__label--select" for="sg-select2" data-formfield>
+		<span class="e-form__label-text">Dropdown label</span>
+		<select class="e-form__input e-form__input--select" name="sg-dropdown" id="sg-select2" placeholder="placeholder...">
+			<option value="e-form__input e-form__input--option" selected="">First</option>
+			<option value="e-form__input e-form__input--option">Second</option>
+			<option value="e-form__input e-form__input--option">Third</option>
+		</select>
+	</label>
+	<label for="password2" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Password</span>
+		<input type="password" name="password2" class="e-form__input e-form__input--text" title="Password" data-formfield-text>
+	</label>
+	<fieldset class="e-form__fieldset">
+		<legend class="e-form__legend">Radio buttons legend</legend>
+		<label class="e-form__label e-form__label--radio" for="sg-radio1b" data-formfield>
+			<span class="e-form__label-text">Radio 1 label</span>
+			<input type="radio" class="e-form__input e-form__input--radio" id="sg-radio1b" name="sgr2" title="Radio buttons legend">
+			<span class="e-form__fake-radio"></span>
+		</label>
+		<label class="e-form__label e-form__label--radio" for="sg-radio2b" data-formfield>
+			<span class="e-form__label-text">Radio 2 label</span>
+			<input type="radio" class="e-form__input e-form__input--radio" id="sg-radio2b" name="sgr2" title="Radio buttons legend">
+			<span class="e-form__fake-radio"></span>
+		</label>
+		<label class="e-form__label e-form__label--radio" for="sg-radio3b" data-formfield>
+			<span class="e-form__label-text">Radio 3 label</span>
+			<input type="radio" class="e-form__input e-form__input--radio" id="sg-radio3b" name="sgr2" title="Radio buttons legend">
+			<span class="e-form__fake-radio"></span>
+		</label>
+	</fieldset>
+	<label for="email2" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Email</span>
+		<input type="email" name="email2" class="e-form__input e-form__input--text" title="Email" data-formfield-text>
+	</label>
+	<fieldset class="e-form__fieldset">
+		<legend class="e-form__legend">Checkboxes legend</legend>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox1b" data-formfield>
+			<span class="e-form__label-text">Checkbox 1 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox1b" name="sgc2" title="Checkboxes legend">
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox2b" data-formfield>
+			<span class="e-form__label-text">Checkbox 2 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox2b" name="sgc2" title="Checkboxes legend">
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+		<label class="e-form__label e-form__label--checkbox" for="sg-checkbox3b" data-formfield>
+			<span class="e-form__label-text">Checkbox 3 label</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="sg-checkbox3b" name="sgc2" title="Checkboxes legend">
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+	</fieldset>
+	<label for="telephone2" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Tel</span>
+		<input type="tel" name="telephone2" class="e-form__input e-form__input--text" title="Tel" data-formfield-text>
+	</label>
+	<label for="zipcode2" class="e-form__label e-form__label--text" data-formfield>
+		<span class="e-form__label-text" data-fake-placeholder>Zip code</span>
+		<input type="text" name="zipcode2" class="e-form__input e-form__input--text" title="Zip code" data-formfield-text>
+	</label>
+
+</form>

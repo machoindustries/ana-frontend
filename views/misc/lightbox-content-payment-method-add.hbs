@@ -1,0 +1,55 @@
+<div data-lightbox-src="addnewpaymentmethod">
+	<h3>Card details</h3>
+	<form class="e-form" data-require="./src/views/form-view" data-ajax-form>
+
+		{{!-- Card type (visa etc.) --}}
+		<label class="e-form__label e-form__label--select" for="apm-cardtype" data-formfield>
+			<span class="e-form__label-text">Card type</span>
+			<select class="e-form__input e-form__input--select" name="apm-cardtype" id="apm-cardtype" placeholder="please select" data-payment-method-cardtype>
+				<option class="e-form__input e-form__input--option" value="mastercard" selected="">MasterCard</option>
+				<option class="e-form__input e-form__input--option" value="visa">VISA</option>
+				<option class="e-form__input e-form__input--option" value="americanexpress">American Express</option>
+			</select>
+		</label>
+
+		{{!-- Card holder's name --}}
+		<label for="apm-cardholdername" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Card holder's name</span>
+			<input type="text" name="apm-cardholdername" class="e-form__input e-form__input--text" title="apm-cardholdername" data-formfield-text data-validate data-validate-required data-payment-method-cardholder>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="apm-cardholdername"></div>
+
+		{{!-- Card number --}}
+		<label for="apm-cardnumber" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Card number</span>
+			<input type="text" name="apm-cardnumber" class="e-form__input e-form__input--text" title="apm-cardnumber" inputmode="numeric" autocomplete="cc-number" data-formfield-text data-validate data-validate-required data-validate-digits data-validate-minlength="14" data-validate-maxlength="16" data-payment-method-cardnumber>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="apm-cardnumber"></div>
+
+		{{!-- Start date MM/YY --}}
+		<label for="apm-startdate" class="e-form__label e-form__label--text" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Start date</span>
+			<input type="date" name="apm-startdate" class="e-form__input e-form__input--text" title="apm-startdate" inputmode="numeric" autocomplete="cc-exp" data-formfield-text data-validate data-validate-required data-payment-method-startdate>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="apm-startdate"></div>
+
+		{{!-- Security code --}}
+		<label class="e-payment-details__security e-form__label e-form__label--text" for="security-code" data-formfield>
+			<span class="e-form__label-text" data-fake-placeholder>Security Code</span>
+			<input type="text" name="security-code" class="e-form__input e-form__input--text" title="Security Code" data-formfield-text data-validate data-validate-required data-validate-digits data-payment-method-securitycode>
+		</label>
+		<div class="e-form__validation-errors" data-validation-error data-validation-for="apm-securitycode"></div>
+
+		{{!-- Save for future use? --}}
+		<label class="e-form__label e-form__label--checkbox e-form__label--checkbox-left" for="apm-savecard" data-formfield>
+			<span class="e-form__label-text e-checkout-address__select-text">Save card for future use</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="apm-savecard" name="apm-save" title="Checkboxes legend" data-validate data-validate-required data-save-payment-method data-payment-method-savedetails>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+
+		<a href="#" class="" data-modal-close>Cancel</a>
+
+		<input class="e-button e-button--submit e-button--blue e-form__submit" type="submit" value="Submit" data-add-payment-method />
+
+	</form>
+</div>

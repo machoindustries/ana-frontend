@@ -1,0 +1,60 @@
+[
+	{
+		"AddressLines": [
+			"2400 86th Street (#32)"
+		],
+		"City": "Urbandale",
+		"Country": "USA",
+		"IsInUsa": true,
+		"Latitude": 41.617,
+		"Longitude": -93.739,
+		"Name": "Iowa Nurses Association",
+		"State": "Iowa",
+		"StateCode": "IA",
+		"ZipCode": "50322",
+		"KeyPersonnel": [
+			{
+				"Title": "President",
+				"Name": "Jann Ricklefs"
+			},{
+				"Title": "Vice-President",
+				"Name": "Sue Whitty"
+			}
+		],
+		"WebsiteUrl": "http://www.iowanurses.org/",
+		"WebsiteName": "iowanurses.org",
+		"Phone": "(515) 225-0495",
+		"Email": "mrice@iowanurses.org",
+		"Fax": "(515) 225-0496",
+		"OpeningHours": "Monday to Friday 9am - 2pm"
+	},{
+		"AddressLines": [
+			"1121 L Street",
+			"Suite 406"
+		],
+		"City": "Sacramento",
+		"Country": "USA",
+		"IsInUsa": true,
+		"Latitude": 38.572,
+		"Longitude": -121.475,
+		"Name": "California Nurses Association",
+		"State": "California",
+		"StateCode": "CA",
+		"ZipCode": "95814",
+		"KeyPersonnel": [
+			{
+				"Title": "President",
+				"Name": "Phillip M. Bautista"
+			},{
+				"Title": "Vice-President",
+				"Name": "Anita Girard"
+			}
+		],
+		"WebsiteUrl": "http://www.anacalifornia.org/",
+		"WebsiteName": "anacalifornia.org",
+		"Phone": "916-346-4590",
+		"Email": "pbautista@anacalifornia.org",
+		"Fax": "916-400-3599",
+		"OpeningHours": "Monday to Friday 9am - 5pm"
+	}
+]

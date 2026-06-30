@@ -1,0 +1,76 @@
+---
+title: Checkout V1
+---
+
+<div class="content-area">
+	<div class="grid-constraint">
+		<div class="block containerblock containerblock--shorter" data-require="./src/views/checkout-page-view">
+			<div class="grid grid--center">
+				<div class="grid__item one-whole">
+					<h1 class="containerblock__heading">
+						<span>Checkout</span>
+					</h1>
+				</div>
+				<div class="grid__item one-whole">
+					<form action="POST" class="c-checkout containerblock__content grid grid--full e-form" data-require="./src/views/form-view">
+						<div class="grid">
+							<div class="grid__item one-whole large--two-thirds">
+								<div class="grid grid--full">
+									<div class="c-checkout__section grid__item one-whole">
+										<h2 class="c-checkout__section-title">Your details</h2>
+										<div class="c-checkout__details-item">This is my name</div>
+										<div class="c-checkout__details-item">myemail@theinternet.com</div>
+									</div>
+									<div class="c-checkout__section grid__item one-whole">
+										<h2 class="c-checkout__section-title">Billing Address</h2>
+										{{> e-checkout-address checkout.addresses.billing }}
+									</div>
+									<div class="c-checkout__section grid__item one-whole">
+										<h2 class="c-checkout__section-title">Shipping Address</h2>
+										{{> e-checkout-address checkout.addresses.shipping }}
+									</div>
+									<div class="c-checkout__section grid__item one-whole">
+										<h2 class="c-checkout__section-title">Shipping Method</h2>
+										{{> e-shipping-methods checkout.shippingMethods }}
+									</div>
+									<div class="c-checkout__section grid__item one-whole">
+										<h2 class="c-checkout__section-title">Payment Details</h2>
+										{{> e-payment-details }}
+									</div>
+								</div>
+							</div>
+							<div class="grid__item one-whole large--one-third">
+								<div class="grid grid--full">
+									<div class="c-checkout__section c-checkout__section--vs-none grid__item one-whole">
+										{{> c-order-summary checkout.orderSummary }}
+									</div>
+									<div class="c-checkout__section grid__item one-whole">
+										<label class="c-checkout__accept-terms e-form__label e-form__label--checkbox" for="accept-terms" data-formfield>
+											<span class="e-form__label-text">I have read and agree to the Terms and Conditions</span>
+											<input type="checkbox" class="e-form__input e-form__input--checkbox" id="accept-terms" name="sgc" title="I have read and agree to the Terms and Conditions" data-validate data-validate-required>
+											<span class="e-form__fake-checkbox"></span>
+										</label>
+										<div class="e-form__validation-errors" data-validation-error data-validation-for="sgc"></div>
+									</div>
+									<div class="c-checkout__section grid__item one-whole">
+										{{> e-button type="submit" colourVariant="blue" modifier="full" text="Place order" additionalClasses="e-button" dataAttributes="" }}
+										<div class="c-checkout__contact-info">
+											For bulk or invoice purchases, please contact <a class="c-checkout__contact-info-link" href="mailto:sales@ana.org">sales@ana.org</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="e-lightbox-source">
+						{{> lightbox-content-checkout-address-add addressType="billing" editVersion=false }}
+						{{> lightbox-content-checkout-address-add addressType="billing" editVersion=true }}
+						{{> lightbox-content-checkout-address-add addressType="shipping" editVersion=false }}
+						{{> lightbox-content-checkout-address-add addressType="shipping" editVersion=true }}
+						{{> lightbox-content-payment-details-security-info }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+/* Settings - Media
+------------------------- */
+
+// Should map directly to breakpoints defined in :-
+// scripts/src/breakpoint-manager.js
+$s-breakpoints: (
+    small: (size: 480px),
+    medium: (size: 768px),
+    large: (size: 1024px),
+    xlarge: (size: 1280px)
+);

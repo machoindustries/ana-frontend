@@ -1,0 +1,11 @@
+<div class="c-hero-carousel{{#if modifier}} c-hero-carousel--{{modifier}}{{/if}}" data-require="./src/views/hero-carousel-view"{{#ifEqual modifier 'tabs'}} data-tabs{{/ifEqual}}{{#if autoplay}} data-autoplay{{/if}}{{#if loop}}  data-loop{{/if}}>
+	<div class="c-hero-carousel__owl owl-carousel" data-carousel>
+		{{#each items}}
+			{{#ifEqual ../modifier 'tabs'}}
+				{{> c-hero content=. modifier='carousel' tabs='true' index=this.index}}
+			{{else}}
+				{{> c-hero content=. modifier='carousel' }}
+			{{/ifEqual}}
+		{{/each}}
+	</div>
+</div>

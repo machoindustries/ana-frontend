@@ -1,0 +1,16 @@
+<table{{#if fixed}} data-table-fixed{{/if}}>
+	<thead>
+		{{#each this.titles}}
+			<th>{{this}}</th>
+		{{/each}}
+	</thead>
+	<tbody>
+		{{#each this.rows}}
+			<tr {{#each this.attrs}}{{this.attr}}="{{this.val}}" {{/each}}{{#if ../row-view}} data-require="./src/views/{{../../row-view}}"{{/if}}>
+				{{#each this.cols}}
+					<td>{{{this}}}</td>
+				{{/each}}
+			</tr>
+		{{/each}}
+	</tbody>
+</table>

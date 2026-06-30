@@ -1,0 +1,15 @@
+<div class="e-shipping-methods">
+	<span class="e-shipping-methods__text">Choose a shipping method</span>
+	<div class="e-shipping-methods__options grid">
+		{{#each this}}
+			<div class="e-shipping-methods__item grid__item one-whole small--one-half">
+				<input type="radio" class="e-form__input e-form__input--radio" id="csm-radio{{this.idx}}" name="csm" title="{{this.text}}" data-validate data-validate-required{{#ifEqual this.idx 0}} checked="checked"{{/ifEqual}}>
+				<label class="e-form__label e-form__label--radio e-button" for="csm-radio{{this.idx}}" data-formfield data-shipping-method>
+					<span class="e-form__label-text">{{this.text}}</span>
+					<span class="e-form__fake-radio"></span>
+				</label>
+			</div>
+		{{/each}}
+	</div>
+	<div class="e-form__validation-errors" data-validation-error data-validation-for="csm"></div>
+</div>

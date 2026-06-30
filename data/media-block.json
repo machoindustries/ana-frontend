@@ -1,0 +1,105 @@
+[
+    {
+        "name": "Full width video",
+        "type": "video",
+        "heading": "Video caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "video_url": "//vimeo.com/223080635",
+        "image": "http://via.placeholder.com/1280x768"
+    },
+    {
+        "name": "Full width image",
+        "block-class": "imagefile",
+        "grid-class": "grid__item one-whole",
+        "type": "image",
+        "variant": "",
+        "heading": "Image caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "image": "http://via.placeholder.com/1280x768"
+    },
+    {
+        "name": "Large image, no navigation",
+        "block-class": "imagefile",
+        "grid-class": "grid__item one-whole large--ten-twelfths pad--large--one-twelfth",
+        "figure-grid-class": "grid__item one-whole large--eight-tenths",
+        "caption-grid-class": "c-media-block__caption grid__item one-whole large--two-tenths",
+        "type": "image",
+        "variant": "inline",
+        "heading": "Image caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "image": "http://via.placeholder.com/735x490"
+    },
+    {
+        "name": "Standard image, no navigation",
+        "block-class": "imagefile",
+        "grid-class": "grid__item  large--two-thirds pad--large--one-sixth",
+        "figure-grid-class": "grid__item one-whole",
+        "caption-grid-class": "c-media-block__caption grid__item one-whole",
+        "type": "image",
+        "variant": "8col",
+        "heading": "Image caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "image": "http://via.placeholder.com/735x490"
+    },
+    {
+        "name": "Large image, navigation",
+        "block-class": "imagefile",
+        "grid-class": "grid__item one-whole large--ten-twelfths pad--large--two-twelfths",
+        "figure-grid-class": "grid__item one-whole large--eight-tenths",
+        "caption-grid-class": "c-media-block__caption grid__item one-whole large--two-tenths",
+        "type": "image",
+        "variant": "inline",
+        "heading": "Image caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "image": "http://via.placeholder.com/735x490"
+    },
+    {
+        "name": "Standard image, navigation",
+        "block-class": "imagefile",
+        "grid-class": "grid__item one-whole large--two-thirds pad--large--one-third",
+        "figure-grid-class": "grid__item one-whole",
+        "caption-grid-class": "c-media-block__caption grid__item one-whole",
+        "type": "image",
+        "variant": "8col",
+        "heading": "Image caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "image": "http://via.placeholder.com/735x490"
+    },
+    {
+        "name": "Full width video #6",
+        "block-class": "videoblock",
+        "grid-class": "grid__item one-whole",
+        "type": "video",
+        "variant": "",
+        "heading": "Video caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "video_url": "//vimeo.com/223080635",
+        "image": "http://via.placeholder.com/1280x768"
+    },
+    {
+        "name": "Large video, no navigation #7",
+        "block-class": "videoblock",
+        "grid-class": "grid__item one-whole large--ten-twelfths pad--large--two-twelfths",
+        "video-grid-class": "grid__item one-whole large--eight-tenths",
+        "caption-grid-class": "c-media-block__caption grid__item one-whole large--two-tenths",
+        "type": "video",
+        "variant": "inline",
+        "heading": "Video caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "video_url": "//vimeo.com/223080635",
+        "image": "http://via.placeholder.com/1280x768"
+    },
+    {
+        "name": "Large video, no navigation #8",
+        "block-class": "videoblock",
+        "grid-class": "grid__item  large--two-thirds pad--large--one-sixth",
+        "video-grid-class": "grid__item one-whole",
+        "caption-grid-class": "c-media-block__caption grid__item one-whole",
+        "type": "video",
+        "variant": "8col",
+        "heading": "Video caption title",
+        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+        "video_url": "//vimeo.com/223080635",
+        "image": "http://via.placeholder.com/1280x768"
+    }
+]

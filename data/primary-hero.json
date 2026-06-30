@@ -1,0 +1,32 @@
+{
+	"items": [
+		{
+			"heading": "Resuscitation training",
+			"category": "Products",
+			"copy": "Sub copy with a brief description of what to expect in this area of the website. No more than 3 lines before truncating&hellip;",
+			"buttonCopy": "See products",
+			"buttonUrl": "#",
+			"imagePathMobile": "/assets/img/placeholder-content/ANA-Header-Mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-content/ANA-Header-Tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-content/ANA-Header-Desktop.jpg"
+		},{
+			"heading": "Resuscitation training",
+			"category": "Products",
+			"copy": "Sub copy with a brief description of what to expect in this area of the website. No more than 3 lines before truncating&hellip;",
+			"buttonCopy": "See products",
+			"buttonUrl": "#",
+			"imagePathMobile": "/assets/img/placeholder-content/ANA-Header-Mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-content/ANA-Header-Tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-content/ANA-Header-Desktop.jpg"
+		},{
+			"heading": "Resuscitation training",
+			"category": "Products",
+			"copy": "Sub copy with a brief description of what to expect in this area of the website. No more than 3 lines before truncating&hellip;",
+			"buttonCopy": "See products",
+			"buttonUrl": "#",
+			"imagePathMobile": "/assets/img/placeholder-content/ANA-Header-Mobile.jpg",
+			"imagePathTablet": "/assets/img/placeholder-content/ANA-Header-Tablet.jpg",
+			"imagePathDesktop": "/assets/img/placeholder-content/ANA-Header-Desktop.jpg"
+		}
+	]
+}

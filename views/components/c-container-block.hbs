@@ -1,0 +1,38 @@
+
+<div class="block containerblock">
+
+    <section class="c-container-block{{#if heading}} c-container-block--heading{{/if}}{{#if variant}} c-container-block--{{variant}}{{/if}}{{#if additional-class}} {{additional-class}}{{/if}}" 
+        data-require="./src/views/container-block-view" 
+        data-carousel-mobile="{{carousel-at-mobile}}" data-carousel-desktop="{{carousel-at-desktop}}" 
+        data-carousel-slide-items-small="{{carousel-slide-items-small}}" 
+        data-carousel-slide-items-medium="{{carousel-slide-items-medium}}" 
+        data-carousel-slide-items-large="{{carousel-slide-items-large}}">
+
+        <div class="grid-constraint">
+            <div class="grid grid--center">
+                {{#if heading}}
+                    <div class="grid__item one-whole">
+                        <h2 class="c-container-block__heading c-container-block__heading--lines {{#if heading-additional-class}}{{heading-additional-class}}{{/if}}">
+                            <span>{{heading}}</span>
+                        </h2>
+                    </div>
+                {{/if}}
+                {{#if introContent}}
+                    <div class="c-container-block__intro grid__item one-whole medium--eight-twelfths">
+                        <div class="e-richtext">
+                            {{{introContent}}}
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+
+            {{#if (content "container-block-content")}}
+            <div class="c-container-block__content{{#ifCond heading "||" introContent }} c-container-block__content--margin{{/ifCond}} grid {{#if center}}grid--center{{/if}} {{#if flex}}grid--flex{{/if}}" data-containerblock-content>
+            {{#block "container-block-content"}}
+            {{/block}}
+            </div>
+            {{/if}}
+        </div>
+    </section>
+
+</div>

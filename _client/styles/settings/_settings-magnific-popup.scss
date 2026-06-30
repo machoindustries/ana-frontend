@@ -1,0 +1,55 @@
+////////////////////////
+//      Settings      //
+////////////////////////
+
+// overlay
+$mfp-overlay-color:                   map-get($s-colour, mfpoverlaycolor) !default; // Color of overlay screen
+$mfp-overlay-opacity:                 0.8 !default;                        // Opacity of overlay screen
+$mfp-shadow:                          0 0 8px rgba(0, 0, 0, 0.6) !default; // Shadow on image or iframe
+$mfp-fade-transition:				  opacity 0.25s ease-in-out;
+
+// spacing
+$mfp-popup-padding-left:              8px !default ;                       // Padding from left and from right side
+$mfp-popup-padding-left-mobile:       6px !default;                        // Same as above, but is applied when width of window is less than 800px
+
+$mfp-z-index-base:                    9000 !default;   // Base z-index of popup
+
+// controls
+$mfp-include-arrows:                  true !default;                       // Include styles for nav arrows
+$mfp-controls-opacity:                0.65 !default;                       // Opacity of controls
+$mfp-controls-color:                  map-get($s-colour, mfpcontrolscolor) !default; // Color of controls
+$mfp-controls-border-color:           map-get($s-colour, mfpcontrolsbordercolor) !default; // Border color of controls
+$mfp-inner-close-icon-color:          map-get($s-colour, mfpinnercloseiconcolor) !default; // Color of close button when inside
+$mfp-controls-text-color:             map-get($s-colour, mfpcontrolstextcolor) !default; // Color of preloader and "1 of X" indicator
+$mfp-controls-text-color-hover:       map-get($s-colour, mfpcontrolsbordercolorhover) !default; // Hover color of preloader and "1 of X" indicator
+$mfp-IE7support:                      true !default;                       // Very basic IE7 support
+
+// Iframe-type options
+$mfp-include-iframe-type:             true !default;                       // Enable Iframe-type popups
+$mfp-iframe-padding-top:              $s-layout-gutter-desktop-large !default; // Iframe padding top
+$mfp-iframe-background:               map-get($s-colour, mfpiframebg) !default; // Background color of iframes
+$mfp-iframe-max-width:                80vw !default;                      // Maximum width of iframes
+$mfp-iframe-max-height:               80vh !default;                      // Maximum height of iframes
+$mfp-iframe-ratio:                    3/4 !default;                       // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
+
+// Image-type options
+$mfp-include-image-type:              true !default;                       // Enable Image-type popups
+$mfp-image-background:                map-get($s-colour, mfpimagebg) !default;
+$mfp-image-padding-top:               $s-layout-gutter-desktop-large !default; // Image padding top
+$mfp-image-padding-bottom:            $s-layout-gutter-desktop-large !default; // Image padding bottom
+$mfp-include-mobile-layout-for-image: true !default;                       // Removes paddings from top and bottom
+
+// Image caption options
+$mfp-caption-title-color:             map-get($s-colour, mfpcaptiontitlecolor) !default; // Caption title color
+$mfp-caption-subtitle-color:          map-get($s-colour, mfpcaptionsubtitlecolor) !default; // Caption subtitle color
+
+// A11y
+$mfp-use-visuallyhidden:              false !default;                      // Hide content from browsers, but make it available for screen readers
+
+// Inline options
+$mfp-include-inline-type:             true !default;                       // Enable inline-type popups
+$mfp-inline-background:               map-get($s-colour, mfpinlinebg) !default; // Background color of inline
+$mfp-inline-width:                    80vw !default;
+$mfp-inline-max-width:                900px !default;               // Maximum width of iframes
+$mfp-inline-max-height:               80vh !default;
+$mfp-inline-ratio:                    9/16 !default;                       // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)

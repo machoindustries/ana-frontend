@@ -1,0 +1,30 @@
+/* Tools - Utils
+------------------------- */
+
+// Mixins
+// -------------------------
+
+/// @mixin t-clearfix
+/// Argumentless mixin which appends pseudo classes passed onto a parent container of floated elements to clear the siblings.
+///
+/// @access public
+///
+/// @example
+/// @include t-clearfix;
+@mixin t-clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin t-ie11-only {
+  @media all and (-ms-high-contrast:none) {
+     @content
+  }
+}

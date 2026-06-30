@@ -1,0 +1,62 @@
+<footer class="c-footer{{#if reduced}} c-footer--reduced{{/if}}" data-require="./src/views/footer-view">
+	<div class="c-footer__wrap">
+		<div class="c-footer__section">
+			<section class="c-footer__content">
+				<nav class="c-footer__nav">
+					<ul class="c-footer__nav-list grid">
+						{{#each data.items}}
+							<li class="c-footer__nav-item grid__item one-whole medium--one-half large--one-quarter{{#if modifier}} c-footer__nav-item--{{modifier}}{{/if}}">
+								{{#if heading}}<a href="{{heading.url}}" class="c-footer__link-list-heading">{{heading.copy}}</a>{{/if}}
+								<ul class="c-footer__link-list">
+									{{#each items}}
+										<li class="c-footer__link-list-item{{#if icon}} c-footer__link-list-item--icon{{/if}}">
+											<a href="{{url}}" class="c-footer__link-list-link{{#if modifier}} c-footer__link-list-link--{{modifier}}{{/if}}{{#if icon}} icon icon--{{icon}}{{/if}}">
+												{{#if icon}}
+													<span class="sr-only">{{copy}}</span>
+												{{else}}
+													{{copy}}
+												{{/if}}
+											</a>
+										</li>
+									{{/each}}
+								</ul>
+							</li>
+						{{/each}}
+					</ul>
+				</nav>
+				<div class="c-footer__back-to-top">
+					{{> e-back-to-top }}
+				</div>
+			</section>
+		</div>
+		<div class="c-footer__section c-footer__section--dark">
+			<section class="c-footer__content grid grid--full">
+				<div class="c-footer__content-item grid__item one-whole medium--one-half large--one-quarter">
+					<nav class="c-footer__entities-nav">
+						<a class="c-footer__entities-nav-link" href="#">
+							<img class="c-footer__entities-nav-logo" src="/assets/img/logos/ana-lockup-white.png" alt="ANA">
+						</a>
+					</nav>
+				</div>
+				<div class="c-footer__content-item grid__item one-whole medium--one-half push--large--one-quarter">
+					<aside class="c-footer__copyright">
+					Copyright &copy; 2017 American Nurses Association. All Rights Reserved.
+					</aside>
+					<nav class="c-footer__utility-nav">
+						<ul class="c-footer__utility-nav-list">
+							<li class="c-footer__utility-nav-item">
+								<a class="c-footer__utility-nav-link" href="#">Privacy policy</a>
+							</li>
+							<li class="c-footer__utility-nav-item">
+								<a class="c-footer__utility-nav-link" href="#">Legal</a>
+							</li>
+							<li class="c-footer__utility-nav-item">
+								<a class="c-footer__utility-nav-link" href="#">Sitemap</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+		</div>
+	</div>
+</footer>

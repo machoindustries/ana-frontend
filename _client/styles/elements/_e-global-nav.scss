@@ -1,0 +1,24 @@
+.e-global-nav {
+	
+	position: relative;
+	background-color: t-brand-colour(globalnavbackground);
+	color: map-get($s-colours, white);
+
+	&__content-constraint {
+
+		@include t-content-constraint(true);
+	}
+
+	&__col {
+
+		&--tools {
+
+			display: none;
+
+			@include t-respond-to-min(xlarge) {
+
+				display: inline-block;
+			}
+		}
+	}
+}

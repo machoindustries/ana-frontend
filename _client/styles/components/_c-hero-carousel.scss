@@ -1,0 +1,203 @@
+$hero-carousel-arrow-size: 48px;
+$hero-carousel-arrow-font-size: 45px;
+$hero-carousel-dot-size: 8px;
+$hero-carousel-tab-height: 96px;
+$hero-carousel-arrow-top: 150px;
+$hero-carousel-pips-offset: 42px;
+$c-hero-carousel-nav-inset: 20px;
+
+.c-hero-carousel {
+    $root: &;
+
+    @include t-vertical-spacing(large, margin-bottom);
+
+    margin: auto;
+
+    .c-hero {
+        &__content {
+            @include t-respond-to-min(medium) {
+                opacity: 0;
+            }
+        }
+    }
+    
+    .owl-item { 
+        @include t-owl-carousel-chrome-fix;
+    }
+
+    .owl-prev, 
+    .owl-next {
+        color: t-brand-colour(herocarouselarrowcolour);
+        display: block;
+        font-size: t-rem($hero-carousel-arrow-font-size);
+        height: t-rem($hero-carousel-arrow-size);
+        line-height: 1;
+        opacity: 0.5;
+        position: absolute;
+        top: calc(#{t-rem($hero-carousel-arrow-top)} - #{t-rem($hero-carousel-arrow-size/2)});
+        width: t-rem($hero-carousel-arrow-size);
+
+        &.disabled {
+            opacity: 0.2;
+        }
+
+        @include t-respond-to-min(medium) {
+            display: none;
+            top: calc(50% - #{$hero-carousel-arrow-size/2});
+        }
+
+        @include t-respond-to-min(1240px) {
+            display: block;
+        }
+    }
+
+    .owl-prev {
+        @include t-icon('icon-arrow-left');
+        left: 0;
+    }
+
+    .owl-next {
+        @include t-icon('icon-arrow-right');
+        right: 0;
+    }
+
+    .owl-dots {
+        left: 50%;
+        position: absolute;
+        top: calc(#{t-rem(300px)} - #{t-rem($hero-carousel-arrow-size/2)});
+        transform: translateX(-50%);
+
+        @include t-respond-to-min(medium) {
+            top: calc(100% - #{t-rem($hero-carousel-pips-offset)});
+        }
+    }
+
+    .owl-dot {
+        background: t-brand-colour(herocarouseldotcolour);
+        border-radius: 100%;
+        display: inline-block;
+        font-size: 0;
+        height: t-rem($hero-carousel-dot-size);
+        margin: t-rem(0 $s-layout-gutter-mobile-small);
+        width: t-rem($hero-carousel-dot-size);
+        vertical-align: top;
+        
+        @include t-respond-to-min(medium) {
+            vertical-align: bottom;
+        }
+
+        &.active {
+            background: t-brand-colour(herocarouseldotcolouractive);
+        }
+    }
+
+    .owl-item {
+
+        @include t-respond-to-min(medium) {
+            .c-hero__content {
+                opacity: 0;
+                transition: t-transition-value(opacity, medium, ease-in-out); 
+            }
+
+            &.fade-in {
+                .c-hero__content {
+                    opacity: 1;  
+                }
+            }
+        }
+    }
+
+    &--tabs {
+    
+        @include t-respond-to-min(medium) {	
+            padding-bottom: t-rem($hero-carousel-tab-height);
+
+            .owl-dots {
+                display: block;
+                margin-top: t-rem(-$s-layout-gutter-mobile-small);
+                position: relative;
+
+                &:before {
+                    background: t-brand-colour(herocarouseltabsbackground);
+                    content: "";
+                    display: block;
+                    height: t-rem($s-layout-gutter-mobile-small);
+                    width: 100%;
+                }
+            }
+
+            .owl-dot {
+                float: left;
+                font-size: inherit;
+                height: t-rem($hero-carousel-tab-height);
+                margin-left: 0;
+                margin-right: 0;
+                width: 25%;
+
+                &.active, & {
+                    background: transparent;
+                }
+
+                &:not(:last-of-type) {
+                    #{$root}__tab {
+                        &:after {
+                            background: t-brand-colour(herocarouseltabsborder);
+                            content: "";
+                            display: block;
+                            height: calc(100% - #{t-rem($s-vertical-spacing-mobile-small*2)});
+                            position: absolute;
+                            right: 1px;
+                            top: t-rem($s-vertical-spacing-mobile-small);
+                            width: 1px;
+                        } 
+                    }
+                }
+
+                &.active{
+                    #{$root}__tab:before {
+                        height: t-rem($s-layout-gutter-mobile-small);
+                        transition-delay: 0.25s;
+                    }
+                }
+            }
+
+            #{$root}__tab {
+                background: transparent;
+                border: none;
+                height: t-rem($hero-carousel-tab-height);
+                margin: 0;
+                padding: 0;
+                position: relative;
+                
+                &:before {
+                    background: t-brand-colour(herocarouseltabsactive);
+                    bottom: t-rem($hero-carousel-tab-height);
+                    content: "";
+                    display: block;
+                    height: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    transition: t-transition-value(height, slow, ease-in-out); 
+                }
+            }
+
+            #{$root}__tab-text {
+                @include t-type-p1;
+                background: t-brand-colour(herocarouseltab);
+                color: t-brand-colour(darkgreytext);
+                display: block;
+                height: 100%;
+                padding: t-rem($s-vertical-spacing-mobile-small $s-layout-gutter-desktop-medium);
+                position: relative;
+                text-align: left;
+                width: 100%;
+                z-index: t-z-index(herocarouseltabtext);
+
+                @include t-respond-to-min(large) {
+                    @include t-type-h4;
+                }
+            }
+        }
+    }
+}

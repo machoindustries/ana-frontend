@@ -1,0 +1,78 @@
+[
+	{
+		"affiliate": {
+			"title": "Co-published with:",
+			"name": "The International Society of Nurses in Genetics",
+			"image": "http://via.placeholder.com/50x50",
+			"url": "http://www.isong.org/"
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Duis viverra tortor a placerat egestas. Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam.",
+		"image": "http://via.placeholder.com/150x230/999999/ffffff",
+		"pricing": [
+			{
+				"format": "Paperback",
+				"member": {
+					"price": "49.95",
+					"sale": "54.95"
+				},
+				"regular": {
+					"price": "54.95",
+					"sale": "59.95"
+				}
+			},
+			{
+				"format": "Hardback",
+				"member": {
+					"price": "59.95",
+					"sale": "64.95"
+				},
+				"regular": {
+					"price": "64.95",
+					"sale": "79.95"
+				}
+			}
+		],
+		"entityBannerText": "foundation",
+		"sale_note": "Bank holiday sale (20% off)",
+		"title": "Nursing's Leading Edges: Advancing the Profession through Specialization, Credentialing, and Certification"
+	},
+	{
+		"affiliate": {
+			"title": "Sponsored by:",
+			"name": "The International Society of Nurses in Genetics",
+			"image": "http://via.placeholder.com/50x50",
+			"url": "http://www.isong.org/"
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Duis viverra tortor a placerat egestas. Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam.",
+		"image": "http://via.placeholder.com/150x230/999999/ffffff",
+		"total_hours": "20.15",
+		"pricing": [
+			{
+				"format": "Paperback",
+				"member": {
+					"price": "49.95"
+				},
+				"regular": {
+					"price": "54.95"
+				}
+			},
+			{
+				"format": "Hardback",
+				"member": {
+					"price": "59.95"
+				},
+				"regular": {
+					"price": "64.95"
+				}
+			}
+		],
+		"entityBannerText": "foundation",
+		"event": {
+			"date": "May 22-24, 2017",
+			"time": "10.30am - 4.30pm",
+			"location": "Oak Brook, IL"
+		},
+		"subtitle": "Presenter Name",
+		"title": "Nursing's Leading Edges: Advancing the Profession through Specialization, Credentialing, and Certification"
+	}
+]

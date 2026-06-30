@@ -1,0 +1,69 @@
+---
+title: Cart
+---
+
+<div class="e-notifications is--active" data-require="./src/views/notifications-view">
+
+    <div class="grid-constraint">
+        <div class="grid">
+            <div class="grid__item one-whole">
+
+                <div class="e-notifications__items" data-notifications>
+                    <p class="e-notifications__item">Llaskj dlaskjd laksjd lakjsd alksjd lakjsd lakjsd lajsd </p>
+                    <p class="e-notifications__item">Llaskj dlaskjd laksjd lakjsd alksjd lakjsd lakjsd lajsd </p>
+                    <p class="e-notifications__item">Llaskj dlaskjd laksjd lakjsd alksjd lakjsd lakjsd lajsd </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#extend "c-container-block" heading="Your cart" variant="" additional-class="b-vst--medium b-vsb--small"
+    heading-additional-class="c-container-block__heading--large"
+    carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+{{/extend}}
+
+<form>
+
+    <div class="grid-constraint">
+
+        <div class="grid">
+
+            <div class="grid__item one-whole">
+
+                {{> c-order-detail order-detail-cart }}
+
+                {{> c-cart-summary }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
+
+<div class="content-area">
+
+    {{#extend "c-container-block" heading="Based on items in your cart" variant=""
+        carousel-at-mobile="true" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+
+        {{#content "container-block-content" heading=product-detail-template.suggestedProducts.heading}}
+
+            {{#each product-detail-template.suggestedProducts.products}}
+                <div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+                    {{> c-product-detail this }}
+                </div>
+            {{/each}}
+
+        {{/content}}
+
+    {{/extend}}
+
+</div>
+
+
+<div class="e-lightbox-source">
+    {{> lightbox-content-confirm-remove-item }}
+</div>

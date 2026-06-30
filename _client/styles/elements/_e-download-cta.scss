@@ -1,0 +1,86 @@
+.e-download-cta {
+
+	$root: &;
+	
+	display: inline-block;
+	width: 100%;
+
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: map-get($s-colours, lightgrey);
+	color: map-get($s-colours, mediumtextgrey);
+	display: block;
+	padding-left: t-rem(90px);		
+	position: relative;
+	min-height: t-rem(100px);		
+	text-decoration: none;
+
+	&.is--disabled {
+		cursor: default;
+}
+
+	
+
+	&__file-icon {
+		background: map-get($s-colours, lightblue);
+		display: block;
+		position: absolute;
+		border-width: 11px;
+		border-style: solid;
+		border-color: map-get($s-colours, lightblue);
+		border-radius: 50%;
+		top: t-rem(25px);
+		left: t-rem($s-layout-gutter-mobile-large);
+		color: map-get($s-colours, white);
+	}
+
+	&__content {
+	 	padding-top: t-rem($s-layout-gutter-mobile-large);
+		padding-bottom: t-rem($s-layout-gutter-mobile-large);
+	}
+
+	&__heading {
+		@include t-type-h4;
+		color: t-brand-colour(richtextheadings);
+		margin: 0;
+		line-height: 1.4;
+		padding-top: 6px;
+	}
+
+	&__file-type {
+	  	@include t-type-p1;
+        margin-bottom: t-rem($s-layout-gutter-mobile-tiny);
+		color: map-get($s-colours, darktextgrey);
+		@include t-type-p1;
+		line-height: 1.4;
+		color: map-get($s-colours, grey);
+	}
+
+	&__title {
+		margin-bottom: t-rem($s-layout-gutter-mobile-large);
+	}
+
+	&__copy {
+		@include t-type-p1;
+		margin-bottom: t-rem($s-layout-gutter-mobile-tiny);
+		color: map-get($s-colours, mediumtextgrey);
+		max-width: t-rem(480px);
+	}
+
+	&__item {
+
+        margin-bottom: 0 !important;
+		list-style: none;
+
+		#{$root}__cta {            
+
+			@include t-respond-to-min(medium) {
+				display: block;
+				position: absolute;
+				right: t-rem(13px);
+				top: 50%;
+				margin-top: t-rem(-20px);
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+$e-notifications-bottom-margin: 55px;
+$e-notifications-active-max-height: 1000px;
+
+.e-notifications {
+    
+    display: none;
+    margin-bottom: inherit;
+
+    &.is--active {
+        @include t-vertical-spacing(medium, (margin-top, margin-bottom));
+        display: block;
+    }
+    
+    &__items {
+        border-top: 1px solid t-brand-colour(divider);
+        border-bottom: 1px solid t-brand-colour(divider);
+    }
+
+    &__item {
+
+        @include t-type-p1;
+
+        display: block;
+        text-align: center;
+        color: t-brand-colour(notificationtext);
+        margin: t-rem($s-layout-gutter-mobile-large 0);
+    }
+}

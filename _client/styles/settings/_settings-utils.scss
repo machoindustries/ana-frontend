@@ -1,0 +1,134 @@
+/* Settings - Utils 
+    tools required in the settings which wouldn't be available at this stage if included in the tools package. 
+------------------------- */
+
+// Functions
+// -------------------------
+
+/// @function t-colour
+/// Retreives colour values from the $s-colours map.
+///
+/// @access public
+/// @param {String} $colour - A String which represents a colour key in the $s-colours map.
+/// @param {String} $tone - A String which represents a tone key of the given colour map.
+/// @return {String} - A String representing the required colour.
+///
+/// @example
+/// t-colour(black);
+@function t-colour($colour, $tone: base) {
+
+    @return t-map-value($s-colours, ($colour, $tone));
+}
+
+/* Tools - Utils
+------------------------- */
+
+// Functions
+// -------------------------
+
+/// @function t-rem
+/// Returns a single or series of values represented as rem unit(s).
+///
+/// @access public
+/// @param {Number} $values - A single, or space separated list of Numbers specified using any valid unit type.
+/// @return {Number} - The original value(s) converted into rem unit(s).
+///
+/// @example
+/// t-rem(2em 20px 2rem 20px);
+@function t-rem($values) {
+
+    @if type-of($values) == "list" {
+        $rems: ();
+
+        @each $value in $values {
+            $rems: append($rems, t-rem($value));
+        }
+
+        @return $rems;
+    }
+
+    @if type-of($values) == "number" {
+        @if $values == 0 {
+            @return $values;
+        }
+        @else if unit($values) == px {
+            @return ($values / $s-base-font-size) * 1rem;
+        }
+    }
+
+    @return $values;
+}
+
+/// @function t-map-value
+/// Returns a value from a nested map.
+///
+/// @access public
+/// @param {Map | Number | String} $map-value - A map or value which is checked recursively.
+/// @param {List} $map-value - The list of keys in sequential order.
+/// @return {Number | String} - The value of the final key.
+///
+/// @example
+/// t-map-value($map, (key1, key2));
+@function t-map-value($map-value, $keys, $prev-key: null) {
+
+    @if(type-of($map-value) != map or length($keys) == 0) {
+
+        @if($map-value == null) {
+            @error '"#{$prev-key}" not found in map-value keys.';
+        }
+
+        @return $map-value;
+    }
+
+    $curr-key: nth($keys, 1);
+    @return t-map-value(map-get($map-value, $curr-key), t-slice($keys, 2), $curr-key);
+}
+
+/// @function t-slice
+/// Returns a new list partial from a given list.
+///
+/// @access public
+/// @param {List} $list - The target list from which to derive a partial list.
+/// @param {Number} $start - The start index of the slice operation.
+/// @return {Number} $end - The end index of the slice operation (Optional, defaults to list length).
+///
+/// @example
+/// t-slice($list, 1, 2);
+@function t-slice($list, $start: 1, $end: length($list)) {
+    $result: ();
+
+    @if $start > $end or $start < 1 or $end < 1 or $start > length($list) or $end > length($list)  {
+        @return $result;
+    }
+    @else {
+
+        @for $i from $start through $end {
+            $result: append($result, nth($list, $i));
+        }
+    }
+
+    @return $result;
+}
+
+
+// Mixins
+// -------------------------
+
+/// @mixin t-clearfix
+/// Argumentless mixin which appends pseudo classes passed onto a parent container of floated elements to clear the siblings.
+///
+/// @access public
+///
+/// @example
+/// @include t-clearfix;
+@mixin t-clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -1,0 +1,79 @@
+<div class="containerblock containerblock--featured containerblock--carousel" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="true" data-num-items-desktop="4">
+	<section class="grid-constraint">
+		<div class="grid grid--center">
+			<div class="grid__item one-whole">
+				<h2 class="containerblock__heading">
+					<span>Featured product listing</span>
+				</h2>
+			</div>
+			<div class="containerblock__intro grid__item one-whole medium--eight-twelfths">
+				<div class="e-richtext">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci soluta officia aliquid cupiditate. Id ab, autem praesentium facere ipsum fugiat quod magnam sunt repellat. Eum, amet, perferendis! Ipsum velit, fugit!
+				</div>
+			</div>
+		</div>
+		<div class="containerblock__content grid grid--full grid--center">
+			<div class="grid__item one-whole">
+				<div class="" data-containerblock-content>
+					{{#each product-listing.books}}
+						<div data-containerblock-carousel-slide>
+							{{> c-product-detail this featured=true }}
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="containerblock containerblock--featured" data-require="./src/views/container-block-view" data-carousel-mobile="true" data-carousel-desktop="false">
+	<section class="grid-constraint">
+		<div class="grid grid--center">
+			<div class="grid__item one-whole">
+				<h2 class="containerblock__heading">
+					<span>Normal product listing</span>
+				</h2>
+			</div>
+			<div class="containerblock__intro grid__item one-whole medium--eight-twelfths">
+				<div class="e-richtext">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci soluta officia aliquid cupiditate. Id ab, autem praesentium facere ipsum fugiat quod magnam sunt repellat. Eum, amet, perferendis! Ipsum velit, fugit!
+				</div>
+			</div>
+		</div>
+		<div class="containerblock__content grid grid--full">
+			<div class="grid__item one-whole">
+				<div class="grid" data-containerblock-content>
+					{{#each product-listing.courses}}
+						<div class="grid__item one-whole large--one-quarter" data-containerblock-carousel-slide>
+							{{> c-product-detail this featured=true }}
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="block containerblock">
+	<div class="grid-constraint">
+		<div class="grid">
+			{{#each product-listing.books}}
+				<div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+					{{> c-product-detail this }}
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</div>
+
+<div class="block containerblock">
+	<div class="grid-constraint">
+		<div class="grid">
+			{{#each product-listing.courses}}
+				<div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+					{{> c-product-detail this }}
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</div>

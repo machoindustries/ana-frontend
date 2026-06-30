@@ -1,0 +1,136 @@
+{{#ifEqual type "video" }}
+
+    {{#if block-class}}
+    <div class="block {{block-class}}">
+    {{/if}}
+
+    <section class="grid grid--full c-media-block{{#if variant}} c-media-block--{{variant}}{{/if}}" data-require="./src/views/video-view">
+
+        {{#if variant}}
+        <div class="grid-constraint">
+        {{/if}}
+
+            <div class="grid{{#unless variant}} grid--full{{/unless}}">
+
+                <div class="{{grid-class}}">
+
+                    {{#if variant}}
+                    <div class="grid">
+                    {{/if}}
+
+                        <div class="{{video-grid-class}}">
+
+                            <a href="{{video_url}}"{{#if image}} style="background-image: url({{image}});"{{/if}} class="c-media-block__link" title="Play video {{heading}}" data-video-link>
+                                <span class="c-media-block__play-icon" data-video-play-icon></span>
+                            </a>
+
+                        </div>
+
+                        {{#if variant}}
+                        <div class="{{caption-grid-class}}">
+                            <div class="c-media-block__caption-content">
+                                <h2 class="c-media-block__heading">{{heading}}</h2>
+                                <p class="c-media-block__description">{{description}}</p>
+                            </div>
+                        </div>
+                        {{/if}}
+
+                    {{#if variant}}
+                    </div>
+                    {{/if}}
+
+                </div>
+
+            </div>
+
+            {{#unless variant}}
+            <div class="grid-constraint">
+                <div class="grid">
+                    <div class="c-media-block__caption grid__item one-whole large--one-quarter">
+                        <div class="c-media-block__caption-content">
+                            <h2 class="c-media-block__heading">{{heading}}</h2>
+                            <p class="c-media-block__description">{{description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/unless}}
+
+
+        {{#if variant}}
+        </div>
+        {{/if}}
+
+    </section>
+
+    {{#if block-class}}
+    </div>
+    {{/if}}
+
+{{else}}
+
+    {{#if block-class}}
+    <div class="block {{block-class}}">
+    {{/if}}
+
+        <section class="c-media-block{{#if variant}} c-media-block--{{variant}}{{/if}}">
+
+            {{#if variant}}
+            <div class="grid-constraint">
+            {{/if}}
+        
+                <div class="grid{{#unless variant}} grid--full{{/unless}}">
+
+                    <div class="{{grid-class}}">
+
+                        {{#if variant}}
+                        <div class="grid">
+                        {{/if}}
+
+                            <div class="{{figure-grid-class}}">
+                                <figure class="c-media-block__figure">
+                                    <img src="{{image}}" alt="{{heading}}" class="c-media-block__image" />
+                                </figure>
+                            </div>
+
+                            {{#if variant}}
+                            <div class="{{caption-grid-class}}">
+                                <div class="c-media-block__caption-content">
+                                    <h2 class="c-media-block__heading">{{heading}}</h2>
+                                    <p class="c-media-block__description">{{description}}</p>
+                                </div>
+                            </div>
+                            {{/if}}
+
+                        {{#if variant}}
+                        </div>
+                        {{/if}}
+
+                    </div>
+
+                </div>
+
+                {{#unless variant}}
+                <div class="grid-constraint">
+                    <div class="grid">
+                        <div class="c-media-block__caption grid__item one-whole large--one-quarter">
+                            <div class="c-media-block__caption-content">
+                                <h2 class="c-media-block__heading">{{heading}}</h2>
+                                <p class="c-media-block__description">{{description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/unless}}
+
+            {{#if variant}}
+            </div>
+            {{/if}}
+            
+        </section>
+
+    {{#if block-class}}
+    </div>
+    {{/if}}
+
+{{/ifEqual}}

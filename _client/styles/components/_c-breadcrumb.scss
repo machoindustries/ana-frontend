@@ -1,0 +1,67 @@
+$c-breadcrumb-line-height: 24px;
+
+.c-breadcrumb {
+
+    $root: &;
+
+    display: none;
+
+    @include t-respond-to-min(large) {
+
+        display: block;
+        margin-top: t-get-vertical-spacing(xsmall, large);
+    }
+
+    &__list {
+        
+        @include t-clearfix;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__item {
+
+        @include t-type-caption(regular);
+    
+        float: left;
+        color: t-brand-colour(breadcrumbtext);
+        line-height: t-rem($c-breadcrumb-line-height);
+        padding-right: t-rem($s-layout-gutter-mobile-small);
+        border-right: 1px solid t-brand-colour(divider);
+        margin-right: t-rem($s-layout-gutter-mobile-small);
+
+        &:last-child {
+
+            padding-right: 0;
+            margin-right: 0;
+            border-right: none;
+        }
+
+        @include t-respond-to-min(large){
+            
+            line-height: t-rem($c-breadcrumb-line-height);	
+        }
+    }
+
+    &__link {
+
+        @include t-type-caption(regular);
+
+        color: t-brand-colour(breadcrumblink);
+        text-decoration: none;
+        transition: t-transition-value(color, fast, ease);
+
+        &:hover {
+            
+            color: t-brand-colour(breadcrumblinkhover);
+            text-decoration: none;
+        }
+    }
+
+
+    // Spacing to next element
+
+    & + .hero-area {
+        margin-top: t-get-vertical-spacing(xsmall, large);
+    }
+}

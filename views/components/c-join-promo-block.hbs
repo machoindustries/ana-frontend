@@ -1,0 +1,13 @@
+<div class="c-join-promo-block{{#if variant}} c-join-promo-block--{{variant}}{{/if}}{{#if background_image}} c-join-promo-block--has-background{{/if}}{{#ifEqual style "slim"}} c-join-promo-block--slim{{/ifEqual}}{{#if cta}}{{else}} c-join-promo-block--no-cta{{/if}} grid grid--full"{{#if background_image}} style="background-image:url({{background_image}});"{{/if}}>
+	<div class="c-join-promo-block__content grid__item one-whole{{#ifEqual variant 'full'}} large--six-twelfths push--large--four-twelfths{{/ifEqual}}">
+		<h3 class="c-join-promo-block__title{{#ifEqual style "slim"}} c-join-promo-block__title--slim{{/ifEqual}}">{{title}}</h3>
+		{{#if richtext}}
+			<div class="e-richtext c-join-promo-block__text">
+				{{{richtext}}}
+			</div>
+		{{/if}}
+		{{#if cta}}
+			{{> e-button type="anchor" url=cta.url colourVariant="white-light" text=cta.title additionalClasses="e-button c-join-promo-block__button"}}
+		{{/if}}
+	</div>
+</div>

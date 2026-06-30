@@ -1,0 +1,90 @@
+/* Tools - Icons
+------------------------- */
+
+// Mixins
+// -------------------------
+
+/// @mixin t-icon-base
+/// An argumentless mixin to be used in conjunction with @mixin t-icon.
+///
+/// @access public
+///
+/// @example
+/// @include t-icon-base;
+@mixin t-icon-base {
+
+	display:inline-block;
+	vertical-align:middle;
+	line-height:1;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+/// @mixin t-icon
+/// Retreives an icon from a given icon set from the $s-icons map.
+///
+/// @access public
+/// @param {String} $icon-name - A String which identifies the name of the icon required which must match a key in the corresponding icons map.
+/// @param {String} $position - A String with the value either 'before' or 'after' representing the position of the psuedo class.
+///
+/// @example
+///	@include t-icon('icon-name') {
+///		color: red;
+///	};
+
+@mixin t-icon($icon-name, $position:before) {
+
+	$code-point: t-map-value($s-icons, (icons, $icon-name));
+	$font: t-map-value($s-icons, (stack));
+
+	@if $position == before {
+		&:before {
+			@include t-icon-base;
+			content: $code-point;
+			font-family: $font;
+			@content;
+		}
+	}
+	@else {
+		&:after {
+			@include t-icon-base;
+			content: $code-point;
+			font-family: $font;
+			@content;
+		}
+	}
+}
+
+// Create a modifier class for each of the supported icons - targets element contained inside element with modifier class
+@mixin t-icon-modifiers($root: &, $append: false, $modprefix: '', $position: before) {
+	
+	@if $append {
+
+		@each $name, $value in map-get($s-icons, icons) {
+
+			&#{$root}--#{$modprefix}#{$name} {
+                
+				@include t-icon($name, $position) {
+					@content;
+				};
+			}
+		}
+	} @else {
+        
+		@each $name, $value in map-get($s-icons, icons) {
+
+			#{$root}--#{$name} & {
+
+				@include t-icon($name, $position) {
+					@content;
+				};
+			}
+		}
+	}
+}

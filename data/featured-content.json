@@ -1,0 +1,26 @@
+[
+    {
+        "img": "http://via.placeholder.com/278x314",
+        "title": "One",
+        "copy": "Cras sit amet nibh libero, inn gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.",
+        "ctaText": "Find out more"
+    },
+    {   
+        "img": "http://via.placeholder.com/278x314",
+        "title": "Two",
+        "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur dolor assumenda totam laborum delectus eaque deleniti itaque quisquam.",
+        "ctaText": "Buy"
+    },
+    {   
+        "img": "http://via.placeholder.com/278x314",
+        "title": "Three",
+        "copy": "Repellendus blanditiis, aliquid odit quasi et consequatur magnam cum corrupti, quidem qui fuga, quae illum pariatur autem esse sapiente! Voluptate iure, dolorum.",
+        "ctaText": "Longer CTA text content here"
+    },
+    {   
+        "img": "http://via.placeholder.com/278x314",
+        "title": "Four",
+        "copy": "Consequatur magnam cum corrupti, quidem qui fuga, quae illum pariatur autem esse sapiente! Voluptate iure, dolorum.",
+        "ctaText": "Longer CTA text content here"
+    }
+]

@@ -1,0 +1,210 @@
+/* Tools - Helpers
+------------------------- */
+
+// Mixins
+// -------------------------
+
+/// @mixin t-active
+/// Standardises pseudo states for accessibility.
+///
+/// @access public
+///
+/// @example
+///	@include t-active;
+@mixin t-active {
+
+	&:hover,
+	&:focus,
+	&:active {
+		@content;
+	}
+}
+
+/// @mixin t-flex-image
+/// Apply to basic responsive flexible image styling.
+///
+/// @access public
+///
+/// @example
+///	@include t-flex-image;
+@mixin t-flex-image {
+	max-width: 100%;
+	width: 100%;
+}
+
+/// @mixin t-hidden
+/// Visibly hide elements without removing the target element from the render tree.
+///
+/// @access public
+///
+/// @example
+///	@include t-hidden;
+@mixin t-hidden {
+	position: absolute;
+	left: -9999px;
+}
+
+/// @mixin t-hidden-text
+/// Visibly hide text without removing the target element from the render tree.
+///
+/// @access public
+///
+/// @example
+///	@include t-hidden-text;
+@mixin t-hidden-text {
+	font-size: 0;
+	line-height: 0;
+}
+
+/// @mixin t-reset-list
+/// Removes list style and left margin
+///
+/// @access public
+///
+/// @example
+///	@include t-reset-list;
+@mixin t-reset-list {
+	list-style: none;
+}
+
+@mixin t-reset-list--inline {
+	@include t-reset-list;
+	overflow: hidden;
+	> li {
+		float: left;
+	}
+}
+
+@mixin t-delimited-list($spacing: t-rem(5px), $colour: $s-base-font-colour) {
+
+    @include t-reset-list--inline;
+    margin-bottom: 0;	
+
+    > li {
+
+       	border-right: 1px solid $colour;
+        margin-left: t-rem($spacing);
+        padding-right: t-rem($spacing);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            border: none;
+            padding-right: 0;
+        }
+    }
+}
+
+@mixin t-link-underline-hover {
+	text-decoration: none;
+	
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+}
+
+@mixin t-fill-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;	
+}
+
+@mixin t-interaction {
+
+    &:hover, &:focus, &:active {
+        @content;
+    }
+}
+
+@mixin t-interaction-dark {
+
+    &:hover, &:focus, &:active {
+        
+        text-decoration: underline;
+        color: white;
+
+        @content;
+    }
+}
+
+@mixin t-interaction-light {
+
+    &:hover, &:focus, &:active {
+        
+        text-decoration: underline;
+        color: map-get($s-colours, primaryblue);
+
+        @content;
+    }
+}
+
+@mixin t-gold-line {
+
+    content: "";
+    display: block;
+    width: t-rem(50px);
+    height: t-rem(1px);
+    background-color: map-get($s-colours, goldonpale);
+}
+
+@mixin button-reset {
+    
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;    
+}
+
+@mixin t-hover-jump-fix {
+
+    &:after {
+        @content;
+
+        display: block;
+        content: attr(title);
+        height: 1px;
+        overflow: hidden;
+        color: transparent;
+        opacity: 0;
+    }
+}
+
+@mixin t-brand-box-shadow {
+
+    box-shadow: 2px 2px 4px 0px t-brand-colour(boxshadows);
+}
+
+@function t-transition-value($prop: 'all', $speed: 'medium', $easingFunc: 'ease'){
+
+    @return #{$prop} #{map-get($s-transitions, $speed)} #{$easingFunc};
+}
+
+@mixin t-input-placeholders {
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        @content;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        @content;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        @content;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        @content;
+    }
+}
+
+@mixin t-owl-carousel-chrome-fix  {
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0); 
+    -ms-transform: translateZ(0);  */
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
+}

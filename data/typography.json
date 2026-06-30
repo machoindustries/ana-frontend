@@ -1,0 +1,57 @@
+[
+    {
+        "name": "h1",
+        "class": "t-type-h1"
+    },{
+        "name": "h1 bold",
+        "class": "t-type-h1--bold"
+    },{
+        "name": "h2",
+        "class": "t-type-h2"
+    },{
+        "name": "h2 bold",
+        "class": "t-type-h2--bold"
+    },{
+        "name": "h3",
+        "class": "t-type-h3"
+    },{
+        "name": "h3 bold",
+        "class": "t-type-h3--bold"
+    },{
+        "name": "h4",
+        "class": "t-type-h4"
+    },{
+        "name": "h4 bold",
+        "class": "t-type-h4--bold"
+    },{
+        "name": "p1",
+        "class": "t-type-p1"
+    },{
+        "name": "p1 bold",
+        "class": "t-type-p1--bold"
+    },{
+        "name": "caption",
+        "class": "t-type-caption"
+    },{
+        "name": "caption bold",
+        "class": "t-type-caption--bold"
+    },{
+        "name": "nav1",
+        "class": "t-type-nav1"
+    },{
+        "name": "nav1 bold",
+        "class": "t-type-nav1--bold"
+    },{
+        "name": "nav3",
+        "class": "t-type-nav3"
+    },{
+        "name": "nav3 bold",
+        "class": "t-type-nav3--bold"
+    },{
+        "name": "productpage light",
+        "class": "t-type-productpage"
+    },{
+        "name": "productpage bold",
+        "class": "t-type-productpage--bold"
+    }
+]

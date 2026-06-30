@@ -1,0 +1,64 @@
+---
+title: Account Order Detail
+---
+
+<div class="block">
+
+	<div class="grid-constraint">
+		
+		<div class="grid">
+			<div class="grid__item one-whole">
+				{{> c-breadcrumb breadcrumb}}
+			</div>
+		</div>
+
+		<div class="grid">
+			<aside class="grid__item one-whole medium--three-twelfths">
+				{{> e-subnav subnav}}
+			</aside>
+
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--one-twelfth">
+				<div class="block block--full block--vs-none grid grid--full">
+					<div class="grid__item one-whole">
+						<a class="c-account__return-link" href="#">&lt; Back to order history</a>
+						<h2>Order Successful</h2>
+						<p class="c-account__subtitle">Date placed: <span>01/01/2017</span></p>
+						<p class="c-account__subtitle">Order status: Pending</p>
+					</div>
+				</div>
+				<div class="block block--full">
+					<div class="c-order-detail__row grid">
+						<div class="grid__item one-whole large--one-half">
+							{{> c-order-summary account-order-detail.summary }}
+						</div>
+						<div class="grid__item one-whole large--five-twelfths push--large--one-twelfth">
+							<div class="c-order-detail__payment">
+								<h4 class="c-order-detail__heading">Payment Details</h4>
+								<p class="c-order-detail__address">Card **** **** **** 1234</p>
+							</div>
+							<h4>Billing address</h4>
+							{{> c-address account-order-detail.addresses.billing }}
+						</div>
+					</div>
+					<div class="c-order-detail__row grid">
+						<div class="grid__item one-whole large--one-half">
+							<h4>Shipping address</h4>
+							{{> c-address account-order-detail.addresses.shipping }}
+						</div>
+						<div class="grid__item one-whole large--five-twelfths push--large--one-twelfth">
+							<h4 class="c-address__heading">Shipping Details</h4>
+							<p>{{account-order-detail.summary}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="block block--full grid grid--full">
+		<div class="grid__item one-whole">
+			<h4 class="c-order-detail__heading">7 Items</h4>
+			{{> c-order-detail order-detail-confirmation }}
+		</div>
+	</div>
+</div>

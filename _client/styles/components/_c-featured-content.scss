@@ -1,0 +1,184 @@
+$c-featured-content-copy-max-height-collapsed: 89px;
+$c-featured-content-copy-max-height-expanded: 110px;
+$c-featured-content-divider-width: 64px;
+
+@mixin c-featured-content-expanded($root) {
+
+    #{$root}__content {
+
+        background-color: t-brand-colour(featuredcontenthoverbg);
+        transform: translateY(0%);
+
+        &-wrap {
+
+            @include t-centerer('y', relative);
+
+            &:after {
+                background-color: t-brand-colour(featuredcontenthoverbg);
+                opacity: 0;
+            }
+        }
+    }
+
+    #{$root}__title {
+        
+        @include t-type-p2(light);
+
+        margin-bottom: t-rem($s-layout-gutter-mobile-large);
+        padding-bottom: t-rem($s-layout-gutter-mobile-large);
+
+        &:after {
+            width: t-rem($c-featured-content-divider-width);
+            transition-delay: 0.25s;
+        }
+    }
+}
+
+.featuredcontentblock {
+
+    @include t-respond-to-min(medium) {
+        
+        &--quarter {
+
+            position: relative;
+
+            @include t-respond-to-min(medium) {
+
+                &::after {
+
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    left: calc(100% + #{t-rem($s-layout-gutter-mobile-large)});
+                    background-color: t-brand-colour(divider);
+                }
+
+                &:last-child::after {
+
+                    display: none;
+                }
+            }
+
+            @include t-respond-to-min-max(medium, large) {
+
+                &:nth-child(2n)::after {
+
+                    display: none;
+                }
+            }
+
+            @include t-respond-to-min(large) {
+
+                &:nth-child(4n)::after {
+
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.c-featured-content {
+
+    $root: &;
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: t-rem(430px);
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+
+    &__content {
+
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: t-brand-colour(featuredcontentbg);
+        padding: t-rem($s-layout-gutter-mobile-large);
+        transform: translateY(70%);
+        transition: t-transition-value(transform, slow, ease),
+                    t-transition-value(background-color, slow, ease);
+
+        &-wrap {
+
+            position: relative;
+            text-align: center;
+            top: 0%;
+            transform: translateY(-0%);
+            transition: t-transition-value(top, slow, ease),
+                        t-transition-value(transform, slow, ease);
+
+            &:after {
+
+                content: "";
+                display: block;
+                position: absolute;
+                top: t-rem($c-featured-content-copy-max-height-collapsed);
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: t-brand-colour(featuredcontentbg);
+                opacity: 1;
+                transition: t-transition-value(opacity, slow, ease),
+                            t-transition-value(background-color, slow, ease);
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__title {
+        
+        @include t-type-p2(bold);
+        
+        position: relative;
+        margin-bottom: t-rem($s-layout-gutter-mobile-small);
+        padding-bottom: 0;
+        transition: t-transition-value(padding-bottom, slow, ease),
+                    t-transition-value(margin-bottom, slow, ease);
+
+        &:after {
+            
+            @include t-centerer('x');
+            
+            content: "";
+            display: block;
+            bottom: 0;
+            width: 0;
+            height: t-rem(2px);
+            background-color: t-brand-colour(featuredcontentcopy);
+            transition: t-transition-value(width, medium, ease);
+        }
+    }
+
+    &__copy {
+        
+        @include t-type-p1;
+        
+        position: relative;
+        overflow: hidden;
+        transition: t-transition-value(max-height, slow, ease);
+    }
+
+    &__title,
+    &__copy {
+
+        color: t-brand-colour(featuredcontentcopy);
+        text-align: center;
+    }
+
+    &:hover,
+    &.is--expanded{
+
+        @include c-featured-content-expanded($root);
+    }
+}

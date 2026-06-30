@@ -1,0 +1,23 @@
+[
+  {
+    "href": "#",
+    "label": "Intro",
+    "current": true
+  },
+  {
+    "href": "#",
+    "label": "Benefits"
+  },
+  {
+    "href": "#",
+    "label": "Evidence"
+  },
+  {
+    "href": "#",
+    "label": "How can we help"
+  },
+  {
+    "href": "#",
+    "label": "Featured products"
+  }
+]

@@ -1,0 +1,130 @@
+{
+	"addresses": {
+		"shipping": {
+			"title": "Shipping Address",
+			"name": "James Bond",
+			"address_line_1": "Address Line 1",
+			"address_line_2": "Address Line 2",
+			"address_line_3": "Address Line 3",
+			"city": "New York City",
+			"state": "New York",
+			"zip_code": "91210",
+			"telephone_number": "01234123123",
+			"telephone_number_2": "09878686423"
+		},
+		"billing": {
+			"title": "Billing Address",
+			"name": "James Bond",
+			"address_line_1": "Address Line 1",
+			"address_line_2": "Address Line 2",
+			"address_line_3": "Address Line 3",
+			"city": "New York City",
+			"state": "New York",
+			"zip_code": "91210",
+			"telephone_number": "01234123123",
+			"telephone_number_2": "09878686423"
+		}
+	},
+	"items": [
+		{
+			"id": "order-item-0",
+			"thumbnail": "http://via.placeholder.com/37x55",
+			"title" : "Name of item in cart lorem ipsum dolor sit amet sed diam",
+			"price": {
+				"original": "40.00",
+				"discounted": "30.00",
+				"discount_notice": "25% off"
+			},
+			"quantity": 2,
+			"functional": false,
+			"total": "60.00"
+		},
+		{
+			"id": "order-item-1",
+			"thumbnail": "http://via.placeholder.com/37x55",
+			"title" : "Certification item in basket, the title of which may run to two lines mauris viverra euismod mauris. Suspendisse auctor vel est sit amet pharetra.",
+			"price": {
+				"original": "20.00"
+			},
+			"quantity": 1,
+			"functional": false,
+			"total": "20.00"
+		},
+		{
+			"id": "order-item-2",
+			"thumbnail": "http://via.placeholder.com/37x55",
+			"title" : "Nursing’s Leading Edges",
+			"author" : "Lisa Summers, MSN, DrPH, FACNM",
+			"format" : {
+				"name":	"ebook",
+				"download_url":	"http://www.google.com"
+			},
+			"price": {
+				"original": "20.00"
+			},
+			"quantity": 1,
+			"functional": false,
+			"total": "20.00"
+		},
+		{
+			"id": "order-item-3",
+			"thumbnail": "http://via.placeholder.com/37x55",
+			"title" : "Another cart item lorem ipsum dolor sit amet sed diam",
+			"price": {
+				"original": "49.99",
+				"discounted": "39.99",
+				"discount_notice": "20% off"
+			},
+			"quantity": 1,
+			"functional": false,
+			"total": "60.00"
+		},
+		{
+			"id": "order-item-4",
+			"thumbnail": "http://via.placeholder.com/37x55",
+			"title" : "Certification item in basket, the title of which may run to two lines mauris viverra euismod mauris. Suspendisse auctor vel est sit amet pharetra.",
+			"price": {
+				"original": "150.00"
+			},
+			"quantity": 1,
+			"functional": false,
+			"total": "150.00",
+			"bundle": [
+				{
+					"id": "order-item-3b",
+					"thumbnail": "http://via.placeholder.com/37x55",
+					"title" : "Certification item in basket, the title of which may run to two lines mauris viverra euismod mauris. Suspendisse auctor vel est sit amet pharetra.",
+					"price": {
+						"original": "20.00"
+					},
+					"quantity": 1,
+					"functional": false,
+					"total": "20.00"
+				},
+				{
+					"id": "order-item-3c",
+					"thumbnail": "http://via.placeholder.com/37x55",
+					"title" : "Certification item in basket, the title of which may run to two lines mauris viverra euismod mauris. Suspendisse auctor vel est sit amet pharetra.",
+					"price": {
+						"original": "20.00"
+					},
+					"quantity": 1,
+					"functional": false,
+					"total": "20.00"
+				}
+			]
+		}
+	],
+	"summary": {
+		"items": "79.99",
+		"tax": "12.00",
+		"discount": {
+			"amount": "-10.00",
+			"name": "Summer Sale 2017"
+		},
+		"shipping": "15.00",
+		"donation": "60.00",
+		"pac_contribution": "60.00",
+		"total": "220.53"
+	}
+}

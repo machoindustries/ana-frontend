@@ -1,0 +1,35 @@
+<div class="c-address">
+	{{#if title}}<h4 class="c-address__heading">{{title}}</h4>{{/if}}
+	<ul class="c-address__address">
+		{{#if name}}
+			<li class="c-address__address-item" data-address-output-name>{{name}}</li>
+		{{/if}}
+		{{#if address1}}
+			<li class="c-address__address-item" data-address-output-address-1>{{address1}}</li>
+		{{/if}}
+		{{#if address2}}
+			<li class="c-address__address-item" data-address-output-address-2>{{address2}}</li>
+		{{/if}}
+		{{#if address3}}
+			<li class="c-address__address-item" data-address-output-address-3>{{address3}}</li>
+		{{/if}}
+		{{#if city}}
+			<li class="c-address__address-item" data-address-output-city>{{city}}</li>
+		{{/if}}
+		{{#if state}}
+			<li class="c-address__address-item" data-address-output-state>{{state}}</li>
+		{{/if}}
+		{{#if country}}
+			<li class="c-address__address-item" data-address-output-country>{{country}}</li>
+		{{/if}}
+		{{#if zipcode}}
+			<li class="c-address__address-item" data-address-output-zipcode>{{zipcode}}</li>
+		{{/if}}
+		{{#if phone1}}
+			<li class="c-address__address-item c-address__address-item--push" data-address-output-phone-1>{{phone1}}</li>
+		{{/if}}
+		{{#if phone2}}
+			<li class="c-address__address-item" data-address-output-phone-2>{{phone2}}</li>
+		{{/if}}
+	</ul>
+</div>

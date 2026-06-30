@@ -1,0 +1,126 @@
+---
+title: Course Listing
+---
+
+<div class="content-area">
+	
+	<section class="block containerblock">
+		<div class="grid-constraint">
+			<div class="grid">
+				<div class="grid__item one-whole">
+					{{> c-breadcrumb breadcrumb}}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block grid-constraint">
+		<div class="grid">
+			<div class="grid__item one-whole">
+				<h1 class="containerblock__heading containerblock__heading--large">
+					<span>Workshops, online courses and webinars</span>
+				</h1>
+			</div>
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--two-twelfths">
+				<div class="containerblock__intro e-richtext">
+					<p>Proin eget cursus diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut justo purus, ornare sit amet quam id, dictum aliquet dolor. Etiam gravida interdum justo. augue lorem, vehicula sit amet finibus at, interdum sit amet diam.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block containerblock containerblock--featured">
+		<div class="grid">
+			<div class="grid__item one-whole">
+				<div class="c-product-carousel">
+					<div class="grid-constraint">
+
+						<div class="grid grid--full">
+							<div class="grid__item one-whole">
+								<h2 class="containerblock__heading">
+									<span>This weeks featured courses</span>
+								</h2>
+							</div>
+							<div class="grid__item one-whole medium--eight-twelfths push--medium--two-twelfths">
+								<div class="block block--full e-richtext">
+									<p>Aliquam ut ligula sit amet urna tristique scelerisque sit amet nec neque. Nulla gravida lacinia elit. Suspend isse augue lorem, vehicula sit amet finibus at, Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam.</p>
+								</div>
+							</div>
+							<div class="grid__item one-whole">
+								<div class="block block--full" data-require="./src/views/product-detail-carousel-view" data-nav-dots="true" data-nav-arrows="false">
+									{{#each product-listing.courses}}
+										<div data-containerblock-carousel-slide data-dot="<span class='c-product-carousel__dot-title' title='{{this.title}}'></span>">
+											{{> c-product-detail this }}
+										</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="grid-constraint">
+		<div class="grid">
+			<div class="grid__item one-whole">
+				<h4 class="c-product-search-form__title">
+					<span class="c-product-search-form__title-copy--desktop">Filter by:</span> 
+					<span class="c-product-search-form__title-copy--mobile">24 results</span> 
+				</h4>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="grid__item one-whole">
+				{{> c-product-detail-form}}
+			</div>
+		</div>
+	</section>
+	
+	<section class="block">
+		<div class="grid-constraint">
+			<div class="grid">
+				{{#each product-listing.courses}}
+					<div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+						{{> c-product-detail this }}
+					</div>
+				{{/each}}
+
+				{{#each product-listing.courses}}
+					<div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+						{{> c-product-detail this }}
+					</div>
+				{{/each}}
+			</div>
+			<div>
+				<div class="grid">
+					<div class="grid__item one-whole">
+						{{> e-pagination}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="grid-constraint">
+		<div class="grid">
+			<div class="grid__item one-whole">
+				<h2 class="containerblock__heading">
+					<span>You might also like</span>
+				</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="grid-constraint">
+		<div class="grid">
+			{{#each product-listing.courses}}
+				<div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+					{{> c-product-detail this}}
+				</div>
+			{{/each}}
+		</div>
+	</section>
+
+</div>

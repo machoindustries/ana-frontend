@@ -1,0 +1,97 @@
+/* Helpers
+------------------------- */
+
+%h-flex-image, .h-flex-image {
+	@include t-flex-image;
+}
+
+.no-js .no-js-h-hidden,
+.js .js-h-hidden,
+%h-hidden, .h-hidden {
+	@include t-hidden;
+}
+
+.h-display-none,
+.js .js-h-display-none,
+.no-js .no-js-h-display-none {
+    display: none;
+}
+
+%sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.sr-only {
+	@extend %sr-only;
+}
+
+.ui-dialog {
+
+    z-index: 1001 !important;
+}
+
+.ui-widget-overlay {
+
+    z-index: 1000 !important;
+}
+
+.cf {
+
+    @include t-clearfix();
+}
+
+@include t-respond-to-min(medium) {
+    
+    .js {
+
+        [data-carousel-slide] {
+
+            opacity: 0;
+        }
+
+        .owl-loaded {
+
+            [data-carousel-slide]{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@include t-respond-to-max(medium){
+    .hide-small {
+        display:none;
+    }
+}
+
+@include t-respond-to-min-max(medium, large){
+    .hide-medium {
+        display:none;
+    }
+}
+
+@include t-respond-to-min(large){
+    .hide-large {
+        display:none;
+    }
+}
+
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+
+.zero-height {
+
+    @include t-respond-to-min(large) {
+        height: 0;
+        overflow: visible;
+        display: block;
+    }
+}

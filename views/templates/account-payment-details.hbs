@@ -1,0 +1,52 @@
+---
+title: Account Payment Details
+---
+
+
+
+	<div class="grid-constraint">
+		
+		<div class="grid">
+			<div class="grid__item one-whole">
+				{{> c-breadcrumb breadcrumb}}
+			</div>
+		</div>
+
+		<div class="grid">
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--four-twelfths">
+				<h2 class="c-account__address-heading">My Account</h2>
+			</div>
+		</div>
+
+		<div class="grid">
+			
+			<aside class="grid__item one-whole medium--three-twelfths">
+				
+				{{> e-subnav subnav}}
+
+			</aside>
+
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--one-twelfth">
+				
+				<div class="c-account__section" data-require="./src/views/account-payment-details-view">
+					
+					<h4 class="c-account__title">Payment Details</h4>
+					<div class="c-account__intro e-richtext">
+						{{{account-payment-details.introText}}}
+					</div>
+					
+					<div class="grid" data-account-payment-methods>
+						{{!-- {{#each account-payment-details.paymentMethods }}
+							<div class="grid__item one-whole medium--one-half">
+								{{> e-account-payment-method this }}
+							</div>
+						{{/each}} --}}
+					</div>
+
+				</div>
+
+			</div>
+			
+		</div>
+
+	</div>

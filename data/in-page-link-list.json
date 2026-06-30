@@ -1,0 +1,12 @@
+{
+	"default": {
+        "title": "Related content",
+        "links": [
+            { "title": "Navigation item 1" }, 
+            { "title": "Navigation item 2 with a really long title" }, 
+            { "title": "Navigation item 3" },
+            { "title": "Navigation item 4", "download": true },
+            { "title": "Navigation item 5 with a really long title", "download": true }
+        ]
+    }
+}

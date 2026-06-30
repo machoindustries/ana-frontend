@@ -1,0 +1,322 @@
+/* Base - Layout
+------------------------- */
+
+$global-max-content-width: 1680px;
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+
+    &.nav-open {
+
+        @include t-respond-to-max(large) {
+            height: 100%;
+            overflow-y: hidden;
+        }
+    }
+}
+
+body {
+
+    background: t-brand-colour(bodybackground);
+    overflow-x: hidden;
+
+    .episerver-edit-mode & {
+
+        overflow: hidden !important;
+    }
+
+    &.creative-review {
+
+        padding: 5px;
+        background: #888;
+    }
+}
+
+.main {
+
+    max-width: t-rem($global-max-content-width);
+    margin: 0 auto;
+    background: map-get($s-colours, white);
+    position: relative;
+    padding: 0;
+    z-index: t-z-index(main);
+    min-height: 60vh;
+}
+
+.grid-constraint {
+
+    @include t-content-constraint();
+
+    &--full-to-large {
+
+        padding-left: 0;
+        padding-right: 0;
+
+        @include t-respond-to-min(large) {
+            padding-left: t-rem($s-layout-gutter);
+            padding-right: t-rem($s-layout-gutter);
+        }
+    }
+}
+
+.grid {
+
+    &--flex {
+
+        .flexbox & {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            > .grid__item {
+
+                display: flex;
+            }
+
+            &.grid--center {
+                justify-content: center
+            }
+        }
+    }
+
+    &--overflow-hidden {
+
+        overflow: hidden;
+    }
+}
+
+.block {
+
+    &--full {
+
+        @include t-no-content-padding;
+    }
+
+    &--full-desktop {
+
+        @include t-no-content-padding;
+    }
+
+    &--vs-none {
+
+        @include t-vertical-spacing(none, margin-bottom);
+    }
+
+    &--vs-small {
+
+        @include t-vertical-spacing(small, margin-bottom);
+    }
+
+    &--vs-large {
+        
+        @include t-vertical-spacing(large, margin-bottom);
+    }
+
+    &--pad-top {
+
+        padding-top: t-rem($s-layout-gutter-desktop-large);
+    }
+}
+
+.content-area {
+
+    position: relative;
+
+    &--last-child-no-margin {
+        > .block:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    > .block {
+        @include t-vertical-spacing(large, margin-bottom);
+    }
+    
+    > :not(.block):last-child {
+        
+        margin-bottom: 0;
+    }
+
+    > .imagefile + .editorialblock,
+    > .editorialblock + .imagefile {
+
+        @include t-vertical-spacing(small, margin-top, $negate: true);
+    }
+    
+    + .content-area {
+
+        @include t-vertical-spacing(medium, margin-top);
+    }
+
+    > .accordionitemblock + .accordionitemblock {
+        @include t-vertical-spacing(large, margin-top, $negate: true);
+    }
+
+    @include t-respond-to-min(medium) {
+
+        .medium--one-third {
+            margin-bottom: t-get-vertical-spacing(medium);
+        }        
+
+        .medium--one-half {
+            margin-bottom: t-get-vertical-spacing(medium);
+        }
+    }
+}
+
+.theme {
+
+    @include t-vertical-spacing(large, (padding-top, padding-bottom));
+
+    @each $name, $map in $s-themes {
+
+        &--#{$name} + .theme--#{$name} {
+            @include t-vertical-spacing(medium, margin-top, $negate: true);
+        }
+
+        &--#{$name} {
+
+            background-color: map-get($map, background-colour);
+            color: map-get($map, text-colour);
+        }
+    }
+}
+
+.wrap {
+
+    &--content-intro-5050 {
+
+        @include t-vertical-spacing(large, margin-top);
+
+        @include t-respond-to-max(medium) {
+
+            .contentintroblock:first-child {
+
+                .c-content-intro--5050 {
+                    border-bottom: 1px solid map-get($s-colours, lightblue);
+                }
+            }
+
+            .contentintroblock:last-child {
+
+                .c-content-intro--5050 {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        @include t-respond-to-min(medium) {
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+
+            &:before {
+
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: $s-layout-gutter;
+                bottom: 0;
+                right: 0;
+                background-color: map-get($s-colours, white);
+            }
+
+            &:after {
+
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: calc(50% + #{$s-layout-gutter--half});
+                bottom: 0;
+                width: 1px;
+                background-color: map-get($s-colours, lightblue);
+            }
+        }
+    }
+}
+
+.owl-carousel {
+
+    .carouselitem {
+
+        width: 100%;
+        padding: 0;
+    }
+
+    .owl-item {
+        
+        @include t-owl-carousel-chrome-fix;
+
+        & > .grid__item {
+
+            padding-left: 0;
+        }
+
+        display: block;
+    }
+}
+
+/// Vertical Spacing Placeholders / Classes
+/// Iterates through the $s-vertical-spacing map to render a class and placeholder for non arbitrary spacing.
+@each $spacing in map-keys($s-vertical-spacing) {
+
+    %b-vs--#{$spacing}, .b-vs--#{$spacing} {
+		@include t-vertical-spacing($spacing, (margin-top, margin-bottom), true);
+    }
+
+    %b-vst--#{$spacing}, .b-vst--#{$spacing} {
+        @include t-vertical-spacing($spacing, (margin-top), true);
+    }
+
+    %b-vsb--#{$spacing}, .b-vsb--#{$spacing} {
+        @include t-vertical-spacing($spacing, (margin-bottom), true);
+    }
+}
+
+.b-vs--no-margin,
+.b-vsb--no-margin,
+.b-vst--no-margin {
+
+    margin-bottom: 0 !important;
+}
+
+
+.img-align {
+    &--bl {
+        background-position: bottom left !important;
+    }
+    &--bm {
+        background-position: bottom center !important;
+    }
+    &--br {
+        background-position: bottom right !important;
+    }
+    &--ml {
+        background-position: center left !important;
+    }
+    &--mm {
+        background-position: center center !important;
+    }
+    &--mr {
+        background-position: center right !important;
+    }
+    &--tl {
+        background-position: top left !important;
+    }
+    &--tm {
+        background-position: top center !important;
+    }
+    &--tr {
+        background-position: top right !important;
+    }
+}
+
+ol ul { display: inline-block } // Fix for numbering order issue

@@ -1,0 +1,19 @@
+/* Settings - Icons
+------------------------- */
+
+/// $s-icons
+/// Establishes a map containing a series of icon sets with a map of icons with associated unicode (UTF8) values and an associated font family stack.
+///
+/// @example
+/// $s-icons: (
+///     icons: (
+///         'icon-name': '\f101'
+///     ),
+///     stack: 'icons'
+/// );
+$s-icons: (
+    icons: (<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+        '<%= glyphs[glyphIdx] %>': '<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>'<% if (glyphIdx < glyphs.length - 1) { %>,<% } } %>
+    ),
+    stack: 'icons'
+);

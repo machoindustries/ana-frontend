@@ -1,0 +1,179 @@
+$e-button-height: 54px;
+$e-button-padding-h: 30px;
+$e-button-padding-v: 13px;
+$e-button-padding-v-anchors: 14.5px;
+
+@mixin e-button-base () {
+
+    @include t-type-p1(bold);
+
+    display: inline-block;
+    position: relative;
+    padding: t-rem($e-button-padding-v $e-button-padding-h);
+    border: 1px solid;
+    min-height: t-rem($e-button-height);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: t-transition-value(background-color, slow, ease),
+                t-transition-value(color, slow, ease),
+                t-transition-value(border-color, slow, ease);
+}
+
+.e-button {
+
+    $root: &;
+
+    @include e-button-base;
+    transition: t-transition-value(background-color, slow, ease), t-transition-value(color, slow, ease), t-transition-value(border-color, slow, ease);
+
+    &[disabled] {
+        &,
+        &#{$root}--blue,
+        &#{$root}--white,
+        &#{$root}--white-light,
+        &#{$root}--orange,
+        &#{$root}--green {
+        }
+    }
+
+    &--full {
+        display: block;
+        width: 100%;
+    }
+
+    &--anchor {
+
+        &,
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include t-respond-to-max(small) {
+            width: -webkit-fill-available;
+            margin-top: 5px;
+        }
+    }
+
+    @at-root {
+
+        a#{&},
+        a#{&}--blue,
+        a#{&}--white,
+        a#{&}--white-light,
+        a#{&}--orange,
+        a#{&}--green {
+            padding-top: t-rem($e-button-padding-v-anchors);
+        }
+    }
+
+    &,
+    &--blue {
+
+        &,
+        body.epi_visualaid & { // Fix for incorrect in-editor styling when using TinyMCE
+
+            @include e-button-base;
+            background-color: t-brand-colour(buttonbluebg);
+            color: t-brand-colour(buttonbluetext);
+            border-color: t-brand-colour(buttonblueborder);
+
+            &:hover,
+            &.is--active {
+                background-color: t-brand-colour(buttonbluehoverbg);
+                color: t-brand-colour(buttonbluehovertext);
+                border-color: t-brand-colour(buttonbluehoverborder);
+                box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+            }
+        }
+    }
+
+    &--white,
+    &--white-light {
+
+        &,
+        body.epi_visualaid & {
+
+            @include e-button-base;
+            background-color: t-brand-colour(buttonwhitebg);
+            color: t-brand-colour(buttonwhitetext);
+            border-color: t-brand-colour(buttonwhiteborder);
+            box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+        }
+
+        @include t-respond-to-max(small) {
+            padding: 0.8125rem 0.875rem;
+        }
+    }
+
+    &--white {
+
+        &,
+        body.epi_visualaid & {
+
+            &:hover,
+            &.is--active {
+                background-color: t-brand-colour(buttonwhitehoverbg);
+                color: t-brand-colour(buttonwhitehovertext);
+                border-color: t-brand-colour(buttonwhitehoverborder);
+                box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+            }
+        }
+    }
+
+    &--white-light {
+
+        &,
+        body.epi_visualaid & {
+
+            &:hover,
+            &.is--active {
+                background-color: t-brand-colour(buttonwhitelthoverbg);
+                color: t-brand-colour(buttonwhitelthovertext);
+                border-color: t-brand-colour(buttonwhitelthoverborder);
+                box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+            }
+        }
+    }
+
+    &--orange {
+
+        &,
+        body.epi_visualaid & {
+
+            @include e-button-base;
+            background-color: t-brand-colour(buttonorangebg);
+            color: t-brand-colour(buttonorangetext);
+            border-color: t-brand-colour(buttonorangeborder);
+
+            &:hover,
+            &.is--active {
+                background-color: t-brand-colour(buttonorangehoverbg);
+                color: t-brand-colour(buttonorangehovertext);
+                border-color: t-brand-colour(buttonorangehoverborder);
+                box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+            }
+        }
+    }
+
+    &--green {
+
+        &,
+        body.epi_visualaid & {
+
+            @include e-button-base;
+            background-color: t-brand-colour(buttongreenbg);
+            color: t-brand-colour(buttongreentext);
+            border-color: t-brand-colour(buttongreenborder);
+
+            &:hover,
+            &.is--active {
+                background-color: t-brand-colour(buttongreenhoverbg);
+                color: t-brand-colour(buttongreenhovertext);
+                border-color: t-brand-colour(buttongreenhoverborder);
+                box-shadow: 0 2px 8px 0 rgba(12,30,41,0.35);
+            }
+        }
+    }
+}

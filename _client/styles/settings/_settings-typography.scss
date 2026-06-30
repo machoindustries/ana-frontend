@@ -1,0 +1,253 @@
+/* Settings - Typography
+------------------------- */
+
+$s-base-font-family: 'SourceSansProRegular', sans-serif;
+$s-base-font-size: 16px;
+$s-base-line-height: 1;
+$s-base-letter-spacing: 0.5px;
+$s-base-font-colour: map-get($s-colours, darkergrey);
+
+/// $s-fonts
+/// Establishes a map containing a series of font files located in the specified fonts directory.
+///
+$s-fonts: (
+	'SourceSansProRegular': (
+		file: 'SourceSansPro-Regular',
+		weight: normal,
+		stack: '"SourceSansProRegular", Arial, Helvetica, sans-serif'
+	),
+	'SourceSansProBold': (
+		file: 'SourceSansPro-Bold',
+		weight: normal,
+		stack: '"SourceSansProBold", Arial, Helvetica, sans-serif'
+	),
+	'SourceSansProSemiBold': (
+		file: 'SourceSansPro-SemiBold',
+		weight: normal,
+		stack: '"SourceSansProSemiBold", Arial, Helvetica, sans-serif'
+	),
+	'icons': (
+		file: 'icons',
+		weight: normal,
+		stack: 'icons'
+	)
+);
+
+/// $s-fonts
+/// Establishes a map containing a series of font weights mapped to meaningful names
+$s-font-weights: (
+	xlighter: 200,
+	lighter: 300,
+	normal: 400,
+	bold: 700
+);
+
+/// $s-type-sizing
+/// Establishes a map containing abstract font-sizing declarations with matching breakpoint specifications.
+///
+/// @example
+/// $s-type-sizing: (
+/// 	abstract: (
+/// 		small: (
+/// 			font-size: 10px,
+/// 			line-height: 20px
+/// 		),
+/// 		medium: (
+/// 			font-size: 20px,
+/// 			line-height: 40px
+/// 		)
+/// 	)
+/// );
+
+// FONT SIZES
+// ----------
+// These exist as a centralised store for font sizes without coupling them to breakpoint sizes.
+// Scarif: Super
+// Coruscant: Mega
+// Tatooine: Jumbo
+// Dagobah: Display
+// Hoth: Headline
+// Yavin: Title
+// Bespin: Body
+// Corellia: Caption
+// Endor: Small
+// Kessel: Quote
+
+$s-font-size-scarif:		96px;
+$s-font-size-coruscant:		56px;
+$s-font-size-tatooine:		45px;
+$s-font-size-dagobah:		34px;
+$s-font-size-hoth:			24px;
+$s-font-size-yavin: 		20px;
+$s-font-size-bespin: 		15px;
+$s-font-size-corellia: 		12px;
+$s-font-size-naboo: 		11px;
+$s-font-size-endor: 		10px;
+$s-font-size-kessel: 		24px;
+
+$s-line-height-scarif:		1.17;
+$s-line-height-coruscant:	1.11;
+$s-line-height-tatooine:	1.11;
+$s-line-height-dagobah:		1.12;
+$s-line-height-hoth: 		1.42;
+$s-line-height-yavin: 		1.4;
+$s-line-height-bespin: 		1.47;
+$s-line-height-corellia: 	1.33;
+$s-line-height-naboo: 		1.36;
+$s-line-height-endor: 		1.4;
+$s-line-height-kessel: 		1.33;
+
+$s-type-sizing: (
+	super: (
+		small: (
+			font-size: $s-font-size-scarif,
+			line-height: $s-line-height-scarif
+		),
+		large: (
+			font-size: $s-font-size-scarif,
+			line-height: $s-line-height-scarif
+		)
+	),
+	h1: (
+		small: (
+			font-size: $s-font-size-tatooine,
+			line-height: $s-line-height-tatooine
+		),
+		large: (
+			font-size: $s-font-size-coruscant,
+			line-height: $s-line-height-coruscant
+		)
+	),
+	h2: (
+		small: (
+			font-size: $s-font-size-tatooine,
+			line-height: $s-line-height-tatooine
+		),
+		medium: (
+			font-size: $s-font-size-tatooine,
+			line-height: $s-line-height-tatooine
+		),
+		large: (
+			font-size: $s-font-size-tatooine,
+			line-height: $s-line-height-tatooine
+		)
+	),
+	h3: (
+		small: (
+			font-size: $s-font-size-dagobah,
+			line-height: $s-line-height-dagobah
+		),
+		large: (
+			font-size: $s-font-size-dagobah,
+			line-height: $s-line-height-dagobah
+		)
+	),
+	h4: (
+		small: (
+			font-size: $s-font-size-yavin,
+			line-height: $s-line-height-yavin
+		),
+		large: (
+			font-size: $s-font-size-yavin,
+			line-height: $s-line-height-yavin
+		)
+	),
+	p1: (
+		small: (
+			font-size: $s-font-size-bespin,
+			line-height: $s-line-height-bespin
+		),
+		large: (
+			font-size: $s-font-size-bespin,
+			line-height: $s-line-height-bespin
+		)
+	),
+	p2: (
+		small: (
+			font-size: $s-font-size-hoth,
+			line-height: $s-line-height-hoth
+		),
+		large: (
+			font-size: $s-font-size-hoth,
+			line-height: $s-line-height-hoth
+		)
+	),
+	caption: (
+		small: (
+			font-size: $s-font-size-corellia,
+			line-height: $s-line-height-corellia
+		),
+		large: (
+			font-size: $s-font-size-corellia,
+			line-height: $s-line-height-corellia
+		)
+	),
+	nav1: (
+		small: (
+			font-size: $s-font-size-endor,
+			line-height: $s-line-height-endor
+		),
+		medium: (
+			font-size: $s-font-size-naboo,
+			line-height: $s-line-height-naboo
+		),
+		large: (
+			font-size: $s-font-size-corellia,
+			line-height: $s-line-height-corellia
+		)
+	),
+	nav3: (
+		small: (
+			font-size: $s-font-size-bespin,
+			line-height: $s-line-height-bespin
+		),
+		medium: (
+			font-size: $s-font-size-naboo,
+			line-height: $s-line-height-naboo
+		),
+		large: (
+			font-size: $s-font-size-corellia,
+			line-height: $s-line-height-corellia
+		)
+	),
+	quote: (
+		small: (
+			font-size: $s-font-size-kessel,
+			line-height: $s-line-height-kessel
+		),
+		large: (
+			font-size: $s-font-size-kessel,
+			line-height: $s-line-height-kessel
+		)
+	),
+	productpage: (
+		small: (
+			font-size: $s-font-size-yavin,
+			line-height: $s-line-height-yavin
+		),
+		large: (
+			font-size: $s-font-size-hoth,
+			line-height: $s-line-height-hoth
+		)
+	),
+	ctaheadings: (
+		small: (
+			font-size: $s-font-size-yavin,
+			line-height: $s-line-height-yavin
+		),
+		large: (
+			font-size: $s-font-size-yavin,
+			line-height: $s-line-height-yavin
+		)
+	),
+	annotation: (
+		small: (
+			font-size: $s-font-size-endor,
+			line-height: $s-line-height-endor
+		),
+		large: (
+			font-size: $s-font-size-endor,
+			line-height: $s-line-height-endor
+		)
+	)
+);

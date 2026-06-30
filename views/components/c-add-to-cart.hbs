@@ -1,0 +1,35 @@
+<div class="c-add-to-cart">
+    <form class="grid">
+        <div class="grid__item one-whole medium--one-half">
+            {{#ifGreaterThan items.length 1}}
+                <label class="e-form__label e-form__label--select c-add-to-cart__form-label--select" for="sg-select">
+                    <span class="e-form__label-text">Select format</span>
+                    <select class="e-form__input e-form__input--select c-add-to-cart__form-input--select" name="sg-dropdown" id="sg-select" placeholder="placeholder...">
+                        {{#each this.items}}
+                            <option value="{{this.id}}">{{#if this.type}}{{this.type}} {{/if}}${{this.pricing.standard}}/${{this.pricing.member}} members</option>
+                        {{/each}}
+                    </select>
+                </label>
+            {{/ifGreaterThan}}
+            {{#ifLessThan items.length 2}}
+                {{> e-price type=this.items.[0].type standardPrice=this.items.[0].pricing.standard memberPrice=this.items.[0].pricing.member}}
+            {{/ifLessThan}}
+        </div>
+        <div class="grid__item one-whole medium--one-half">
+            <div class="c-add-to-cart__quantity">
+                <label for="sg-inputtext" class="e-form__label c-add-to-cart__form-label">
+                    <span class="e-form__label-text">Quantity</span>
+                    <input type="number" name="sg-inputtext" class="e-form__input e-form__input--text c-add-to-cart__form-input--text" value="1" min="1" />
+                </label>
+            </div>
+            <div class="c-add-to-cart__add">
+                {{> e-button type="button" colourVariant="blue" text="ADD TO CART" additionalClasses="e-button c-add-to-cart__button" dataAttributes="" }}
+            </div>
+        </div>
+        <div class="grid__item one-whole">
+            <p class="c-add-to-cart__description">
+                {{{this.description}}}
+            </p>
+        </div>
+    </form>
+</div>

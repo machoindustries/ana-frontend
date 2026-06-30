@@ -1,0 +1,104 @@
+{
+	"items": [
+		{
+			"id": 0,
+			"heading": {
+				"copy": "Media center",
+				"url": "#"
+			},
+			"items": [
+				{
+					"copy": "Press Releases",
+					"url": "#"
+				},{
+					"copy": "Advertizing with ANA",
+					"url": "#"
+				},{
+					"copy": "Copyright Permission",
+					"url": "#"
+				},{
+					"copy": "Request",
+					"url": "#"
+				},{
+					"copy": "Trademark Permission",
+					"url": "#"
+				},{
+					"copy": "Request",
+					"url": "#"
+				},{
+					"copy": "Logo Files",
+					"url": "#"
+				}
+			]
+		},{
+			"id": 1,
+			"heading": {
+				"copy": "News & Publications",
+				"url": "#"
+			},
+			"items": [
+				{
+					"copy": "OJIN",
+					"url": "#"
+				},{
+					"copy": "American Nurse Today",
+					"url": "#"
+				},{
+					"copy": "The American Nurse",
+					"url": "#"
+				},{
+					"copy": "Publications",
+					"url": "#"
+				},{
+					"copy": "News",
+					"url": "#"
+				}
+			]
+		},{
+			"id": 2,
+			"modifier": "flush",
+			"items": [{
+				"copy": "FAQ's",
+				"url": "#",
+				"modifier": "large"
+			},{
+				"copy": "Contact Us",
+				"url": "#",
+				"modifier": "large"
+			},{
+				"copy": "ANA Enterprise Careers",
+				"url": "#",
+				"modifier": "large"
+			}]
+		},{
+			"id": 3,
+			"heading": {
+				"copy": "Social media",
+				"url": "#"
+			},
+			"items": [
+				{
+					"icon": "icon-twitter",
+					"copy": "Twitter",
+					"url": "#"
+				},{
+					"icon": "icon-linkedin",
+					"copy": "LinkedIn",
+					"url": "#"
+				},{
+					"icon": "icon-facebook",
+					"copy": "Facebook",
+					"url": "#"
+				},{
+					"icon": "icon-youtube",
+					"copy": "Youtube",
+					"url": "#"
+				},{
+					"copy": "community.ana.org",
+					"url": "#",
+					"modifier": "pad-top"
+				}
+			]
+		}
+	]
+}

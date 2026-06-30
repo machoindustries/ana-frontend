@@ -1,0 +1,194 @@
+$order-item-thumbnail-size: 70px;
+$order-item-padding: $s-layout-gutter-mobile-large;
+$c-order-item-quantity-row-label-height-mobile: 45px;
+$c-order-item-quantity-row-label-height-desktop: 55px;
+
+.c-order-item {
+
+    $root: &;
+
+    padding: t-rem($order-item-padding 0);
+
+    &__wrapper {
+
+        &,
+        .content-area .c-order-detail & {
+    
+            margin-bottom: 0;
+        }
+    }
+
+    &__content {
+
+        display: block;
+        overflow: hidden;
+        //padding: t-rem(0 $order-item-padding);
+        padding: 0;
+        margin-bottom: t-rem($s-layout-gutter-mobile-small);
+
+        @include t-respond-to-min(medium) {
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        &--figure-title {
+            padding-left: t-rem($order-item-thumbnail-size + $order-item-padding) !important;
+            position: relative;
+
+            #{$root}__figure {
+                margin-left: t-rem(-($order-item-thumbnail-size + $order-item-padding));
+            }
+        }
+
+        &--item-total {
+
+            @include t-respond-to-min(medium) {
+                text-align: right;
+            }
+        }
+
+        &--right {
+
+            text-align: right;
+        }
+
+        .grid__item > p {
+
+            margin-bottom: t-rem($s-layout-gutter-mobile-medium);
+        }
+    }
+
+    &__figure {
+        border: 1px solid t-brand-colour(divider);
+        float: left;
+        height: t-rem($order-item-thumbnail-size);
+        margin: 0 t-rem($order-item-padding) 0 0;
+        position: relative;
+        width: t-rem($order-item-thumbnail-size);
+        &--icon {
+            background-color: t-brand-colour(productdetailcoursebg);
+        }
+        &-icon {
+            color: t-brand-colour(productdetailcourseicon);
+            @include t-centerer;
+            font-size: t-rem($order-item-thumbnail-size/2);
+        }
+    }
+
+    &__image {
+        @include t-centerer;
+        max-height: t-rem($order-item-thumbnail-size);
+        max-width: t-rem($order-item-thumbnail-size);
+    }
+
+    &__title {
+        
+        color: t-brand-colour(orderitemtitle);
+        padding-right: t-rem($s-layout-gutter-mobile-large);
+    }
+
+    &__link {
+
+        @include t-default-link-interaction;
+
+        display: block;
+        text-decoration: none;
+    }
+
+    &__format {
+        
+        color: t-brand-colour(orderitemformattext);
+        margin-top: t-rem($s-layout-gutter-mobile-small);
+    }
+
+    &__row-label {
+
+        @include t-type-p1(bold);
+
+        float: left;
+        width: t-rem(90px);
+
+        @include t-respond-to-min(medium) {
+            
+            @include t-hidden;
+        }
+
+        &--quantity {
+
+            height: t-rem($c-order-item-quantity-row-label-height-mobile);
+            line-height: t-rem($c-order-item-quantity-row-label-height-mobile);
+
+            @include t-respond-to-min(medium) {
+                
+                height: t-rem($c-order-item-quantity-row-label-height-mobile);
+                line-height: t-rem($c-order-item-quantity-row-label-height-mobile);	
+            }
+        }
+    }
+
+    &__pricing {
+
+        margin: 0;
+
+        @include t-respond-to-max(medium) {
+
+            float: right;
+            width: calc(100% - 90px);
+        }
+
+        &-price {
+
+            @include t-type-p1;
+
+            color: t-brand-colour(productprice);
+
+            &--old {
+
+                color: t-brand-colour(productprice);
+                text-decoration: line-through;
+            }
+
+            &--new {
+
+                color: t-brand-colour(productpricecallout);
+            }
+
+            &-caveat {
+                
+                @include t-type-caption;
+
+                color: t-brand-colour(productpricecaveat);	
+            }
+        }
+    }
+
+    &__quantity {
+
+        @include t-type-p1;
+
+        margin: 0;
+        color: t-brand-colour(darkgreytext);
+        text-align: left;
+
+        @include t-respond-to-min(medium){
+            
+            text-align: center;
+        }
+    }
+
+    &__bundle-contents {
+
+        &-heading {
+            
+            margin-top: t-rem($s-layout-gutter-mobile-large);
+            color: t-brand-colour(productbundleheading);
+        }
+    }
+
+    &__product-type {
+
+        @include t-type-caption(bold);
+
+        color: t-brand-colour(producttitletype);
+    }
+}

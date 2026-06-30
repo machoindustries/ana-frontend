@@ -1,0 +1,254 @@
+{
+	"breadcrumb": [
+	    {
+	        "href": "#",
+	        "label": "Education & Events",
+	        "order": 1
+	    },{
+	        "href": "#",
+	        "label": "Nursing books",
+	        "order": 2
+	    },{
+	        "label": "Title of book",
+	        "order": 3
+	    }
+	],
+	"productDetail": {
+		"affiliate": {
+			"title": "Co-published with:",
+			"name": "The International Society of Nurses in Genetics",
+			"image": "http://via.placeholder.com/50x50",
+			"url": "http://www.isong.org/"
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Duis viverra tortor a placerat egestas. Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam.",
+		"image": "http://via.placeholder.com/150x230/999999/ffffff",
+		"pricing": [
+			{
+				"format": "Paperback",
+				"member": {
+					"price": "49.95",
+					"sale": "54.95"
+				},
+				"regular": {
+					"price": "54.95",
+					"sale": "59.95"
+				}
+			},
+			{
+				"format": "Hardback",
+				"member": {
+					"price": "59.95",
+					"sale": "64.95"
+				},
+				"regular": {
+					"price": "64.95",
+					"sale": "79.95"
+				}
+			}
+		],
+		"entityBannerText": "foundation",
+		"sale_note": "Bank holiday sale (20% off)",
+		"title": "Nursing's Leading Edges: Advancing the Profession through Specialization, Credentialing, and Certification"
+	},
+	"addToCart": {
+		"description": "For bulk or invoice purchases, please contact <a href='mailto:sales@ana.org'>sales@ana.org</a>",
+		"items": [
+			{
+				"id": 1,
+				"pricing": {
+					"standard": "54.85",
+					"member": "49.95"
+				},
+				"type": "Paperback"
+			},
+			{
+				"id": 2,
+				"pricing": {
+					"standard": "64.85",
+					"member": "59.95"
+				},
+				"type": "Hardback"
+			}
+		]
+	},
+	"tabControl": [
+		{
+			"title": "Product Detail",
+			"productDetail": {
+				"statSummary": [
+					{
+						"heading": "Paperback",
+						"isbn": "0001293109824",
+						"pub": "293420948239",
+						"pages": "300 pages"
+					},
+					{
+						"heading": "eBook",
+						"isbn": "E001293109824",
+						"pub": "5138854153587",
+						"pages": "300 pages"
+					}
+				],
+				"introContent": "<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Nunc diam tellus, malesuada consectetur vulputate at, rutrum nec neque. Nulla et est lectus.</p><p>In euismod est eget leo ultricies sagittis. Suspendisse vel tempor est, vitae laoreet quam. Donec volutpat consequat tristique. Fusce placerat eros a volutpat sagittis. In ut ligula consectetur, viverra orci porttitor, vestibulum arcu. Vivamus at ipsum ullamcorper, pellentesque nisi ut, sodales ante. Sed lobortis lacinia neque, vel luctus nisi aliquam non. Aliquam erat volutpat. Mauris cursus diam in aliquet volutpat. Mauris aliquam nisi ut est aliquet fringilla. Ut aliquet lacus at ante semper malesuada. Vestibulum dui dolor, convallis non elit fermentum, semper tempus metus. Pellentesque cursus, ipsum quis ultrices interdum, ipsum arcu mollis elit, at cursus mauris nisi eget tortor.</p>",
+				"video": {
+					"type": "video",
+			        "heading": "Video caption title",
+			        "description": "Sed ut augue molestie, commodo mauris vel, dignissim sapien.",
+			        "video_url": "//vimeo.com/223080635",
+			        "image": "http://via.placeholder.com/1280x768"
+			    },
+			    "addToCart": {
+					"description": "For bulk or invoice purchases, please contact <a href='mailto:sales@ana.org'>sales@ana.org</a>",
+					"items": [
+						{
+							"id": 1,
+							"pricing": {
+								"standard": "54.85",
+								"member": "49.95"
+							},
+							"type": "Paperback"
+						},
+						{
+							"id": 2,
+							"pricing": {
+								"standard": "64.85",
+								"member": "59.95"
+							},
+							"type": "Hardback"
+						}
+					]
+				},
+				"author": {
+					"copy": {
+						"summary": "Kati Kleber, BSN, RN, CCRN, graduated from nursing school in Iowa in 2010. After working on a cardiac stepdown unit in the Midwest, she moved into neurocritical care in Charlotte, NC.",
+						"description": [
+							"Kati Kleber, BSN, RN, CCRN, graduated from nursing school in Iowa in 2010. After working on a cardiac stepdown unit in the Midwest, she moved into neurocritical care in Charlotte, NC.",
+							"She was a certified preceptor, obtained her critical care certification, and was named one of the \"Great 100 Nurses of North Carolina\" and Charlotte Business Journal’s Nurse of the Year in 2015. Author, national speaker, and host of a podcast for new nurses, Kati owns and operates FreshRN.com.",
+							"Her passion centers not only on encouraging and educating new graduate nurses, but also on building relationships with other people and God. She and her husband John have one child, Hannah Joy, and two very handsome rescue dogs. Kati is currently pursuing her MSN in Nursing Education. To learn more about her, visit katikleber.com."
+						]
+					},
+					"name": "Name of Person",
+					"detail_1": "Job Title",
+					"detail_2": "MBA, RN, NEA-BC"
+				},
+				"accordion": {
+					"heading": "FAQs",
+					"items": [
+						{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": false
+						},{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": true
+						},{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": true
+						},{
+							"title": "Accordion Item Title",
+							"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+							"collapsePanel": true
+						}
+					]
+				},
+				"joinPromo": {
+					"title": "Join ANA From just $XXX in Washington DC",
+					"cta": {
+						"title": "FIND OUT MORE",
+						"url": "https://www.google.com"
+					},
+					"style": "slim"
+				}
+			},
+			"collapsePanel": false
+		},
+		{
+			"title": "Downloads and Licensing",
+			"htmlContent": "<p>Mauris sit amet feugiat ex, vel ultricies mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa massa, aliquet vitae finibus et, ultricies sed libero. Maecenas aliquet sapien sed finibus tristique. Vestibulum rutrum diam tellus, ac congue turpis tempus a. Praesent sit amet congue diam. Morbi consequat porttitor arcu, nec elementum sapien lobortis sed. Sed convallis tortor ut lectus elementum pulvinar. Nam quis libero ut sapien eleifend tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec felis dui, pharetra quis erat vulputate, molestie porttitor ante. Nam felis mi, posuere eget rhoncus eu, bibendum at ligula. Sed sagittis a ligula ut finibus. Donec a felis cursus, convallis turpis at, auctor orci. Nam sit amet tincidunt metus. Sed at felis viverra, pellentesque urna ac, vulputate lorem.</p>",
+			"collapsePanel": true
+		}
+	],
+	"suggestedProducts": {
+		"heading": "You may also like",
+		"products": [
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "Nursing: Scope and Standards of Practice...",
+				"url": "#"
+			},
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "Code of Ethics for Nurses with Interpretive...",
+				"url": "#"
+			},
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "Anatomy of a Super Nurse: The Ultimate...",
+				"url": "#"
+			},
+			{
+				"detail_1": "Author Name",
+				"detail_2": "Paperback",
+				"note": "Also available in e-book",
+				"price": {
+					"standard": {
+						"original": "54.95",
+						"offer": "49.95"
+					},
+					"member": {
+						"original": "52.95",
+						"offer": "47.95"
+					}
+				},
+				"product_type": "book",
+				"image": "http://via.placeholder.com/150x230/999999/ffffff",
+				"title": "What Would Florence Do? A Guide for New...",
+				"url": "#"
+			}
+		]
+	}
+}

@@ -1,0 +1,21 @@
+.e-back-to-top {
+
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	
+	@include t-icon(icon-arrow-up) {
+		
+		font-size: t-rem(24px);
+		cursor: pointer;
+	}
+
+	&__text {
+		
+		@include t-type-caption('bold');
+
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}

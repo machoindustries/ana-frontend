@@ -1,0 +1,281 @@
+/* Tools - Layout
+------------------------- */
+
+/// @mixin t-content-constraint
+/// Applies a maximum site width and outer gutters to be used on outer elements.
+///
+/// @access public
+///
+/// @example
+///	@include t-site-constraint;
+@mixin t-content-constraint($larger: false, $padding: true) {
+	margin-left: auto;
+    margin-right: auto;
+    
+	@if $larger == true {
+        //max-width: $s-layout-max-content-width--larger + ($s-layout-gutter * 2);
+        max-width: $s-layout-max-content-width--larger;
+    } 
+    @else {
+        max-width: $s-layout-max-content-width;
+        //max-width: $s-layout-max-content-width + ($s-layout-gutter * 2);
+    }
+    
+    @if $padding == true {
+
+        @include t-respond-to-max(medium) {
+            padding-left: t-rem($s-layout-gutter--half);
+            padding-right: t-rem($s-layout-gutter--half);
+        }
+
+	    padding-left: t-rem($s-layout-gutter-desktop-larger);
+        padding-right: t-rem($s-layout-gutter-desktop-larger);
+    }
+}
+
+// Functions
+// -------------------------
+
+/// @function t-get-vertical-spacing-type-adjust
+/// Returns the difference between the font-size and line-height for a given breakpoint.
+///
+/// @access public
+/// @param {String} $type-size- A String which represents a type size label in the $s-type-sizing map.
+/// @param {String} - A String which represents a breakpoint label of the give $type-size within the $s-type-sizing map.
+/// @return {Number} - The difference between font-size and line-height expressed in the appropriate unit.
+///
+/// @example
+/// t-get-vertical-spacing-type-adjust(small, medium);
+@function t-get-vertical-spacing-type-adjust($type-size, $breakpoint-name) {
+
+	$font-size: t-map-value($s-type-sizing, ($type-size, $breakpoint-name, font-size));
+	$line-height: t-map-value($s-type-sizing, ($type-size, $breakpoint-name, line-height));
+
+	@if unitless($line-height) {
+		$line-height: $line-height * $font-size;
+	}
+
+	@return ($line-height - $font-size) / 2;
+}
+
+/// @function t-get-vertical-spacing
+/// Returns the correct spacing units for a given spacing and breakpoint label with an optional type size adjustment.
+///
+/// @access public
+/// @param {String} $spacing-name - A String which represents a spacing label in the $s-vertical-spacing map.
+/// @param {String} $breakpoint-name - A String which represents a breakpoint label in the $s-breakpoints map in which to reference the correct result.
+/// @param {String} $type-size - A String which represents a type size label in the $s-type-sizing map. (Optional)
+/// @return {Number} - The difference between font-size and line-height expressed in the appropriate unit.
+///
+/// @example
+/// t-get-vertical-spacing(small, medium);
+@function t-get-vertical-spacing($spacing-name, $breakpoint-name: small, $type-size: null, $negate: false) {
+
+	@if(map-has-key($s-breakpoints, $breakpoint-name)) {
+		$spacing: t-map-value($s-vertical-spacing, ($spacing-name, $breakpoint-name));
+		$adjust: 0;
+
+		@if($type-size != null) {
+			$adjust: t-get-vertical-spacing-type-adjust($type-size, $breakpoint-name);
+		}
+
+        @if ($negate) {
+            @return t-rem(-($spacing - $adjust));
+        }
+
+		@return t-rem($spacing - $adjust);
+	}
+
+	@return null;
+}
+
+
+// Mixins
+// -------------------------
+
+/// @mixin t-vertical-spacing
+/// Provides the correct vertical spacing to all referenced breakpoints from cross referencing $s-breakpoints and $s-vertical-spacing maps with an optional $type-size parameter to adjust for line height differences.
+///
+/// @access public
+/// @param {String} $spacing-name - A String which represents a spacing label in the $s-vertical-spacing map.
+/// @param {List} $props - A List of CSS properties in which to apply the resulting units.
+/// @param {String} $type-size - A String which represents a type size label in the $s-type-sizing map. (Optional)
+/// @param {String} $default-breakpoint-name - A String which represents a breakpoint label in the $s-breakpoints map in which to apply default styling. (Optional)
+///
+/// @example
+///	@include t-vertical-spacing(small, (margin-bottom, padding-bottom));
+@mixin t-vertical-spacing($spacing-name, $props, $important: false, $type-size: null, $default-breakpoint-name: 'small', $negate: false) {
+
+	@each $prop in $props {
+
+		$default-spacing: t-get-vertical-spacing($spacing-name, $default-breakpoint-name, $type-size, $negate);
+
+		@if($default-spacing != null) {
+			@if $important {
+				#{$prop}: $default-spacing !important;
+			} @else {
+				#{$prop}: $default-spacing;
+			}
+		}
+	}
+
+	@each $breakpoint-name in map-keys(map-get($s-vertical-spacing, $spacing-name)) {
+
+		@if $breakpoint-name != $default-breakpoint-name {
+
+			$spacing: t-get-vertical-spacing($spacing-name, $breakpoint-name, $type-size, $negate);
+
+			@if($spacing != null) {
+				@include t-respond-to-min($breakpoint-name) {
+
+					@each $prop in $props {
+						@if $important {
+							#{$prop}: $spacing !important;
+						} @else {
+							#{$prop}: $spacing;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin t-content-padding(){
+
+	padding-left: t-rem($s-layout-gutter-mobile-large);
+	padding-right: t-rem($s-layout-gutter-mobile-large);
+}
+
+@mixin t-no-content-padding(){
+
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@mixin t-escape-content-padding(){
+
+	margin-left: t-rem(-$s-layout-gutter-mobile-large);
+	margin-right: t-rem(-$s-layout-gutter-mobile-large);
+}
+
+/// @mixin t-inline-container
+/// To be applied to the container of inline-block elements, eliminating the additional horizontal space.
+///
+/// @access public
+///
+/// @example
+/// @include t-inline-container;
+@mixin t-inline-container {
+	letter-spacing: -0.31em;
+}
+
+/// @mixin t-inline-item
+/// To be applied to inline-block elements as descendants of t-inline-container to restore normal letter-spacing.
+///
+/// @access public
+/// @param {String} $vertical-align - The vertical alignment of the elements.
+///
+/// @example
+/// @include t-inline-container;
+@mixin t-inline-item($vertical-align: top) {
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: $vertical-align;
+}
+
+/// @mixin t-layer
+/// Provides the correct global z-index given a level parameter and optional modifier.
+///
+/// @access public
+/// @param {Number} $level - A key which identifies the base z-index.
+/// @param {Number} $modifier - An optional modifier to increase the base z-index level by the given number.
+///
+/// @example
+/// @include t-layer(2, 1);
+@mixin t-layer($level: 0, $modifier: 0) {
+	z-index: map-get($s-layers, $level) + $modifier;
+}
+
+/// @mixin t-brand-border-radius
+/// Applies standardised border radius on the $s-standards-border-radius setting.
+///
+/// @example
+///	@include t-brand-border-radius;
+@mixin t-brand-border-radius {
+	border-radius: $s-standard-border-radius;
+}
+
+/// @mixin t-brand-border
+/// Applies standardised border based on the $s-standards-border map.
+///
+/// @access public
+/// @param {String} $edge - Edge which to apply the border(s).
+/// @param {Number} $width - Border width.
+///
+/// @example
+///	@include t-brand-border;
+@mixin t-brand-border($edge: bottom, $width: map-get($s-standard-borders, width), $colour: map-get($s-standard-borders, colour)) {
+
+	$border-string: $width map-get($s-standard-borders, style) $colour;
+
+	@if $edge == all {
+		border: $border-string;
+	} @else {
+		border-#{$edge}: $border-string;
+	}
+}
+
+/// @mixin t-brand-shadow--drop
+/// Applies standardised drop box-shadow to element.
+///
+///
+/// @example
+///	@include t-brand-shadow--drop;
+@mixin t-brand-shadow--drop() {
+
+	$settings: map-get($s-standard-shadow--drop, settings); 
+	$colour: map-get($s-standard-shadow--drop, colour);
+	
+	@include t-brand-box-shadow;
+}
+
+@mixin t-vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin t-centerer($axis: 'both', $position: absolute) {
+
+	position: $position;
+
+	@if ($axis == 'both') {
+
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+	} @else if ($axis == 'x') {
+
+		left: 50%;
+		transform: translateX(-50%);
+
+	} @else if ($axis == 'y') {
+
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+@function t-z-index($key){
+
+	@if map-has-key($s-z-indices, $key){
+
+		@return map-get($s-z-indices, $key);
+	
+	} @else {
+		
+		@error "tools-layout > t-z-index : key `#{$key}` not found in $s-z-indices.";
+	}
+}

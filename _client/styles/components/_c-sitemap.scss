@@ -1,0 +1,119 @@
+$c-sitemap-options: (
+	adjustedSectionTitleBottomPadding: t-rem($s-vertical-spacing-mobile-small),
+	linkListTitleChevronSize: t-rem(36px),
+	adjustedSectionMarginBottom: t-rem($s-vertical-spacing-mobile-large),
+	adjustedSectionTitleMarginBottom: t-rem($s-vertical-spacing-mobile-small)
+);
+
+.c-sitemap {
+
+	@include t-vertical-spacing(medium, (padding-top, padding-bottom));
+	
+	&__title {
+		@include t-type-h2;
+		margin-bottom: map-get($c-sitemap-options, adjustedSectionMarginBottom);
+	}
+
+	&__section {
+
+		&-title {
+			@include t-type-h4;
+			border-bottom: 1px solid t-brand-colour(divider);
+			position: relative;
+			padding-bottom: map-get($c-sitemap-options, adjustedSectionTitleBottomPadding);
+			margin-bottom: map-get($c-sitemap-options, adjustedSectionTitleMarginBottom);
+		}
+
+		&-link {
+			color: t-brand-colour(darkgreytext);
+			text-decoration: none;
+
+			@include t-interaction {
+				border-bottom: 1px solid t-brand-colour(divider);
+			}
+		}
+
+	}
+
+	.c-sitemap-link-list {
+		
+		&__accordion-toggle {
+			@include t-respond-to-min(medium) {
+				display: none;
+			}
+		}
+
+		&__item {
+			margin-bottom: t-rem($s-vertical-spacing-mobile-small);
+		}
+
+		&__list {
+			padding-left: map-get($c-sitemap-options, adjustedSectionTitleBottomPadding);
+		}
+
+		&__title {
+
+			@include t-type-p1;
+			position: relative;
+			padding-top: 0;
+			user-select: none;
+
+			&:before {
+
+				display: none;
+			}
+
+			&:after {
+
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				height: t-rem(1px);
+				width: 100%;
+			}
+		}
+	}
+
+	.c-sitemap-link {
+
+		&__title {
+
+			&-link {
+
+				display: inline-block;
+				position: relative;
+				margin-right: map-get($c-sitemap-options, linkListTitleChevronSize);
+				padding-right: 0;
+				width: auto;
+				max-width: 100%;
+				padding-bottom: t-rem(1px);
+				z-index: t-z-index(accordionenabledlink);
+
+				.no-js & {
+
+					width: 100%;
+					z-index: t-z-index(accordiondisabledlink);
+				}
+
+				@include t-active() {
+
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&-list {
+
+		&.is-disabled .c-sitemap-link__title-link {
+
+			z-index: t-z-index(accordiondisabledlink);
+			padding-right: map-get($c-sitemap-options, linkListTitleChevronSize);
+			margin-right: 0;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+---
+title: Product Listing
+---
+
+{{> c-breadcrumb breadcrumb}}
+
+{{#extend "c-container-block" heading="Nursing books" variant="large" additional-class="b-vst--medium b-vsb--large"
+    carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides=""
+    heading-additional-class="c-container-block__heading--large"
+    introContent="<p>Proin eget cursus diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut justo purus, ornare sit amet quam id, dictum aliquet dolor. Etiam gravida interdum justo.  augue lorem, vehicula sit amet finibus at, interdum sit amet diam.</p>" }}
+{{/extend}}
+
+<div class="content-area">
+    {{#extend "c-container-block" heading="This week's featured books" variant="featured"
+        carousel-at-mobile="false" carousel-at-desktop="false" carousel-at-desktop-slides=""
+        introContent="<p>Aliquam ut ligula sit amet urna tristique scelerisque sit amet nec neque. Nulla gravida lacinia elit. Suspend isse augue lorem, vehicula sit amet finibus at, Suspendisse augue lorem, vehicula sit amet finibus at, interdum sit amet diam.</p>" }}
+
+        {{#content "container-block-content"}}
+
+            {{#each product-listing.books-featured }}
+                {{> c-product-detail this }}
+            {{/each}}
+            
+        {{/content}}
+
+    {{/extend}}
+</div>
+
+<div class="grid-constraint">
+    <div class="grid">
+        <div class="grid__item one-whole">
+            <h2 class="c-product-search-form__title">
+                <span class="c-product-search-form__title-copy--desktop">Filter by:</span> 
+                <span class="c-product-search-form__title-copy--mobile">24 results</span> 
+            </h2>
+        
+            {{> c-product-detail-form }}
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    <div class="block containerblock">
+        <div class="c-container-block">
+
+            <div class="grid-constraint">
+                <div class="c-container-block__content grid grid--flex">
+
+                    {{#each product-listing.books}}
+                        {{> c-product-detail this }}
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    <div class="block promoblock">
+    {{> c-promo-block promo-block.[0]}}
+    </div>
+</div>

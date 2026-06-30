@@ -1,0 +1,43 @@
+<article class="c-image{{#if dta.modifierCssClass}} c-image--{{this.modifierCssClass}}{{/if}}{{#if this.inline}} c-image--inline{{/if}}">
+
+	{{#if this.inline}}
+	
+		<div class="grid-constraint">
+			<div class="grid">
+				<div class="grid__item one-whole large--eight-twelfths">
+					<figure class="c-image__figure">
+						<img src="{{this.image}}" alt="{{this.caption.title}}" class="c-image__image" />
+					</figure>
+				</div>
+
+				{{#if this.caption.text}}
+					<div class="grid__item one-whole large--two-twelfths">
+						<div class="c-image__caption">
+							<h4 class="c-image__title">{{this.caption.title}}</h4>
+							<p class="c-image__text">{{this.caption.text}}</p>
+						</div>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+
+	{{else}}
+
+		<figure class="c-image__figure">
+			<img src="{{this.image}}" alt="{{this.caption.title}}" class="c-image__image" />
+		</figure>
+
+		<div class="grid-constraint">
+			<div class="grid">
+				<div class="grid__item one-whole">
+					<div class="c-image__caption">
+						<h4 class="c-image__title">{{this.caption.title}}</h4>
+						<p class="c-image__text">{{this.caption.text}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{{/if}}
+
+</article>

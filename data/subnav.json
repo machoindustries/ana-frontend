@@ -1,0 +1,78 @@
+{
+	"section_title": "This Section",
+	"section_title_mobile": "Pages in this section",
+	"items": [
+		{
+			"title": "Section 1",
+			"url": "#",
+			"hasChildrenActive": true,
+			"items": [
+				{
+					"title": "Section 4",
+					"url": "#"
+				},
+				{
+					"title": "Section 5",
+					"url": "#"
+				},
+				{
+					"title": "Section 6",
+					"url": "#",
+					"active": true
+				}
+			]
+		},
+		{
+			"title": "Section 2",
+			"url": "#"
+		},
+		{
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+        },
+        {
+			"title": "Section 3",
+			"url": "#"
+		}
+	]
+}

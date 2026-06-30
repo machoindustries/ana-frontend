@@ -1,0 +1,6 @@
+@import "../resources/resources-richtext.scss";
+
+.e-richtext {
+
+    @include e-richtext-content(false);
+}

@@ -1,0 +1,112 @@
+{
+	"caveat": {
+		"title": "ANA will never use your personal information onec fringilla, eros ut ultricies hendrerit, elit ante posuere lorem, ac vulputate mauris purus et arcu. Pellentesque mattis, nisi vitae lacinia viverra, risus orci rutrum odio, quis efficitur massa felis non augue. Nunc diam tellus, malesuada consectetur vulputate at, rutrum nec neque. Nulla et est lectus."
+	},
+	"licenses": {
+		"text": "Keep a record of your licenses in one central place and save time with your next ANA Enterprise application."
+	},
+	"membership": {
+		"text": "You can add, remove and update your memberships here."
+	},
+	"nurse_verification": {
+		"title": "Lorem ipsum dolor sit amet sed diam."
+	},
+	"personal_details": {
+		"name": "This is my name",
+		"email": "This is my email address"
+	},
+	"role": {
+		"title": "This is my role which may have a long title Current American Nurses Foundation donor"
+	},
+	"volunteer_status": {
+		"left_column": [
+			"Board Member",
+			"Commissioner",
+			"Magnet Program Director",
+			"Other"
+		],
+		"right_column": [
+			"Pathway Contact",
+			"SME",
+			"Committee Member"
+		]
+	},
+	"data": [
+		{
+			"titles": [
+				"Association",
+				"Membership ID",
+				"Start Date",
+				"End Date",
+				"Options"
+			],
+			"rows": [
+				{
+					"cols": [
+						"American Nurses Association",
+						"12345678",
+						"03/02/18",
+						"06/02/18",
+						""
+					]
+				},
+				{
+					"cols": [
+						"Another Association with a two line name",
+						"98765432",
+						"03/02/18",
+						"03/12/18",
+						"<a href='#'>Remove</a> | <a href='#'>edit</a>"
+					]
+				},
+				{
+					"cols": [
+						"Lorem ipsum dolor",
+						"4567890",
+						"05/02/18",
+						"01/06/19",
+						"<a href='#'>Remove</a> | <a href='#'>edit</a>"
+					]
+				}
+			]
+		},
+		{
+			"titles": [
+				"Country",
+				"State",
+				"License No.",
+				"Expiry",
+				"Options"
+			],
+			"rows": [
+				{
+					"cols": [
+						"United States of America",
+						"CA",
+						"12345678",
+						"03/02/18",
+						"<a href='#'>Remove</a> | <a href='#'>edit</a>"
+					]
+				},
+				{
+					"cols": [
+						"United States of America",
+						"MD",
+						"98765432",
+						"03/12/18",
+						"<a href='#'>Remove</a> | <a href='#'>edit</a>"
+					]
+				},
+				{
+					"cols": [
+						"United States of America",
+						"CA",
+						"4567890",
+						"01/06/19",
+						"<a href='#'>Remove</a> | <a href='#'>edit</a>"
+					]
+				}
+			]
+		}
+	]
+}

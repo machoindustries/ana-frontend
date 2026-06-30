@@ -1,0 +1,48 @@
+$e-checkout-address-checkbox-size: 45px;
+
+.e-checkout-address {
+
+	margin-bottom: t-rem($s-layout-gutter-desktop-small);
+	
+	&__select {
+
+		margin-top: t-rem($s-layout-gutter-desktop-large);
+
+		&-text {
+
+			width: calc(100% - #{$e-checkout-address-checkbox-size});
+		}
+
+		@include t-respond-to-min(large){
+			
+			max-width: 80%;	
+		}
+	}
+
+	&__action {
+
+		@include t-type-p1;
+
+		display: inline-block;
+		position: relative;
+		color: t-brand-colour(richtextheadings);
+		margin-top: t-rem($s-layout-gutter-mobile-small);
+	}
+
+	&__address {
+
+		margin-top: t-rem($s-layout-gutter-desktop-medium);
+	}
+
+	&__address,
+	&__contact {
+
+		list-style-type: none;
+	}
+
+	&__addresses-same {
+
+		width: 100%;
+		margin-top: 0;
+	}
+}

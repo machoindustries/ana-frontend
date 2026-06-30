@@ -1,0 +1,159 @@
+$c-add-to-cart-quantity-mobile-width: 50px;
+
+.c-add-to-cart {
+
+    $root: &;
+
+    @include t-respond-to-min(large) {
+        
+        padding-top: t-rem($s-layout-gutter-desktop-medium);
+    }
+
+    &--single-line-at-medium {
+
+        @include t-respond-to-min(medium) {
+            padding-top: t-rem($s-layout-gutter-desktop-medium);
+        }
+    }
+
+    &--single-line-at-medium & {
+
+        .e-form__label-text,
+        &__form-label-text {
+
+            @include t-respond-to-min(medium) {
+                margin-top: 0;
+                top: auto;
+                bottom: calc(100% + #{$s-layout-gutter-mobile-small});
+                position: absolute;
+            }
+        }
+
+        &__form-label--select,
+        &__quantity,
+        &__button {
+            @include t-respond-to-min(medium) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__button {
+        
+        margin-top: t-rem($s-layout-gutter-mobile-large);
+        width: 100%;
+
+        @include t-respond-to-min(large) {
+            
+            margin-top: 0;	
+        }
+    }
+
+    &__form {
+        &-input,
+        &-label {
+            &--select,
+            &--text {
+                width: 100%;
+            }
+        }
+
+        &-input {
+            &--text{
+
+                height: t-rem(54px);
+
+                &:focus ~ #{$root}__form-label.e-form__label-text {
+                    display: inline-block;
+                }
+
+                @include t-respond-to-min(large) {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        &-label {
+            margin-top: 0;
+
+            &-text {
+                @include t-type-caption;
+                top: 100%;
+                display: block;
+                position: absolute;
+                left: 0;
+                opacity: 1;
+
+                @include t-respond-to-min(large) {
+                    top: auto;
+                    bottom: calc(100% + #{t-rem($s-layout-gutter-mobile-tiny)});
+                }
+            }
+
+            &--select {
+
+                margin-top: t-rem($s-layout-gutter-mobile-large + $s-layout-gutter-mobile-tiny);
+
+                @include t-respond-to-min(large) {
+                    
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &__description {
+        @include t-type-caption;
+
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+        margin: t-rem($s-layout-gutter-mobile-small) 0 0;
+        padding-left: 70px;
+
+        a {
+            @include t-default-link-interaction;
+        }
+    }
+
+    &__quantity {
+        margin: t-rem($s-layout-gutter-mobile-large 0 0);
+        width: t-rem($c-add-to-cart-quantity-mobile-width);
+
+        @include t-respond-to-min(large) {
+            margin: 0;
+        }
+
+        #{$root}__form {
+            
+            &-label {
+            
+                width: 100%;
+
+                .e-form__label-text {
+                    
+                    display: block;
+                    margin-top: t-rem($s-layout-gutter-mobile-small);
+                    
+                    @include t-respond-to-min(large) {
+
+                        bottom: calc(100% + #{$s-layout-gutter-mobile-small});
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    &__quantity,
+    &__add {
+
+        float: left;
+    }
+
+    &__add {
+        
+        margin-left: t-rem($s-layout-gutter-mobile-large);
+        width: calc(100% - #{$c-add-to-cart-quantity-mobile-width + $s-layout-gutter-mobile-large});
+    }
+}

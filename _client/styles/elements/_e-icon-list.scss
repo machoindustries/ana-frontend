@@ -1,0 +1,13 @@
+
+.e-icon-list {
+    
+    &__item {
+
+        display: block;
+
+        &:before {
+
+            font-size: 28px;
+        }
+    }
+}

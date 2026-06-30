@@ -1,0 +1,55 @@
+---
+title: Account My Address Book
+---
+
+
+
+	<div class="grid-constraint">
+		
+		<div class="grid">
+			<div class="grid__item one-whole">
+				{{> c-breadcrumb breadcrumb}}
+			</div>
+		</div>
+
+		<div class="block block--vs-none grid grid--full">
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--four-twelfths">
+				<h2 class="c-account__address-heading">My Account</h2>
+			</div>
+		</div>
+
+		<div class="block grid">
+			
+			<aside class="grid__item one-whole medium--three-twelfths">
+				{{> e-subnav subnav}}
+			</aside>
+
+			<div class="grid__item one-whole medium--eight-twelfths push--medium--one-twelfth" data-require="./src/views/address-book-view">
+				<div class="c-account__section grid">
+					<div class="grid__item one-whole">
+						<h4 class="c-account__subtitle">Address Book</h4>
+						<a href="#" class="c-account__action-link c-account__action-link--add-address" data-address-book-add>+ Add an address</a>
+						<p>Below are your stored billing and shipping addresses. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+					</div>
+					<div class="grid__item one-whole">
+						<div class="grid" data-address-book-list>
+							<div class="grid__item one-whole">No addresses to display</div>
+							{{!-- <div class="grid__item one-whole medium--one-half" data-address-book-item>
+								<div class="c-account__address c-account__address--default">
+									<div class="c-account__address-content">
+										<h4 class="c-account__subtitle">Default Billing Address</h4>
+										{{> c-account-address account-addresses.addresses.billing }}
+									</div>
+								</div>
+							</div> --}}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="e-lightbox-source">
+				{{> lightbox-content-account-address-edit }}
+			</div>
+
+		</div>
+	</div>

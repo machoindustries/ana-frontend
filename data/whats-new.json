@@ -1,0 +1,153 @@
+{
+	"items": [
+		{
+			"itemType": "content-feature",
+			"title": "Product Release",
+			"copy": "ANA Medical Announces the Release of SimMan ALS Simulator",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "content-feature",
+			"title": "Event",
+			"copy": "National EMS Week 2016: Called to Care",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "content-feature",
+			"title": "Watch",
+			"copy": "LIVE from ECCU: Join us as we Ask the Experts",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "twitter",
+			"realName": "Andy Smith",
+			"userName": "andysmithdesign",
+			"tweetText": {
+				"example1": "Short tweet",
+				"example2": "lorem ipsum dolor sit amet",
+				"example3": "this is some very long text which is the maximum length twitter allows a user to enter when authoring a tweet on their social media platform"
+			}
+		},{
+			"itemType": "content-feature",
+			"title": "Event",
+			"copy": "National EMS Week 2016: Called to Care",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "content-feature",
+			"title": "Watch",
+			"copy": "LIVE from ECCU: Join us as we Ask the Experts",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "content-feature",
+			"title": "Product Release",
+			"copy": "ANA Medical Announces ...",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "content-feature",
+			"title": "Event",
+			"copy": "National EMS Week 2016: Called to Care",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "content-feature",
+			"title": "Watch",
+			"copy": "LIVE from ECCU: Join us as we Ask the Experts",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "twitter",
+			"realName": "Andy Smith",
+			"userName": "andysmithdesign",
+			"tweetText": {
+				"example1": "this is some very long text which is the maximum length twitter allows a user to enter when authoring a tweet on their social media platform",
+				"example2": "lorem ipsum dolor sit amet",
+				"example3": "Short tweet"
+			}
+		},{
+			"itemType": "content-feature",
+			"title": "Event",
+			"copy": "National EMS Week 2016: Called to Care",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		},{
+			"itemType": "content-feature",
+			"title": "Watch",
+			"copy": "LIVE from ECCU: Join us as we Ask the Experts",
+			"ctaText": "Read more",
+			"imageSize": {
+				"x": "390",
+				"y": "230"
+			},
+			"imageUrl": "/placeholder.jpg",
+			"imageSizes": "(min-width: 768px) 390px, 100vw",
+			"imageDimensions": "390/230, 480/285, 730/420",
+			"linkType": "block"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+[
+	{
+		"modifierCssClass": "",
+		"caption": {
+			"title": "Image caption title",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+		},
+		"image": "http://via.placeholder.com/1440x810"
+	},
+	{
+		"modifierCssClass": "",
+		"caption": {
+			"title": "Image caption title",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+		},
+		"image": "http://via.placeholder.com/1440x810",
+		"inline": true
+	},
+	{
+		"modifierCssClass": "",
+		"caption": {
+			"title": "",
+			"text": ""
+		},
+		"image": "http://via.placeholder.com/1440x810",
+		"inline": true
+	}
+]

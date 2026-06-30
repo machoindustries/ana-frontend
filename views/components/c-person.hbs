@@ -1,0 +1,66 @@
+{{#if block-class}}
+<div class="block {{block-class}}">
+{{/if}}
+
+{{#if grid-class}}
+<div class="grid-constraint">
+    <div class="grid">
+        <div class="{{grid-class}}" data-modal-class="{{modal-grid-class}}">
+{{/if}}
+
+        <article class="c-person{{#if modifier}} c-person--{{modifier}}{{/if}}{{#if bordered}} c-person--bordered{{/if}}{{#if copy.summary}}{{else}} c-person--no-summary{{/if}}{{#if copy.description}} c-person--modal{{/if}}"{{#if copy.description}} data-require="./src/views/person-view"{{/if}}>
+            
+            <div class="c-person__wrapper" data-person>
+
+                <div class="grid">
+                    <div class="{{image-grid-class}} c-person__image-wrap" data-modal-class="{{modal-image-grid-class}}">
+                        <div class="c-person__image" {{#if image}}style="background-image: url('{{image}}');"{{/if}}></div>
+                    </div>
+
+                    <div class="{{detail-grid-class}}" data-modal-class="{{modal-detail-grid-class}}">
+
+                        <div class="c-person__details">
+                            {{#if name}}
+                                <h2 class="c-person__name">{{name}}</h2>
+                            {{/if}}
+
+                            {{#each details}}
+                                <p class="c-person__detail">{{{this}}}</p>
+                            {{/each}}
+
+                        </div>
+
+                    </div>
+
+                    {{#if copy.summary}}
+                    <div class="c-person__summary {{summary-grid-class}}">
+                        <div class="e-richtext">
+                            <p>{{copy.summary}}</p>
+                        </div>
+                    </div>
+                    {{/if}}
+
+                    {{#if copy.description}}
+                    <div class="c-person__description {{description-grid-class}}" data-modal-class="{{modal-description-grid-class}}">
+                        <div class="e-richtext">
+                            {{#each copy.description}}
+                                <p>{{this}}</p>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/if}}
+
+                </div>
+
+            </div>
+        </article>
+
+{{#if grid-class}}
+        </div>
+    </div>
+</div>
+{{/if}}
+
+{{#if block-class}}
+</div>
+{{/if}}

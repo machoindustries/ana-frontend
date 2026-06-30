@@ -1,0 +1,60 @@
+---
+title: product detail page
+---
+
+
+
+
+
+<div class="grid-constraint">
+    <div class="grid">
+
+        <div class="grid__item one-whole">
+
+            {{> c-breadcrumb product-detail-template.breadcrumb}}
+
+        </div>
+
+    </div>
+</div>
+
+<article class="b-vst--medium b-vsb--large">
+    
+        <div class="grid-constraint">
+            <div class="grid">
+                <div class="grid__item one-whole">
+                    {{> c-product-page-detail product-detail-template.productDetail }}
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-constraint">
+            <div class="grid">
+                <div class="grid__item one-whole">
+                    {{> c-tab-control product-detail-template.tabControl}}
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</article>
+
+<div class="content-area">
+
+    {{#extend "c-container-block" heading="Featured content x4" variant=""
+        carousel-at-mobile="true" carousel-at-desktop="false" carousel-at-desktop-slides="" }}
+
+        {{#content "container-block-content" heading=product-detail-template.suggestedProducts.heading}}
+
+            {{#each product-detail-template.suggestedProducts.products}}
+                <div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+                    {{> c-product-detail this }}
+                </div>
+            {{/each}}
+
+        {{/content}}
+
+    {{/extend}}
+
+</div>

@@ -1,0 +1,84 @@
+
+{{#if block-class}}
+<div class="block {{block-class}}">
+{{/if}}
+
+<article class="c-product-detail{{#if modifier}} {{modifier}}{{/if}}{{#if product_type}} c-product-detail--{{product_type}}{{/if}}">
+
+    {{#ifEqual product_type "book"}}
+        <figure class="c-product-detail__figure">
+            <a href="{{url}}" class="c-product-detail__figure-link"><img src="{{image}}" alt="{{title}}" class="c-product-detail__image" />
+            {{#if entityBannerText}}
+                <div class="c-product-detail__entity-banner c-product-detail__entity-banner--{{entityBannerText}}">
+                    <span class="c-product-detail__entity-banner-pretext">Presented by</span>
+                    <span class="c-product-detail__entity-banner-text">{{entityBannerText}}</span>
+                </div>
+            {{/if}}
+            </a>
+        </figure>
+    {{/ifEqual}}
+
+    {{#ifEqual product_type "course"}}
+        <figure class="c-product-detail__figure">
+            <a href="{{url}}" class="c-product-detail__figure-link">
+                <span class="{{image}} c-product-detail__figure-icon"></span>
+            {{#if entityBannerText}}
+                <div class="c-product-detail__entity-banner c-product-detail__entity-banner--{{entityBannerText}}">
+                    <span class="c-product-detail__entity-banner-pretext">Presented by</span>
+                    <span class="c-product-detail__entity-banner-text">{{entityBannerText}}</span>
+                </div>
+            {{/if}}
+            </a>
+        </figure>
+    {{/ifEqual}}
+
+    <div class="c-product-detail__info">
+        <h3 class="c-product-detail__info-title">
+            <a href="{{url}}" class="c-product-detail__info-link">{{title}}</a>
+        </h3>
+        <span class="c-product-detail__info-detail-1">{{detail_1}}</span>
+        <span class="c-product-detail__info-detail-2">{{detail_2}}</span>
+        <span class="c-product-detail__info-note">{{note}}</span>
+    </div>
+
+    <div class="c-product-detail__pricing">
+        <div class="c-product-detail__pricing-item">
+            <span class="c-product-detail__pricing-label">Price from:</span>
+            {{#if price.standard.offer}}
+                <span class="c-product-detail__pricing-price c-product-detail__pricing-price--old">${{price.standard.original}}</span>
+                <span class="c-product-detail__pricing-price c-product-detail__pricing-price--new">${{price.standard.offer}}</span>
+            {{else}}
+                <span class="c-product-detail__pricing-price">${{price.standard.original}}</span>
+            {{/if}}
+        </div>
+        <div class="c-product-detail__pricing-item">
+            <span class="c-product-detail__pricing-label">Member Price:</span>
+            {{#if price.member.offer}}
+                <span class="c-product-detail__pricing-price c-product-detail__pricing-price--old">${{price.member.original}}</span>
+                <span class="c-product-detail__pricing-price c-product-detail__pricing-price--new">${{price.member.offer}}</span>
+            {{else}}
+                <span class="c-product-detail__pricing-price">${{price.member.original}}</span>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="c-product-detail__controls">
+        {{#ifEqual product_type "book"}}
+            <label class="e-form__label e-form__label--select c-product-detail__controls-label" for="sg-select">
+                <select class="e-form__input e-form__input--select c-product-detail__controls-select" name="sg-dropdown" id="sg-select" placeholder="placeholder...">
+                    <option value="e-form__input e-form__input--option" selected="selected" disabled="disabled">Please select...</option>
+                    <option value="e-form__input e-form__input--option">First</option>
+                    <option value="e-form__input e-form__input--option">Second</option>
+                    <option value="e-form__input e-form__input--option">Third</option>
+                </select>
+            </label>
+        {{/ifEqual}}
+        
+        {{> e-button type="submit" colourVariant="white" text="ADD TO CART" additionalClasses="e-button c-product-detail__controls-button" dataAttributes="" }}
+    </div>
+
+</article>
+
+{{#if block-class}}
+</div>
+{{/if}}

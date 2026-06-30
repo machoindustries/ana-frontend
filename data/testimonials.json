@@ -1,0 +1,30 @@
+[
+    {
+        "block-class": "testimonialblock testimonialfullwidth",
+        "grid-class": "",
+        "faculty": "Faculty and Location",
+        "image": "http://via.placeholder.com/500x500",
+        "job_title": "Senior Staff Nurse",
+        "name": "ELENA CECCHINI, PhD, RN, FAAN",
+        "qualifications": "PhD, RN, FAAN",
+        "text": "ANA has carefully screened partners committed to providing ANA member nurses with great value, and we make it easy to cover yourself in these critical areas."
+    },
+    {
+        "block-class": "testimonialblock testimoniallarge",
+        "grid-class": "grid__item one-whole large--two-thirds pad--large--one-third",
+        "faculty": "Faculty and Location",
+        "job_title": "Senior Staff Nurse",
+        "name": "ELENA CECCHINI, PhD, RN, FAAN",
+        "qualifications": "PhD, RN, FAAN",
+        "text": "ANA has carefully screened partners committed to providing ANA member nurses with great value, and we make it easy to cover yourself in these critical areas."
+    },
+    {
+        "block-class": "testimonialblock testimoniallarge",
+        "grid-class": "grid__item one-whole large--two-thirds pad--large--one-sixth",
+        "faculty": "Faculty and Location",
+        "job_title": "Senior Staff Nurse",
+        "name": "ELENA CECCHINI, PhD, RN, FAAN",
+        "qualifications": "PhD, RN, FAAN",
+        "text": "ANA has carefully screened partners committed to providing ANA member nurses with great value, and we make it easy to cover yourself in these critical areas."
+    }
+]

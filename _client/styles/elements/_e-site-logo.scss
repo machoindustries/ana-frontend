@@ -1,0 +1,37 @@
+$e-site-logo-img-width: 153px;
+$e-site-logo-img-height-fallback: 40px;
+$e-site-logo-mobile-top-margin: 14px;
+
+.e-site-logo {
+
+	$root: &;
+	
+	display: inline-block;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: t-rem($s-layout-gutter--half);
+    z-index: t-z-index(sitelogo);
+    
+    @include t-respond-to-min(medium) {
+        left: t-rem($s-layout-gutter);
+    }
+
+	&__img {
+		
+		display: block;
+		width: t-rem($e-site-logo-img-width);
+		height: auto;
+
+		@include t-respond-to-max(medium) {
+			
+			width: t-rem(144px);
+		}
+
+		@include t-ie11-only {
+
+			height: t-rem($e-site-logo-img-height-fallback);
+		}
+	}
+}

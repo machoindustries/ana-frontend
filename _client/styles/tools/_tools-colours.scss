@@ -1,0 +1,18 @@
+/* Tools - Colours
+------------------------- */
+
+@function t-brand-colour($key){
+
+	@if map-has-key($s-colour, $key){
+
+		@return map-get($s-colour, $key);
+	
+	} @else {
+		
+		@error "tools-colours > t-brand-colour : key `#{$key}` not found in $s-colour.";
+	}
+}
+
+@mixin t-gradient-linear($direction, $colour1, $colour2) {
+	background-image: linear-gradient($direction, $colour1, $colour2);
+}

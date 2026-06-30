@@ -1,0 +1,59 @@
+---
+title: Checkout Confirmation
+---
+
+<div class="block">
+
+	<div class="grid-constraint">
+		
+		<div class="grid">
+			<div class="grid__item one-whole">
+				{{> c-breadcrumb breadcrumb}}
+			</div>
+		</div>
+
+		<div class="containerblock containerblock--shorter">
+			<div class="grid-constraint">
+				<div class="grid grid--center">
+					<div class="grid__item one-whole">
+						<h1 class="containerblock__heading">
+							<span>Order successful!</span>
+						</h1>
+					</div>
+					<div class="containerblock__intro grid__item one-whole medium--eight-twelfths">
+						<div class="e-richtext">
+							<p>Thank you Stephen Lindley for your order. Your order number is <strong>123456</strong>. A confirmation email will be coming soon to myemail@theinternet.com</p>
+							<h4>What happens next?</h4>
+							<p>Shipping timescale information goes here lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid">
+			<div class="grid__item one-whole">
+				<div class="block block--full">
+					<div class="grid">
+						<div class="grid__item one-whole medium--one-half large--one-third">
+							{{> c-address order-detail.addresses.shipping }}
+						</div>
+						<div class="grid__item one-whole medium--one-half large--one-third">
+							{{> c-address order-detail.addresses.billing }}
+						</div>
+						<div class="grid__item one-whole large--one-third">
+							{{> c-order-summary order-detail.summary }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="block block--full grid grid--full">
+		<div class="grid__item one-whole">
+			<h4 class="c-order-detail__heading">What you ordered</h4>
+			{{> c-order-detail checkout-summary.orderDetail }}
+		</div>
+	</div>
+</div>

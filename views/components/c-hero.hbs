@@ -1,0 +1,35 @@
+<section class="c-hero{{#if modifier}} c-hero--{{modifier}}{{/if}}"{{#ifEqual tabs 'true'}} data-dot="<div class='c-hero-carousel__tab'><span class='c-hero-carousel__tab-text'>{{tabName}}</span></div>"{{else}} data-dot=""{{/ifEqual}}>
+
+    {{#with content}}
+        <div class="c-hero__bg"
+            data-background
+            style="background-image: url({{imagePathDesktop}});">
+
+        </div>
+    
+        {{!-- <picture class="c-hero__picture">
+            <source srcset="{{imagePathTablet}}{{#if imagePathTablet2x}}, {{imagePathTablet2x}} 2x{{/if}}" media="(min-width: 768px)">
+            <source srcset="{{imagePathDesktop}}{{#if imagePathDesktop2x}}, {{imagePathDesktop2x}} 2x{{/if}}" media="(min-width: 1024px)">
+            <img class="c-hero__image" srcset="{{imagePathMobile}}{{#if imagePathMobile2x}}, {{imagePathMobile2x}} 2x{{/if}}" alt="{{imageAlt}}" />
+        </picture> --}}
+
+        <div class="grid-constraint c-hero__grid-constraint">
+            <div class="grid c-hero__grid">
+                <div class="grid__item one-whole medium--eight-twelfths large--five-twelfths c-hero__content">
+
+                    <h1 class="c-hero__heading">{{heading}}</h1>
+                    <div class="c-hero__intro">
+                        {{#if introduction}}
+                            <p class="c-hero__intro-text">{{introduction}}</p>
+                        {{/if}}
+                        {{#if cta}}
+                            {{> e-button type="anchor" colourVariant="blue" text=cta.text additionalClasses="e-button c-hero__cta" }}
+                        {{/if}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    
+</section>

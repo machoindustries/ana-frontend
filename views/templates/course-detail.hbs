@@ -1,0 +1,58 @@
+---
+title: course detail page
+---
+
+<article class="containerblock">
+	<section>
+		<div class="grid-constraint">
+			<div class="grid">
+				<div class="grid__item one-whole">
+					<div class="block block--vs-none">
+						{{> c-breadcrumb course-detail-template.breadcrumb}}
+					</div>
+				</div>
+				<div class="grid__item one-whole">
+					<div class="block block--vs-none">
+						{{> c-product-page-detail course-detail-template.productDetail}}
+					</div>
+				</div>
+				<div class="c-product-page-detail__add-to-cart grid__item one-whole large--eight-twelfths pad--large--four-twelfths">
+					<div class="block">
+						{{> c-add-to-cart course-detail-template.addToCart}}
+					</div>
+				</div>
+				<div class="grid__item one-whole">
+					<div class="block">
+						{{> c-tab-control course-detail-template.tabControl}}
+					</div>
+				</div>
+				<div class="grid__item one-whole">
+					<div class="block">
+						<div class="containerblock" data-require="./src/views/container-block-view" data-carousel-mobile="false" data-carousel-desktop="false">
+							<section class="grid-constraint">
+								<div class="grid grid--full grid--center">
+									<div class="grid__item one-whole">
+										<h2 class="containerblock__heading">
+											<span>{{course-detail-template.suggestedProducts.heading}}</span>
+										</h2>
+									</div>
+								</div>
+								<div class="containerblock__content grid grid--full grid--center">
+									<div class="grid__item one-whole">
+										<div class="grid" data-containerblock-content>
+											{{#each course-detail-template.suggestedProducts.products}}
+												<div class="grid__item one-whole small--one-half medium--one-third large--one-quarter">
+													{{> c-product-detail this }}
+												</div>
+											{{/each}}
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</article>

@@ -1,0 +1,245 @@
+$e-header-tools-itemwidth: 36px;
+$e-header-tools-itemheight: 70px;
+$e-header-tools-itemwidth-desktop: 130px;
+$e-header-tools-item-padding-v: 15px;
+$e-header-tools-item-padding-h: 10px;
+$e-header-tools-item-padding-top: 25px;
+$e-header-tools-item-padding-v-desktop: 13px;
+$e-header-tools-icon-size: 20px;
+$e-header-tools-desktop-nav-height: 42px;
+$e-header-tools-desktop-icon-padding: 10px;
+$e-header-tools-desktop-cart-padding-h: 24px;
+
+.e-header-tools {
+    
+    $root: &;
+
+    float: right;
+
+    @include t-type-nav1;
+
+    color: map-get($s-colour, globalnavtext);
+
+    &--mobile {
+
+        display: flex;
+        align-items: center;
+        color: map-get($s-colour, darkgreytext);
+        margin-right: t-rem(72px);
+
+        #{$root}__link--cta {
+
+            display: none;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            margin: 0 t-rem(5px);
+            border-left: 1px solid t-brand-colour(divider);
+            height: t-rem(40px);
+            width: 1px;
+        }
+    }
+
+    &--desktop {
+
+        display: none;
+    }
+
+    &__list {
+
+        @include t-clearfix;
+
+        list-style-type: none;
+        margin: 0;
+    }
+
+    &__item {
+        
+        display: inline-block;
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        &:first-child {
+            margin-left: 0;
+        }
+        
+        @include t-respond-to-min(xlarge){
+
+            &:before {
+
+                content: "";
+                display: block;
+                position: absolute;
+                top: t-rem($e-header-tools-desktop-icon-padding);
+                left: 0;
+                width: 1px;
+                height: t-rem($e-header-tools-icon-size);
+                background-color: t-brand-colour(divider);
+            }
+
+            &:first-child,
+            &:last-child {
+
+                &:before {
+
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__link {
+        
+        display: block;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: t-rem($e-header-tools-item-padding-top $e-header-tools-item-padding-h $e-header-tools-item-padding-v $e-header-tools-item-padding-h);
+        text-align: center;
+        height: t-rem($e-header-tools-itemheight);
+        width: t-rem($e-header-tools-itemwidth);
+        color: map-get($s-colour, headertools);
+
+        @include t-respond-to-min(xlarge) {
+
+            height: auto;
+            color: map-get($s-colour, headertoolsdesktop);
+            padding: t-rem($e-header-tools-item-padding-v-desktop $e-header-tools-item-padding-h $e-header-tools-item-padding-v-desktop);
+        }
+
+        &--cart {
+
+            @include t-icon(icon-cart-empty){
+                
+                font-size: t-rem($e-header-tools-icon-size);
+            }
+
+            @include t-respond-to-min(xlarge){
+
+                height: t-rem($e-header-tools-desktop-nav-height);
+                padding-left: t-rem($e-header-tools-desktop-cart-padding-h);
+                padding-right: t-rem($e-header-tools-desktop-cart-padding-h);
+
+                &:before {
+
+                    position: absolute;
+                    top: t-rem($e-header-tools-desktop-icon-padding);
+                    left: t-rem($e-header-tools-desktop-icon-padding);
+                }
+            }
+        }
+
+        &--account {
+
+            @include t-icon(icon-profile){
+
+                font-size: t-rem($e-header-tools-icon-size);
+
+                @include t-respond-to-min(xlarge){
+
+                    display: none;
+                }
+            }
+        }
+
+        &--cta {
+
+            @include t-type-nav1(bold);
+            
+            display: block;
+            width: 100%;
+            background-color: map-get($s-colour, headertoolscta);
+            color: map-get($s-colour, headertoolsdesktop);
+            transition: t-transition-value(background-color, slow, ease),
+                        t-transition-value(color, slow, ease),
+                        t-transition-value(border-color, slow, ease);
+
+            &:hover {
+
+                background-color: map-get($s-colour, headertoolsctahover);                
+            }
+
+            &-mobile {
+                
+                &,
+                &#{$root}__link {
+                    
+                    @include t-type-p1(bold);
+
+                    @include t-interaction() {
+
+                        @include t-type-p1(bold);
+                    }
+                }
+
+                @include t-respond-to-min(large){
+                    
+                    display: none;   
+                }
+            }
+        }
+
+        @include t-hover-jump-fix(){
+
+            @include t-type-nav1(bold);
+        }
+
+        @include t-interaction(){
+            
+            @include t-type-nav1(bold);
+        }
+
+        @include t-respond-to-min(xlarge){
+
+            width: t-rem($e-header-tools-itemwidth-desktop);
+
+            &--collapse {
+
+                width: auto;
+            }
+        }
+
+        &-label {
+
+            @include t-respond-to-max(xlarge){
+
+                @include t-hidden;
+
+                .e-header-tools__link--cta-mobile & {
+
+                    position: relative;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    &__cart-item-count {
+
+        display: block;
+        position: absolute;
+        right: 100%;
+        right: calc(100% - 10px);
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+    }
+
+    @include t-respond-to-min(xlarge) {
+
+        &--mobile {
+
+            display: none;
+        }
+
+        &--desktop {
+
+            margin-right: t-rem(-$s-layout-gutter);
+            display: inline-block;
+        }
+    }
+}

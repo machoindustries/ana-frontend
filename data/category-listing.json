@@ -1,0 +1,626 @@
+{
+	"featuredBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	],
+	"foundationBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	],
+	"ethicsBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	],
+	"standardsBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	],
+	"qualityBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	],
+	"leadershipBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	],
+	"magnetBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	],
+	"anaYouBooks": [
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Nursing: Scope and Standards of Practice...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Code of Ethics for Nurses with Interpretive...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "Anatomy of a Super Nurse: The Ultimate...",
+			"url": "#"
+		},
+		{
+			"detail_1": "Author Name",
+			"detail_2": "Paperback",
+			"note": "Also available in e-book",
+			"price": {
+				"standard": {
+					"original": "54.95",
+					"offer": "49.95"
+				},
+				"member": {
+					"original": "52.95",
+					"offer": "47.95"
+				}
+			},
+			"product_type": "book",
+			"image": "http://via.placeholder.com/150x230/999999/ffffff",
+			"title": "What Would Florence Do? A Guide for New...",
+			"url": "#"
+		}
+	]
+}

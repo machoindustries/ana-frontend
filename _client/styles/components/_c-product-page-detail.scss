@@ -1,0 +1,258 @@
+$product-pricing-label-width: 150px;
+$product-left-offset: 33.333333%;
+$product-page-detail-height: 385px;
+
+.c-product-page-detail {
+
+    $root: &;
+
+    position: relative;
+    
+    @include t-vertical-spacing(large, margin-bottom);
+
+    @include t-respond-to-min(medium) {
+
+        min-height: t-rem($product-page-detail-height);
+    }
+    
+    &__media {
+
+        margin-bottom: t-get-vertical-spacing(small, small);
+
+        @include t-respond-to-min(medium) {
+            margin-bottom: 0;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            height: t-rem($product-page-detail-height);
+        }
+    }
+
+    &__image {
+
+        display: block;
+        margin: 0 auto;
+
+        &-wrapper {
+
+            display: flex;
+            position: relative;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: t-rem(t-get-vertical-spacing(small, large) 0);
+            background-color: t-brand-colour(productdetailpageimage);
+            overflow: hidden;
+        }
+    }
+
+    &__pricing {
+
+        text-align: right;
+
+        @include t-respond-to-min(medium) {
+            text-align: left;
+        }
+
+        &-item {
+
+            @include t-type-p1;
+
+            padding-bottom: t-rem($s-layout-gutter-mobile-tiny);
+
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+
+            &--small {
+                
+                @include t-type-caption;
+            }
+        }
+
+        &-label {
+
+            float: left;
+            text-align: left;
+            width: t-rem($product-pricing-label-width);
+
+            @include t-respond-to-min(medium) {
+                float: none;
+                display: inline-block;
+            }
+        }
+
+        &-price {
+            
+            color: t-brand-colour(productprice);
+
+            &--old {
+                text-decoration: line-through;
+            }
+
+            &--new {
+                color: t-brand-colour(productpricecallout);
+            }
+        }
+
+        &-salenote {
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(100% - #{t-rem($product-pricing-label-width)} - #{t-rem($s-layout-gutter-mobile-small)});
+        }
+    }
+
+    &__affiliate {
+
+        @include t-respond-to-max(large) {
+            margin-top: t-get-vertical-spacing(small, small);
+        }
+    }
+
+    &__section {
+
+        margin-bottom: t-get-vertical-spacing(small, small);
+
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            margin-top: t-get-vertical-spacing(small, small);
+            background-color: t-brand-colour(productdetailpageborder);
+        }
+    }
+
+    &__add-to-cart {
+
+        padding-top: t-rem($s-layout-gutter-desktop-medium);
+        padding-bottom: t-rem($s-layout-gutter-desktop-medium);
+    }
+
+    
+    &__title {
+
+        @include t-type-productpage(light);
+
+        margin-top: 0;
+        margin-bottom: t-get-vertical-spacing(small, small);
+        color: t-brand-colour(productdetailpagetitle);
+
+        &:not(&--has-subtitle) {
+            &::after {
+                content: '';
+                display: block;
+                height: 1px;
+                margin-top: t-get-vertical-spacing(small, small);
+                background-color: t-brand-colour(productdetailpageborder);
+            }
+        }
+
+        &--has-subtitle {
+            @include t-vertical-spacing(none, margin-bottom);
+        }
+    }
+
+    &__subtitle {
+        
+        @include t-type-caption(light);
+
+        display: block;
+        margin-top: t-rem($s-layout-gutter-mobile-tiny);
+        margin-bottom: t-get-vertical-spacing(small, small);
+
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            margin-top: t-get-vertical-spacing(small, small);
+            background-color: t-brand-colour(productdetailpageborder);
+        }
+    }
+
+    &__event {
+        
+        @include t-type-p1;
+
+        margin-top: t-rem($s-vertical-spacing-mobile-medium);
+
+        &-detail {
+            display: block;
+            padding-bottom: t-rem($s-layout-gutter-mobile-tiny);
+
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+        }
+
+        @include t-respond-to-min(large) {
+            margin-top: 0;
+        }
+    }
+
+    &__totalhours {
+
+        background: t-brand-colour(productdetailhours);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+
+        @include t-respond-to-max(medium) {
+            min-height: t-rem(335px);
+        }
+        
+        &-clock {
+
+            @include t-responsive-type-size(h3);
+
+            color: t-brand-colour(productdetailhoursicon);
+            position: relative;
+            top: t-rem(5px);
+        }
+
+        &-description {
+
+            @include t-type-h4;
+
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            padding: t-rem(0 $s-layout-gutter--half $s-vertical-spacing-mobile-medium);
+            text-align: center;
+            color: t-brand-colour(productdetailhourscolour);
+
+            .c-product-detail & {
+
+                display: none;
+                padding-left: 0;
+                padding-right: 0;
+                width: calc(100% - #{(2 * $s-layout-gutter-mobile-large)});
+                text-align: center;
+
+                @include t-respond-to-min(small){
+                    
+                    display: block;
+                }
+            }
+        }
+
+        &-workshop {
+
+            display: block;
+            align-self: center;
+            color: t-brand-colour(productdetailhourscolour);
+            font-size: t-rem($s-layout-gutter-desktop-xlarge*2);
+            text-align: center;
+        }
+    }
+
+    a:not(.e-button) {
+        
+        @include t-default-link-interaction;
+    }
+}

@@ -1,0 +1,22 @@
+.startpage {
+
+    .content-area {
+
+        .block.icongridblock,
+        .block.flipcardgridblockcontainer,
+        .block.joinpromoblock,
+        .block.latestnewsblock,
+        .block.testimonialsliderblock,
+        .block.subscribeblock {
+            margin-bottom: 0;
+        }
+    }
+
+    .grid-constraint .grid-constraint {
+        padding: 0;
+    }
+
+    .block.c-container-block > .grid-constraint > .grid {
+        margin-left: 0;
+    }
+}

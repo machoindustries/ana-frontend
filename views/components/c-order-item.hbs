@@ -1,0 +1,88 @@
+<div class="grid c-order-item"{{#if functional}}data-require="./src/views/order-item-view" data-product-code="My-Test-Product"{{/if}}>
+    
+    <div class="grid__item one-whole medium--five-twelfths">
+        <div class="c-order-item__content c-order-item__content--figure-title">
+
+            <figure class="c-order-item__figure">
+                <a href="#">
+                    <img src="{{thumbnail}}" title="{{title}}" class="c-order-item__image" />
+                </a>
+            </figure>
+
+            <div class="c-order-item__title">
+                <a href="#" class="c-order-item__link">
+                    {{title}}
+                </a>
+            </div>
+
+            {{#if author}}
+                <div class="c-order-item__author">{{author}}</div>
+            {{/if}}
+
+            {{#if format}}
+                <div class="c-order-item__format">
+                    <div class="c-order-item__format-name">{{format.name}}</div>
+                </div>
+                {{> e-button type="anchor" colourVariant="blue" text="Download ebook" additionalClasses="c-order-detail__download-link e-button" dataAttributes=" download"}}
+            {{/if}}
+
+        </div>
+    </div>
+
+    <div class="grid__item one-whole medium--two-twelfths">
+        <dl class="c-order-item__content c-order-item__content--item-price">
+            <dt class="c-order-item__row-label">Item price:</dt>
+            <dd class="c-order-item__pricing">
+                {{#if price.discounted}}
+                    <span class="c-order-item__pricing-price c-order-item__pricing-price--old">${{price.original}}</span>
+                    <span class="c-order-item__pricing-price c-order-item__pricing-price--new">${{price.discounted}}</span>
+                {{else}}
+                    <span class="c-order-item__pricing-price">${{price.original}}</span>
+                {{/if}}
+                <div class="c-order-item__pricing-price-caveat">{{price.discount_notice}}</div>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="grid__item one-whole medium--three-twelfths">
+        <dl class="c-order-item__content">
+            <dt class="c-order-item__row-label{{#if functional}} c-order-item__row-label--quantity{{/if}}">Quantity:</dt>
+            <dd class="c-order-item__quantity">
+                {{#if functional}}
+                    {{> e-quantity-selector quantity=quantity id=id }}
+                {{else}}
+                    {{quantity}}
+                {{/if}}
+            </dd>
+        </dl>
+    </div>
+
+    {{#unless bundleItem}}
+        <div class="grid__item one-whole medium--two-twelfths">
+            <dl class="c-order-item__content c-order-item__content--item-total">
+                <dt class="c-order-item__row-label c-order-item__row-label">Item total:</dt>
+                <dd class="c-order-item__pricing">
+                    <div class="c-order-item__pricing-price">${{total}}</div>
+                    {{#if bundle}}
+                        <span class="c-order-item__pricing-price-caveat">Bundle Price</span>
+                    {{/if}}
+                </dd>
+            </dl>
+        </div>
+    {{/unless}}
+    {{#if bundle}}
+        <div class="grid__item one-whole">
+            <div class="c-order-item__content">
+                <div class="c-order-item__bundle-contents-heading">This bundle contains:</div>
+            </div>
+            <ul>
+                {{#each bundle}}
+                    {{> c-order-item this bundleItem=true }}
+                {{/each}}
+            </ul>
+            <div class="c-order-item__content">
+                {{> e-button type="anchor" colourVariant="blue" text="Go to my online courses" additionalClasses="e-button"}}
+            </div>
+        </div>
+    {{/if}}
+</div>

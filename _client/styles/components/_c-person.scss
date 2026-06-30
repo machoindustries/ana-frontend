@@ -1,0 +1,205 @@
+$person_image_width: (
+    small: t-rem(66px),
+    large: t-rem(172px)
+);
+
+.c-person-magnific {
+
+    .mfp-container {
+        padding: 0;
+    }
+
+    .mfp-content {
+        @include t-vertical-spacing(medium, (padding-top, padding-bottom));
+        width: 100%;
+        max-width: none;
+        max-height: 80vh;
+    }
+}
+
+.personblock {
+
+    &small {
+
+        .content-area & {
+
+            @include t-respond-to-min(large) {
+                
+                margin-bottom: t-get-vertical-spacing(none, large);
+                height: 0;
+                overflow: visible;
+            }
+        }
+    }
+}
+
+.c-person {
+    $root: &;
+    
+    @include t-type-size(p1, small);
+    
+    overflow: hidden;
+
+    &--modal {
+        position: relative;
+    }
+
+    &--modal & {
+
+        &__name,
+        &__image {
+            cursor: pointer;
+        }
+
+        &__name {
+
+            @include t-interaction {
+                color: t-brand-colour(personnamehover);
+            }
+        }
+    }
+
+    &--small & {
+
+        &__name {
+            @include t-responsive-type-size(p1);
+            @include t-type-base(bold);
+            text-transform: uppercase;
+        }
+    }
+
+    &--large & {
+
+        &__name {
+
+            @include t-respond-to-max(medium) {
+
+                @include t-type-size(p1, small);
+                @include t-type-base(bold);
+                text-transform: uppercase;
+            }
+
+            @include t-respond-to-min(medium) {
+
+                @include t-type-size(p2, large);
+            }
+        }
+
+        &__detail {
+
+            @include t-respond-to-max(medium) {
+                
+                @include t-type-size(p1, small);
+            }
+
+            @include t-respond-to-min(medium) {
+
+                @include t-type-size(h4, large);
+            }
+        }
+    }
+
+    &--no-summary & {
+
+        @include t-respond-to-min(medium) {
+            &__image {
+                margin-bottom: t-get-vertical-spacing(none, large);
+            }
+        }
+    }
+
+    &__description {
+        display: none;
+
+        &--show {
+            @include t-vertical-spacing(small, margin-top);
+            display: inline-block;
+        }
+    }
+
+    &__image-wrap {
+
+        @include t-respond-to-min(medium) {
+            float: left;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        min-width: t-rem(55px);
+        min-height: t-rem(55px);
+        padding-top: 100%;
+        background-image: url(/assets/img/no-profile.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 100%;
+        border: t-rem(1px) solid t-brand-colour(personimageborder);
+        box-shadow: inset 0 t-rem(2px) t-rem(4px) 0 t-brand-colour(personimageshadow);
+
+        @include t-respond-to-min(medium) {
+            margin-bottom: t-get-vertical-spacing(xsmall, large);
+        }
+    }
+
+    &__modal {
+
+        #{$root} {
+    
+            &__description {
+                @include t-vertical-spacing(small, margin-top);
+                display: inline-block;
+            }
+
+            &__name {
+                cursor: initial;
+            }
+    
+            &__summary {
+                display: none;
+            }
+        }
+    }
+
+    &__name {
+
+        color: t-brand-colour(personname);
+        margin: 0;
+    }
+
+    &__detail {
+
+        margin: 0;
+        color: t-brand-colour(personcopy);
+
+        a {
+            text-decoration: underline;
+            color: t-brand-colour(richtextanchors);
+
+            @include t-interaction {
+                color: t-brand-colour(richtextanchorshover);
+            }
+        }
+    }
+    
+    &__summary {
+
+        margin-top: t-rem($s-vertical-spacing-mobile-small);
+        color: t-brand-colour(personcopy);
+    }
+
+    @include t-respond-to-min(large) {
+        &--float {
+            border-top: solid 1px t-brand-colour(divider);
+            position: relative;
+            left: 0;
+            top: t-rem(55px);
+            overflow: visible;
+            height: 0;
+
+            & > div {
+                padding: t-rem($s-layout-gutter-desktop-small 0);
+            }
+        }
+    }
+}

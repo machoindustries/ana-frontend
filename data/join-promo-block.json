@@ -1,0 +1,52 @@
+[
+	{
+		"title": "Join ANA From just $XXX in Washington DC",
+		"richtext": "<ul><li>Benefit is lorem ipsum dolor sit onsectetur adipiscing elit. Aenean sollicit udin</li><li>Benefit is dolor sit lorem ipsum consectet</li><li>Benefit is lorem ipsum dolor sit Nulla vel</li></ul>",
+		"cta": {
+			"title": "FIND OUT MORE",
+			"url": "https://www.google.com"
+		},
+		"background_image": "http://via.placeholder.com/400x400",
+		"style": "large"
+	},
+	{
+		"title": "Join ANA From just $XXX in Washington DC",
+		"cta": {
+			"title": "FIND OUT MORE",
+			"url": "https://www.google.com"
+		},
+		"background_image": "http://via.placeholder.com/400x400",
+		"style": "slim"
+	},
+	{
+		"title": "Join ANA From just $XXX in Washington DC",
+		"richtext": "<ul><li>Benefit is lorem ipsum dolor sit onsectetur adipiscing elit. Aenean sollicit udin</li><li>Benefit is dolor sit lorem ipsum consectet</li><li>Benefit is lorem ipsum dolor sit Nulla vel</li></ul>",
+		"cta": {
+			"title": "FIND OUT MORE",
+			"url": "https://www.google.com"
+		},
+		"style": "large"
+	},
+	{
+		"title": "Join ANA From just $XXX in Washington DC",
+		"cta": {
+			"title": "FIND OUT MORE",
+			"url": "https://www.google.com"
+		},
+		"style": "slim"
+	},
+	{
+		"title": "Join ANA From just $XXX in Washington DC",
+		"richtext": "<p>Benefit is lorem ipsum dolor sit onsectetur adipiscing elit. Aenean sollicit udin. Benefit is dolor sit lorem ipsum consectet. Benefit is lorem ipsum dolor sit Nulla vel. Benefit is lorem ipsum dolor sit Nulla vel.</p>",
+		"cta": {
+			"title": "FIND OUT MORE",
+			"url": "https://www.google.com"
+		},
+		"style": "large"
+	},
+	{
+		"title": "Join ANA From just $XXX in Washington DC",
+		"richtext": "<p>Benefit is lorem ipsum dolor sit onsectetur adipiscing elit. Aenean sollicit udin. Benefit is dolor sit lorem ipsum consectet. Benefit is lorem ipsum dolor sit Nulla vel. Benefit is lorem ipsum dolor sit Nulla vel.</p>",
+		"style": "large"
+	}
+]

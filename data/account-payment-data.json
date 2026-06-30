@@ -1,0 +1,19 @@
+{
+	"paymentMethods": [
+		{
+			"id": "0000111122223333",
+			"verify": true,
+			"edit": true
+		},
+		{
+			"id": "1111222233334444",
+			"verify": false,
+			"edit": false
+		},
+		{
+			"id": "2222333344445555",
+			"verify": true,
+			"edit": true
+		}
+	] 
+}

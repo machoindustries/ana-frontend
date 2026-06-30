@@ -1,0 +1,160 @@
+$c-sitemap-link-list-options: (
+    toggleIconSize: 22px,
+    toggleButtonSize: 22px
+);
+
+.c-sitemap-link-list {
+
+    $root: &;
+
+    &__title {
+        
+        @include t-vertical-spacing(large, padding-top);
+        @include t-type-h3;
+        margin-bottom: t-rem($s-vertical-spacing-mobile-small);
+        position: relative;
+
+        &-link,
+        a {
+            color: inherit;
+            text-decoration: none;
+            
+            @include t-interaction {
+
+                border-bottom: 1px solid map-get($s-colours, darktextgrey);
+            }
+        }
+    }
+
+    &__list {
+
+        @include t-vertical-spacing(small, margin-bottom);
+        list-style: none;
+
+        @include t-respond-to-min(medium) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+
+        @include t-type-p1;
+
+        &:last-child {
+
+            margin-bottom: 0;
+        }
+
+        &-link {
+
+            @include t-link-underline-hover;
+            display: inline-block;
+            padding-right: t-rem(36px);
+            color: map-get($s-colours, ctablue);
+            position: relative;
+            
+            .c-sitemap-list-list__item-icon {
+
+                @include t-icon(icon-arrow-right, after) {
+
+                    font-size: t-rem(36px);
+                    text-decoration: none;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: t-rem(-18px);
+                }
+            }
+
+            &--download {
+
+                &:after { display: none; }
+
+                padding-left: t-rem(36px - 12px);
+                padding-right: 0;
+                
+                .c-sitemap-list-list__item-icon {
+
+                    &:after {
+
+                        display: none;
+                    }
+
+                    @include t-icon(icon-arrow-down, before) {
+
+                        font-size: t-rem(36px);
+                        text-decoration: none;
+                        position: absolute;
+                        top: 50%;
+                        left: t-rem(-12px); // Icon alignment to edge
+                        margin-top: t-rem(-18px);
+                    }
+                }
+            }
+        }
+
+        &-sublinks {
+
+            list-style-type: none;
+            @include t-vertical-spacing(small, margin-top, $type-size: p1);
+
+            padding-left: 10px;
+        }
+    }
+
+    &__accordion-toggle {
+
+        display: block;
+        position: absolute;
+        width: map-get($c-sitemap-link-list-options, toggleButtonSize);
+        height: map-get($c-sitemap-link-list-options, toggleButtonSize);
+        right: 0;
+        top: 0;
+        z-index: 10;
+
+        @include t-icon(icon-arrow-right, before) {
+
+            font-size: t-rem(map-get($c-sitemap-link-list-options, toggleIconSize));
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: auto;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            transition: transform map-get($s-transitions, sitemapAccordionArrows) ease;
+            cursor: pointer;
+        }
+
+        &:before {
+
+            transform: rotate(90deg);
+            
+            .is-active & {
+
+                transform: rotate(-90deg);
+            }
+
+            .is-disabled &,
+            .is-disabled.is-active & {
+
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &--empty {
+
+        #{$root}__accordion-toggle {
+            &:before {
+                transform: rotate(0deg);
+            }
+        }
+
+        #{$root}__list {
+
+            margin-bottom: 0;
+        }
+    }
+}

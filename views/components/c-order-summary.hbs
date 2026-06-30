@@ -1,0 +1,100 @@
+<div class="c-order-summary" data-require="./src/views/order-summary-view">
+    <h4 class="c-order-summary__heading">
+        Order summary
+        {{#if showEditCart}}<a href="#" class="c-order-summary__edit-cart">View C
+        
+        
+        
+        art</a>{{/if}}
+    </h4>
+    <div class="c-order-summary__content" data-order-summary-content>
+
+        <div class="c-order-summary__section">
+
+            <dl class="c-order-summary__row grid">
+                <dt class="c-order-summary__item c-order-summary__item--label grid__item one-half">Items</dt>
+                <dd class="c-order-summary__item c-order-summary__item--value grid__item one-half" data-order-summary-output-items>${{items}}</dd>
+            </dl>
+
+            <dl class="c-order-summary__row grid">
+                <dt class="c-order-summary__item c-order-summary__item--label grid__item one-half">Tax</dt>
+                <dd class="c-order-summary__item c-order-summary__item--value grid__item one-half" data-order-summary-output-tax>${{tax}}</dd>
+            </dl>
+
+            <div class="c-order-summary__row">
+                <dl class="c-order-summary__row-dl grid">
+                    <dt class="c-order-summary__item c-order-summary__item--label grid__item one-half">
+                        Discount
+                    </dt>
+                    <dd class="c-order-summary__item c-order-summary__item--value grid__item one-half" data-order-summary-output-discount>
+                        {{#if discount.amount}}
+                            {{discount.amount}}
+                        {{/if}}
+                    </dd>
+                </dl>
+                <div data-order-summary-output-applied-discounts>
+                    {{#if discount.amount}}
+                        <dl class="c-order-summary__row-dl c-order-summary__applied-discount grid" data-order-summary-applied-discount>
+                            <dt class="c-order-summary__item--discount grid__item one-half">{{discount.name}}</dt>
+                            <dd class="c-order-summary__item c-order-summary__item--value grid__item one-half" data-discount-code="12345">
+                                <a class="c-order-summary__remove-discount" href="#" data-order-summary-discount-remove>Remove</a>
+                            </dd>
+                        </dl>
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="c-order-summary__row grid">
+                <dl>
+                    <dt class="c-order-summary__item c-order-summary__item--label grid__item one-half">Shipping</dt>
+                    <dd class="c-order-summary__item c-order-summary__item--value grid__item one-half" data-order-summary-output-shipping>${{shipping}}</dd>
+                </dl>
+            </div>
+
+            <div class="c-order-summary__row">
+                <a href="#" class="c-order-summary__add-discount" data-order-summary-discount-add>
+                    <span>+</span> Add a discount code
+                </a>
+                <div class="c-order-summary__panel grid" data-order-summary-add-discount-panel>
+                    <div class="grid__item two-thirds">
+                        <label for="discountcode" class="c-order-summary__add-discount-field e-form__label e-form__label--text" data-formfield>
+                            <span class="e-form__label-text" data-fake-placeholder>Discount code</span>
+                            <input type="text" name="discountcode" class="e-form__input e-form__input--text" title="discountcode" data-formfield-text data-order-summary-add-discount-field>
+                            <div class="e-form__validation-errors" data-validation-error></div>
+                        </label>
+                        <div class="e-form__validation-errors" data-validation-error data-validation-for="discountcode"></div>
+                    </div>
+                    <div class="grid__item one-third">
+                        {{> e-button type="anchor" colourVariant="blue" text="Apply" additionalClasses="c-order-summary__add-discount-apply" dataAttributes="data-order-summary-apply-discount-code" }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-order-summary-output-donations>
+            <div class="c-order-summary__section">
+                <dl class="c-order-summary__row grid">
+                    <dt class="c-order-summary__item c-order-summary__item--label grid__item one-half">
+                        Foundation Donation:
+                        <span class="c-order-summary__item--discount">This item is tax deductible</span>
+                    </dt>
+                    <dd class="c-order-summary__item c-order-summary__item--value grid__item one-half">${{donation}}</dd>
+                </dl>
+            </div>
+
+            <div class="c-order-summary__section">
+                <dl class="c-order-summary__row grid">
+                    <dt class="c-order-summary__item c-order-summary__item--label grid__item one-half">
+                        PAC Contribution:
+                        <span class="c-order-summary__item--discount">Lorem Ipsum</span>
+                    </dt>
+                    <dd class="c-order-summary__item c-order-summary__item--value grid__item one-half">${{pac_contribution}}</dd>
+                </dl>
+            </div>
+        </div>
+        
+    </div>
+    <span class="c-order-summary__total">
+        Total: <span data-order-summary-output-total>${{total}}</span>
+    </span>
+</div>

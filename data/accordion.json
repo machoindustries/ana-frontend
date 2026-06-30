@@ -1,0 +1,22 @@
+{
+	"heading": "Accordion group heading",
+	"items": [
+		{
+			"title": "Accordion Item Title",
+			"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+			"collapsePanel": false
+		},{
+			"title": "Accordion Item Title",
+			"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p><ul><li>test item</li><li>another list item</li><li>third list item</li></ul>",
+			"collapsePanel": true
+		},{
+			"title": "Accordion Item Title",
+			"htmlContent": "<h3>title to test richtext</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+			"collapsePanel": true
+		},{
+			"title": "Accordion Item Title",
+			"htmlContent": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, corporis, officia aspernatur cum inventore ratione debitis asperiores vel consequatur ut veritatis voluptas doloribus ab! Facilis, distinctio commodi doloribus tempora consectetur.</p>",
+			"collapsePanel": true
+		}
+	]
+}

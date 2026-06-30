@@ -1,0 +1,24 @@
+<section class="e-checkout-address" data-address-type="{{addressType}}" data-require="./src/views/checkout-address-view">
+	{{#if showAddressesSameCheckbox}}
+		<label class="e-checkout-address__addresses-same e-form__label e-form__label--checkbox e-form__label--checkbox-left" for="addresses-same" data-formfield>
+			<span class="e-form__label-text e-checkout-address__select-text">My billing and shipping addresses are the same</span>
+			<input type="checkbox" class="e-form__input e-form__input--checkbox" id="addresses-same" name="sgc" title="Checkboxes legend" data-validate data-validate-required data-addresses-same>
+			<span class="e-form__fake-checkbox"></span>
+		</label>
+	{{/if}}
+	<div class="e-checkout-address__content" data-address-panel>
+		<label class="e-checkout-address__select e-form__label e-form__label--select" for="{{selectId}}" data-formfield>
+			<span class="e-form__label-text">Choose a saved address</span>
+			<select class="e-form__input e-form__input--select" name="sg-dropdown" id="{{selectId}}" placeholder="placeholder..." data-address-select>
+				<option class="e-form__input e-form__input--option" value="" selected="">No addresses found</option>
+			</select>
+		</label>
+		<a href="#" class="e-checkout-address__action e-checkout-address__action--add" data-address-add>
+			<span>+</span> Add a new address
+		</a>
+		<ul class="e-checkout-address__address">
+			{{> c-address lines }}
+		</ul>
+		<a href="#" class="e-checkout-address__action" data-address-edit>Edit address</a>
+	</div>
+</section>

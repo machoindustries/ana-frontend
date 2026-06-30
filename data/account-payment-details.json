@@ -1,0 +1,22 @@
+{
+	"introText": "<p>Keep a record of your payment details lorem ipsum dolor sit amet</p>",
+	"paymentMethods": [
+		{
+			"type": "Credit Card",
+			"cardType": "VISA",
+			"cardNumber": "**** **** **** 1234"
+		},{
+			"type": "Credit Card",
+			"cardType": "VISA",
+			"cardNumber": "**** **** **** 1234"
+		},{
+			"type": "Credit Card",
+			"cardType": "VISA",
+			"cardNumber": "**** **** **** 1234"
+		},{
+			"type": "Credit Card",
+			"cardType": "VISA",
+			"cardNumber": "**** **** **** 1234"
+		}
+	]
+}

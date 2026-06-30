@@ -1,0 +1,62 @@
+{
+    "heading": "Downloads",
+    "description": "Sed diam nonummy",
+    "items": [
+        {
+            "name": "Google Lorem Ipsum DOLOR",
+            "file-type": "google.com",
+            "icon-exists": false,
+            "icon-type": "",
+            "external-link": true
+        },
+        {
+            "name": "Lorem Ipsum DOLOR",
+            "file-type": "EXCEL (7.6MB)",
+            "icon-exists": false,
+            "icon-type": "",
+            "external-link": false
+        },
+        {
+            "name": "Music Lorem Ipsum DOLOR - no file type - long text",
+            "file-type": "",
+            "icon-exists": false,
+            "icon-type": "",
+            "external-link": false
+        },
+        {
+            "name": "Video Lorem Ipsum DOLOR",
+            "file-type": "MP4 (222Mb)",
+            "icon-exists": false,
+            "icon-type": "",
+            "external-link": false
+        },
+        {
+            "name": "Image Lorem Ipsum DOLOR - No Icon",
+            "file-type": "JPEG (11Mb)",
+            "icon-exists": false,
+            "icon-type": "",
+            "external-link": false
+        },
+        {
+            "name": "Excel Lorem Ipsum DOLOR",
+            "file-type": "EXCEL (18.3Mb)",
+            "icon-exists": true,
+            "icon-type": "xls",
+            "external-link": false
+        },
+        {
+            "name": "WORD Lorem Ipsum DOLOR",
+            "file-type": "WORD (5.4Mb)",
+            "icon-exists": true,
+            "icon-type": "doc",
+            "external-link": false
+        },
+        {
+            "name": "PDF Lorem Ipsum DOLOR",
+            "file-type": "PDF (21.7Mb)",
+            "icon-exists": true,
+            "icon-type": "pdf",
+            "external-link": false
+        }
+    ]
+}

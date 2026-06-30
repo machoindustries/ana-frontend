@@ -1,0 +1,49 @@
+<form method="GET" action="/" class="c-product-search-form{{#ifEqual page "news-listing"}} c-product-search-form--news-listing{{/ifEqual}}" data-require="./src/views/form-view">
+
+    <div class="grid">
+        <div class="grid__item one-whole medium--five-twelfths">
+            {{#ifEqual page "news-listing"}}
+                <label class="e-form__label e-form__label--select">
+                    <span class="e-form__label-text" data-fake-placeholder="">Subject</span>
+                    <select class="e-form__input e-form__input--select" id="sg-select" placeholder="placeholder...">
+                        <option value="" disabled selected>Select</option>
+                        <option value="news">News</option>
+                        <option value="announcements">Announcements</option>
+                    </select>
+                </label>		
+            {{else}}
+                <label for="q" class="e-form__label e-form__label--text">
+                    <input type="text" name="q" class="e-form__input e-form__input--text" placeholder="Type Here" data-formfield-text />
+                    <span class="c-product-search-form__input-label">Search by keyword</span>
+                    <button type="submit" class="c-product-search-form__button"></button>
+                </label>
+            {{/ifEqual}}
+
+        </div>
+        <div class="grid__item one-whole medium--one-twelfth c-product-search-form__results">
+            <div class="c-product-search-form__results-count">
+                <span class="c-product-search-form__results-count-text">24 results</span>
+            </div>
+        </div>
+        <div class="grid__item one-whole medium--three-twelfths">
+            <label class="e-form__label e-form__label--select" for="pz">
+                <span class="e-form__label-text" data-fake-placeholder="">Results per page</span>
+                <select class="e-form__input e-form__input--select" name="pz" id="sg-select" placeholder="placeholder...">
+                    <option value="10" class="e-form__input--option">10</option>
+                    <option value="20" class="e-form__input--option">20</option>
+                    <option value="50" class="e-form__input--option">50</option>
+                </select>
+            </label>
+        </div>
+        <div class="grid__item one-whole medium--three-twelfths">
+            <label class="e-form__label e-form__label--select" for="s">
+                <span class="e-form__label-text" data-fake-placeholder="">Sort by</span>
+                <select class="e-form__input e-form__input--select" name="s" id="sg-select" placeholder="placeholder...">
+                    <option value="relevance" class="e-form__input--option">Relevance</option>
+                    <option value="a-z" class="e-form__input--option">A-Z</option>
+                    <option value="z-a" class="e-form__input--option">Z-A</option>
+                </select>
+            </label>
+        </div>
+    </div>
+</form>

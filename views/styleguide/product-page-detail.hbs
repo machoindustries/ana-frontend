@@ -1,0 +1,25 @@
+
+
+{{#extend "c-static-section" heading="Product"}}
+    {{#content "static-section-content"}}
+    <article class="grid-constraint b-vst--small b-vsb--large">
+        <div class="grid">
+            <div class="grid__item one-whole">
+                {{> c-product-page-detail product-page-detail.[0] }}
+            </div>
+        </div>
+    </article>
+    {{/content}}
+{{/extend}}
+
+{{#extend "c-static-section" heading="Event"}}
+    {{#content "static-section-content"}}
+    <article class="grid-constraint b-vst--small b-vsb--large">
+        <div class="grid">
+            <div class="grid__item one-whole">
+                {{> c-product-page-detail product-page-detail.[1] }}
+            </div>
+        </div>
+    </article>
+    {{/content}}
+{{/extend}}

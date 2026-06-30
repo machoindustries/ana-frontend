@@ -1,0 +1,94 @@
+[
+	{
+		"AddressLines": [
+			"2801 Atlantic Ave"
+		],
+		"City": "Long Beach",
+		"Country": "USA",
+		"IsInUsa": true,
+		"Latitude": 33.78,
+		"Longitude": -118.19,
+		"Name": "Long Beach Memorial Medial Center/Miller Children's & Women's Hospital",
+		"State": "California",
+		"StateCode": "CA",
+		"ZipCode": "90806",
+		"FirstRecognized": "2013",
+		"ReRecognized": "2016"
+	},{
+		"AddressLines": [
+			"8700 Beverly Blvd",
+			"2021 NT"
+		],
+		"City": "Los Angeles",
+		"Country": "USA",
+		"IsInUsa": true,
+		"Latitude": 34.08,
+		"Longitude": -118.33,
+		"Name": "Cedars-Sinai",
+		"State": "California",
+		"StateCode": "CA",
+		"ZipCode": "90048",
+		"FirstRecognized": "2011",
+		"ReRecognized": "2012"
+	},{
+		"AddressLines": [
+			"3003 Health Center Dr"
+		],
+		"City": "San Diego",
+		"Country": "USA",
+		"IsInUsa": true,
+		"Latitude": 32.72,
+		"Longitude": -117.15,
+		"Name": "Sharp Mary Birch Hospital for Women and Newborns",
+		"State": "California",
+		"StateCode": "CA",
+		"ZipCode": "92123",
+		"FirstRecognized": "1985",
+		"ReRecognized": "2006"
+	},{
+		"AddressLines": [
+			"200 Main Street"
+		],
+		"City": "Birmingham",
+		"Country": "USA",
+		"IsInUsa": true,
+		"Latitude": 33.52,
+		"Longitude": -86.82,
+		"Name": "Birmingham Central Hospital",
+		"State": "Alabama",
+		"StateCode": "AL",
+		"ZipCode": "52427",
+		"FirstRecognized": "2002",
+		"ReRecognized": "2010"
+	},{
+		"AddressLines": [
+			"1024 Hall Drive"
+		],
+		"City": "Madison",
+		"Country": "USA",
+		"IsInUsa": true,
+		"Latitude": 43.07,
+		"Longitude": -89.4,
+		"Name": "Madison Walk In Center",
+		"State": "Wisconsin",
+		"StateCode": "WI",
+		"ZipCode": "88445",
+		"FirstRecognized": "1992",
+		"ReRecognized": "1996"
+	},{
+		"AddressLines": [
+			"1804 Av Miguel Hidalgo"
+		],
+		"City": "Merida",
+		"Country": "Mexico",
+		"IsInUsa": false,
+		"Latitude": 20.97,
+		"Longitude": -89.63,
+		"Name": "El Hospital Merida",
+		"State": "Yucatan",
+		"StateCode": "",
+		"ZipCode": "",
+		"FirstRecognized": "2008",
+		"ReRecognized": "2017"
+	}
+]

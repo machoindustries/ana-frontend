@@ -1,0 +1,40 @@
+
+{{#if testimonial.block-class}}
+<div class="block {{testimonial.block-class}}">
+{{/if}}
+
+{{#if testimonial.grid-class}}
+    <div class="grid-constraint">
+    <div class="grid">
+    <div class="{{testimonial.grid-class}}">
+{{/if}}
+
+<div class="c-testimonial{{#if testimonial.image}} c-testimonial--has-image{{/if}}">
+    
+    {{#if testimonial.image}}
+        <div class="c-testimonial__image" style="background-image: url({{testimonial.image}});"></div>
+    {{/if}}
+
+    <blockquote class="c-testimonial__content">
+        <p class="c-testimonial__quote">
+            {{testimonial.text}}
+        </p>
+         <footer class="c-testimonial__footer">
+            <span class="c-testimonial__cite">{{testimonial.name}}</span>
+            <span class="c-testimonial__qualifications">{{testimonial.qualifications}}</span>
+            <span class="c-testimonial__job-title">{{testimonial.job_title}}</span>
+            <span class="c-testimonial__faculty">{{testimonial.faculty}}</span>
+        </footer>
+    </blockquote>
+
+</div>
+
+{{#if testimonial.grid-class}}
+    </div>
+    </div>
+    </div>
+{{/if}}
+
+{{#if testimonial.block-class}}
+</div>
+{{/if}}

@@ -1,0 +1,46 @@
+.c-tab-control {
+
+    $root: &;
+
+    border-top: 1px solid t-brand-colour(divider);
+
+    @include t-respond-to-min(medium) {
+
+        border-top: 1px solid t-brand-colour(tabcontrolborder);
+        padding-top: t-rem($tab-height);
+        position: relative;
+    }
+
+    &__content {
+
+        overflow: hidden;
+        
+        @include t-respond-to-min(medium) {
+
+            padding: t-rem($s-vertical-spacing-mobile-large 0 0);
+        }
+    }
+
+    &__section {
+
+        &:not(:last-of-type) {
+
+            border-bottom: 1px solid t-brand-colour(tabcontrolborder);
+
+            @include t-respond-to-min(medium) {
+
+                border: none;
+            }
+
+            #{$root}__content {
+
+                padding-bottom: t-rem($s-vertical-spacing-mobile-medium);
+
+                @include t-respond-to-min(medium) {
+
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

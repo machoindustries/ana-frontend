@@ -1,0 +1,13 @@
+{{#ifEqual type "button"}}
+    <button class="e-button e-button--{{type}}{{#if colourVariant}} e-button--{{colourVariant}}{{/if}}{{#if modifier}} e-button--{{modifier}}{{/if}}{{#if additionalClasses}} {{additionalClasses}}{{/if}}" {{#if dataAttributes}}{{dataAttributes}}{{/if}}>
+        {{text}}
+    </button>
+{{/ifEqual}}
+{{#ifEqual type "anchor"}}
+    <a href="{{url}}" class="e-button e-button--{{type}}{{#if colourVariant}} e-button--{{colourVariant}}{{/if}}{{#if modifier}} e-button--{{modifier}}{{/if}}{{#if additionalClasses}} {{additionalClasses}}{{/if}}" {{#if dataAttributes}}{{dataAttributes}}{{/if}}>
+        {{text}}
+    </a>
+{{/ifEqual}}
+{{#ifEqual type "submit"}}
+	<input class="e-button e-button--{{type}}{{#if colourVariant}} e-button--{{colourVariant}}{{/if}}{{#if modifier}} e-button--{{modifier}}{{/if}}{{#if additionalClasses}} {{additionalClasses}}{{/if}}" type="submit" value="{{text}}" {{#if dataAttributes}}{{dataAttributes}}{{/if}} />
+{{/ifEqual}}

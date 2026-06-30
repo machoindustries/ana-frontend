@@ -1,0 +1,92 @@
+/* Settings - Layout
+------------------------- */
+
+$s-layout-max-content-width:            1440px;
+$s-layout-max-content-width--larger:    1680px;
+
+$s-layout-gutter-mobile-tiny:           5px;
+$s-layout-gutter-mobile-small:          10px;
+$s-layout-gutter-mobile-medium:         15px;
+$s-layout-gutter-mobile-large:          20px;
+$s-layout-gutter-mobile-larger:         35px;
+$s-layout-gutter-mobile-xlarge:         40px;
+$s-layout-gutter-desktop-tiny:          10px;
+$s-layout-gutter-desktop-small:         20px;
+$s-layout-gutter-desktop-medium:        30px;
+$s-layout-gutter-desktop-large:         40px;
+$s-layout-gutter-desktop-larger:        60px;
+$s-layout-gutter-desktop-xlarge:        80px;
+
+$s-layout-gutter:                       40px; // for grid system
+$s-layout-gutter--half:                 $s-layout-gutter / 2; // for grid system
+
+$s-vertical-spacing-mobile-xsmall:      10px;
+$s-vertical-spacing-mobile-small:       20px;
+$s-vertical-spacing-mobile-medium:      30px;
+$s-vertical-spacing-mobile-large:       40px;
+$s-vertical-spacing-desktop-xsmall:     20px;
+$s-vertical-spacing-desktop-small:      40px;
+$s-vertical-spacing-desktop-medium:     60px;
+$s-vertical-spacing-desktop-large:      80px;
+
+$s-vertical-spacing: (
+    none: (
+        small: 0,
+        large: 0
+    ),
+    xsmall: (
+        small: $s-vertical-spacing-mobile-xsmall,
+        large: $s-vertical-spacing-desktop-xsmall
+    ),
+    small: (
+        small: $s-vertical-spacing-mobile-small,
+        large: $s-vertical-spacing-desktop-small
+    ),
+    medium: (
+        small: $s-vertical-spacing-mobile-medium,
+        large: $s-vertical-spacing-desktop-medium
+    ),
+    large: (
+        small: $s-vertical-spacing-mobile-large,
+        large: $s-vertical-spacing-desktop-large
+    )
+);
+
+/// $s-layers
+/// Establishes a map containing z-index layers.
+///
+/// @example
+/// $s-layers: (
+/// 	0: 0,
+/// 	1: 1,
+/// 	2: 10,
+/// 	3: 100,
+/// 	4: 1000
+/// );
+
+$s-z-indices: (
+    main: 0,
+    header: 100,
+    primarynav: 110,
+    subnav: 1,
+    sitelogo: 100,
+    primarynavbutton: 200,
+    videoplayoverlay: 0,
+    videoplaybutton: 1,
+    heropicturegradient: 1,
+    herocutoutoverlap: 1,
+    herocontent: 2,
+    herotabs: 2,
+    herocarouseltabtext: -1,
+    magnificPopup: 9000,
+    spinnerOverlay: 10000,
+    accordionenabledlink: 1,
+    accordiondisabledlink: 20,
+    heroimage: 0
+);
+
+$s-standard-borders: (
+    width: 1px,
+    colour: map-get($s-colours, blue),
+    style: solid
+);

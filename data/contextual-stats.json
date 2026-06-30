@@ -1,0 +1,14 @@
+{
+	"items": [
+		{
+			"copy": "Stat sub copy that wraps over three lines",
+			"stat": "000"
+		},{
+			"copy": "Stat sub copy",
+			"stat": "000"
+		},{
+			"copy": "Stat sub copy that wraps over three lines",
+			"stat": "000"
+		}
+	]
+}

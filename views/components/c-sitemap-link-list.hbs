@@ -1,0 +1,32 @@
+<nav class="c-sitemap-link-list{{#if variant}} c-sitemap-link-list--{{variant}}{{/if}}{{#unless data.links}} c-sitemap-link-list--empty{{/unless}}" {{#if isAccordion}}data-require="./src/views/accordion-item-view"{{/if}} data-disable-at-breakpoint="768" data-sitemap="true">
+
+    <h2 class="c-sitemap-link-list__title">
+        
+        {{#if isAccordion}}
+                
+            <span class="c-sitemap-link-list__accordion-toggle" data-accordion-toggle></span>
+
+        {{/if}}
+
+        {{#if titleIsLink}}
+
+            <a class="c-sitemap-link__title-link" href="{{data.url}}">{{data.title}}</a>
+        
+        {{else}}
+
+            {{data.title}}
+
+        {{/if}}
+
+    </h2>
+
+    <ul class="c-sitemap-link-list__list e-accordion__item-content-wrapper" data-accordion-content>
+
+        {{#each data.links}}
+
+            {{> e-sitemap-link data=this }}
+
+        {{/each}}
+
+    </ul>
+</nav>

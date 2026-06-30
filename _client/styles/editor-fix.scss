@@ -1,0 +1,26 @@
+strong {
+	font-size: 100% !important;
+	line-height: initial !important;
+}
+*, :after, :before, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
+	margin-left: 1% !important;
+}
+ul {
+	& > li {
+		&:before {
+			font-size: initial !important;
+		}
+	}
+}
+ol {
+	& > li {
+		&:before {
+			font-size: initial !important;
+		}
+	}
+}
+td {
+	p {
+		font-size: initial !important;
+	}
+}

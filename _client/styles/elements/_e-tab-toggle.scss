@@ -1,0 +1,70 @@
+$tab-height: 55px;
+$tab-toggle-icon: 24px;
+$tab-parent: ".c-tab-control";
+
+.e-tab-toggle {
+    @include t-type-h4;
+    color: t-brand-colour(tabcontroltoggletextmobile);
+    cursor: pointer;
+    padding: t-rem($s-vertical-spacing-mobile-small 0);
+    position: relative;
+    margin-bottom: 0;
+
+    @include t-icon(icon-expand, before) {
+        color: t-brand-colour(tabcontroltoggleicon);
+        font-size: t-rem($tab-toggle-icon);
+        position: absolute;
+        right: 0;
+        top: calc(#{t-rem($s-vertical-spacing-mobile-small + 2px)});
+    }
+
+    #{$tab-parent}__section.is-active & {
+        @include t-icon(icon-collapse, before);
+    }
+
+    @include t-respond-to-min(medium) {
+
+        background: t-brand-colour(tabcontrolbackground);
+        border-bottom: 1px solid t-brand-colour(tabcontrolborder);
+        height: t-rem($tab-height);
+        position: absolute;
+        top: 0;
+        width: 50%;
+
+        &--full {
+            width: 100%;
+            border-left: 1px solid t-brand-colour(tabcontrolborder) !important;
+        }
+
+        &__text {
+
+            @include t-centerer;
+
+            width: 100%;
+            padding: t-rem(0 $s-layout-gutter--half);
+            display: block;
+            color: t-brand-colour(tabcontroltabtext);
+            text-align: center;
+        }
+
+        #{$tab-parent}__section.is-active & {
+            @include t-icon(icon-collapse, before);
+            background: t-brand-colour(tabcontrolbackgroundactive);
+            border-color: t-brand-colour(tabcontrolborderactive);
+        }
+
+        #{$tab-parent}__section:nth-child(1) & {
+            left: 0;
+            border-right: 1px solid t-brand-colour(tabcontrolborder);
+        }
+
+        #{$tab-parent}__section:nth-child(2) & {
+            right: 0;
+        }		
+        
+        &:before,
+        #{$tab-parent}__section.is-active &:before {
+            display: none;
+        }
+    }
+}
