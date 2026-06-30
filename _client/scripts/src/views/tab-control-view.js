@@ -3,7 +3,7 @@ import animate from 'modules/animate';
 import enquire from 'enquire.js';
 import globalEmitter from 'modules/global-emitter';
 import breakpoints from 'values/breakpoints';
-import Utils from 'modules/Utils';
+import Utils from 'modules/utils';
 
 class TabControlItemView extends BaseComponent {
     constructor() {
