@@ -192,8 +192,15 @@ export default defineConfig(({ command, mode }) => {
 
         server: {
             proxy: {
-                '/': {
-                    target: 'https://localhost:44300',
+                // Catch-all forwards everything to the local .NET app —
+                // EXCEPT /_client/preview/, which needs to be served as
+                // static files by Vite directly for the component
+                // preview harness (npm run preview:build) to work.
+                // Without this bypass, every preview request 502s since
+                // it gets forwarded to the .NET app, which has no route
+                // for it.
+                '^/(?!_client/preview/)': {
+                    target: 'https://localhost:54809',
                     changeOrigin: true,
                     secure: false,
                 },
