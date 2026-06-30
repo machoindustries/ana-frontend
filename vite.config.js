@@ -63,6 +63,81 @@ function buildEntryPoints() {
     return entries;
 }
 
+// ─── Preview harness static file server (dev only) ──────────────────────────
+//
+// appType: 'custom' (below) disables Vite's built-in HTML-serving
+// middleware entirely — by design, since in production the .NET/Razor
+// app serves all HTML and Vite only provides the proxy-forwarded dev
+// experience. That means there's no middleware anywhere that will serve
+// a plain .html file from disk, which is exactly what the component
+// preview harness (npm run preview:build) needs for
+// _client/preview/index.html and _client/preview/components/*.html.
+//
+// This plugin fills that one specific gap: a minimal static file server
+// scoped ONLY to /_client/preview/, active only in `vite dev` (not
+// `vite build`). It runs before the proxy is ever consulted, has zero
+// effect on any other route, and never runs during a real build or
+// production deploy.
+function previewStaticServer() {
+    const PREVIEW_ROOT = path.resolve(__dirname, '_client/preview');
+
+    const MIME_TYPES = {
+        '.html': 'text/html; charset=utf-8',
+        '.css': 'text/css; charset=utf-8',
+        '.js': 'text/javascript; charset=utf-8',
+        '.mjs': 'text/javascript; charset=utf-8',
+        '.json': 'application/json; charset=utf-8',
+        '.svg': 'image/svg+xml',
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.gif': 'image/gif',
+        '.webp': 'image/webp',
+        '.ico': 'image/x-icon',
+        '.woff': 'font/woff',
+        '.woff2': 'font/woff2',
+        '.ttf': 'font/ttf',
+        '.eot': 'application/vnd.ms-fontobject',
+        '.map': 'application/json; charset=utf-8',
+    };
+
+    return {
+        name: 'preview-static-server',
+        apply: 'serve',
+        configureServer(server) {
+            server.middlewares.use((req, res, next) => {
+                if (!req.url || !req.url.startsWith('/_client/preview/')) {
+                    next();
+                    return;
+                }
+
+                const urlPath = req.url.split('?')[0];
+                const relativePath = urlPath.replace('/_client/preview/', '');
+                const filePath = path.join(PREVIEW_ROOT, relativePath);
+
+                // Guard against path traversal outside the preview root.
+                if (!normalizePath(filePath).startsWith(normalizePath(PREVIEW_ROOT))) {
+                    next();
+                    return;
+                }
+
+                fs.readFile(filePath, (err, data) => {
+                    if (err) {
+                        next();
+                        return;
+                    }
+
+                    const ext = path.extname(filePath);
+
+                    res.setHeader('Content-Type', MIME_TYPES[ext] || 'application/octet-stream');
+                    res.statusCode = 200;
+                    res.end(data);
+                });
+            });
+        },
+    };
+}
+
 // ─── Config ──────────────────────────────────────────────────────────────────
 
 export default defineConfig(({ command, mode }) => {
@@ -158,6 +233,7 @@ export default defineConfig(({ command, mode }) => {
         },
 
         plugins: [
+            previewStaticServer(),
             viteStaticCopy({
                 targets: [
                     // Images (excluding icons/ which fed the now-dropped webfont task)
