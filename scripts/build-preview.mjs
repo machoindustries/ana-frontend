@@ -38,9 +38,14 @@ const PREVIEW_DIR = path.join(ROOT, '_client/preview');
 // Source dirs to scan for partials AND for previewable templates.
 const PARTIAL_SOURCE_DIRS = [VIEWS_COMPONENTS_DIR, VIEWS_ELEMENTS_DIR];
 
-// Components/elements that define their own {{#block}} — these are
-// layout-style templates meant to be {{#extend}}ed, not rendered on
-// their own. Previewing them standalone would just show empty blocks.
+// Components/elements that are layout wrappers with no meaningful
+// standalone preview — they exist solely to be used via {{#extend}} in
+// other templates, and rendering them in isolation produces an empty
+// shell with no useful content. Distinct from the old "skipped because
+// we lacked extend/block/content" bucket — those (c-container-block,
+// c-static-section, e-accordion__item) are now previewable since
+// layout helpers are registered, but their standalone output is still
+// genuinely empty/useless, so they stay excluded.
 const SKIP_STANDALONE = new Set([
     'c-container-block',
     'c-static-section',
@@ -81,6 +86,14 @@ const CAROUSEL_FIXTURE_MODE = {
 // These mirror helpers that existed in the old Grunt/assemble-handlebars
 // styleguide tooling (not present in this extracted repo). Hand-written
 // here to match observed usage patterns in the .hbs source.
+//
+// Sources:
+//   handlebars_helpers/assemble-custom-helpers.js — conditionals, eachIndex, ifCond
+//   handlebars_helpers/custom-helpers.js — DOM attribute helpers (setClasses etc.)
+//   handlebars_helpers/layout-helpers.js — extend/block/content layout inheritance
+// All ported verbatim from machoindustries/ana-frontend-legacy.
+
+// ─── Conditionals (from assemble-custom-helpers.js) ───────────────────────
 
 Handlebars.registerHelper('ifCond', function (a, operator, b, options) {
     switch (operator) {
@@ -98,12 +111,20 @@ Handlebars.registerHelper('ifEqual', function (a, b, options) {
     return (a === b) ? options.fn(this) : options.inverse(this);
 });
 
+Handlebars.registerHelper('ifNotEqual', function (a, b, options) {
+    return (a !== b) ? options.fn(this) : options.inverse(this);
+});
+
 Handlebars.registerHelper('ifGreaterThan', function (a, b, options) {
-    return (a > b) ? options.fn(this) : options.inverse(this);
+    return (parseInt(a) > parseInt(b)) ? options.fn(this) : options.inverse(this);
 });
 
 Handlebars.registerHelper('ifLessThan', function (a, b, options) {
-    return (a < b) ? options.fn(this) : options.inverse(this);
+    return (parseInt(a) < parseInt(b)) ? options.fn(this) : options.inverse(this);
+});
+
+Handlebars.registerHelper('idify', function (str) {
+    return str.split(' ').join('-').toLowerCase();
 });
 
 Handlebars.registerHelper('eachIndex', function (items, options) {
@@ -111,13 +132,255 @@ Handlebars.registerHelper('eachIndex', function (items, options) {
         return '';
     }
 
-    return items.map((item, index) => {
-        return options.fn(item, { data: { index } });
-    }).join('');
+    let buffer = '';
+
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+
+        if (typeof item === 'object') {
+            item['index'] = i;
+        } else {
+            item = { value: item, index: i };
+        }
+
+        buffer += options.fn(item);
+    }
+
+    return buffer;
 });
 
 Handlebars.registerHelper('default', function (value, fallback) {
     return (value === undefined || value === null || value === '') ? fallback : value;
+});
+
+// ─── DOM attribute helpers (from custom-helpers.js) ───────────────────────
+//
+// These generate BEM modifier class strings, data-* attribute strings,
+// aria-* attribute strings etc. from comma-separated shorthand values.
+// Ported verbatim — lodash is a devDependency already in this project.
+
+import _ from 'lodash';
+
+function getArray(str, sep, firstOnly) {
+    sep = sep || ',';
+    const pattern = firstOnly ? new RegExp(sep + '(.+)?') : sep;
+
+    return str.split(pattern)
+        .map((item) => item.trim())
+        .filter((item) => item !== '');
+}
+
+function getKeyValuePairs(valStr) {
+    return getArray(valStr.replace(/["]/g, ''), ',').map((s) => getArray(s, ':', true));
+}
+
+Handlebars.registerHelper('setClasses', function (classesStr) {
+    return _.isString(classesStr) ? getArray(classesStr).join(' ') : '';
+});
+
+Handlebars.registerHelper('setModifiers', function (baseClass, modifierStr) {
+    return _.isString(baseClass) && _.isString(modifierStr)
+        ? baseClass + ' ' + getArray(modifierStr).map((m) => `${baseClass}--${m}`).join(' ')
+        : _.isString(baseClass) ? baseClass : '';
+});
+
+Handlebars.registerHelper('setData', function (dataStr) {
+    const data = _.isString(dataStr)
+        ? getKeyValuePairs(dataStr).reduce((obj, attrs) => {
+            obj[_.kebabCase(attrs[0])] = attrs[1];
+            return obj;
+        }, {})
+        : {};
+
+    return data
+        ? Object.keys(data)
+            .filter((key) => key !== 'require' || (data[key] && data[key] !== 'null'))
+            .map((key) => 'data-' + key + (data[key] ? `="${data[key]}"` : ''))
+            .join(' ')
+        : '';
+});
+
+Handlebars.registerHelper('setAttrs', function (attrStr) {
+    const attrs = _.isString(attrStr)
+        ? getKeyValuePairs(attrStr).reduce((obj, attrs) => {
+            obj[_.kebabCase(attrs[0])] = attrs[1];
+            return obj;
+        }, {})
+        : {};
+
+    return attrs
+        ? Object.keys(attrs).map((key) => key + (attrs[key] ? `="${attrs[key]}"` : '')).join(' ')
+        : '';
+});
+
+Handlebars.registerHelper('setAria', function (ariaStr) {
+    const aria = _.isString(ariaStr)
+        ? getKeyValuePairs(ariaStr).reduce((obj, attrs) => {
+            obj[_.kebabCase(attrs[0])] = attrs[1];
+            return obj;
+        }, {})
+        : {};
+
+    return aria
+        ? Object.keys(aria).map((key) => 'aria-' + key + (aria[key] ? `="${aria[key]}"` : '')).join(' ')
+        : '';
+});
+
+Handlebars.registerHelper('take', function (value, alt) {
+    return ((_.isString(value) || _.isNumber(value)) && value) ||
+        ((_.isString(alt) || _.isNumber(alt)) && alt) || '';
+});
+
+Handlebars.registerHelper('either', function (value, pass, fail) {
+    return value
+        ? (_.isString(pass) || _.isNumber(pass)) && pass
+        : (_.isString(fail) || _.isNumber(fail)) ? fail : '';
+});
+
+Handlebars.registerHelper('times', function (n, item, options) {
+    let accum = '';
+    for (let i = 0; i < n; i++) {
+        accum += options.fn({ index: i, item });
+    }
+    return accum;
+});
+
+Handlebars.registerHelper('idify', function (str) {
+    return _.isString(str) ? str.split(' ').join('-').toLowerCase() : '';
+});
+
+Handlebars.registerHelper('concatStr', function (...args) {
+    const opts = args.pop(); // remove Handlebars options object
+    return args.filter((a) => _.isString(a) || _.isNumber(a)).join('');
+});
+
+Handlebars.registerHelper('toJSONStr', function (obj, stripOuterBraces, options) {
+    if (arguments.length < 3) {
+        options = stripOuterBraces;
+        stripOuterBraces = false;
+    }
+    const strip = _.isBoolean(stripOuterBraces) && stripOuterBraces;
+    return strip ? JSON.stringify(obj).replace(/^{(.*)}$/, '$1').trim() : JSON.stringify(obj);
+});
+
+// ─── Layout inheritance helpers (from layout-helpers.js) ──────────────────
+//
+// Implements the {{#extend}}/{{#block}}/{{#content}} pattern used by
+// views/styleguide/*.hbs and views/templates/*.hbs. This is a custom
+// implementation (not the handlebars-layouts npm package) ported
+// verbatim from the legacy source.
+//
+// Registering these unlocks the 3 previously-skipped components
+// (c-container-block, c-static-section, e-accordion__item) and allows
+// future v2 work on full-page template previews.
+
+function noop() { return ''; }
+
+function getLayoutStack(context) {
+    return context.$$layoutStack || (context.$$layoutStack = []);
+}
+
+function applyStack(context) {
+    const stack = getLayoutStack(context);
+    while (stack.length) {
+        stack.shift()(context);
+    }
+}
+
+function getLayoutActions(context) {
+    return context.$$layoutActions || (context.$$layoutActions = {});
+}
+
+function getActionsByName(context, name) {
+    const actions = getLayoutActions(context);
+    return actions[name] || (actions[name] = []);
+}
+
+function applyAction(val, action) {
+    const context = this;
+    const fn = () => action.fn(context, action.options);
+
+    switch (action.mode) {
+        case 'append': return val + fn();
+        case 'prepend': return fn() + val;
+        case 'replace': return fn();
+        default: return val;
+    }
+}
+
+function mixin(target, ...sources) {
+    for (const source of sources) {
+        if (source) {
+            for (const key of Object.keys(source)) {
+                target[key] = source[key];
+            }
+        }
+    }
+    return target;
+}
+
+Handlebars.registerHelper('extend', function (name, customContext, options) {
+    if (arguments.length < 3) {
+        options = customContext;
+        customContext = undefined;
+    }
+
+    options = options || {};
+
+    const fn = options.fn || noop;
+    const context = mixin({}, customContext === undefined ? this : {}, options.hash);
+    const data = Handlebars.createFrame(options.data);
+    const template = Handlebars.partials[name];
+
+    if (template == null) {
+        throw new Error(`Missing partial: '${name}'`);
+    }
+
+    const compiled = typeof template !== 'function' ? Handlebars.compile(template) : template;
+
+    getLayoutStack(context).push(fn);
+
+    return compiled(context, { data });
+});
+
+Handlebars.registerHelper('embed', function (...args) {
+    const context = mixin({}, this || {});
+    context.$$layoutStack = null;
+    context.$$layoutActions = null;
+    return Handlebars.helpers.extend.apply(context, args);
+});
+
+Handlebars.registerHelper('block', function (name, options) {
+    options = options || {};
+
+    const fn = options.fn || noop;
+    const data = Handlebars.createFrame(options.data);
+    const context = this || {};
+
+    applyStack(context);
+
+    return getActionsByName(context, name).reduce(
+        applyAction.bind(context),
+        fn(context, { data })
+    );
+});
+
+Handlebars.registerHelper('content', function (name, options) {
+    options = options || {};
+
+    const fn = options.fn;
+    const data = Handlebars.createFrame(options.data);
+    const hash = options.hash || {};
+    const mode = (hash.mode || 'replace').toLowerCase();
+    const context = this || {};
+
+    applyStack(context);
+
+    if (!fn) {
+        return name in getLayoutActions(context);
+    }
+
+    getActionsByName(context, name).push({ options: { data }, mode, fn });
 });
 
 // ─── Placeholder-aware override of the built-in #each ─────────────────────
@@ -247,7 +510,21 @@ function getTopLevelFieldRefs(templateSource) {
     const firstEachIndex = templateSource.search(/\{\{#each\b/);
     const outerScope = firstEachIndex === -1 ? templateSource : templateSource.slice(0, firstEachIndex);
 
-    const KNOWN_HELPERS = new Set(['if', 'unless', 'each', 'with', 'else', 'ifCond', 'ifEqual', 'ifGreaterThan', 'ifLessThan', 'eachIndex', 'default']);
+    const KNOWN_HELPERS = new Set([
+        // Built-in Handlebars
+        'if', 'unless', 'each', 'with', 'else', 'lookup', 'log',
+        // Conditionals (assemble-custom-helpers.js)
+        'ifCond', 'ifEqual', 'ifNotEqual', 'ifGreaterThan', 'ifLessThan',
+        'eachIndex', 'idify', 'default',
+        // DOM attribute helpers (custom-helpers.js)
+        'setClasses', 'setModifiers', 'setData', 'setAttrs', 'setAria',
+        'take', 'either', 'times', 'concatStr', 'toJSONStr',
+        'srcDim', 'srcDns', 'encodeURI', 'decodeURI', 'toBool',
+        'capitalizeFirst', 'toString', 'toNumber', 'not', 'iter',
+        'escapeHTML', 'merge', 'getValue', 'tr', 'pairStr', 'concatArr',
+        // Layout helpers (layout-helpers.js)
+        'extend', 'embed', 'block', 'content',
+    ]);
 
     return [...outerScope.matchAll(/\{\{\{?\s*#?([a-zA-Z_][a-zA-Z0-9_.-]*)(?:\s+([a-zA-Z_][a-zA-Z0-9_.-]*))?/g)]
         .map((m) => (KNOWN_HELPERS.has(m[1]) ? m[2] : m[1]))
