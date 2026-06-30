@@ -155,6 +155,16 @@ export default defineConfig(({ command, mode }) => {
                     loadPaths: [
                         path.resolve(__dirname, STYLES_DIR),
                     ],
+                    // In preview mode, fonts/images are served from
+                    // _client/preview/dist/ (this self-contained repo),
+                    // not the .NET app's wwwroot/assets/ -- override the
+                    // !default path variables before any other .scss is
+                    // loaded. No-op in dev/production: additionalData is
+                    // simply empty, and the !default values in
+                    // _settings-helpers.scss apply as before.
+                    additionalData: isPreview
+                        ? `$s-fonts-path: '/_client/preview/dist/fonts/_client/fonts/'; $s-image-path: '/_client/preview/dist/img/_client/images/';`
+                        : '',
                 },
             },
             devSourcemap: !isDeploy,

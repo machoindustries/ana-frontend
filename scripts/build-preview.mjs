@@ -393,6 +393,7 @@ function buildPreviewPage(name, html, fixtureStatus) {
 <head>
     <meta charset="utf-8" />
     <title>Preview: ${name}</title>
+    <link rel="shortcut icon" href="/_client/preview/dist/img/_client/images/logos/favicon.ico" type="image/x-icon" />
     <link href="/_client/preview/dist/css/screen.css" rel="stylesheet" media="screen" />
     <style>
         body { padding: 2rem; }
