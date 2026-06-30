@@ -9,6 +9,14 @@ import fs from 'node:fs';
 const CLIENT_DIR        = '_client';
 const RESOURCES_DIR     = normalizePath(path.resolve(__dirname, '../wwwroot/assets'));
 
+// Used only when running `vite build --mode preview` (npm run
+// preview:build:assets). The real ANA solution's wwwroot doesn't exist
+// in this extracted repo, so component previews need a self-contained
+// build output that doesn't depend on the full .NET solution being
+// checked out alongside this folder. Never used for the real
+// dev/production build — RESOURCES_DIR above is untouched.
+const PREVIEW_RESOURCES_DIR = normalizePath(path.resolve(__dirname, '_client/preview/dist'));
+
 const SCRIPTS_MAIN      = `${CLIENT_DIR}/scripts`;
 const SCRIPTS_LIB       = `${CLIENT_DIR}/scripts/lib`;
 const STYLES_DIR        = `${CLIENT_DIR}/styles`;
@@ -55,10 +63,87 @@ function buildEntryPoints() {
     return entries;
 }
 
+// ─── Preview harness static file server (dev only) ──────────────────────────
+//
+// appType: 'custom' (below) disables Vite's built-in HTML-serving
+// middleware entirely — by design, since in production the .NET/Razor
+// app serves all HTML and Vite only provides the proxy-forwarded dev
+// experience. That means there's no middleware anywhere that will serve
+// a plain .html file from disk, which is exactly what the component
+// preview harness (npm run preview:build) needs for
+// _client/preview/index.html and _client/preview/components/*.html.
+//
+// This plugin fills that one specific gap: a minimal static file server
+// scoped ONLY to /_client/preview/, active only in `vite dev` (not
+// `vite build`). It runs before the proxy is ever consulted, has zero
+// effect on any other route, and never runs during a real build or
+// production deploy.
+function previewStaticServer() {
+    const PREVIEW_ROOT = path.resolve(__dirname, '_client/preview');
+
+    const MIME_TYPES = {
+        '.html': 'text/html; charset=utf-8',
+        '.css': 'text/css; charset=utf-8',
+        '.js': 'text/javascript; charset=utf-8',
+        '.mjs': 'text/javascript; charset=utf-8',
+        '.json': 'application/json; charset=utf-8',
+        '.svg': 'image/svg+xml',
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.gif': 'image/gif',
+        '.webp': 'image/webp',
+        '.ico': 'image/x-icon',
+        '.woff': 'font/woff',
+        '.woff2': 'font/woff2',
+        '.ttf': 'font/ttf',
+        '.eot': 'application/vnd.ms-fontobject',
+        '.map': 'application/json; charset=utf-8',
+    };
+
+    return {
+        name: 'preview-static-server',
+        apply: 'serve',
+        configureServer(server) {
+            server.middlewares.use((req, res, next) => {
+                if (!req.url || !req.url.startsWith('/_client/preview/')) {
+                    next();
+                    return;
+                }
+
+                const urlPath = req.url.split('?')[0];
+                const relativePath = urlPath.replace('/_client/preview/', '');
+                const filePath = path.join(PREVIEW_ROOT, relativePath);
+
+                // Guard against path traversal outside the preview root.
+                if (!normalizePath(filePath).startsWith(normalizePath(PREVIEW_ROOT))) {
+                    next();
+                    return;
+                }
+
+                fs.readFile(filePath, (err, data) => {
+                    if (err) {
+                        next();
+                        return;
+                    }
+
+                    const ext = path.extname(filePath);
+
+                    res.setHeader('Content-Type', MIME_TYPES[ext] || 'application/octet-stream');
+                    res.statusCode = 200;
+                    res.end(data);
+                });
+            });
+        },
+    };
+}
+
 // ─── Config ──────────────────────────────────────────────────────────────────
 
 export default defineConfig(({ command, mode }) => {
     const isDeploy = mode === 'production';
+    const isPreview = mode === 'preview';
+    const outDir = isPreview ? PREVIEW_RESOURCES_DIR : RESOURCES_DIR;
 
     return {
         root: __dirname,
@@ -70,6 +155,16 @@ export default defineConfig(({ command, mode }) => {
                     loadPaths: [
                         path.resolve(__dirname, STYLES_DIR),
                     ],
+                    // In preview mode, fonts/images are served from
+                    // _client/preview/dist/ (this self-contained repo),
+                    // not the .NET app's wwwroot/assets/ -- override the
+                    // !default path variables before any other .scss is
+                    // loaded. No-op in dev/production: additionalData is
+                    // simply empty, and the !default values in
+                    // _settings-helpers.scss apply as before.
+                    additionalData: isPreview
+                        ? `$s-fonts-path: '/_client/preview/dist/fonts/_client/fonts/'; $s-image-path: '/_client/preview/dist/img/_client/images/';`
+                        : '',
                 },
             },
             devSourcemap: !isDeploy,
@@ -92,7 +187,7 @@ export default defineConfig(({ command, mode }) => {
         },
 
         build: {
-            outDir: RESOURCES_DIR,
+            outDir: outDir,
             emptyOutDir: false,
             sourcemap: !isDeploy,
 
@@ -148,6 +243,7 @@ export default defineConfig(({ command, mode }) => {
         },
 
         plugins: [
+            previewStaticServer(),
             viteStaticCopy({
                 targets: [
                     // Images (excluding icons/ which fed the now-dropped webfont task)
@@ -182,8 +278,15 @@ export default defineConfig(({ command, mode }) => {
 
         server: {
             proxy: {
-                '/': {
-                    target: 'https://localhost:44300',
+                // Catch-all forwards everything to the local .NET app —
+                // EXCEPT /_client/preview/, which needs to be served as
+                // static files by Vite directly for the component
+                // preview harness (npm run preview:build) to work.
+                // Without this bypass, every preview request 502s since
+                // it gets forwarded to the .NET app, which has no route
+                // for it.
+                '^/(?!_client/preview/)': {
+                    target: 'https://localhost:54809',
                     changeOrigin: true,
                     secure: false,
                 },

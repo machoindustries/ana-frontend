@@ -8,7 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "optimise:images": "node scripts/optimise-images.mjs"
+    "optimise:images": "node scripts/optimise-images.mjs",
+    "preview:build:assets": "vite build --mode preview",
+    "preview:build:html": "node scripts/build-preview.mjs",
+    "preview:build": "npm run preview:build:assets && npm run preview:build:html"
   },
   "author": "Amaze",
   "license": "UNLICENSED",
@@ -33,6 +36,7 @@
     "eventemitter3": "^1.2.0",
     "events": "^1.1.0",
     "glob": "^13.0.6",
+    "handlebars": "^4.7.9",
     "jquery-validation": "^1.19.4",
     "jquery-validation-unobtrusive": "^3.2.6",
     "jsonfile": "^2.4.0",

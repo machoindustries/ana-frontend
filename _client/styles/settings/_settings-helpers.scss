@@ -1,5 +1,5 @@
 /* Settings - Helpers
 ------------------------- */
 
-$s-image-path: '/assets/img/';
-$s-fonts-path: '/assets/fonts/';
+$s-image-path: '/assets/img/' !default;
+$s-fonts-path: '/assets/fonts/' !default;
