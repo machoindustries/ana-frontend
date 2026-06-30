@@ -4,6 +4,7 @@ bower_components
 node_modules
 build
 _client/scripts/src/templates
+_client/preview
 
 .DS_Store
 .DS_Store?

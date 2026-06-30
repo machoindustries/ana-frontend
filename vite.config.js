@@ -9,6 +9,14 @@ import fs from 'node:fs';
 const CLIENT_DIR        = '_client';
 const RESOURCES_DIR     = normalizePath(path.resolve(__dirname, '../wwwroot/assets'));
 
+// Used only when running `vite build --mode preview` (npm run
+// preview:build:assets). The real ANA solution's wwwroot doesn't exist
+// in this extracted repo, so component previews need a self-contained
+// build output that doesn't depend on the full .NET solution being
+// checked out alongside this folder. Never used for the real
+// dev/production build — RESOURCES_DIR above is untouched.
+const PREVIEW_RESOURCES_DIR = normalizePath(path.resolve(__dirname, '_client/preview/dist'));
+
 const SCRIPTS_MAIN      = `${CLIENT_DIR}/scripts`;
 const SCRIPTS_LIB       = `${CLIENT_DIR}/scripts/lib`;
 const STYLES_DIR        = `${CLIENT_DIR}/styles`;
@@ -59,6 +67,8 @@ function buildEntryPoints() {
 
 export default defineConfig(({ command, mode }) => {
     const isDeploy = mode === 'production';
+    const isPreview = mode === 'preview';
+    const outDir = isPreview ? PREVIEW_RESOURCES_DIR : RESOURCES_DIR;
 
     return {
         root: __dirname,
@@ -92,7 +102,7 @@ export default defineConfig(({ command, mode }) => {
         },
 
         build: {
-            outDir: RESOURCES_DIR,
+            outDir: outDir,
             emptyOutDir: false,
             sourcemap: !isDeploy,
 
