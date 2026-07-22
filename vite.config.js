@@ -172,6 +172,13 @@ export default defineConfig(({ command, mode }) => {
 
         resolve: {
             alias: {
+                // jQuery is a classic global script in the Razor layout, not
+                // a bundled dependency. Aliasing (rather than marking
+                // external) means Rollup treats the shim as a normal local
+                // module and inlines it — no bare `import ... from "jquery"`
+                // survives into the output, so entry.js and its chunks stay
+                // loadable as plain classic scripts. See jquery-shim.js.
+                'jquery':     path.resolve(__dirname, `${CLIENT_DIR}/scripts/lib/jquery-shim.js`),
                 'src':        path.resolve(__dirname, `${CLIENT_DIR}/scripts/src`),
                 'components': path.resolve(__dirname, `${CLIENT_DIR}/scripts/src/components`),
                 'modules':    path.resolve(__dirname, `${CLIENT_DIR}/scripts/src/modules`),
@@ -225,14 +232,6 @@ export default defineConfig(({ command, mode }) => {
                     },
                 },
 
-                // jQuery is loaded as a global script tag in the Razor layout.
-                // Rollup will not bundle it — modules that import jquery
-                // receive the global $ at runtime instead.
-                // TODO: revisit once jQuery audit is complete.
-                external: ['jquery'],
-                globals: {
-                    jquery: '$',
-                },
             },
 
             minify: isDeploy ? 'terser' : false,
