@@ -260,13 +260,28 @@ export default defineConfig(({ command, mode }) => {
 
                     // Legacy lib files — copied as-is pending jQuery audit
                     // TODO: migrate to npm imports after audit
-                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery.js`)),         dest: 'js' },
-                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery.min.js`)),     dest: 'js' },
-                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery-ui.js`)),      dest: 'js' },
-                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery-ui.min.js`)),  dest: 'js' },
-                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/cdc.js`)),            dest: 'js' },
-                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/entry.js`)),          dest: 'js' },
-                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/StringList.js`)),     dest: 'js' },
+                    //
+                    // `rename` is required on each: vite-plugin-static-copy
+                    // preserves the full source path under `dest` by
+                    // default (e.g. src .../_client/scripts/lib/jquery.js
+                    // with dest 'js' lands at js/_client/scripts/lib/jquery.js,
+                    // NOT js/jquery.js), which silently breaks every flat
+                    // reference to these files (the Razor layout's
+                    // /bundles/jquery route, and the preview harness's
+                    // /_client/preview/dist/js/jquery.js script tag).
+                    //
+                    // NOTE: lib/entry.js is intentionally NOT copied here.
+                    // It's the old Browserify UMD bundle (same format still
+                    // live on nursingworld.org today), not application code.
+                    // Flattening it to js/entry.js would collide with —
+                    // and depending on write order, potentially overwrite —
+                    // the real Rollup-built entry.js from buildEntryPoints().
+                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery.js`)),         dest: 'js', rename: { stripBase: true } },
+                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery.min.js`)),     dest: 'js', rename: { stripBase: true } },
+                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery-ui.js`)),      dest: 'js', rename: { stripBase: true } },
+                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/jquery-ui.min.js`)),  dest: 'js', rename: { stripBase: true } },
+                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/cdc.js`)),            dest: 'js', rename: { stripBase: true } },
+                    { src: normalizePath(path.resolve(__dirname, `${SCRIPTS_LIB}/StringList.js`)),     dest: 'js', rename: { stripBase: true } },
 
 { src: normalizePath(path.resolve(__dirname, `${CLIENT_DIR}/styles/lib/cdc.css`)),        dest: 'css', rename: 'cdc.css' },
 { src: normalizePath(path.resolve(__dirname, `${CLIENT_DIR}/styles/lib/system.css`)),     dest: 'css', rename: 'system.css' },
